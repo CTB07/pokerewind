@@ -95,7 +95,7 @@ static const u8 sTileBitAttributes[] =
     [MB_NORTHWARD_CURRENT] = TILE_ATTRIBUTES(TRUE, TRUE, FALSE),
     [MB_SOUTHWARD_CURRENT] = TILE_ATTRIBUTES(TRUE, TRUE, FALSE),
     [MB_REWIND] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
-    [MB_UNUSED_55] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_REWIND_RETURN_TO_PRESENT] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_UNUSED_56] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_57] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_58] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
@@ -960,11 +960,12 @@ bool8 MetatileBehavior_IsDiveable(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SEMI_DEEP_WATER
      || metatileBehavior == MB_DEEP_WATER
-     || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER       || metatileBehavior == MB_REWIND)
+     || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER)
         return TRUE;
     else
         return FALSE;
 }
+
 
 bool8 MetatileBehavior_IsUnableToEmerge(u8 metatileBehavior)
 {
@@ -973,10 +974,25 @@ bool8 MetatileBehavior_IsUnableToEmerge(u8 metatileBehavior)
     // To fix change the metatile behavior of the narrower water door with porymap's tileset editor.
     if (metatileBehavior == MB_NO_SURFACING
      || metatileBehavior == MB_SEAWEED_NO_SURFACING
-     #ifdef BUGFIX
      || metatileBehavior == MB_WATER_DOOR
-     #endif
      )
+        return TRUE;
+    else
+        return FALSE;
+}
+
+
+bool8 MetatileBehavior_IsRewindable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_REWIND)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsFastforwardable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_REWIND_RETURN_TO_PRESENT)
         return TRUE;
     else
         return FALSE;

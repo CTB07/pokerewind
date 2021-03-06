@@ -650,6 +650,14 @@ bool8 (*const sDiveFieldEffectFuncs[])(struct Task *) =
     DiveFieldEffect_TryWarp,
 };
 
+bool8 (*const sRewindFieldEffectFuncs[])(struct Task *) =
+{
+    RewindFieldEffect_Init,
+    RewindFieldEffect_ShowMon,
+    RewindFieldEffect_TryWarp,
+};
+
+
 bool8 (*const sLavaridgeGymB1FWarpEffectFuncs[])(struct Task *, struct ObjectEvent *, struct Sprite *) =
 {
     LavaridgeGymB1FWarpEffect_Init,
@@ -1940,13 +1948,13 @@ static bool8 DiveFieldEffect_TryWarp(struct Task *task)
     return FALSE;
 }
 
-bool8 FldEff_UseDive(void)
+bool8 FldEff_UseRewind(void)
 {
     u8 taskId;
-    taskId = CreateTask(Task_UseDive, 0xff);
+    taskId = CreateTask(Task_UseRewind, 0xff);
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
-    Task_UseDive(taskId);
+    Task_UseRewind(taskId);
     return FALSE;
 }
 
@@ -1979,7 +1987,7 @@ static bool8 RewindFieldEffect_TryWarp(struct Task *task)
     // Wait for show mon first
     if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
     {
-        TryDoDiveWarp(&mapPosition, gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior);
+        TryDoRewindWarp(&mapPosition, gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior);
         DestroyTask(FindTaskIdByFunc(Task_UseRewind));
         FieldEffectActiveListRemove(FLDEFF_USE_REWIND);
     }

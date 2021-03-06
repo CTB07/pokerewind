@@ -404,6 +404,7 @@ static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Dive(void);
+static bool8 SetUpFieldMove_Rewind(void);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -3851,7 +3852,7 @@ static bool8 SetUpFieldMove_Dive(void)
 }
 
 
-static void FieldCallback_Dive(void)
+static void FieldCallback_Rewind(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
     FieldEffectStart(FLDEFF_USE_REWIND);
