@@ -3850,6 +3850,25 @@ static bool8 SetUpFieldMove_Dive(void)
     return FALSE;
 }
 
+
+static void FieldCallback_Dive(void)
+{
+    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    FieldEffectStart(FLDEFF_USE_REWIND);
+}
+
+static bool8 SetUpFieldMove_Rewind(void)
+{
+    gFieldEffectArguments[1] = TrySetRewindWarp();
+    if (gFieldEffectArguments[1] != 0)
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_Rewind;
+        return TRUE;
+    }
+    return FALSE;
+}
+
 static void CreatePartyMonIconSprite(struct Pokemon *mon, struct PartyMenuBox *menuBox, u32 slot)
 {
     u16 species2;

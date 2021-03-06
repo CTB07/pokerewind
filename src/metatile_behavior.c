@@ -94,7 +94,7 @@ static const u8 sTileBitAttributes[] =
     [MB_WESTWARD_CURRENT] = TILE_ATTRIBUTES(TRUE, TRUE, FALSE),
     [MB_NORTHWARD_CURRENT] = TILE_ATTRIBUTES(TRUE, TRUE, FALSE),
     [MB_SOUTHWARD_CURRENT] = TILE_ATTRIBUTES(TRUE, TRUE, FALSE),
-    [MB_UNUSED_54] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_REWIND] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_UNUSED_55] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_56] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_57] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
@@ -960,7 +960,7 @@ bool8 MetatileBehavior_IsDiveable(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_SEMI_DEEP_WATER
      || metatileBehavior == MB_DEEP_WATER
-     || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER)
+     || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER       || metatileBehavior == MB_REWIND)
         return TRUE;
     else
         return FALSE;
