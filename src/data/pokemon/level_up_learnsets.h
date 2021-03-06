@@ -138,7 +138,7 @@ static const struct LevelUpMove sTemperilaLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(68, MOVE_OVERHEAT),
 	LEVEL_UP_END,
 };
-
+ 
 static const struct LevelUpMove sSubsteeLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(1, MOVE_POUND),
 	LEVEL_UP_MOVE(1, MOVE_TAILWHIP),
