@@ -1362,7 +1362,19 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
-
+    else if (gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST)
+             && (gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_25
+             || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_50
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33_STATUS
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_THRASH
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_IF_MISS)
+    {
+        gLastUsedAbility = ABILITY_THERAPIST;
+        RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
+        gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
+        return;
+    }
     for (i = 0; i < gBattlersCount; i++)
     {
         if ((gProtectStructs[gBattlerByTurnOrder[i]].stealMove) && gBattleMoves[gCurrentMove].flags & FLAG_SNATCH_AFFECTED)
@@ -3247,7 +3259,7 @@ static void Cmd_seteffectwithchance(void)
 {
     u32 percentChance;
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE)
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE||GetBattlerAbility(gBattlerAttacker) == ABILITY_LOW_ODDS)
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance * 2;
     else
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance;
@@ -8530,6 +8542,13 @@ static void Cmd_faintifabilitynotdamp(void)
         gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
         return;
     }
+    if ((gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST)))
+    {
+        gLastUsedAbility = ABILITY_THERAPIST;
+        RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
+        gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
+        return;
+    }
 
     gActiveBattler = gBattlerAttacker;
     gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
@@ -12227,13 +12246,17 @@ static void Cmd_handleballthrow(void)
         }
         #endif
 
+
+	
         // catchRate is unsigned, which means that it may potentially overflow if sum is applied directly.
         if (catchRate < 21 && ballAddition == -20)
             catchRate = 1;
         else
             catchRate = catchRate + ballAddition;
-
-        odds = ((catchRate) * ballMultiplier / 10)
+	if gBattleMons[gBattlerAttacker].ability = ABILITY_BALL_FETCH
+	    odds = ((catchRate) * (ballMultiplier + 20) / 10)
+	else
+            odds = ((catchRate) * ballMultiplier / 10)
             * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)
             / (3 * gBattleMons[gBattlerTarget].maxHP);
 

@@ -11609,7 +11609,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	[MOVE_GUN] =
 	{	//ANIM TODO
 		.effect = EFFECT_0HKO,
-		.power = 0,
+		.power = 1,
 		.type = TYPE_STEEL,
 		.accuracy = 30,
 		.pp = 5,
@@ -11625,7 +11625,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	[MOVE_SNAP] =
 	{	//ANIM TODO
 		.effect = EFFECT_0HKO,
-		.power = 0,
+		.power = 1,
 		.type = TYPE_STEEL,
 		.accuracy = 50,
 		.pp = 1,

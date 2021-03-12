@@ -3523,7 +3523,7 @@ static bool32 ShouldChangeFormHpBased(u32 battler)
         {ABILITY_SHIELDS_DOWN, SPECIES_MINIOR_METEOR_ORANGE, SPECIES_MINIOR_CORE_ORANGE, 2},
         {ABILITY_SHIELDS_DOWN, SPECIES_MINIOR_METEOR_VIOLET, SPECIES_MINIOR_CORE_VIOLET, 2},
         {ABILITY_SHIELDS_DOWN, SPECIES_MINIOR_METEOR_YELLOW, SPECIES_MINIOR_CORE_YELLOW, 2},
-        {ABILITY_SCHOOLING, SPECIES_WISHIWASHI_SCHOOL, SPECIES_WISHIWASHI, 4},
+        {ABILITY_SCHOOLING, SPECIES_HUMONGEC_SCHOOLING, SPECIES_HUMONGEC, 4},
     };
     u32 i;
 
@@ -6869,10 +6869,6 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_WATER)
            MulModifier(&modifier, UQ_4_12(2.0));
         break;
-    case ABILITY_CASH_GRAB:
-        if (gBattleMoves[move].effect == EFFECT_PAY_DAY)
-           MulModifier(&modifier, UQ_4_12(2.0));
-        break;
     case ABILITY_STEELWORKER:
         if (moveType == TYPE_STEEL)
            MulModifier(&modifier, UQ_4_12(1.5));
@@ -6916,6 +6912,22 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_DRAGONS_MAW:
         if (moveType == TYPE_DRAGON)
             MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_LOW_ODDS:
+        if (gBattleMoves[gCurrentMove].secondaryEffectChance !=0 && gBattleMoves[gCurrentMove].secondaryEffectChance != 100)
+            MulModifier(&modifier, UQ_4_12(0.8));
+        break;
+    case ABILITY_CASH_GRAB:
+        if (gBattleMoves[move].effect == EFFECT_PAY_DAY)
+           MulModifier(&modifier, UQ_4_12(2.0));
+        break;
+    case ABILITY_ECHO_CHAMBER
+        percentBoost = min(gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
+        MulModifier(&finalModifier, UQ_4_12(1.0) + sPercentToModifier[percentBoost]);
+        break;
+    case ABILITY_ARTILLERY:
+        if (gBattleMoves[move].flags & FLAG_MEGA_LAUNCHER_BOOST || gBattleMoves[move].flags & FLAG_BALLISTIC)
+           MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }
 

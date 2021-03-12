@@ -223,7 +223,7 @@ static const u8 sNeuroforceDescription[] = _("Ups “supereffective”.");
 static const u8 sIntrepidSwordDescription[] = _("Ups Attack on entry.");
 static const u8 sDauntlessShieldDescription[] = _("Ups Defense on entry.");
 static const u8 sLiberoDescription[] = _("Changes type to move's.");
-static const u8 sBallFetchDescription[] = _("Fetches failed Poké Ball.");
+static const u8 sBallFetchDescription[] = _("Catch rate up. Fetches Ball.");
 static const u8 sCottonDownDescription[] = _("Lower Speed of all when hit.");
 static const u8 sPropellerTailDescription[] = _("Ignores foe's redirection.");
 static const u8 sMirrorArmorDescription[] = _("Reflect stat decreases.");
@@ -263,6 +263,7 @@ static const u8 sArtilleryDescription[] =    _("Powers bomb/pulse moves.");
 static const u8 sContagiousDescription[] =   _("Infects foes.");
 static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
 static const u8 sOmnipotenceDescription[] =  _("ups all stats???.");
+static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
     [ABILITY_NONE] = _("-------"),
@@ -542,6 +543,7 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CONTAGIOUS] = _("Contagious"),
     [ABILITY_TRIANGULATE] = _("Triangulate"),
     [ABILITY_OMNIPOTENCE] = _("Omnipotence"),
+    [ABILITY_THERAPIST] = _("Therapist"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -823,4 +825,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_CONTAGIOUS] = sContagiousDescription,
     [ABILITY_TRIANGULATE] = sTriangulateDescription,
     [ABILITY_OMNIPOTENCE] = sOmnipotenceDescription,
+    [ABILITY_THERAPIST] = sTherapistDescription[]
 };
