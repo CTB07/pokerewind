@@ -25,9 +25,9 @@ static u8 CreateMonIconSprite(struct MonIconSpriteTemplate *, s16, s16, u8);
 
 const u8 *const gMonIconTable[] =
 {
-    [SPECIES_NONE] = gMonIcon_Bulbasaur,
-    [SPECIES_BULBASAUR] = gMonIcon_Bulbasaur,
-    [SPECIES_IVYSAUR] = gMonIcon_Ivysaur,
+    [SPECIES_NONE] = gMonIcon_Paropeat,
+    [SPECIES_PAROPEAT] = gMonIcon_Paropeat,
+    [SPECIES_MACAUMENT] = gMonIcon_Macaument,
     [SPECIES_VENUSAUR] = gMonIcon_Venusaur,
     [SPECIES_CHARMANDER] = gMonIcon_Charmander,
     [SPECIES_CHARMELEON] = gMonIcon_Charmeleon,
@@ -1242,8 +1242,8 @@ const u8 *const gMonIconTableFemale[] =
 
 const u8 gMonIconPaletteIndices[] =
 {
-    [SPECIES_BULBASAUR] = 4,
-    [SPECIES_IVYSAUR] = 4,
+    [SPECIES_PAROPEAT] = 1,
+    [SPECIES_MACAUMENT] = 5,
     [SPECIES_VENUSAUR] = 4,
     [SPECIES_CHARMANDER] = 0,
     [SPECIES_CHARMELEON] = 0,

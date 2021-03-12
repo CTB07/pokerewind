@@ -12,24 +12,24 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_BULBASAUR] =
+    [NATIONAL_DEX_PAROPEAT] =
     {
-        .categoryName = _("Seed"),
+        .categoryName = _("Echo"),
         .height = 7,
         .weight = 69,
-        .description = gBulbasaurPokedexText,
+        .description = gParopeatPokedexText,
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_IVYSAUR] =
+    [NATIONAL_DEX_MACAUMENT] =
     {
-        .categoryName = _("Seed"),
+        .categoryName = _("Dialogue"),
         .height = 10,
         .weight = 130,
-        .description = gIvysaurPokedexText,
+        .description = gMacaumentPokedexText,
         .pokemonScale = 335,
         .pokemonOffset = 13,
         .trainerScale = 256,

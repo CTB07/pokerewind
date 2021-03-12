@@ -1,8 +1,8 @@
 
 	.align 2
 gCryTable:: @ 869DCF4
-	cry Cry_Bulbasaur  @ 869DCF4
-	cry Cry_Ivysaur  @ 869DD00
+	cry Cry_Paropeat  @ 869DCF4
+	cry Cry_Macaument  @ 869DD00
 	cry Cry_Venusaur  @ 869DD0C
 	cry Cry_Charmander  @ 869DD18
 	cry Cry_Charmeleon  @ 869DD24
@@ -1275,8 +1275,8 @@ gCryTable:: @ 869DCF4
 
 	.align 2
 gCryTable2:: @ 869EF24
-	cry2 Cry_Bulbasaur  @ 869EF24
-	cry2 Cry_Ivysaur  @ 869EF30
+	cry2 Cry_Paropeat  @ 869EF24
+	cry2 Cry_Macaument  @ 869EF30
 	cry2 Cry_Venusaur  @ 869EF3C
 	cry2 Cry_Charmander  @ 869EF48
 	cry2 Cry_Charmeleon  @ 869EF54

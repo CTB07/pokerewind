@@ -6,20 +6,16 @@
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_BULBASAUR_1[] =
+static const union AnimCmd sAnim_PAROPEAT_1[] =
 {
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_IVYSAUR_1[] =
+static const union AnimCmd sAnim_MACAUMENT_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_FRAME(1, 36),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_VENUSAUR_1[] =
@@ -9138,14 +9134,14 @@ static const union AnimCmd *const sAnims_NONE[] ={
     sAnim_NONE_1,
 };
 
-static const union AnimCmd *const sAnims_BULBASAUR[] ={
+static const union AnimCmd *const sAnims_PAROPEAT[] ={
     sAnim_GeneralFrame0,
-    sAnim_BULBASAUR_1,
+    sAnim_PAROPEAT_1,
 };
 
-static const union AnimCmd *const sAnims_IVYSAUR[] ={
-    sAnim_GeneralFrame0,
-    sAnim_IVYSAUR_1,
+static const union AnimCmd *const sAnims_MACAUMENT[] ={
+sAnim_GeneralFrame0,
+sAnim_MACAUMENT_1,
 };
 
 static const union AnimCmd *const sAnims_VENUSAUR[] ={
@@ -14417,8 +14413,8 @@ static const union AnimCmd *const sAnims_DEOXYS_SPEED[] ={
 const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
 {
     ANIM_CMD(NONE),
-    ANIM_CMD(BULBASAUR),
-    ANIM_CMD(IVYSAUR),
+    ANIM_CMD(PAROPEAT),
+    ANIM_CMD(MACAUMENT),
     ANIM_CMD(VENUSAUR),
     ANIM_CMD(CHARMANDER),
     ANIM_CMD(CHARMELEON),

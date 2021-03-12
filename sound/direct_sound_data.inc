@@ -387,12 +387,12 @@ DirectSoundWaveData_8745A7C::
 	.incbin "sound/direct_sound_samples/8745A7C.bin"
 
 	.align 2
-Cry_Bulbasaur::
-	.incbin "sound/direct_sound_samples/cries/bulbasaur.bin"
+Cry_Paropeat::
+	.incbin "sound/direct_sound_samples/cries/paropeat.bin"
 
 	.align 2
-Cry_Ivysaur::
-	.incbin "sound/direct_sound_samples/cries/ivysaur.bin"
+Cry_Macaument::
+.incbin "sound/direct_sound_samples/cries/ivysaur.bin"
 
 	.align 2
 Cry_Venusaur::

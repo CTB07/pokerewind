@@ -272,7 +272,7 @@ void ReadMail(struct MailStruct *mail, void (*callback)(void), bool8 flag)
             break;
     }
     species = MailSpeciesToSpecies(mail->species, buffer);
-    if (species >= SPECIES_BULBASAUR && species < NUM_SPECIES)
+    if (species >= SPECIES_PAROPEAT && species < NUM_SPECIES)
     {
         switch (sMailRead->mailType)
         {

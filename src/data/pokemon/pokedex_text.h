@@ -4,17 +4,17 @@ const u8 gDummyPokedexText[] = _(
     "No detailed information is available\n"
     "at this time.");
 
-const u8 gBulbasaurPokedexText[] = _(
-    "Bulbasaur can be seen napping in bright\n"
-    "sunlight. There is a seed on its back.\n"
-    "By soaking up the sun's rays, the seed\n"
-    "grows progressively larger.");
+const u8 gParopeatPokedexText[] = _(
+    "Paropeat mimic everything they hear.\n"
+    "They repeat these phrases and sentences\n" 
+    "so often that the original meanings are\n" 
+    "usually lost forever.");
 
-const u8 gIvysaurPokedexText[] = _(
-    "To support its bulb, Ivysaur's legs\n"
-    "grow sturdy. If it spends more time lying in\n"
-    "the sunlight, the bud will soon bloom into\n"
-    "a large flower.");
+const u8 gMacaumentPokedexText[] = _(
+    "Finally exiting their infancy stage,\n" 
+    "Macaument now have the capacity to form\n" 
+    "original thoughts, spending most of their\n" 
+    "time commenting on menial things.");
 
 const u8 gVenusaurPokedexText[] = _(
     "Venusaur's flower is said to take on vivid\n"

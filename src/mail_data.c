@@ -27,7 +27,7 @@ void ClearMailStruct(struct MailStruct *mail)
     for (i = 0; i < 4; i++)
         mail->trainerId[i] = 0;
 
-    mail->species = SPECIES_BULBASAUR;
+    mail->species = SPECIES_PAROPEAT;
     mail->itemId = ITEM_NONE;
 }
 
