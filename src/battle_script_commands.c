@@ -1234,6 +1234,16 @@ static bool32 TryAegiFormChange(void)
     {
     default:
         return FALSE;
+    case SPECIES_DISPUTRAW: // Phys -> special
+        if (IS_MOVE_STATUS(gCurrentMove)||IS_MOVE_PHYSICAL(gCurrentMove))// No change if phys or status
+            return FALSE;
+        gBattleMons[gBattlerAttacker].species = SPECIES_DISPUTRAW_SPECIAL;
+        break;
+    case SPECIES_DISPUTRAW_SPECIAL: // spe -> pHys
+        if (IS_MOVE_STATUS(gCurrentMove) || IS_MOVE_SPECIAL(gCurrentMove))// No change if spe or status
+            return FALSE;
+        gBattleMons[gBattlerAttacker].species = SPECIES_DISPUTRAW;
+        break;
     case SPECIES_AEGISLASH: // Shield -> Blade
         if (gBattleMoves[gCurrentMove].power == 0)
             return FALSE;
@@ -6928,12 +6938,12 @@ static bool32 HasAttackerFaintedTarget(void)
         return FALSE;
 }
 
-static void HandleTerrainMove(u32 moveEffect)
+static void static void HandleTerrainMove(u16 move)
 {
     u32 statusFlag = 0;
     u8 *timer = NULL;
-
-    switch (moveEffect)
+    
+    switch (gBattleMoves[move].effect)
     {
     case EFFECT_MISTY_TERRAIN:
         statusFlag = STATUS_FIELD_MISTY_TERRAIN, timer = &gFieldTimers.mistyTerrainTimer;
@@ -6951,6 +6961,44 @@ static void HandleTerrainMove(u32 moveEffect)
         statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN, timer = &gFieldTimers.psychicTerrainTimer;
         gBattleCommunication[MULTISTRING_CHOOSER] = 3;
         break;
+    case EFFECT_DAMAGE_SET_TERRAIN:
+        switch (gBattleMoves[move].argument)
+        {
+        case 0: //splintered stormshards and steel roller
+            if (!(gFieldStatuses & (STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN)))
+            {
+                //no terrain to remove -> jump to battle script pointer
+                gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+            }
+            else
+            {
+                // remove all terrain
+                gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN);
+                gBattleCommunication[MULTISTRING_CHOOSER] = 4;
+                gBattlescriptCurrInstr += 7;
+            }
+        case 1: //Misty
+            statusFlag = STATUS_FIELD_MISTY_TERRAIN, timer = &gFieldTimers.mistyTerrainTimer;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+            break;
+            return;
+        case 2: //grassy
+            statusFlag = STATUS_FIELD_GRASSY_TERRAIN, timer = &gFieldTimers.grassyTerrainTimer;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+            break;
+        case 3: //electric
+            statusFlag = STATUS_FIELD_ELECTRIC_TERRAIN, timer = &gFieldTimers.electricTerrainTimer;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+            break;
+        case 4: //psychic. genesis supernova
+            statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN, timer = &gFieldTimers.psychicTerrainTimer;
+            gBattleCommunication[MULTISTRING_CHOOSER] = 3;
+            break;
+        default:
+            break;
+        }
+        break;
+    }
     }
 
     if (gFieldStatuses & statusFlag || statusFlag == 0)
@@ -8369,8 +8417,17 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;    // exit if loop failed (failsafe)
         }
         return;
+    case VARIOUS_JUMP_IF_OVER_HALF_HP
+        if (gBattleMons[gBattlerAttacker].hp > halfHp)
+        {
+             gBattlescriptCurrInstr = jumpPtr;
+        }
+        else
+        {
+        gBattlescriptCurrInstr = +=5;
+        }
+        return;
     }
-
     gBattlescriptCurrInstr += 3;
 }
 
@@ -10929,8 +10986,14 @@ static void Cmd_trydobeatup(void)
             PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattleCommunication[0])
 
             gBattlescriptCurrInstr += 9;
-
-            gBattleMoveDamage = gBaseStats[GetMonData(&party[gBattleCommunication[0]], MON_DATA_SPECIES)].baseAttack;
+            if (gBattleMoves[gCurrentMove].split == SPLIT_SPECIAL)//IS_MOVE_PHYSICAL(gCurrentMove)
+            {
+            	gBattleMoveDamage = gBaseStats[GetMonData(&party[gBattleCommunication[0]], MON_DATA_SPECIES)].baseSpAttack;
+            }
+            else
+            {
+            	gBattleMoveDamage = gBaseStats[GetMonData(&party[gBattleCommunication[0]], MON_DATA_SPECIES)].baseAttack;
+            }
             gBattleMoveDamage *= gBattleMoves[gCurrentMove].power;
             gBattleMoveDamage *= (GetMonData(&party[gBattleCommunication[0]], MON_DATA_LEVEL) * 2 / 5 + 2);
             gBattleMoveDamage /= gBaseStats[gBattleMons[gBattlerTarget].species].baseDefense;
@@ -11668,6 +11731,17 @@ static void Cmd_pickup(void)
             {
                 heldItem = GetBattlePyramidPickupItemId();
                 SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+            }
+            else if (ability == ABILITY_CASH_GRAB
+                && species != 0
+                && species != SPECIES_EGG
+                && heldItem == ITEM_NONE)
+            {
+                if ((lvlDivBy10 + 1 ) * 5 > Random() % 100)
+                {
+                    heldItem = ITEM_DOGECOIN;
+                    SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
+                }
             }
             #if (defined ITEM_HONEY)
             else if (ability == ABILITY_HONEY_GATHER
@@ -12693,4 +12767,3 @@ static bool32 CriticalCapture(u32 odds)
         return FALSE;
     #endif
 }
-

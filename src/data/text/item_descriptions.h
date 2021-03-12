@@ -3008,3 +3008,18 @@ static const u8 sUltranecroziumZDesc[] = _(
     "A crystal to turn\n"
     "fused Necrozma\n"
     "into a new form.");
+
+static const u8 sVomitFossilDesc[] = _(
+    "An odd puddle from\n"
+    "A prehistoric\n"
+    "Pokémon");
+
+static const u8 sTuskFossilDesc[] = _(
+    "A tooth from a\n"
+    "prehistoric\n"
+    "Pokémon");
+
+static const u8 sDogecoinDesc[] = _(
+    "Sells for a high\n"
+    "price. Definitely\n"
+    "not a meme stock");

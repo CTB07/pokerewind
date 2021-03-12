@@ -2942,6 +2942,30 @@ static const u8 sEERIE_SPELLDescription[] = _(
     "Attacks with psychic power.\n"
     "Foe's last move has 3 PP cut.");
 
+static const u8 sBIG_DEBATEDescription[] = _(
+    "Roasts target in an argument.\n"
+    "Has a chance to Burn.");
+
+static const u8 sMOB_MENTALITYescription[] = _(
+    "A Fire/Ice barrage of dislikes.\n"
+    "Clears stat gains quickly.");
+
+static const u8 sLEGION_BASHDescription[] = _(
+    "Summons loyal subscribers to\n"
+    "hit thrice with rising power.");
+
+static const u8 sMIC_DROPDescription[] = _(
+    "Passes the mic with flair,\n"
+    "switching after dealing damage.");
+
+static const u8 sGUNDescription[] = _(
+    "Pulls a fucking gat on the foe\n"
+    "killing it instantly.");
+
+static const u8 sSNAPDescription[] = _(
+    "You should have gone for the\n"
+    "head. A 50% OKHO on both foes.");
+
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
 

@@ -705,6 +705,11 @@
 #define ITEM_TAPUNIUM_Z               602
 #define ITEM_ULTRANECROZIUM_Z         603
 
+//new shit
+#define ITEM_VOMIT_FOSSIL      	      605
+#define ITEM_TUSK_FOSSIL      	      606
+#define ITEM_DOGECOIN      	      607
+
 #define ITEMS_COUNT 604
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 

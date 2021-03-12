@@ -1346,6 +1346,8 @@
 
 // National Dex Index Defines
 
+//species are fully assigned according to this, in pokemon.c
+
 #define NATIONAL_DEX_NONE 0
 #define NATIONAL_DEX_BULBASAUR 1
 #define NATIONAL_DEX_IVYSAUR 2

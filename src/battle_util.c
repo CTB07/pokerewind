@@ -6869,6 +6869,10 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_WATER)
            MulModifier(&modifier, UQ_4_12(2.0));
         break;
+    case ABILITY_CASH_GRAB:
+        if (gBattleMoves[move].effect == EFFECT_PAY_DAY)
+           MulModifier(&modifier, UQ_4_12(2.0));
+        break;
     case ABILITY_STEELWORKER:
         if (moveType == TYPE_STEEL)
            MulModifier(&modifier, UQ_4_12(1.5));
@@ -6887,6 +6891,10 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         break;
     case ABILITY_AERILATE:
         if (moveType == TYPE_FLYING && gBattleStruct->ateBoost[battlerAtk])
+            MulModifier(&modifier, UQ_4_12(1.2));
+        break;
+    case ABILITY_TRIANGULATE:
+        if (moveType == TYPE_PSYCHIC && gBattleStruct->ateBoost[battlerAtk])
             MulModifier(&modifier, UQ_4_12(1.2));
         break;
     case ABILITY_NORMALIZE:
@@ -7117,6 +7125,24 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
         }
     }
+    else if (gBattleMoves[move].effect == EFFECT_BODY_PRESS)
+    {
+        if (IS_MOVE_PHYSICAL(move))
+        {
+            atkStat = gBattleMons[battlerAtk].defense;
+            atkStage = gBattleMons[battlerAtk].statStages[STAT_DEF];
+        }
+        else
+        {
+            atkStat = gBattleMons[battlerAtk].spDefense;
+            atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
+        }
+    }
+    else if (gBattleMoves[move].effect == EFFECT_SPIN_DASH)
+    {
+        atkStat = gBattleMons[battlerAtk].speed;
+        atkStage = gBattleMons[battlerAtk].statStages[STAT_SPEED];
+    }
     else
     {
         if (IS_MOVE_PHYSICAL(move))
@@ -7307,13 +7333,13 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
         spDef = gBattleMons[battlerDef].spDefense;
     }
 
-    if (gBattleMoves[move].effect == EFFECT_PSYSHOCK || IS_MOVE_PHYSICAL(move)) // uses defense stat instead of sp.def
+    if (gBattleMoves[move].effect != EFFECT_MENTAL_STRIKE && (gBattleMoves[move].effect == EFFECT_PSYSHOCK || IS_MOVE_PHYSICAL(move))) // uses defense stat instead of sp.def
     {
         defStat = def;
         defStage = gBattleMons[battlerDef].statStages[STAT_DEF];
         usesDefStat = TRUE;
     }
-    else // is special
+    else // is special or is mental strike effect
     {
         defStat = spDef;
         defStage = gBattleMons[battlerDef].statStages[STAT_SPDEF];
@@ -7712,7 +7738,7 @@ u16 CalcTypeEffectivenessMultiplier(u16 move, u8 moveType, u8 battlerAtk, u8 bat
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
         modifier = CalcTypeEffectivenessMultiplierInternal(move, moveType, battlerAtk, battlerDef, recordAbilities, modifier);
-        if (gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE)
+        if (gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE || gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE_MOB_MENTALITY)
             modifier = CalcTypeEffectivenessMultiplierInternal(move, gBattleMoves[move].argument, battlerAtk, battlerDef, recordAbilities, modifier);
     }
 

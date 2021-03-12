@@ -1,4 +1,4 @@
-static const u8 sNoneDescription[] = _("No special ability.");
+#define ABILITY_CASH_GRAB 271static const u8 sNoneDescription[] = _("No special ability.");
 static const u8 sStenchDescription[] = _("Helps repel wild POKéMON.");
 static const u8 sDrizzleDescription[] = _("Summons rain in battle.");
 static const u8 sSpeedBoostDescription[] = _("Gradually boosts Speed.");
@@ -254,7 +254,15 @@ static const u8 sChillingNeighDescription[] = _("KOs boost Attack stat.");
 static const u8 sGrimNeighDescription[] = _("KOs boost Sp. Atk stat.");
 static const u8 sAsOneIceRiderDescription[] = _("Unnerve and Chilling Neigh.");
 static const u8 sAsOneShadowRiderDescription[] = _("Unnerve and Grim Neigh.");
-
+static const u8 sLowOddsDescription[] =      _("Lowers power but gets lucky.");
+static const u8 sNoFucksDescription[] =      _("Resets enemy stat boosts.");
+static const u8 sBuffooneryDescription[] =   _("Switches out on recharge.");
+static const u8 sCashGrabDescription[] =     _("Get cash items. Ups Pay Day.");
+static const u8 sEchoChamberDescription[] =  _("Repeating moves ups power.");
+static const u8 sArtilleryDescription[] =    _("Powers bomb/pulse moves.");
+static const u8 sContagiousDescription[] =   _("Infects foes.");
+static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
+static const u8 sOmnipotenceDescription[] =  _("ups all stats???.");
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
     [ABILITY_NONE] = _("-------"),
@@ -521,10 +529,19 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CURIOUS_MEDICINE] = _("CuriusMedicn"),
     [ABILITY_TRANSISTOR] = _("Transistor"),
     [ABILITY_DRAGONS_MAW] = _("Dragon's Maw"),
-    [ABILITY_CHILLING_NEIGH] = _("ChillngNeigh"),
+    [ABILITY_CHILLING_NEIGH] = 
     [ABILITY_GRIM_NEIGH] = _("Grim Neigh"),
     [ABILITY_AS_ONE_ICE_RIDER] = _("As One"),
     [ABILITY_AS_ONE_SHADOW_RIDER] = _("As One"),
+    [ABILITY_LOW_ODDS] = _("Low Odds"),
+    [ABILITY_NO_FUCKS] = _("No Hecks"),
+    [ABILITY_BUFFOONERY] = _("Buffoonery"),
+    [ABILITY_CASH_GRAB] = _("Cash Grab"),
+    [ABILITY_ECHO_CHAMBER] = _("Echo Chamber"),
+    [ABILITY_ARTILLERY] = _("Artillery"),
+    [ABILITY_CONTAGIOUS] = _("Contagious"),
+    [ABILITY_TRIANGULATE] = _("Triangulate"),
+    [ABILITY_OMNIPOTENCE] = _("Omnipotence"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -797,4 +814,13 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_GRIM_NEIGH] = sGrimNeighDescription,
     [ABILITY_AS_ONE_ICE_RIDER] = sAsOneIceRiderDescription,
     [ABILITY_AS_ONE_SHADOW_RIDER] = sAsOneShadowRiderDescription,
+    [ABILITY_LOW_ODDS] = sLowOddsDescription,
+    [ABILITY_NO_FUCKS] = sNoFucksDescription,
+    [ABILITY_BUFFOONERY] = sBuffooneryDescription,
+    [ABILITY_CASH_GRAB] = sCashGrabDescription,
+    [ABILITY_ECHO_CHAMBER] = sEchoChamberDescription,
+    [ABILITY_ARTILLERY] = sArtilleryescription,
+    [ABILITY_CONTAGIOUS] = sContagiousDescription,
+    [ABILITY_TRIANGULATE] = sTriangulateDescription,
+    [ABILITY_OMNIPOTENCE] = sOmnipotenceDescription,
 };
