@@ -788,5 +788,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
 [MOVE_ENVELOP] = _("Envelop"),
 [MOVE_FROSTBITE] = _("Frostbite"),
 [MOVE_ASSASSINATE] = _("Assassinate"),
+[MOVE_EJECT] = _("Eject"),
+[MOVE_VENT_KILL] = _("Vent Kill"),
 
 };

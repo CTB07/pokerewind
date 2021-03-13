@@ -11552,9 +11552,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 180,
 		.split = SPLIT_SPECIAL,
-		.z_move_effect = 0
 	},
 	
 	[MOVE_MOB_MENTALITY] =
@@ -11568,10 +11566,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 1,
 		.flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 100,
 		.split = SPLIT_PHYSICAL,
 		.argument = TYPE_ICE,
-		.z_move_effect = 0
 
 	},
 	
@@ -11586,9 +11582,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 100,
 		.split = SPLIT_PHYSICAL,
-		.z_move_effect = 0
 	},
 
 	[MOVE_MIC_DROP] =
@@ -11602,14 +11596,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 100,
 		.split = SPLIT_SPECIAL,
-		.z_move_effect = 0
 	},
 	
 	[MOVE_GUN] =
 	{	//ANIM TODO
-		.effect = EFFECT_0HKO,
+		.effect = EFFECT_OHKO,
 		.power = 1,
 		.type = TYPE_STEEL,
 		.accuracy = 30,
@@ -11618,9 +11610,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags =  FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_BALLISTIC,
-		.z_move_power = 180,
 		.split = SPLIT_PHYSICAL,
-		.z_move_effect = 0
 	},
 
 	[MOVE_SNAP] =
@@ -11634,9 +11624,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_BOTH,
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 180,
 		.split = SPLIT_SPECIAL,
-		.z_move_effect = 0
 	},
 
 	[MOVE_MORDANT_ACID] =
@@ -11650,9 +11638,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 130,
 		.split = SPLIT_SPECIAL,
-		.z_move_effect = 0
 	},
 
 	[MOVE_BEAR_HUG] =
@@ -11667,8 +11653,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
 		.split = SPLIT_STATUS,
-		.z_move_power = 0,
-		.z_move_effect = Z_EFFECT_ATK_UP_1,
 	},
 	
 	[MOVE_LENS_FLARE] =
@@ -11682,9 +11666,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 1,
 		.flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 160,
 		.split = SPLIT_PHYSICAL,
-		.z_move_effect = 0
 	},
 	
 	[MOVE_PIXIE_PETAL] =
@@ -11783,9 +11765,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 3,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 100,
 		.split = SPLIT_SPECIAL,
-		.z_move_effect = 0
 	},
 	
 
@@ -11800,9 +11780,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_USER,
 		.priority = 0,
 		.flags = FLAG_SNATCH_AFFECTED,
-		.z_move_power = 0,
 		.split = SPLIT_STATUS,
-		.z_move_effect = Z_EFFECT_RECOVER_HP
 	},
 
 	
@@ -11817,9 +11795,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_USER,
 		.priority = 0,
 		.flags = FLAG_SNATCH_AFFECTED,
-		.z_move_power = 0,
 		.split = SPLIT_STATUS,
-		.z_move_effect = Z_EFFECT_RESET_STATS
 	},
 	
 	[MOVE_MENTAL_STRIKE] =
@@ -11833,9 +11809,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 160,
 		.split = SPLIT_PHYSICAL,
-		.z_move_effect = 0
 	},
 
 	[MOVE_REWIND] =
@@ -11849,9 +11823,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 140,
 		.split = SPLIT_SPECIAL,
-		.z_move_effect = 0
 	},
 
     [MOVE_LEEK_SPIN] =
