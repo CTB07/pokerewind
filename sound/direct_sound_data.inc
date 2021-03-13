@@ -387,27 +387,27 @@ DirectSoundWaveData_8745A7C::
 	.incbin "sound/direct_sound_samples/8745A7C.bin"
 
 	.align 2
-Cry_Bulbasaur::
-	.incbin "sound/direct_sound_samples/cries/bulbasaur.bin"
+Cry_Paropeat::
+	.incbin "sound/direct_sound_samples/cries/paropeat.bin"
 
 	.align 2
-Cry_Ivysaur::
-	.incbin "sound/direct_sound_samples/cries/ivysaur.bin"
+Cry_Macaument::
+.incbin "sound/direct_sound_samples/cries/ivysaur.bin"
 
 	.align 2
-Cry_Venusaur::
-	.incbin "sound/direct_sound_samples/cries/venusaur.bin"
+Cry_Arguwint::
+.incbin "sound/direct_sound_samples/cries/venusaur.bin"
 
 	.align 2
-Cry_Charmander::
+Cry_Primatio::
 	.incbin "sound/direct_sound_samples/cries/charmander.bin"
 
 	.align 2
-Cry_Charmeleon::
+Cry_Opinimp::
 	.incbin "sound/direct_sound_samples/cries/charmeleon.bin"
 
 	.align 2
-Cry_Charizard::
+Cry_Temperilla::
 	.incbin "sound/direct_sound_samples/cries/charizard.bin"
 
 	.align 2

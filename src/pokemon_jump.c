@@ -297,7 +297,7 @@ EWRAM_DATA static struct PokemonJump2 *gUnknown_02022D00 = NULL;
 
 static const struct PokemonJumpMons gPkmnJumpSpecies[] =
 {
-    { .species = SPECIES_BULBASAUR,  .unk2 = 2, },
+    { .species = SPECIES_PAROPEAT,  .unk2 = 2, },
     { .species = SPECIES_CHARMANDER, .unk2 = 1, },
     { .species = SPECIES_SQUIRTLE,   .unk2 = 0, },
     { .species = SPECIES_CATERPIE,   .unk2 = 1, },

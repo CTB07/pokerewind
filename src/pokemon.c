@@ -313,12 +313,12 @@ const u16 gSpeciesToHoennPokedexNum[NUM_SPECIES] = // Assigns all species to the
 
 const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to the National Dex Index (Summary No. for National Dex)
 {
-    SPECIES_TO_NATIONAL(BULBASAUR),
-    SPECIES_TO_NATIONAL(IVYSAUR),
-    SPECIES_TO_NATIONAL(VENUSAUR),
-    SPECIES_TO_NATIONAL(CHARMANDER),
-    SPECIES_TO_NATIONAL(CHARMELEON),
-    SPECIES_TO_NATIONAL(CHARIZARD),
+    SPECIES_TO_NATIONAL(PAROPEAT),
+    SPECIES_TO_NATIONAL(MACAUMENT),
+    SPECIES_TO_NATIONAL(ARGUWINT),
+    SPECIES_TO_NATIONAL(PRIMATIO),
+    SPECIES_TO_NATIONAL(OPINIMP),
+    SPECIES_TO_NATIONAL(TEMPERILLA),
     SPECIES_TO_NATIONAL(SQUIRTLE),
     SPECIES_TO_NATIONAL(WARTORTLE),
     SPECIES_TO_NATIONAL(BLASTOISE),
@@ -1853,12 +1853,12 @@ const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 
 static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
 {
-    [SPECIES_BULBASAUR - 1] = 0x06,
-    [SPECIES_IVYSAUR - 1] = 0x17,
-    [SPECIES_VENUSAUR - 1] = 0x2f,
-    [SPECIES_CHARMANDER - 1] = 0x52,
-    [SPECIES_CHARMELEON - 1] = 0x25,
-    [SPECIES_CHARIZARD - 1] = 0x10,
+    [SPECIES_PAROPEAT - 1] = 0x06,
+    [SPECIES_MACAUMENT - 1] = 0x17,
+    [SPECIES_ARGUWINT - 1] = 0x2f,
+    [SPECIES_PRIMATIO - 1] = 0x52,
+    [SPECIES_OPINIMP - 1] = 0x25,
+    [SPECIES_TEMPERILLA - 1] = 0x10,
     [SPECIES_SQUIRTLE - 1] = 0x0b,
     [SPECIES_WARTORTLE - 1] = 0x13,
     [SPECIES_BLASTOISE - 1] = 0x19,
@@ -7399,10 +7399,10 @@ static void Task_PokemonSummaryAnimateAfterDelay(u8 taskId)
 
 void BattleAnimateFrontSprite(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
 {
-    if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
-        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
-    else
-        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3);
+    //if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
+    DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
+    /*else
+        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3);*/
 }
 
 void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
@@ -7451,7 +7451,8 @@ void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, 
 
 void PokemonSummaryDoMonAnimation(struct Sprite* sprite, u16 species, bool8 oneFrame)
 {
-    if (!oneFrame && HasTwoFramesAnimation(species))
+    sprite->callback = SpriteCallbackDummy;
+    /*if (!oneFrame && HasTwoFramesAnimation(species))
         StartSpriteAnim(sprite, 1);
     if (sMonAnimationDelayTable[species - 1] != 0)
     {
@@ -7465,7 +7466,7 @@ void PokemonSummaryDoMonAnimation(struct Sprite* sprite, u16 species, bool8 oneF
     else
     {
         StartMonSummaryAnimation(sprite, sMonFrontAnimIdsTable[species - 1]);
-    }
+    }*/
 }
 
 void StopPokemonAnimationDelayTask(void)
@@ -7477,15 +7478,15 @@ void StopPokemonAnimationDelayTask(void)
 
 void BattleAnimateBackSprite(struct Sprite* sprite, u16 species)
 {
-    if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
-    {
-        sprite->callback = SpriteCallbackDummy;
-    }
+    /*if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
+    {*/
+    sprite->callback = SpriteCallbackDummy;
+    /*}
     else
     {
         LaunchAnimationTaskForBackSprite(sprite, GetSpeciesBackAnimSet(species));
         sprite->callback = SpriteCallbackDummy_2;
-    }
+    }*/
 }
 
 u8 sub_806EF08(u8 arg0)

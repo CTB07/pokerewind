@@ -1530,7 +1530,8 @@ static void sub_8140174(void)
 
 static void EvoScene_DoMonAnimation(u8 monSpriteId, u16 speciesId)
 {
-    DoMonFrontSpriteAnimation(&gSprites[monSpriteId], speciesId, FALSE, 0);
+    //DoMonFrontSpriteAnimation
+    BattleAnimateFrontSprite(&gSprites[monSpriteId], speciesId, FALSE, 0);
 }
 
 static bool32 EvoScene_IsMonAnimFinished(u8 monSpriteId)

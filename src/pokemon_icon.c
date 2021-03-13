@@ -25,13 +25,13 @@ static u8 CreateMonIconSprite(struct MonIconSpriteTemplate *, s16, s16, u8);
 
 const u8 *const gMonIconTable[] =
 {
-    [SPECIES_NONE] = gMonIcon_Bulbasaur,
-    [SPECIES_BULBASAUR] = gMonIcon_Bulbasaur,
-    [SPECIES_IVYSAUR] = gMonIcon_Ivysaur,
-    [SPECIES_VENUSAUR] = gMonIcon_Venusaur,
-    [SPECIES_CHARMANDER] = gMonIcon_Charmander,
-    [SPECIES_CHARMELEON] = gMonIcon_Charmeleon,
-    [SPECIES_CHARIZARD] = gMonIcon_Charizard,
+    [SPECIES_NONE] = gMonIcon_Paropeat,
+    [SPECIES_PAROPEAT] = gMonIcon_Paropeat,
+    [SPECIES_MACAUMENT] = gMonIcon_Macaument,
+    [SPECIES_ARGUWINT] = gMonIcon_Arguwint,
+    [SPECIES_PRIMATIO] = gMonIcon_Primatio,
+    [SPECIES_OPINIMP] = gMonIcon_Opinimp,
+    [SPECIES_TEMPERILLA] = gMonIcon_Temperilla,
     [SPECIES_SQUIRTLE] = gMonIcon_Squirtle,
     [SPECIES_WARTORTLE] = gMonIcon_Wartortle,
     [SPECIES_BLASTOISE] = gMonIcon_Blastoise,
@@ -1242,12 +1242,12 @@ const u8 *const gMonIconTableFemale[] =
 
 const u8 gMonIconPaletteIndices[] =
 {
-    [SPECIES_BULBASAUR] = 4,
-    [SPECIES_IVYSAUR] = 4,
-    [SPECIES_VENUSAUR] = 4,
-    [SPECIES_CHARMANDER] = 0,
-    [SPECIES_CHARMELEON] = 0,
-    [SPECIES_CHARIZARD] = 0,
+    [SPECIES_PAROPEAT] = 1,
+    [SPECIES_MACAUMENT] = 5,
+    [SPECIES_ARGUWINT] = 5,
+    [SPECIES_PRIMATIO] = 0,
+    [SPECIES_OPINIMP] = 2,
+    [SPECIES_CHARIZARD] = 2,
     [SPECIES_SQUIRTLE] = 0,
     [SPECIES_WARTORTLE] = 2,
     [SPECIES_BLASTOISE] = 2,

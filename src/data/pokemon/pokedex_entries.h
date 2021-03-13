@@ -12,72 +12,72 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_BULBASAUR] =
+    [NATIONAL_DEX_PAROPEAT] =
     {
-        .categoryName = _("Seed"),
+        .categoryName = _("Echo"),
         .height = 7,
         .weight = 69,
-        .description = gBulbasaurPokedexText,
+        .description = gParopeatPokedexText,
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_IVYSAUR] =
+    [NATIONAL_DEX_MACAUMENT] =
     {
-        .categoryName = _("Seed"),
+        .categoryName = _("Dialogue"),
         .height = 10,
         .weight = 130,
-        .description = gIvysaurPokedexText,
+        .description = gMacaumentPokedexText,
         .pokemonScale = 335,
         .pokemonOffset = 13,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_VENUSAUR] =
+    [NATIONAL_DEX_ARGUWINT] =
     {
-        .categoryName = _("Seed"),
+        .categoryName = _("Scholar"),
         .height = 20,
         .weight = 1000,
-        .description = gVenusaurPokedexText,
+        .description = gArguwintPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
         .trainerOffset = 6,
     },
 
-    [NATIONAL_DEX_CHARMANDER] =
+    [NATIONAL_DEX_PRIMATIO] =
     {
-        .categoryName = _("Lizard"),
+        .categoryName = _("Feedback"),
         .height = 6,
         .weight = 85,
-        .description = gCharmanderPokedexText,
+        .description = gPrimatioPokedexText,
         .pokemonScale = 444,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_CHARMELEON] =
+    [NATIONAL_DEX_OPINIMP] =
     {
-        .categoryName = _("Flame"),
+        .categoryName = _("Conflicted"),
         .height = 11,
         .weight = 190,
-        .description = gCharmeleonPokedexText,
+        .description = gOpinimpPokedexText,
         .pokemonScale = 302,
         .pokemonOffset = 9,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_CHARIZARD] =
+    [NATIONAL_DEX_TEMPERILLA] =
     {
-        .categoryName = _("Flame"),
+        .categoryName = _("Deranged"),
         .height = 17,
         .weight = 905,
-        .description = gCharizardPokedexText,
+        .description = gTemperillaPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
