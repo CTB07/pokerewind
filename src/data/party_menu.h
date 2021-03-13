@@ -717,6 +717,7 @@ enum
     FIELD_MOVE_MILK_DRINK,
     FIELD_MOVE_SOFT_BOILED,
     FIELD_MOVE_SWEET_SCENT,
+    FIELD_MOVE_REWIND,
 };
 
 // What a weird choice of table termination;
@@ -761,6 +762,7 @@ struct
     [MENU_FIELD_MOVES + FIELD_MOVE_MILK_DRINK] = {gMoveNames[MOVE_MILK_DRINK], CursorCb_FieldMove},
     [MENU_FIELD_MOVES + FIELD_MOVE_SOFT_BOILED] = {gMoveNames[MOVE_SOFT_BOILED], CursorCb_FieldMove},
     [MENU_FIELD_MOVES + FIELD_MOVE_SWEET_SCENT] = {gMoveNames[MOVE_SWEET_SCENT], CursorCb_FieldMove},
+    [MENU_FIELD_MOVES + FIELD_MOVE_REWIND] = {gMoveNames[MOVE_REWIND], CursorCb_FieldMove},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};

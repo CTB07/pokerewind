@@ -984,6 +984,52 @@ u8 TrySetDiveWarp(void)
     return 0;
 }
 
+bool8 TryDoRewindWarp(struct MapPosition *position, u16 metatileBehavior)
+{
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
+    {
+        if (SetDiveWarpEmerge(position->x - 7, position->y - 7))
+        {
+            StoreInitialPlayerAvatarState();
+            DoRewindWarp();
+            PlaySE(SE_M_SUPERSONIC);
+            return TRUE;
+        }
+    }
+    else if (MetatileBehavior_IsRewindable(metatileBehavior) == TRUE)
+    {
+        if (SetRewindWarpDive(position->x - 7, position->y - 7))
+        {
+            StoreInitialPlayerAvatarState();
+            DoRewindWarp();
+            PlaySE(SE_M_SUPERSONIC);
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+
+u8 TrySetRewindWarp(void)
+{
+    s16 x, y;
+    u8 metatileBehavior;
+
+    PlayerGetDestCoords(&x, &y);
+    metatileBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
+    {
+        if (SetRewindWarpEmerge(x - 7, y - 7) == TRUE)
+            return 1;
+    }
+    else if (MetatileBehavior_IsRewindable(metatileBehavior) == TRUE)
+    {
+        if (SetRewindWarpDive(x - 7, y - 7) == TRUE)
+            return 2;
+    }
+    return 0;
+}
+
 const u8 *GetObjectEventScriptPointerPlayerFacing(void)
 {
     u8 direction;
