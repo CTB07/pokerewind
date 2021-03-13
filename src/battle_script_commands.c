@@ -1363,12 +1363,16 @@ static void Cmd_attackcanceler(void)
         return;
     }
     else if (gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST)
-             && (gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_25
+             && ( ( (gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_25
              || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33
 	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_50
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33_STATUS
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33_STATUS) && GetBattlerAbility(gBattlerAttacker) != ABILITY_ROCK_HEAD)
 	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_THRASH
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_IF_MISS)
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_IF_MISS
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_MEMENTO
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_HEALING_WISH
+	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_BELLY_DRUM
+             || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_SUBSTITUTE)
     {
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);

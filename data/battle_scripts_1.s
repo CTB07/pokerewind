@@ -374,6 +374,9 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMeteorBeam
 	.4byte BattleScript_EffectDivebomb
 	.4byte BattleScript_EffectTerrainHit
+	.4byte BattleScript_EffectMordantAcid
+	.4byte BattleScript_EffectEject
+	.4byte BattleScript_EffectTripleSuperEffective
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -1102,6 +1105,7 @@ BattleScript_EffectFinalGambit:
 	jumpifmovehadnoeffect BattleScript_MoveEnd
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectEject:
 BattleScript_EffectHitSwitchTarget:
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
@@ -4854,6 +4858,7 @@ BattleScript_EffectWaterSport::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectMordantAcid::
 BattleScript_EffectPoisonFang::
 	setmoveeffect MOVE_EFFECT_TOXIC
 	goto BattleScript_EffectHit
@@ -7250,6 +7255,15 @@ BattleScript_BattlerAbilityStatRaiseOnSwitchIn::
 	printstring STRINGID_BATTLERABILITYRAISEDSTAT
 	waitmessage 0x40
 	end3
+
+
+BattleScript_BattlerAbilityNoFucks::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_RESETSTARGETSSTATLEVELS
+	waitmessage 0x40
+	end3
+
 
 BattleScript_TargetAbilityStatRaiseOnMoveEnd::
 	call BattleScript_AbilityPopUp

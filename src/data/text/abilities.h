@@ -262,7 +262,7 @@ static const u8 sEchoChamberDescription[] =  _("Repeating moves ups power.");
 static const u8 sArtilleryDescription[] =    _("Powers bomb/pulse moves.");
 static const u8 sContagiousDescription[] =   _("Infects foes.");
 static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
-static const u8 sOmnipotenceDescription[] =  _("ups all stats???.");
+static const u8 sOmnipotenceDescription[] =  _("Ups random stat on switch.");
 static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
