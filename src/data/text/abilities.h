@@ -1,4 +1,4 @@
-#define ABILITY_CASH_GRAB 271static const u8 sNoneDescription[] = _("No special ability.");
+static const u8 sNoneDescription[] = _("No special ability.");
 static const u8 sStenchDescription[] = _("Helps repel wild POKéMON.");
 static const u8 sDrizzleDescription[] = _("Summons rain in battle.");
 static const u8 sSpeedBoostDescription[] = _("Gradually boosts Speed.");
@@ -825,5 +825,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_CONTAGIOUS] = sContagiousDescription,
     [ABILITY_TRIANGULATE] = sTriangulateDescription,
     [ABILITY_OMNIPOTENCE] = sOmnipotenceDescription,
-    [ABILITY_THERAPIST] = sTherapistDescription[]
+    [ABILITY_THERAPIST] = sTherapistDescription,
 };
