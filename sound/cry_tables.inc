@@ -3,10 +3,10 @@
 gCryTable:: @ 869DCF4
 	cry Cry_Paropeat  @ 869DCF4
 	cry Cry_Macaument  @ 869DD00
-	cry Cry_Venusaur  @ 869DD0C
-	cry Cry_Charmander  @ 869DD18
-	cry Cry_Charmeleon  @ 869DD24
-	cry Cry_Charizard  @ 869DD30
+	cry Cry_Arguwint  @ 869DD0C
+	cry Cry_Primatio  @ 869DD18
+	cry Cry_Opinimp  @ 869DD24
+	cry Cry_Temperilla  @ 869DD30
 	cry Cry_Squirtle  @ 869DD3C
 	cry Cry_Wartortle  @ 869DD48
 	cry Cry_Blastoise  @ 869DD54
@@ -1277,10 +1277,10 @@ gCryTable:: @ 869DCF4
 gCryTable2:: @ 869EF24
 	cry2 Cry_Paropeat  @ 869EF24
 	cry2 Cry_Macaument  @ 869EF30
-	cry2 Cry_Venusaur  @ 869EF3C
-	cry2 Cry_Charmander  @ 869EF48
-	cry2 Cry_Charmeleon  @ 869EF54
-	cry2 Cry_Charizard  @ 869EF60
+	cry2 Cry_Arguwint  @ 869EF3C
+	cry2 Cry_Primatio  @ 869EF48
+	cry2 Cry_Opinimp  @ 869EF54
+	cry2 Cry_Temperilla  @ 869EF60
 	cry2 Cry_Squirtle  @ 869EF6C
 	cry2 Cry_Wartortle  @ 869EF78
 	cry2 Cry_Blastoise  @ 869EF84

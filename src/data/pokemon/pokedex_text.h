@@ -5,40 +5,38 @@ const u8 gDummyPokedexText[] = _(
     "at this time.");
 
 const u8 gParopeatPokedexText[] = _(
-    "Paropeat mimic everything they hear.\n"
+    "PAROPEAT mimic everything they hear.\n"
     "They repeat these phrases and sentences\n" 
     "so often that the original meanings are\n" 
     "usually lost forever.");
 
 const u8 gMacaumentPokedexText[] = _(
     "Finally exiting their infancy stage,\n" 
-    "Macaument now have the capacity to form\n" 
+    "MACAUMENT now have the capacity to form\n" 
     "original thoughts, spending most of their\n" 
     "time commenting on menial things.");
 
-const u8 gVenusaurPokedexText[] = _(
-    "Venusaur's flower is said to take on vivid\n"
-    "colors if it gets plenty of nutrition and\n"
-    "sunlight. The flower's aroma soothes the\n"
-    "emotions of people.");
+const u8 gArguwintPokedexText[] = _(
+    "The wits of this Pokemon have\n"
+    "surpassed even ancient philosophers. You\n" 
+    "can probably spot them debating with each\n "
+    "other over the essence of the universe.");
 
-const u8 gCharmanderPokedexText[] = _(
-    "The flame that burns at the tip of its\n"
-    "tail is an indication of its emotions.\n"
-    "The flame wavers when Charmander is\n"
-    "happy, and blazes when it is enraged.");
+const u8 gPrimatioPokedexText[] = _(
+    "Young and innocent, this Pokemon is known\n" 
+    "to be extremely loud about its preferences.\n"
+    "If it sees something it doesn't like, it will\n"
+    "not hesistate to let everything around it know.");
 
-const u8 gCharmeleonPokedexText[] = _(
-    "Without pity, its sharp claws destroy foes.\n"
-    "If it encounters a strong enemy, it\n"
-    "becomes agitated, and the flame on its\n"
-    "tail flares with a bluish white color.");
+const u8 gOpinimpPokedexText[] = _(
+    "Evolution has given this Pokemon a new\n" 
+    "perspective on matters, but while volatile, it\n" 
+    "is mostly able to keep itself /nunder control.");
 
-const u8 gCharizardPokedexText[] = _(
-    "A Charizard flies about in search of\n"
-    "strong opponents. It breathes intense\n"
-    "flames that can melt any material. However,\n"
-    "it will never torch a weaker foe.");
+const u8 gTemperillaPokedexText[] = _(
+    "Infamous for having wild arguments with itself,\n" 
+    "this Pokemon's mood and /nopinion can shift on a\n" 
+    "dime, and /nusually for the worse.");
 
 const u8 gSquirtlePokedexText[] = _(
     "Its shell is not just for protection.\n"

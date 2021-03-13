@@ -14,39 +14,32 @@ static const union AnimCmd sAnim_PAROPEAT_1[] =
 
 static const union AnimCmd sAnim_MACAUMENT_1[] =
 {
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_ARGUWINT_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_PRIMATIO_1[] =
+{
 ANIMCMD_FRAME(0, 1),
 ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_VENUSAUR_1[] =
+static const union AnimCmd sAnim_OPINIMP_1[] =
 {
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 25),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_CHARMANDER_1[] =
+static const union AnimCmd sAnim_TEMPERILLA_1[] =
 {
-    ANIMCMD_FRAME(0, 2),
-    ANIMCMD_FRAME(1, 46),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_CHARMELEON_1[] =
-{
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 25),
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_CHARIZARD_1[] =
-{
-    ANIMCMD_FRAME(1, 40),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_SQUIRTLE_1[] =
@@ -9144,24 +9137,24 @@ sAnim_GeneralFrame0,
 sAnim_MACAUMENT_1,
 };
 
-static const union AnimCmd *const sAnims_VENUSAUR[] ={
-    sAnim_GeneralFrame0,
-    sAnim_VENUSAUR_1,
+static const union AnimCmd *const sAnims_ARGUWINT[] ={
+sAnim_GeneralFrame0,
+sAnim_ARGUWINT_1,
 };
 
-static const union AnimCmd *const sAnims_CHARMANDER[] ={
-    sAnim_GeneralFrame0,
-    sAnim_CHARMANDER_1,
+static const union AnimCmd *const sAnims_PRIMATIO[] ={
+sAnim_GeneralFrame0,
+sAnim_PRIMATIO_1,
 };
 
-static const union AnimCmd *const sAnims_CHARMELEON[] ={
-    sAnim_GeneralFrame0,
-    sAnim_CHARMELEON_1,
+static const union AnimCmd *const sAnims_OPINIMP[] ={
+sAnim_GeneralFrame0,
+sAnim_OPINIMP_1,
 };
 
-static const union AnimCmd *const sAnims_CHARIZARD[] ={
-    sAnim_GeneralFrame0,
-    sAnim_CHARIZARD_1,
+static const union AnimCmd *const sAnims_TEMPERILLA[] ={
+sAnim_GeneralFrame0,
+sAnim_TEMPERILLA_1,
 };
 
 static const union AnimCmd *const sAnims_SQUIRTLE[] ={
@@ -14415,10 +14408,10 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(NONE),
     ANIM_CMD(PAROPEAT),
     ANIM_CMD(MACAUMENT),
-    ANIM_CMD(VENUSAUR),
-    ANIM_CMD(CHARMANDER),
-    ANIM_CMD(CHARMELEON),
-    ANIM_CMD(CHARIZARD),
+    ANIM_CMD(ARGUWINT),
+    ANIM_CMD(PRIMATIO),
+    ANIM_CMD(OPINIMP),
+    ANIM_CMD(TEMPERILLA),
     ANIM_CMD(SQUIRTLE),
     ANIM_CMD(WARTORTLE),
     ANIM_CMD(BLASTOISE),

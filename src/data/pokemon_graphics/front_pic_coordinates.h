@@ -7,33 +7,33 @@ const struct MonCoords gMonFrontPicCoords[] =
     },
     [SPECIES_PAROPEAT] =
     {
-    .size = 0x45,
-    .y_offset = 8,
+        .size = 0x45,
+        .y_offset = 8,
     },
     [SPECIES_MACAUMENT] =
     {
-    .size = 0x45,
-    .y_offset = 7,
-    },
-    [SPECIES_VENUSAUR] =
-    {
-        .size = 0x88,
-        .y_offset = 3,
-    },
-    [SPECIES_CHARMANDER] =
-    {
-        .size = 0x55,
-        .y_offset = 10,
-    },
-    [SPECIES_CHARMELEON] =
-    {
-        .size = 0x66,
+        .size = 0x45,
         .y_offset = 7,
     },
-    [SPECIES_CHARIZARD] =
+    [SPECIES_ARGUWINT] =
     {
-        .size = 0x88,
-        .y_offset = 0,
+        .size = 0x45,
+        .y_offset = 2,
+    },
+    [SPECIES_PRIMATIO] =
+    {
+        .size = 0x45,
+        .y_offset = 3,
+    },
+    [SPECIES_OPINIMP] =
+    {
+        .size = 0x45,
+        .y_offset = 7,
+    },
+    [SPECIES_TEMPERILLA] =
+    {
+    .size = 0x45,
+    .y_offset = 0,
     },
     [SPECIES_SQUIRTLE] =
     {

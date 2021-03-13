@@ -10,22 +10,22 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = 0x75,
         .y_offset = 0,
     },
-    [SPECIES_IVYSAUR] =
+    [SPECIES_MACAUMENT] =
     {
         .size = 0x87,
         .y_offset = 9,
     },
-    [SPECIES_VENUSAUR] =
+    [SPECIES_ARGUWINT] =
     {
         .size = 0x86,
         .y_offset = 10,
     },
-    [SPECIES_CHARMANDER] =
+    [SPECIES_PRIMATIO] =
     {
         .size = 0x66,
         .y_offset = 9,
     },
-    [SPECIES_CHARMELEON] =
+    [SPECIES_OPINIMP] =
     {
         .size = 0x76,
         .y_offset = 8,
