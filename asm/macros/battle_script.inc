@@ -1894,3 +1894,8 @@
 	1:
 	.endm
 
+	.macro jumpifoverhalfhp ptr:req
+	various \battler, VARIOUS_JUMP_IF_OVER_HALF_HP
+	.4byte \ptr
+	.endm
+

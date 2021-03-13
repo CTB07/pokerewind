@@ -3523,7 +3523,7 @@ static bool32 ShouldChangeFormHpBased(u32 battler)
         {ABILITY_SHIELDS_DOWN, SPECIES_MINIOR_METEOR_ORANGE, SPECIES_MINIOR_CORE_ORANGE, 2},
         {ABILITY_SHIELDS_DOWN, SPECIES_MINIOR_METEOR_VIOLET, SPECIES_MINIOR_CORE_VIOLET, 2},
         {ABILITY_SHIELDS_DOWN, SPECIES_MINIOR_METEOR_YELLOW, SPECIES_MINIOR_CORE_YELLOW, 2},
-        {ABILITY_SCHOOLING, SPECIES_WISHIWASHI_SCHOOL, SPECIES_WISHIWASHI, 4},
+        {ABILITY_SCHOOLING, SPECIES_HUMONGEC_SCHOOLING, SPECIES_HUMONGEC, 4},
     };
     u32 i;
 
@@ -4063,6 +4063,39 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_NO_FUCKS:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+		u32 stat, opposingBattler;
+                opposingBattler = BATTLE_OPPOSITE(battler);
+                for (i = 0; i < 2; opposingBattler ^= BIT_SIDE, i++)
+                {
+                    for (stat = 0; stat < NUM_BATTLE_STATS; stat++)
+                    {
+                        if (gBattleMons[opposingBattler].statStages[i] != 6)
+                            break;
+                    }
+                    if (stat != NUM_BATTLE_STATS)
+                    {
+                        for (stat = 0; stat < NUM_BATTLE_STATS; stat++)
+                            gBattleMons[opposingBattler].statStages[i] = 6;
+                    }
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+		BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityNoFucks);
+                effect++;
+		}
+            }
+            break;
+        case ABILITY_OMNIPOTENCE:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                i = Random() % NATURE_STATS + STAT_ATK; //the nature stats are atk def sate sdef spe. nature stats  is 5. +1 because we can't stat boost hp
+                SET_STATCHANGER(i, 4, FALSE);
+                BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
+                effect++;
+            }
+            break;
         }
         break;
     case ABILITYEFFECT_ENDTURN: // 1
@@ -4523,6 +4556,36 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 }
             }
             break;
+
+        case ABILITY_CONTAGIOUS:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && IsBattlerAlive(gBattlerAttacker)
+             && TARGET_TURN_DAMAGED
+             && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
+            {
+                switch (gBattleMons[gBattlerAttacker].ability)
+                {
+                case ABILITY_CONTAGIOUS:
+                case ABILITY_BATTLE_BOND:
+                case ABILITY_COMATOSE:
+                case ABILITY_DISGUISE:
+                case ABILITY_MULTITYPE:
+                case ABILITY_POWER_CONSTRUCT:
+                case ABILITY_RKS_SYSTEM:
+                case ABILITY_SCHOOLING:
+                case ABILITY_SHIELDS_DOWN:
+                case ABILITY_STANCE_CHANGE:
+                    break;
+                default:
+                    gLastUsedAbility = gBattleMons[gBattlerAttacker].ability = ABILITY_CONTAGIOUS;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_MummyActivates;
+                    effect++;
+                    break;
+                }
+            }
+            goto POISON_POINT;
+	    break;
         case ABILITY_ANGER_POINT:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && gIsCriticalHit
@@ -6889,6 +6952,10 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_FLYING && gBattleStruct->ateBoost[battlerAtk])
             MulModifier(&modifier, UQ_4_12(1.2));
         break;
+    case ABILITY_TRIANGULATE:
+        if (moveType == TYPE_PSYCHIC && gBattleStruct->ateBoost[battlerAtk])
+            MulModifier(&modifier, UQ_4_12(1.2));
+        break;
     case ABILITY_NORMALIZE:
         if (moveType == TYPE_NORMAL && gBattleStruct->ateBoost[battlerAtk])
             MulModifier(&modifier, UQ_4_12(1.2));
@@ -6908,6 +6975,22 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_DRAGONS_MAW:
         if (moveType == TYPE_DRAGON)
             MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_LOW_ODDS:
+        if (gBattleMoves[gCurrentMove].secondaryEffectChance !=0 && gBattleMoves[gCurrentMove].secondaryEffectChance != 100)
+            MulModifier(&modifier, UQ_4_12(0.8));
+        break;
+    case ABILITY_CASH_GRAB:
+        if (gBattleMoves[move].effect == EFFECT_PAY_DAY)
+           MulModifier(&modifier, UQ_4_12(2.0));
+        break;
+    case ABILITY_ECHO_CHAMBER
+        percentBoost = min(gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
+        MulModifier(&finalModifier, UQ_4_12(1.0) + sPercentToModifier[percentBoost]);
+        break;
+    case ABILITY_ARTILLERY:
+        if (gBattleMoves[move].flags & FLAG_MEGA_LAUNCHER_BOOST || gBattleMoves[move].flags & FLAG_BALLISTIC)
+           MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }
 
@@ -7117,6 +7200,24 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
         }
     }
+    else if (gBattleMoves[move].effect == EFFECT_BODY_PRESS)
+    {
+        if (IS_MOVE_PHYSICAL(move))
+        {
+            atkStat = gBattleMons[battlerAtk].defense;
+            atkStage = gBattleMons[battlerAtk].statStages[STAT_DEF];
+        }
+        else
+        {
+            atkStat = gBattleMons[battlerAtk].spDefense;
+            atkStage = gBattleMons[battlerAtk].statStages[STAT_SPDEF];
+        }
+    }
+    else if (gBattleMoves[move].effect == EFFECT_SPIN_DASH)
+    {
+        atkStat = gBattleMons[battlerAtk].speed;
+        atkStage = gBattleMons[battlerAtk].statStages[STAT_SPEED];
+    }
     else
     {
         if (IS_MOVE_PHYSICAL(move))
@@ -7307,13 +7408,13 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
         spDef = gBattleMons[battlerDef].spDefense;
     }
 
-    if (gBattleMoves[move].effect == EFFECT_PSYSHOCK || IS_MOVE_PHYSICAL(move)) // uses defense stat instead of sp.def
+    if (gBattleMoves[move].effect != EFFECT_MENTAL_STRIKE && (gBattleMoves[move].effect == EFFECT_PSYSHOCK || IS_MOVE_PHYSICAL(move))) // uses defense stat instead of sp.def
     {
         defStat = def;
         defStage = gBattleMons[battlerDef].statStages[STAT_DEF];
         usesDefStat = TRUE;
     }
-    else // is special
+    else // is special or is mental strike effect
     {
         defStat = spDef;
         defStage = gBattleMons[battlerDef].statStages[STAT_SPDEF];
@@ -7636,6 +7737,12 @@ static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 batt
         mod = UQ_4_12(1.0);
     if (gBattleMoves[move].effect == EFFECT_FREEZE_DRY && defType == TYPE_WATER)
         mod = UQ_4_12(2.0);
+    if (gBattleMoves[move].effect == EFFECT_MORDANT_ACID && defType == TYPE_STEEL)
+        mod = UQ_4_12(2.0);
+    if (gBattleMoves[move].effect == EFFECT_EJECT && defType == TYPE_PSYCHIC)
+        mod = UQ_4_12(2.0);
+    if (gBattleMoves[move].effect == EFFECT_TRIPLE_SUPER_EFFECTIVE && mod = UQ_4_12(2.0))
+        mod = UQ_4_12(3.0);
     if (moveType == TYPE_GROUND && defType == TYPE_FLYING && IsBattlerGrounded(battlerDef) && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);
 
@@ -7712,7 +7819,7 @@ u16 CalcTypeEffectivenessMultiplier(u16 move, u8 moveType, u8 battlerAtk, u8 bat
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
         modifier = CalcTypeEffectivenessMultiplierInternal(move, moveType, battlerAtk, battlerDef, recordAbilities, modifier);
-        if (gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE)
+        if (gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE || gBattleMoves[move].effect == EFFECT_TWO_TYPED_MOVE_MOB_MENTALITY)
             modifier = CalcTypeEffectivenessMultiplierInternal(move, gBattleMoves[move].argument, battlerAtk, battlerDef, recordAbilities, modifier);
     }
 

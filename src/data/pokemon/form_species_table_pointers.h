@@ -1,5 +1,12 @@
 const u16 *const gFormSpeciesIdTables[NUM_SPECIES] =
 {
+    [SPECIES_DISPUTRAW] = sDisputrawFormSpeciesIdTable,
+    [SPECIES_DISPUTRAW_SPECIAL] = sDisputrawFormSpeciesIdTable,
+    [SPECIES_HUMONGEC] = sHumongecFormSpeciesIdTable,
+    [SPECIES_HUMONGEC_SCHOOLING] = sHumongecFormSpeciesIdTable,
+//
+    [SPECIES_WISHIWASHI] = sWishiwashiFormSpeciesIdTable,
+    [SPECIES_AEGISLASH] = sAegislashFormSpeciesIdTable,
     [SPECIES_VENUSAUR] = sVenusaurFormSpeciesIdTable,
     [SPECIES_CHARIZARD] = sCharizardFormSpeciesIdTable,
     [SPECIES_BLASTOISE] = sBlastoiseFormSpeciesIdTable,
@@ -113,7 +120,6 @@ const u16 *const gFormSpeciesIdTables[NUM_SPECIES] =
     [SPECIES_FLORGES] = sFlorgesFormSpeciesIdTable,
     [SPECIES_FURFROU] = sFurfrouFormSpeciesIdTable,
     [SPECIES_MEOWSTIC] = sMeowsticFormSpeciesIdTable,
-    [SPECIES_AEGISLASH] = sAegislashFormSpeciesIdTable,
     [SPECIES_PUMPKABOO] = sPumpkabooFormSpeciesIdTable,
     [SPECIES_GOURGEIST] = sGourgeistFormSpeciesIdTable,
     [SPECIES_XERNEAS] = sXerneasFormSpeciesIdTable,
@@ -123,7 +129,6 @@ const u16 *const gFormSpeciesIdTables[NUM_SPECIES] =
     [SPECIES_ORICORIO] = sOricorioFormSpeciesIdTable,
     [SPECIES_ROCKRUFF] = sRockruffFormSpeciesIdTable,
     [SPECIES_LYCANROC] = sLycanrocFormSpeciesIdTable,
-    [SPECIES_WISHIWASHI] = sWishiwashiFormSpeciesIdTable,
     [SPECIES_SILVALLY] = sSilvallyFormSpeciesIdTable,
     [SPECIES_MINIOR] = sMiniorFormSpeciesIdTable,
     [SPECIES_MIMIKYU] = sMimikyuFormSpeciesIdTable,

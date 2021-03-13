@@ -1237,5 +1237,5 @@ static const u16 sTMHMMoves[] =
     [ITEM_HM05 - ITEM_TM01] = MOVE_FLASH,
     [ITEM_HM06 - ITEM_TM01] = MOVE_ROCK_SMASH,
     [ITEM_HM07 - ITEM_TM01] = MOVE_WATERFALL,
-    [ITEM_HM08 - ITEM_TM01] = MOVE_DIVE,
+    [ITEM_HM08 - ITEM_TM01] = MOVE_DIVE, //this is the table of all HM and TM moves.
 };
