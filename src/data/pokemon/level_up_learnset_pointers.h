@@ -901,8 +901,8 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_CALYREX] = sCalyrexLevelUpLearnset,
     // Megas
     [SPECIES_VENUSAUR_MEGA] = sArguwintLevelUpLearnset,
-    [SPECIES_CHARIZARD_MEGA_X] = sCharizardLevelUpLearnset,
-    [SPECIES_CHARIZARD_MEGA_Y] = sCharizardLevelUpLearnset,
+    [SPECIES_CHARIZARD_MEGA_X] = sTemperillaLevelUpLearnset,
+    [SPECIES_CHARIZARD_MEGA_Y] = sTemperillaLevelUpLearnset,
     [SPECIES_BLASTOISE_MEGA] = sBlastoiseLevelUpLearnset,
     [SPECIES_BEEDRILL_MEGA] = sBeedrillLevelUpLearnset,
     [SPECIES_PIDGEOT_MEGA] = sPidgeotLevelUpLearnset,
