@@ -360,5 +360,6 @@ extern const u8 BattleScript_SandSpitActivates[];
 extern const u8 BattleScript_PerishBodyActivates[];
 extern const u8 BattleScript_ActivateAsOne[];
 extern const u8 BattleScript_RaiseStatOnFaintingTarget[];
+extern const u8 BattleScript_BattlerAbilityNoFucks[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

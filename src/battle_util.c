@@ -4090,7 +4090,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
-                i = Random() % NATURE_STATS + STAT_ATK; //the nature stats are atk def sate sdef spe. nature stats  is 5. +1 because we can't stat boost hp
+                i = (Random() % 5) + 1; //the stats used are atk def sate sdef spe. Rand 5 gives no from 0-4. +1 because we can't stat boost hp - gives us stats 
                 SET_STATCHANGER(i, 4, FALSE);
                 BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
                 effect++;
