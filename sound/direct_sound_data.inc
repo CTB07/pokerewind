@@ -491,15 +491,15 @@ Cry_Raichu::
 	.incbin "sound/direct_sound_samples/cries/raichu.bin"
 
 	.align 2
-Cry_Sandshrew::
+Cry_Grubfeed::
 	.incbin "sound/direct_sound_samples/cries/sandshrew.bin"
 
 	.align 2
-Cry_Sandslash::
+Cry_Kwizbee::
 	.incbin "sound/direct_sound_samples/cries/sandslash.bin"
 
 	.align 2
-Cry_NidoranF::
+Cry_Cosmonarch::
 	.incbin "sound/direct_sound_samples/cries/nidoran_f.bin"
 
 	.align 2

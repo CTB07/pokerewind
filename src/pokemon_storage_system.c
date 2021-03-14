@@ -6857,8 +6857,8 @@ static void SetCursorMonData(void *pokemon, u8 mode)
     }
     else
     {
-        if (sPSSData->cursorMonSpecies == SPECIES_NIDORAN_F || sPSSData->cursorMonSpecies == SPECIES_NIDORAN_M)
-            gender = MON_GENDERLESS;
+        /*if (sPSSData->cursorMonSpecies == SPECIES_NIDORAN_F || sPSSData->cursorMonSpecies == SPECIES_NIDORAN_M)
+            gender = MON_GENDERLESS;*/
 
         StringCopyPadded(sPSSData->cursorMonNickText, sPSSData->cursorMonNick, CHAR_SPACE, 5);
 

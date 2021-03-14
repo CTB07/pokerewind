@@ -324,36 +324,36 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_SANDSHREW] =
+    [NATIONAL_DEX_GRUBFEED] =
     {
-        .categoryName = _("Mouse"),
+        .categoryName = _("Consumer"),
         .height = 6,
         .weight = 120,
-        .description = gSandshrewPokedexText,
+        .description = gGrubfeedPokedexText,
         .pokemonScale = 365,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_SANDSLASH] =
+    [NATIONAL_DEX_KWIZBEE] =
     {
-        .categoryName = _("Mouse"),
+        .categoryName = _("Quiz"),
         .height = 10,
         .weight = 295,
-        .description = gSandslashPokedexText,
+        .description = gKwizbeePokedexText,
         .pokemonScale = 341,
         .pokemonOffset = 11,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_NIDORAN_F] =
+    [NATIONAL_DEX_COSMONARCH] =
     {
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Queen Bee"),
         .height = 4,
         .weight = 70,
-        .description = gNidoranFPokedexText,
+        .description = gCosmonarchPokedexText,
         .pokemonScale = 488,
         .pokemonOffset = 21,
         .trainerScale = 256,

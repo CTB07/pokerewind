@@ -27,9 +27,9 @@ gCryTable:: @ 869DCF4
 	cry Cry_Canneko  @ 869DE08
 	cry Cry_Pikachu  @ 869DE14
 	cry Cry_Raichu  @ 869DE20
-	cry Cry_Sandshrew  @ 869DE2C
-	cry Cry_Sandslash  @ 869DE38
-	cry Cry_NidoranF  @ 869DE44
+	cry Cry_Grubfeed  @ 869DE2C
+	cry Cry_Kwizbee  @ 869DE38
+	cry Cry_Cosmonarch  @ 869DE44
 	cry Cry_Nidorina  @ 869DE50
 	cry Cry_Nidoqueen  @ 869DE5C
 	cry Cry_NidoranM  @ 869DE68
@@ -955,8 +955,8 @@ gCryTable:: @ 869DCF4
 	cry Cry_Airiola
 	cry Cry_Standaad
 	cry Cry_Raichu
-	cry Cry_Sandshrew
-	cry Cry_Sandslash
+	cry Cry_Grubfeed
+	cry Cry_Kwizbee
 	cry Cry_Vulpix
 	cry Cry_Ninetales
 	cry Cry_Diglett
@@ -1301,9 +1301,9 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Canneko  @ 869F038
 	cry2 Cry_Pikachu  @ 869F044
 	cry2 Cry_Raichu  @ 869F050
-	cry2 Cry_Sandshrew  @ 869F05C
-	cry2 Cry_Sandslash  @ 869F068
-	cry2 Cry_NidoranF  @ 869F074
+	cry2 Cry_Grubfeed  @ 869F05C
+	cry2 Cry_Kwizbee  @ 869F068
+	cry2 Cry_Cosmonarch  @ 869F074
 	cry2 Cry_Nidorina  @ 869F080
 	cry2 Cry_Nidoqueen  @ 869F08C
 	cry2 Cry_NidoranM  @ 869F098
@@ -2229,8 +2229,8 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Airiola
 	cry2 Cry_Standaad
 	cry2 Cry_Raichu
-	cry2 Cry_Sandshrew
-	cry2 Cry_Sandslash
+	cry2 Cry_Grubfeed
+	cry2 Cry_Kwizbee
 	cry2 Cry_Vulpix
 	cry2 Cry_Ninetales
 	cry2 Cry_Diglett

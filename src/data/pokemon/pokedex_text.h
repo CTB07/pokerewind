@@ -153,19 +153,19 @@ const u8 gRaichuPokedexText[] = _(
     "it occasionally discharges excess energy\n"
     "and calms itself down.");
 
-const u8 gSandshrewPokedexText[] = _(
+const u8 gGrubfeedPokedexText[] = _(
     "When it curls up in a ball, it can make any\n"
     "attack bounce off harmlessly. Its hide has\n"
     "turned tough and solid as a result of\n"
     "living in the desert.");
 
-const u8 gSandslashPokedexText[] = _(
+const u8 gKwizbeePokedexText[] = _(
     "It curls up in a ball to protect itself from\n"
     "enemy attacks. It also curls up to prevent\n"
     "heatstroke during the daytime when\n"
     "temperatures rise sharply.");
 
-const u8 gNidoranFPokedexText[] = _(
+const u8 gCosmonarchPokedexText[] = _(
     "Its highly toxic barbs are thought to have\n"
     "developed as protection for this small-\n"
     "bodied Pokémon. When enraged, it releases\n"

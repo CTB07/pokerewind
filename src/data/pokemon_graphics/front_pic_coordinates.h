@@ -68,17 +68,17 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_ACTURUNK] =
     {
         .size = 0x45,
-        .y_offset = 9,
+        .y_offset = 3,
     },
     [SPECIES_DRAMASPIRE] =
     {
         .size = 0x45,
-        .y_offset = 6,
+        .y_offset = 3,
     },
     [SPECIES_BURROBIT] =
     {
         .size = 0x45,
-        .y_offset = 9,
+        .y_offset = 3,
     },
     [SPECIES_BUNNAETHER] =
     {
@@ -135,20 +135,20 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x67,
         .y_offset = 3,
     },
-    [SPECIES_SANDSHREW] =
-    {
-        .size = 0x55,
-        .y_offset = 11,
-    },
-    [SPECIES_SANDSLASH] =
-    {
-        .size = 0x76,
-        .y_offset = 6,
-    },
-    [SPECIES_NIDORAN_F] =
+    [SPECIES_GRUBFEED] =
     {
         .size = 0x45,
-        .y_offset = 13,
+        .y_offset = 7,
+    },
+    [SPECIES_KWIZBEE] =
+    {
+        .size = 0x45,
+        .y_offset = 5,
+    },
+    [SPECIES_COSMONARCH] =
+    {
+        .size = 0x45,
+        .y_offset = 3,
     },
     [SPECIES_NIDORINA] =
     {

@@ -188,56 +188,22 @@ static const union AnimCmd sAnim_RAICHU_2[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_SANDSHREW_1[] =
+static const union AnimCmd sAnim_GRUBFEED_1[] =
 {
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_SANDSHREW_2[] =
+static const union AnimCmd sAnim_KWIZBEE_1[] =
 {
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_SANDSLASH_1[] =
+static const union AnimCmd sAnim_COSMONARCH_1[] =
 {
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_SANDSLASH_2[] =
-{
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_NIDORAN_F_1[] =
-{
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 50),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_NIDORINA_1[] =
@@ -9149,21 +9115,19 @@ static const union AnimCmd *const sAnims_RAICHU[] ={
     sAnim_RAICHU_2,
 };
 
-static const union AnimCmd *const sAnims_SANDSHREW[] ={
-    sAnim_GeneralFrame0,
-    sAnim_SANDSHREW_1,
-    sAnim_SANDSHREW_2,
+static const union AnimCmd *const sAnims_GRUBFEED[] ={
+sAnim_GeneralFrame0,
+sAnim_GRUBFEED_1,
 };
 
-static const union AnimCmd *const sAnims_SANDSLASH[] ={
-    sAnim_GeneralFrame0,
-    sAnim_SANDSLASH_1,
-    sAnim_SANDSLASH_2,
+static const union AnimCmd *const sAnims_KWIZBEE[] ={
+sAnim_GeneralFrame0,
+sAnim_KWIZBEE_1,
 };
 
-static const union AnimCmd *const sAnims_NIDORAN_F[] ={
-    sAnim_GeneralFrame0,
-    sAnim_NIDORAN_F_1,
+static const union AnimCmd *const sAnims_COSMONARCH[] ={
+sAnim_GeneralFrame0,
+sAnim_COSMONARCH_1,
 };
 
 static const union AnimCmd *const sAnims_NIDORINA[] ={
@@ -14322,9 +14286,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(CANNEKO),
     ANIM_CMD(PIKACHU),
     ANIM_CMD(RAICHU),
-    ANIM_CMD(SANDSHREW),
-    ANIM_CMD(SANDSLASH),
-    ANIM_CMD(NIDORAN_F),
+    ANIM_CMD(GRUBFEED),
+    ANIM_CMD(KWIZBEE),
+    ANIM_CMD(COSMONARCH),
     ANIM_CMD(NIDORINA),
     ANIM_CMD(NIDOQUEEN),
     ANIM_CMD(NIDORAN_M),
