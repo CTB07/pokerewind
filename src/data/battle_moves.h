@@ -11725,9 +11725,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	.target = MOVE_TARGET_SELECTED,
 	.priority = 0,
 	.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-	.z_move_power = 120,
 	.split = SPLIT_SPECIAL,
-	.z_move_effect = 0
        	.argument = 2,
     },
 	
@@ -11742,9 +11740,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	.target = MOVE_TARGET_SELECTED,
 	.priority = 0,
 	.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_BALLISTIC,
-	.z_move_power = 140,
 	.split = SPLIT_SPECIAL,
-	.z_move_effect = 0,
     },
 
     [MOVE_PSYCH_OUT] =
@@ -11958,5 +11954,4 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
         .split = SPLIT_PHYSICAL,
     },
-
 };
