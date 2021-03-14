@@ -6985,7 +6985,7 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
            MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case ABILITY_ECHO_CHAMBER
-        percentBoost = min(gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
+        percentBoost = min((gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
         MulModifier(&finalModifier, UQ_4_12(1.0) + sPercentToModifier[percentBoost]);
         break;
     case ABILITY_ARTILLERY:
