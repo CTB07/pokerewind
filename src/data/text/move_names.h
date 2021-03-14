@@ -757,7 +757,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ASTRAL_BARRAGE] = _("AstrlBarrage"),
     [MOVE_EERIE_SPELL] = _("Eerie Spell"),
     [MOVE_BIG_DEBATE] = _("Big Debate"),
-    [MOVE_BIG_DEBATE] = _("Big Debate"),
     [MOVE_LEGION_BASH] = _("Legion Bash"),
     [MOVE_MOB_MENTALITY] = _("MobMentality"),
     [MOVE_MIC_DROP] = _("Mic Drop"),
@@ -771,6 +770,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_PSYCH_OUT] = _("Psych Out"),
     [MOVE_PANIC_SWEAT] = _("Panic Sweat"),
     [MOVE_PIXIE_PETAL] = _("Pixie Petal"),
+    [MOVE_GUN] = _("Gun"),
     [MOVE_MIND_PIECE] = _("Mind Piece"),
     [MOVE_DIVEBOMB] = _("Divebomb"),
     [MOVE_REWIND] = _("Rewind"),
@@ -784,7 +784,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ENVELOP] = _("Envelop"),
     [MOVE_FROSTBITE] = _("Frostbite"),
     [MOVE_ASSASSINATE] = _("Assassinate"),
-    [MOVE_GUN] = _("Gun"),
-    [MOVE_VENT_KILL] = _("Vent Kill"),
     [MOVE_EJECT] = _("Eject"),
+    [MOVE_VENT_KILL] = _("Vent Kill"),
+
 };
