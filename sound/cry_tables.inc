@@ -15,16 +15,16 @@ gCryTable:: @ 869DCF4
 	cry Cry_Elecreep  @ 869DD78
 	cry Cry_Acturunk  @ 869DD84
 	cry Cry_Dramaspire  @ 869DD90
-	cry Cry_Beedrill  @ 869DD9C
-	cry Cry_Pidgey  @ 869DDA8
-	cry Cry_Pidgeotto  @ 869DDB4
-	cry Cry_Pidgeot  @ 869DDC0
-	cry Cry_Rattata  @ 869DDCC
-	cry Cry_Raticate  @ 869DDD8
-	cry Cry_Spearow  @ 869DDE4
-	cry Cry_Fearow  @ 869DDF0
-	cry Cry_Ekans  @ 869DDFC
-	cry Cry_Arbok  @ 869DE08
+	cry Cry_Burrobit  @ 869DD9C
+	cry Cry_Bunnaether  @ 869DDA8
+	cry Cry_Cuckoob  @ 869DDB4
+	cry Cry_Twiddies  @ 869DDC0
+	cry Cry_Airiola  @ 869DDCC
+	cry Cry_Standaad  @ 869DDD8
+	cry Cry_Reckloat  @ 869DDE4
+	cry Cry_Deviloat  @ 869DDF0
+	cry Cry_Kitkar  @ 869DDFC
+	cry Cry_Canneko  @ 869DE08
 	cry Cry_Pikachu  @ 869DE14
 	cry Cry_Raichu  @ 869DE20
 	cry Cry_Sandshrew  @ 869DE2C
@@ -952,8 +952,8 @@ gCryTable:: @ 869DCF4
 	cry_uncomp Cry_KyogrePrimal
 	cry_uncomp Cry_GroudonPrimal
 	@ Alolan Forms
-	cry Cry_Rattata
-	cry Cry_Raticate
+	cry Cry_Airiola
+	cry Cry_Standaad
 	cry Cry_Raichu
 	cry Cry_Sandshrew
 	cry Cry_Sandslash
@@ -1289,16 +1289,16 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Elecreep  @ 869EFA8
 	cry2 Cry_Acturunk  @ 869EFB4
 	cry2 Cry_Dramaspire  @ 869EFC0
-	cry2 Cry_Beedrill  @ 869EFCC
-	cry2 Cry_Pidgey  @ 869EFD8
-	cry2 Cry_Pidgeotto  @ 869EFE4
-	cry2 Cry_Pidgeot  @ 869EFF0
-	cry2 Cry_Rattata  @ 869EFFC
-	cry2 Cry_Raticate  @ 869F008
-	cry2 Cry_Spearow  @ 869F014
-	cry2 Cry_Fearow  @ 869F020
-	cry2 Cry_Ekans  @ 869F02C
-	cry2 Cry_Arbok  @ 869F038
+	cry2 Cry_Burrobit  @ 869EFCC
+	cry2 Cry_Bunnaether  @ 869EFD8
+	cry2 Cry_Cuckoob  @ 869EFE4
+	cry2 Cry_Twiddies  @ 869EFF0
+	cry2 Cry_Airiola  @ 869EFFC
+	cry2 Cry_Standaad  @ 869F008
+	cry2 Cry_Reckloat  @ 869F014
+	cry2 Cry_Deviloat  @ 869F020
+	cry2 Cry_Kitkar  @ 869F02C
+	cry2 Cry_Canneko  @ 869F038
 	cry2 Cry_Pikachu  @ 869F044
 	cry2 Cry_Raichu  @ 869F050
 	cry2 Cry_Sandshrew  @ 869F05C
@@ -2226,8 +2226,8 @@ gCryTable2:: @ 869EF24
 	cry2_uncomp Cry_KyogrePrimal
 	cry2_uncomp Cry_GroudonPrimal
 	@ Alolan Forms
-	cry2 Cry_Rattata
-	cry2 Cry_Raticate
+	cry2 Cry_Airiola
+	cry2 Cry_Standaad
 	cry2 Cry_Raichu
 	cry2 Cry_Sandshrew
 	cry2 Cry_Sandslash

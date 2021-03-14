@@ -75,55 +75,55 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 6,
     },
-    [SPECIES_BEEDRILL] =
-    {
-        .size = 0x86,
-        .y_offset = 5,
-    },
-    [SPECIES_PIDGEY] =
-    {
-        .size = 0x65,
-        .y_offset = 12,
-    },
-    [SPECIES_PIDGEOTTO] =
-    {
-        .size = 0x67,
-        .y_offset = 6,
-    },
-    [SPECIES_PIDGEOT] =
-    {
-        .size = 0x88,
-        .y_offset = 2,
-    },
-    [SPECIES_RATTATA] =
-    {
-        .size = 0x44,
-        .y_offset = 13,
-    },
-    [SPECIES_RATICATE] =
-    {
-        .size = 0x66,
-        .y_offset = 6,
-    },
-    [SPECIES_SPEAROW] =
+    [SPECIES_BURROBIT] =
     {
         .size = 0x45,
-        .y_offset = 12,
+        .y_offset = 9,
     },
-    [SPECIES_FEAROW] =
+    [SPECIES_BUNNAETHER] =
     {
-        .size = 0x78,
-        .y_offset = 0,
+        .size = 0x45,
+        .y_offset = 7,
     },
-    [SPECIES_EKANS] =
+    [SPECIES_CUCKOOB] =
     {
-        .size = 0x65,
+        .size = 0x45,
         .y_offset = 10,
     },
-    [SPECIES_ARBOK] =
+    [SPECIES_TWIDDIES] =
     {
-        .size = 0x88,
-        .y_offset = 1,
+        .size = 0x45,
+        .y_offset = 6,
+    },
+    [SPECIES_AIRIOLA] =
+    {
+        .size = 0x45,
+        .y_offset = 3,
+    },
+    [SPECIES_STANDAAD] =
+    {
+        .size = 0x45,
+        .y_offset = 8,
+    },
+    [SPECIES_RECKLOAT] =
+    {
+        .size = 0x45,
+        .y_offset = 6,
+    },
+    [SPECIES_DEVILOAT] =
+    {
+        .size = 0x45,
+        .y_offset = 4,
+    },
+    [SPECIES_KITKAR] =
+    {
+        .size = 0x45,
+        .y_offset = 9,
+    },
+    [SPECIES_CANNEKO] =
+    {
+        .size = 0x45,
+        .y_offset = 5,
     },
     [SPECIES_PIKACHU] =
     {

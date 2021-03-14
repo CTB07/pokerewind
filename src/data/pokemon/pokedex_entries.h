@@ -180,120 +180,120 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_BEEDRILL] =
+    [NATIONAL_DEX_BURROBIT] =
     {
-        .categoryName = _("Poison Bee"),
+        .categoryName = _("Dust Bunny"),
         .height = 10,
         .weight = 295,
-        .description = gBeedrillPokedexText,
+        .description = gBurrobitPokedexText,
         .pokemonScale = 366,
         .pokemonOffset = 2,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_PIDGEY] =
+    [NATIONAL_DEX_BUNNAETHER] =
     {
-        .categoryName = _("Tiny Bird"),
+        .categoryName = _("Bunnaether"),
         .height = 3,
         .weight = 18,
-        .description = gPidgeyPokedexText,
+        .description = gBunnaetherPokedexText,
         .pokemonScale = 508,
         .pokemonOffset = -3,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_PIDGEOTTO] =
+    [NATIONAL_DEX_CUCKOOB] =
     {
-        .categoryName = _("Bird"),
+        .categoryName = _("Petite"),
         .height = 11,
         .weight = 300,
-        .description = gPidgeottoPokedexText,
+        .description = gCuckoobPokedexText,
         .pokemonScale = 331,
         .pokemonOffset = 10,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_PIDGEOT] =
+    [NATIONAL_DEX_TWIDDIES] =
     {
-        .categoryName = _("Bird"),
+        .categoryName = _("Bouncy"),
         .height = 15,
         .weight = 395,
-        .description = gPidgeotPokedexText,
+        .description = gTwiddiesPokedexText,
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_RATTATA] =
+    [NATIONAL_DEX_AIRIOLA] =
     {
-        .categoryName = _("Mouse"),
+        .categoryName = _("Great Tit"),
         .height = 3,
         .weight = 35,
-        .description = gRattataPokedexText,
+        .description = gAiriolaPokedexText,
         .pokemonScale = 481,
         .pokemonOffset = 21,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_RATICATE] =
+    [NATIONAL_DEX_STANDAAD] =
     {
-        .categoryName = _("Mouse"),
+        .categoryName = _("Goat"),
         .height = 7,
         .weight = 185,
-        .description = gRaticatePokedexText,
+        .description = gStandaadPokedexText,
         .pokemonScale = 459,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_SPEAROW] =
+    [NATIONAL_DEX_RECKLOAT] =
     {
-        .categoryName = _("Tiny Bird"),
+        .categoryName = _("Goat"),
         .height = 3,
         .weight = 20,
-        .description = gSpearowPokedexText,
+        .description = gReckloatPokedexText,
         .pokemonScale = 571,
         .pokemonOffset = 22,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_FEAROW] =
+    [NATIONAL_DEX_DEVILOAT] =
     {
-        .categoryName = _("Beak"),
+        .categoryName = _("Satyr"),
         .height = 12,
         .weight = 380,
-        .description = gFearowPokedexText,
+        .description = gDeviloatPokedexText,
         .pokemonScale = 278,
         .pokemonOffset = 1,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_EKANS] =
+    [NATIONAL_DEX_KITKAR] =
     {
-        .categoryName = _("Snake"),
+        .categoryName = _("Mobilized"),
         .height = 20,
         .weight = 69,
-        .description = gEkansPokedexText,
+        .description = gKitkarPokedexText,
         .pokemonScale = 298,
         .pokemonOffset = 12,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ARBOK] =
+    [NATIONAL_DEX_CANNEKO] =
     {
-        .categoryName = _("Cobra"),
+        .categoryName = _("Kitten War"),
         .height = 35,
         .weight = 650,
-        .description = gArbokPokedexText,
+        .description = gCannekoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 296,

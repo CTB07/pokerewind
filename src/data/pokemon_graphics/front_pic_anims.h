@@ -90,130 +90,64 @@ ANIMCMD_FRAME(0, 1),
 ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_BEEDRILL_1[] =
+static const union AnimCmd sAnim_BURROBIT_1[] =
 {
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 35),
-    ANIMCMD_FRAME(0, 28),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_PIDGEY_1[] =
+static const union AnimCmd sAnim_BUNNAETHER_1[] =
 {
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_PIDGEOTTO_1[] =
+static const union AnimCmd sAnim_CUCKOOB_1[] =
 {
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 35),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_PIDGEOT_1[] =
+static const union AnimCmd sAnim_TWIDDIES_1[] =
 {
-    ANIMCMD_FRAME(1, 20),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 15),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-
-static const union AnimCmd sAnim_RATTATA_1[] =
+static const union AnimCmd sAnim_AIRIOLA_1[] =
 {
-    ANIMCMD_FRAME(0, 3),
-    ANIMCMD_FRAME(1, 50),
-    ANIMCMD_FRAME(1, 28),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_RATICATE_1[] =
+static const union AnimCmd sAnim_STANDAAD_1[] =
 {
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_SPEAROW_1[] =
+static const union AnimCmd sAnim_RECKLOAT_1[] =
 {
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 5),
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_FEAROW_1[] =
+static const union AnimCmd sAnim_DEVILOAT_1[] =
 {
-    ANIMCMD_FRAME(1, 7),
-    ANIMCMD_FRAME(0, 7),
-    ANIMCMD_FRAME(1, 7),
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_FRAME(1, 7),
-    ANIMCMD_FRAME(0, 7),
-    ANIMCMD_FRAME(1, 7),
-    ANIMCMD_FRAME(0, 7),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_EKANS_1[] =
+static const union AnimCmd sAnim_KITKAR_1[] =
 {
-    ANIMCMD_FRAME(1, 8),
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(1, 8),
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(1, 40),
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ARBOK_1[] =
+static const union AnimCmd sAnim_CANNEKO_1[] =
 {
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_FRAME(1, 35),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_END,
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_END,
 };
 
 static const union AnimCmd sAnim_PIKACHU_1[] =
@@ -9153,54 +9087,54 @@ sAnim_GeneralFrame0,
 sAnim_DRAMASPIRE_1,
 };
 
-static const union AnimCmd *const sAnims_BEEDRILL[] ={
-    sAnim_GeneralFrame0,
-    sAnim_BEEDRILL_1,
+static const union AnimCmd *const sAnims_BURROBIT[] ={
+sAnim_GeneralFrame0,
+sAnim_BURROBIT_1,
 };
 
-static const union AnimCmd *const sAnims_PIDGEY[] ={
-    sAnim_GeneralFrame0,
-    sAnim_PIDGEY_1,
+static const union AnimCmd *const sAnims_BUNNAETHER[] ={
+sAnim_GeneralFrame0,
+sAnim_BUNNAETHER_1,
 };
 
-static const union AnimCmd *const sAnims_PIDGEOTTO[] ={
-    sAnim_GeneralFrame0,
-    sAnim_PIDGEOTTO_1,
+static const union AnimCmd *const sAnims_CUCKOOB[] ={
+sAnim_GeneralFrame0,
+sAnim_CUCKOOB_1,
 };
 
-static const union AnimCmd *const sAnims_PIDGEOT[] ={
-    sAnim_GeneralFrame0,
-    sAnim_PIDGEOT_1,
+static const union AnimCmd *const sAnims_TWIDDIES[] ={
+sAnim_GeneralFrame0,
+sAnim_TWIDDIES_1,
 };
 
-static const union AnimCmd *const sAnims_RATTATA[] ={
-    sAnim_GeneralFrame0,
-    sAnim_RATTATA_1,
+static const union AnimCmd *const sAnims_AIRIOLA[] ={
+sAnim_GeneralFrame0,
+sAnim_AIRIOLA_1,
 };
 
-static const union AnimCmd *const sAnims_RATICATE[] ={
-    sAnim_GeneralFrame0,
-    sAnim_RATICATE_1,
+static const union AnimCmd *const sAnims_STANDAAD[] ={
+sAnim_GeneralFrame0,
+sAnim_STANDAAD_1,
 };
 
-static const union AnimCmd *const sAnims_SPEAROW[] ={
-    sAnim_GeneralFrame0,
-    sAnim_SPEAROW_1,
+static const union AnimCmd *const sAnims_RECKLOAT[] ={
+sAnim_GeneralFrame0,
+sAnim_RECKLOAT_1,
 };
 
-static const union AnimCmd *const sAnims_FEAROW[] ={
-    sAnim_GeneralFrame0,
-    sAnim_FEAROW_1,
+static const union AnimCmd *const sAnims_DEVILOAT[] ={
+sAnim_GeneralFrame0,
+sAnim_DEVILOAT_1,
 };
 
-static const union AnimCmd *const sAnims_EKANS[] ={
-    sAnim_GeneralFrame0,
-    sAnim_EKANS_1,
+static const union AnimCmd *const sAnims_KITKAR[] ={
+sAnim_GeneralFrame0,
+sAnim_KITKAR_1,
 };
 
-static const union AnimCmd *const sAnims_ARBOK[] ={
-    sAnim_GeneralFrame0,
-    sAnim_ARBOK_1,
+static const union AnimCmd *const sAnims_CANNEKO[] ={
+sAnim_GeneralFrame0,
+sAnim_CANNEKO_1,
 };
 
 static const union AnimCmd *const sAnims_PIKACHU[] ={
@@ -14376,16 +14310,16 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(ELECREEP),
     ANIM_CMD(ACTURUNK),
     ANIM_CMD(DRAMASPIRE),
-    ANIM_CMD(BEEDRILL),
-    ANIM_CMD(PIDGEY),
-    ANIM_CMD(PIDGEOTTO),
-    ANIM_CMD(PIDGEOT),
-    ANIM_CMD(RATTATA),
-    ANIM_CMD(RATICATE),
-    ANIM_CMD(SPEAROW),
-    ANIM_CMD(FEAROW),
-    ANIM_CMD(EKANS),
-    ANIM_CMD(ARBOK),
+    ANIM_CMD(BURROBIT),
+    ANIM_CMD(BUNNAETHER),
+    ANIM_CMD(CUCKOOB),
+    ANIM_CMD(TWIDDIES),
+    ANIM_CMD(AIRIOLA),
+    ANIM_CMD(STANDAAD),
+    ANIM_CMD(RECKLOAT),
+    ANIM_CMD(DEVILOAT),
+    ANIM_CMD(KITKAR),
+    ANIM_CMD(CANNEKO),
     ANIM_CMD(PIKACHU),
     ANIM_CMD(RAICHU),
     ANIM_CMD(SANDSHREW),
