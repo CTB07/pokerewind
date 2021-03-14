@@ -8440,7 +8440,7 @@ static void Cmd_various(void)
         }
         else
         {
-        gBattlescriptCurrInstr = +=5;
+             gBattlescriptCurrInstr = +=5;
         }
         return;
     }

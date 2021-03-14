@@ -1769,6 +1769,11 @@
 	various \battler, VARIOUS_TRY_ACTIVATE_GRIM_NEIGH
 	.endm
 
+	.macro jumpifoverhalfhp, ptr:req
+	various \battler, VARIOUS_JUMP_IF_OVER_HALF_HP
+	.4byte \ptr
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7
@@ -1892,10 +1897,5 @@
 	jumpifability BS_ATTACKER, ABILITY_INFILTRATOR, 1f
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, \jumpptr
 	1:
-	.endm
-
-	.macro jumpifoverhalfhp ptr:req
-	various \battler, VARIOUS_JUMP_IF_OVER_HALF_HP
-	.4byte \ptr
 	.endm
 
