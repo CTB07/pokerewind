@@ -30,22 +30,22 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = 0x76,
         .y_offset = 8,
     },
-    [SPECIES_CHARIZARD] =
+    [SPECIES_TEMPERILLA] =
     {
         .size = 0x88,
         .y_offset = 1,
     },
-    [SPECIES_SQUIRTLE] =
+    [SPECIES_SUBSTEE] =
     {
         .size = 0x66,
         .y_offset = 9,
     },
-    [SPECIES_WARTORTLE] =
+    [SPECIES_MANEMBER] =
     {
         .size = 0x87,
         .y_offset = 7,
     },
-    [SPECIES_BLASTOISE] =
+    [SPECIES_TRECHIBER] =
     {
         .size = 0x87,
         .y_offset = 7,

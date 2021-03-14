@@ -4,87 +4,33 @@ const u8 gDummyPokedexText[] = _(
     "No detailed information is available\n"
     "at this time.");
 
-const u8 gParopeatPokedexText[] = _(
-    "PAROPEAT mimic everything they hear.\n"
-    "They repeat these phrases and sentences\n" 
-    "so often that the original meanings are\n" 
-    "usually lost forever.");
+const u8 gParopeatPokedexText[] = _("Paropeat mimic everything they hear.\nThey repeat these phrases and sentences\nso often that the original meanings are\nusually lost forever.");
 
-const u8 gMacaumentPokedexText[] = _(
-    "Finally exiting their infancy stage,\n" 
-    "MACAUMENT now have the capacity to form\n" 
-    "original thoughts, spending most of their\n" 
-    "time commenting on menial things.");
+const u8 gMacaumentPokedexText[] = _("Finally exiting their infancy stage, \nMacaument now have the capacity to form \noriginal thoughts, spending most of their \ntime commenting on menial things.");
 
-const u8 gArguwintPokedexText[] = _(
-    "The wits of this Pokemon have\n"
-    "surpassed even ancient philosophers. You\n" 
-    "can probably spot them debating with each\n "
-    "other over the essence of the universe.");
+const u8 gArguwintPokedexText[] = _("The wits of this Pokemon have surpassed \neven ancient philosophers. You can \nprobably spot them debating with each \nother over the essence of the universe.");
 
-const u8 gPrimatioPokedexText[] = _(
-    "Young and innocent, this Pokemon is known\n" 
-    "to be extremely loud about its preferences.\n"
-    "If it sees something it doesn't like, it will\n"
-    "not hesistate to let everything around it know.");
+const u8 gPrimatioPokedexText[] = _("Young and innocent, this Pokemon is \nknown to be extremely loud about its \npreferences.");
 
-const u8 gOpinimpPokedexText[] = _(
-    "Evolution has given this Pokemon a new\n" 
-    "perspective on matters, but while volatile, it\n" 
-    "is mostly able to keep itself /nunder control.");
+const u8 gOpinimpPokedexText[] = _("Evolution has given this Pokemon a \nnew perspective on matters, but while \nvolatile, it is mostly able to keep itself \nunder control.");
 
-const u8 gTemperillaPokedexText[] = _(
-    "Infamous for having wild arguments with itself,\n" 
-    "this Pokemon's mood and /nopinion can shift on a\n" 
-    "dime, and /nusually for the worse.");
+const u8 gTemperillaPokedexText[] = _("Infamous for having wild arguments \nwith itself, this Pokemon's mood and \nopinion can shift on a dime, and \nusually for the worse.");
 
-const u8 gSquirtlePokedexText[] = _(
-    "Its shell is not just for protection.\n"
-    "Its rounded shape and the grooves on its\n"
-    "surface minimize resistance in water,\n"
-    "enabling Squirtle to swim at high speeds.");
+const u8 gSubsteePokedexText[] = _("Friendly and curious, this Pokemon \nfollows boats, other Pokemon, and even \nsimple currents that it deems \ninteresting for miles.");
 
-const u8 gWartortlePokedexText[] = _(
-    "Its large tail is covered with rich, thick\n"
-    "fur that deepens in color with age.\n"
-    "The scratches on its shell are evidence\n"
-    "of this Pokémon's toughness in battle.");
+const u8 gManemberPokedexText[] = _("This seafaring Pokemon can track \nanything across the seas, but only \never does if the target catches its \ninterest.");
 
-const u8 gBlastoisePokedexText[] = _(
-    "The waterspouts that protrude from its\n"
-    "shell are highly accurate. Their bullets of\n"
-    "water can precisely nail tin cans from\n"
-    "a distance of over 160 feet.");
+const u8 gTrechiberPokedexText[] = _("Clad in a hardy shell, this notoriously \nhyperfocused Pokemon scours the \nocean floor for sunken treasure to \nbring to its favorite person.");
 
-const u8 gCaterpiePokedexText[] = _(
-    "Its voracious appetite compels it to\n"
-    "devour leaves bigger than itself without\n"
-    "hesitation. It releases a terribly strong\n"
-    "odor from its antennae.");
+const u8 gBulbitePokedexText[] = _("Its fascination with its own dim tail-bulb\n means this Pokemon is never hard to \nspot - convenient, since live wires are\n their favorite snack.");
 
-const u8 gMetapodPokedexText[] = _(
-    "Its shell is as hard as an iron slab.\n"
-    "A Metapod does not move very much\n"
-    "because it is preparing its soft innards\n"
-    "for evolution inside the shell.");
+const u8 gLampupaPokedexText[] = _("Wild Lampupa are notorious pests, \nturning under-patrolled power plants into \nhuge, blindingly bright colony nests \novernight.");
 
-const u8 gButterfreePokedexText[] = _(
-    "It has a superior ability to search for\n"
-    "delicious honey from flowers. It can seek,\n"
-    "extract, and carry honey from flowers\n"
-    "blooming over six miles away.");
+const u8 gElecreepPokedexText[] = _("While friendly, its odd habits and \nsurprising talent for stealth often \ngive people who stumble across one \na scare.");
 
-const u8 gWeedlePokedexText[] = _(
-    "A Weedle has an extremely acute sense\n"
-    "of smell. It distinguishes its favorite\n"
-    "kinds of leaves from those it dislikes by\n"
-    "sniffing with its big red nose.");
+const u8 gActurunkPokedexText[] = _("People walking in the woods have reported\nsightings of small groups of Acturunk\nputting on simple plays and theater\nperformances among themselves.");
 
-const u8 gKakunaPokedexText[] = _(
-    "It remains virtually immobile while it\n"
-    "clings to a tree. However, on the inside,\n"
-    "it busily prepares for evolution. This is\n"
-    "evident from how hot its shell becomes.");
+const u8 gDramaspirePokedexText[] = _("This Pokemon is extremely frustrating for\nPokemon Centers to treat, as living and\ndead Dramaspire are actually impossible\nto tell apart.");
 
 const u8 gBeedrillPokedexText[] = _(
     "A Beedrill is extremely territorial.\n"

@@ -84,96 +84,96 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 3,
     },
 
-    [NATIONAL_DEX_SQUIRTLE] =
+    [NATIONAL_DEX_SUBSTEE] =
     {
-        .categoryName = _("Tiny Turtle"),
+        .categoryName = _("Supporter"),
         .height = 5,
         .weight = 90,
-        .description = gSquirtlePokedexText,
+        .description = gSubsteePokedexText,
         .pokemonScale = 412,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_WARTORTLE] =
+    [NATIONAL_DEX_MANEMBER] =
     {
-        .categoryName = _("Turtle"),
+        .categoryName = _("Superfan"),
         .height = 10,
         .weight = 225,
-        .description = gWartortlePokedexText,
+        .description = gManemberPokedexText,
         .pokemonScale = 332,
         .pokemonOffset = 10,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_BLASTOISE] =
+    [NATIONAL_DEX_TRECHIBER] =
     {
-        .categoryName = _("Shellfish"),
+        .categoryName = _("Squad"),
         .height = 16,
         .weight = 855,
-        .description = gBlastoisePokedexText,
+        .description = gTrechiberPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 293,
         .trainerOffset = 2,
     },
 
-    [NATIONAL_DEX_CATERPIE] =
+    [NATIONAL_DEX_BULBITE] =
     {
-        .categoryName = _("Worm"),
+        .categoryName = _("Watt"),
         .height = 3,
         .weight = 29,
-        .description = gCaterpiePokedexText,
+        .description = gBulbitePokedexText,
         .pokemonScale = 549,
         .pokemonOffset = 22,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_METAPOD] =
+    [NATIONAL_DEX_LAMPUPA] =
     {
-        .categoryName = _("Cocoon"),
+        .categoryName = _("Lampshade"),
         .height = 7,
         .weight = 99,
-        .description = gMetapodPokedexText,
+        .description = gLampupaPokedexText,
         .pokemonScale = 350,
         .pokemonOffset = 18,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_BUTTERFREE] =
+    [NATIONAL_DEX_ELECREEP] =
     {
-        .categoryName = _("Butterfly"),
+        .categoryName = _("Luminous"),
         .height = 11,
         .weight = 320,
-        .description = gButterfreePokedexText,
+        .description = gElecreepPokedexText,
         .pokemonScale = 312,
         .pokemonOffset = 2,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_WEEDLE] =
+    [NATIONAL_DEX_ACTURUNK] =
     {
-        .categoryName = _("Hairy Bug"),
+        .categoryName = _("Thespian"),
         .height = 3,
         .weight = 32,
-        .description = gWeedlePokedexText,
+        .description = gActurunkPokedexText,
         .pokemonScale = 455,
         .pokemonOffset = 22,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_KAKUNA] =
+    [NATIONAL_DEX_DRAMASPIRE] =
     {
-        .categoryName = _("Cocoon"),
+        .categoryName = _("Phantom"),
         .height = 6,
         .weight = 100,
-        .description = gKakunaPokedexText,
+        .description = gDramaspirePokedexText,
         .pokemonScale = 424,
         .pokemonOffset = 17,
         .trainerScale = 256,

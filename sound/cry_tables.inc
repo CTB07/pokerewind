@@ -7,14 +7,14 @@ gCryTable:: @ 869DCF4
 	cry Cry_Primatio  @ 869DD18
 	cry Cry_Opinimp  @ 869DD24
 	cry Cry_Temperilla  @ 869DD30
-	cry Cry_Squirtle  @ 869DD3C
-	cry Cry_Wartortle  @ 869DD48
-	cry Cry_Blastoise  @ 869DD54
-	cry Cry_Caterpie  @ 869DD60
-	cry Cry_Metapod  @ 869DD6C
-	cry Cry_Butterfree  @ 869DD78
-	cry Cry_Weedle  @ 869DD84
-	cry Cry_Kakuna  @ 869DD90
+	cry Cry_Substee  @ 869DD3C
+	cry Cry_Manember  @ 869DD48
+	cry Cry_Trechiber  @ 869DD54
+	cry Cry_Bulbite  @ 869DD60
+	cry Cry_Lampupa  @ 869DD6C
+	cry Cry_Elecreep  @ 869DD78
+	cry Cry_Acturunk  @ 869DD84
+	cry Cry_Dramaspire  @ 869DD90
 	cry Cry_Beedrill  @ 869DD9C
 	cry Cry_Pidgey  @ 869DDA8
 	cry Cry_Pidgeotto  @ 869DDB4
@@ -1281,14 +1281,14 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Primatio  @ 869EF48
 	cry2 Cry_Opinimp  @ 869EF54
 	cry2 Cry_Temperilla  @ 869EF60
-	cry2 Cry_Squirtle  @ 869EF6C
-	cry2 Cry_Wartortle  @ 869EF78
-	cry2 Cry_Blastoise  @ 869EF84
-	cry2 Cry_Caterpie  @ 869EF90
-	cry2 Cry_Metapod  @ 869EF9C
-	cry2 Cry_Butterfree  @ 869EFA8
-	cry2 Cry_Weedle  @ 869EFB4
-	cry2 Cry_Kakuna  @ 869EFC0
+	cry2 Cry_Substee  @ 869EF6C
+	cry2 Cry_Manember  @ 869EF78
+	cry2 Cry_Trechiber  @ 869EF84
+	cry2 Cry_Bulbite  @ 869EF90
+	cry2 Cry_Lampupa  @ 869EF9C
+	cry2 Cry_Elecreep  @ 869EFA8
+	cry2 Cry_Acturunk  @ 869EFB4
+	cry2 Cry_Dramaspire  @ 869EFC0
 	cry2 Cry_Beedrill  @ 869EFCC
 	cry2 Cry_Pidgey  @ 869EFD8
 	cry2 Cry_Pidgeotto  @ 869EFE4

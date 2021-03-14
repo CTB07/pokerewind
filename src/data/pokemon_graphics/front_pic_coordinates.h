@@ -35,45 +35,45 @@ const struct MonCoords gMonFrontPicCoords[] =
     .size = 0x45,
     .y_offset = 0,
     },
-    [SPECIES_SQUIRTLE] =
+    [SPECIES_SUBSTEE] =
     {
-        .size = 0x65,
+        .size = 0x45,
         .y_offset = 11,
     },
-    [SPECIES_WARTORTLE] =
+    [SPECIES_MANEMBER] =
     {
-        .size = 0x66,
+        .size = 0x45,
         .y_offset = 7,
     },
-    [SPECIES_BLASTOISE] =
+    [SPECIES_TRECHIBER] =
     {
-        .size = 0x88,
+        .size = 0x45,
         .y_offset = 3,
     },
-    [SPECIES_CATERPIE] =
+    [SPECIES_BULBITE] =
+    {
+    .size = 0x45,
+    .y_offset = 12,
+    },
+    [SPECIES_LAMPUPA] =
+    {
+    .size = 0x45,
+    .y_offset = 14,
+    },
+    [SPECIES_ELECREEP] =
     {
         .size = 0x45,
-        .y_offset = 12,
+        .y_offset = 5,
     },
-    [SPECIES_METAPOD] =
-    {
-        .size = 0x54,
-        .y_offset = 14,
-    },
-    [SPECIES_BUTTERFREE] =
-    {
-        .size = 0x76,
-        .y_offset = 10,
-    },
-    [SPECIES_WEEDLE] =
-    {
-        .size = 0x54,
-        .y_offset = 13,
-    },
-    [SPECIES_KAKUNA] =
+    [SPECIES_ACTURUNK] =
     {
         .size = 0x45,
-        .y_offset = 11,
+        .y_offset = 9,
+    },
+    [SPECIES_DRAMASPIRE] =
+    {
+        .size = 0x45,
+        .y_offset = 6,
     },
     [SPECIES_BEEDRILL] =
     {

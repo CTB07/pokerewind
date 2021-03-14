@@ -411,35 +411,35 @@ Cry_Temperilla::
 	.incbin "sound/direct_sound_samples/cries/charizard.bin"
 
 	.align 2
-Cry_Squirtle::
+Cry_Substee::
 	.incbin "sound/direct_sound_samples/cries/squirtle.bin"
 
 	.align 2
-Cry_Wartortle::
+Cry_Manember::
 	.incbin "sound/direct_sound_samples/cries/wartortle.bin"
 
 	.align 2
-Cry_Blastoise::
+Cry_Trechiber::
 	.incbin "sound/direct_sound_samples/cries/blastoise.bin"
 
 	.align 2
-Cry_Caterpie::
+Cry_Bulbite::
 	.incbin "sound/direct_sound_samples/cries/caterpie.bin"
 
 	.align 2
-Cry_Metapod::
+Cry_Lampupa::
 	.incbin "sound/direct_sound_samples/cries/metapod.bin"
 
 	.align 2
-Cry_Butterfree::
+Cry_Elecreep::
 	.incbin "sound/direct_sound_samples/cries/butterfree.bin"
 
 	.align 2
-Cry_Weedle::
+Cry_Acturunk::
 	.incbin "sound/direct_sound_samples/cries/weedle.bin"
 
 	.align 2
-Cry_Kakuna::
+Cry_Dramaspire::
 	.incbin "sound/direct_sound_samples/cries/kakuna.bin"
 
 	.align 2
