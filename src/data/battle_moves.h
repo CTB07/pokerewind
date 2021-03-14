@@ -11542,7 +11542,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_BIG_DEBATE] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_BURN_HIT,
 	.power = 100,
 	.type = TYPE_PSYCHIC,
@@ -11556,7 +11556,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_MOB_MENTALITY] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_TWO_TYPED_MOVE_MOB_MENTALITY,//TODO
 	.power = 40,
 	.type = TYPE_FIRE,
@@ -11571,7 +11571,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_LEGION_BASH] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_TRIPLE_KICK,
 	.power = 25,
 	.type = TYPE_STEEL,
@@ -11585,7 +11585,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_MIC_DROP] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_HIT_ESCAPE,
 	.power = 60,
 	.type = TYPE_FIRE,
@@ -11599,7 +11599,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_GUN] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_OHKO,
 	.power = 1,
 	.type = TYPE_STEEL,
@@ -11613,8 +11613,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_SNAP] =
-    {	//ANIM TODO
-	.effect = EFFECT_0HKO,
+    {	
+	.effect = EFFECT_OHKO,
 	.power = 1,
 	.type = TYPE_STEEL,
 	.accuracy = 50,
@@ -11627,7 +11627,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_MORDANT_ACID] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_MORDANT_ACID,
 	.power = 70,
 	.type = TYPE_POISON,
@@ -11641,7 +11641,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_BEAR_HUG] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_MEAN_LOOK,//TODO
 	.power = 0,
 	.type = TYPE_FAIRY,
@@ -11655,7 +11655,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_LENS_FLARE] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_SUCKER_PUNCH,
 	.power = 70,
 	.type = TYPE_FIRE,
@@ -11669,7 +11669,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_PIXIE_PETAL] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_DAMAGE_SET_TERRAIN,
 	.power = 60,
 	.type = TYPE_GRASS,
@@ -11684,7 +11684,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_MIND_PIECE] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_DAMAGE_SET_TERRAIN,
 	.power = 60,
 	.type = TYPE_GHOST,
@@ -11700,7 +11700,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
 
     [MOVE_JUSTICE_HAMMER] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_DAMAGE_SET_TERRAIN,
 	.power = 60,
 	.type = TYPE_STEEL,
@@ -11715,7 +11715,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_GENTLE_RAIN] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_DAMAGE_SET_TERRAIN,
 	.power = 60,
 	.type = TYPE_WATER,
@@ -11730,7 +11730,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_LEAD_CANNON] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_FLAME_BURST,
 	.power = 70,
 	.type = TYPE_STEEL,
@@ -11744,7 +11744,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_PSYCH_OUT] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_FAKE_OUT,
 	.power = 40,
 	.type = TYPE_PSYCHIC,
@@ -11758,7 +11758,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_PANIC_SWEAT] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_PANIC_SWEAT, //todo EFFECT_PANIC_SWEAT
 	.power = 0,
 	.type = TYPE_WATER,
@@ -11772,7 +11772,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 	
     [MOVE_NARUTO_RUN] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_NARUTO_RUN,
 	.power = 0,
 	.type = TYPE_FIGHTING,
@@ -11786,7 +11786,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_MENTAL_STRIKE] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_MENTAL_STRIKE,
 	.power = 80,
 	.type = TYPE_FIGHTING,
@@ -11800,7 +11800,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_REWIND] =
-    {	//ANIM TODO
+    {	
 	.effect = EFFECT_CLEAR_SMOG,
 	.power = 50,
 	.type = TYPE_PSYCHIC,
@@ -11814,7 +11814,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_LEEK_SPIN] =
-    {	//ANIM TODO
+    {	
         .effect = EFFECT_SP_ATTACK_UP_HIT,
         .power = 80,
         .type = TYPE_GRASS,
@@ -11828,7 +11828,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_DOUBLE_CLICK] =
-    {	//ANIM TODO
+    {	
         .effect = EFFECT_MULTI_HIT, //TODO?
         .power = 50,
         .type = TYPE_BUG,
@@ -11842,7 +11842,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_BLUE_SCREEN] =
-    {	//ANIM TODO
+    {	
         .effect = EFFECT_EXPLOSION,
         .power = 200,
         .type = TYPE_ELECTRIC,
@@ -11856,7 +11856,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_SPIN_DASH] =
-    {	//ANIM TODO
+    {	
         .effect = EFFECT_SPIN_DASH,
         .power = 50,
         .type = TYPE_FIGHTING,
@@ -11885,7 +11885,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_ENVELOP] =
-    {	//anim_todo
+    {	
         .effect = EFFECT_BODY_PRESS,
         .power = 65,
         .type = TYPE_POISON,
@@ -11899,7 +11899,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
 
     [MOVE_ASSASSINATE] =
-    {	//anim_todo
+    {	
         .effect = EFFECT_TRIPLE_SUPER_EFFECTIVE,
         .power = 70,
         .type = TYPE_DARK,
@@ -11914,7 +11914,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
 
     [MOVE_FROSTBITE] =
-    {	//anim_todo
+    {	
         .effect = EFFECT_TRIPLE_SUPER_EFFECTIVE,
         .power = 75,
         .type = TYPE_ICE,
