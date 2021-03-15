@@ -239,7 +239,7 @@ EventScript_UseRewindUnderwater:: @ 8290B5A
 	lockall
 	checkpartymove MOVE_REWIND
 	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq EventScript_CantFastforward
+	goto_if_eq EventScript_CantFastForward
 	bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
@@ -249,7 +249,7 @@ EventScript_UseRewindUnderwater:: @ 8290B5A
 
 EventScript_CantFastForward:: @ 8290B99
 	lockall
-	//msgbox Text_CantFastForward, MSGBOX_DEFAULT
+	msgbox Text_CantFastForward, MSGBOX_DEFAULT
 	goto EventScript_EndRewindSurface
 	end
 
@@ -306,18 +306,23 @@ Text_CantRewind: @ 8290BAA
 
 Text_MonUsedRewind: @ 8290BE8
 	.string "You can go back in time here.\n"
-	.string "Would you like to use Rewind?$"
+	.string "Would you like to use REWIND?$"
 
-//Text_MonUsedDive: @ 8290C1A
-//	.string "{STR_VAR_1} used DIVE.$"
+Text_CantFastForward: @ 8290C28
+	.string "There's a strange aura. Maybe.\n"
+	.string "a POKéMON could fast forward time.$"
 
-//Text_CantSurface: @ 8290C28
-//	.string "Light is filtering down from above.\n"
-//	.string "A POKéMON may be able to surface.$"
 
-//Text_WantToSurface: @ 8290C6E
-//	.string "Light is filtering down from above.\n"
-//	.string "Would you like to use DIVE?$"
+Text_MonUsedDive: @ 8290C1A
+	.string "{STR_VAR_1} used DIVE.$"
+
+Text_CantSurface: @ 8290C28
+	.string "Light is filtering down from above.\n"
+	.string "A POKéMON may be able to surface.$"
+
+Text_WantToSurface: @ 8290C6E
+	.string "Light is filtering down from above.\n"
+	.string "Would you like to use DIVE?$"
 
 EventScript_FailSweetScent:: @ 8290CAE
 	msgbox Text_FailSweetScent, MSGBOX_SIGN

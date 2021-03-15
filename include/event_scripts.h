@@ -542,7 +542,7 @@ extern const u8 EventScript_CannotUseWaterfall[];
 extern const u8 EventScript_UseDive[];
 extern const u8 EventScript_UseDiveUnderwater[];
 extern const u8 EventScript_UseRewind[];
-extern const u8 EventScript_UseRewindFastForward[];
+extern const u8 EventScript_UseRewindUnderwater[];
 extern const u8 EventScript_FallDownHole[];
 extern const u8 EventScript_FieldPoison[];
 extern const u8 EventScript_EggHatch[];

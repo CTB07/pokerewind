@@ -773,9 +773,23 @@ bool8 SetDiveWarpEmerge(u16 x, u16 y)
     return SetDiveWarp(CONNECTION_EMERGE, x, y);
 }
 
+
+
 bool8 SetDiveWarpDive(u16 x, u16 y)
 {
     return SetDiveWarp(CONNECTION_DIVE, x, y);
+}
+
+
+bool8 SetRewindWarpDive(u16 x, u16 y)
+{
+    return SetRewindWarp(CONNECTION_DIVE, x, y);
+}
+
+
+bool8 SetRewindWarpEmerge(u16 x, u16 y)
+{
+    return SetRewindWarp(CONNECTION_EMERGE, x, y);
 }
 
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
