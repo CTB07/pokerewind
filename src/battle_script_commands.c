@@ -1362,7 +1362,7 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
-    else if (((gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST))
+    else if (((gBattlerTarget == IsAbilityOnField(ABILITY_THERAPIST))
              && ((((gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_25)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_50)
@@ -11003,7 +11003,7 @@ static void Cmd_trydobeatup(void)
             PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattleCommunication[0])
 
             gBattlescriptCurrInstr += 9;
-            if (gBattleMoves[gCurrentMove].split == SPLIT_SPECIAL)//IS_MOVE_PHYSICAL(gCurrentMove)
+            if (gBattleMoves[gCurrentMove].split == SPLIT_SPECIAL)
             {
             	gBattleMoveDamage = gBaseStats[GetMonData(&party[gBattleCommunication[0]], MON_DATA_SPECIES)].baseSpAttack;
             }

@@ -534,7 +534,6 @@ static void TryShowAsTarget(u32 battlerId)
         gSprites[gBattlerSpriteIds[battlerId]].callback = SpriteCb_ShowAsMoveTarget;
     }
 }
-
 static void HandleInputChooseMove(void)
 {
     u8 moveTarget;

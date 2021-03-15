@@ -11556,7 +11556,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
     [MOVE_MOB_MENTALITY] =
     {	
-	.effect = EFFECT_TWO_TYPED_MOVE_MOB_MENTALITY,//TODO
+	.effect = EFFECT_TWO_TYPED_MOVE_MOB_MENTALITY,
 	.power = 40,
 	.type = TYPE_FIRE,
 	.accuracy = 100,
