@@ -6954,7 +6954,7 @@ static bool32 HasAttackerFaintedTarget(void)
         return FALSE;
 }
 
-static void static void HandleTerrainMove(u16 move)
+static void HandleTerrainMove(u16 move)
 {
     u32 statusFlag = 0;
     u8 *timer = NULL;
@@ -7015,8 +7015,6 @@ static void static void HandleTerrainMove(u16 move)
         }
         break;
     }
-    }
-
     if (gFieldStatuses & statusFlag || statusFlag == 0)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
@@ -8433,7 +8431,7 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;    // exit if loop failed (failsafe)
         }
         return;
-    case VARIOUS_JUMP_IF_OVER_HALF_HP
+    case VARIOUS_JUMP_IF_OVER_HALF_HP:
         if (gBattleMons[gBattlerAttacker].hp > halfHp)
         {
              gBattlescriptCurrInstr = jumpPtr;
@@ -12259,6 +12257,8 @@ static void Cmd_handleballthrow(void)
             catchRate = catchRate + ballAddition;
 	if gBattleMons[gBattlerAttacker].ability = ABILITY_BALL_FETCH
 	    odds = ((catchRate) * (ballMultiplier + 20) / 10)
+	    * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)
+            / (3 * gBattleMons[gBattlerTarget].maxHP);
 	else
             odds = ((catchRate) * ballMultiplier / 10)
             * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)
