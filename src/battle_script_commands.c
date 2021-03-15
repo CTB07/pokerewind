@@ -8432,7 +8432,7 @@ static void Cmd_various(void)
         }
         return;
     case VARIOUS_JUMP_IF_OVER_HALF_HP:
-        if (gBattleMons[gBattlerAttacker].hp > (gBattleMons[gBattlerAttacker].maxhp / 2))
+        if (gBattleMons[gBattlerAttacker].hp > (gBattleMons[gBattlerAttacker].maxHP / 2))
              gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         else
              gBattlescriptCurrInstr +=7;
