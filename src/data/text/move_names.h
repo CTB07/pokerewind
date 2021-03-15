@@ -774,7 +774,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MIND_PIECE] = _("Mind Piece"),
     [MOVE_DIVEBOMB] = _("Divebomb"),
     [MOVE_REWIND] = _("Rewind"),
-    [MOVE_MENTAL_STRIKE] = _("Mental Strike"),
+    [MOVE_MENTAL_STRIKE] = _("MentalStrike"),
     [MOVE_NARUTO_RUN] = _("Naruto Run"),
     [MOVE_LEEK_SPIN] = _("Leek Spin"),
     [MOVE_DOUBLE_CLICK] = _("Double Click"),
@@ -786,5 +786,4 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ASSASSINATE] = _("Assassinate"),
     [MOVE_EJECT] = _("Eject"),
     [MOVE_VENT_KILL] = _("Vent Kill"),
-
 };

@@ -12255,7 +12255,7 @@ static void Cmd_handleballthrow(void)
             catchRate = 1;
         else
             catchRate = catchRate + ballAddition;
-	if gBattleMons[gBattlerAttacker].ability = ABILITY_BALL_FETCH
+	if (gBattleMons[gBattlerAttacker].ability = ABILITY_BALL_FETCH)
 	    odds = ((catchRate) * (ballMultiplier + 20) / 10)
 	    * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)
             / (3 * gBattleMons[gBattlerTarget].maxHP);
