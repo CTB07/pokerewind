@@ -1,4 +1,4 @@
-#define ABILITY_CASH_GRAB 271static const u8 sNoneDescription[] = _("No special ability.");
+static const u8 sNoneDescription[] = _("No special ability.");
 static const u8 sStenchDescription[] = _("Helps repel wild POKéMON.");
 static const u8 sDrizzleDescription[] = _("Summons rain in battle.");
 static const u8 sSpeedBoostDescription[] = _("Gradually boosts Speed.");
@@ -264,6 +264,7 @@ static const u8 sContagiousDescription[] =   _("Infects foes.");
 static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
 static const u8 sOmnipotenceDescription[] =  _("Ups random stat on switch.");
 static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
+
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
     [ABILITY_NONE] = _("-------"),
@@ -527,10 +528,10 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HUNGER_SWITCH] = _("HungerSwitch"),
     [ABILITY_QUICK_DRAW] = _("Quick Draw"),
     [ABILITY_UNSEEN_FIST] = _("Unseen Fist"),
-    [ABILITY_CURIOUS_MEDICINE] = _("CuriusMedicn"),
+    [ABILITY_CURIOUS_MEDICINE] = _("Curio Medic"),
     [ABILITY_TRANSISTOR] = _("Transistor"),
     [ABILITY_DRAGONS_MAW] = _("Dragon's Maw"),
-    [ABILITY_CHILLING_NEIGH] = 
+    [ABILITY_CHILLING_NEIGH] = ("Chill Neigh"),
     [ABILITY_GRIM_NEIGH] = _("Grim Neigh"),
     [ABILITY_AS_ONE_ICE_RIDER] = _("As One"),
     [ABILITY_AS_ONE_SHADOW_RIDER] = _("As One"),
@@ -821,9 +822,9 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_BUFFOONERY] = sBuffooneryDescription,
     [ABILITY_CASH_GRAB] = sCashGrabDescription,
     [ABILITY_ECHO_CHAMBER] = sEchoChamberDescription,
-    [ABILITY_ARTILLERY] = sArtilleryescription,
+    [ABILITY_ARTILLERY] = sArtilleryDescription,
     [ABILITY_CONTAGIOUS] = sContagiousDescription,
     [ABILITY_TRIANGULATE] = sTriangulateDescription,
     [ABILITY_OMNIPOTENCE] = sOmnipotenceDescription,
-    [ABILITY_THERAPIST] = sTherapistDescription[]
+    [ABILITY_THERAPIST] = sTherapistDescription,
 };

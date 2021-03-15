@@ -52,6 +52,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *, u8, u8);
 static const u8 *GetInteractedWaterScript(struct MapPosition *, u8, u8);
 static bool32 TrySetupDiveDownScript(void);
 static bool32 TrySetupDiveEmergeScript(void);
+static bool32 TrySetupRewindScript(void);
+static bool32 TrySetupFastForwardScript(void);
 static bool8 TryStartStepBasedScript(struct MapPosition *, u16, u16);
 static bool8 CheckStandardWildEncounter(u16);
 static bool8 TryArrowWarp(struct MapPosition *, u16, u8);
@@ -153,6 +155,10 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     if (input->pressedBButton && TrySetupDiveEmergeScript() == TRUE)
         return TRUE;
+
+    if (input->pressedBButton && TrySetupDiveEmergeScript() == TRUE)
+        return TRUE;
+
     if (input->tookStep)
     {
         IncrementGameStat(GAME_STAT_STEPS);
@@ -476,6 +482,26 @@ static bool32 TrySetupDiveEmergeScript(void)
     if (FlagGet(FLAG_BADGE07_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
     {
         ScriptContext1_SetupScript(EventScript_UseDiveUnderwater);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupRewindScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && TrySetRewindWarp() == 2)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewind);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupFastForwardScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
         return TRUE;
     }
     return FALSE;
@@ -979,6 +1005,52 @@ u8 TrySetDiveWarp(void)
     else if (MetatileBehavior_IsDiveable(metatileBehavior) == TRUE)
     {
         if (SetDiveWarpDive(x - 7, y - 7) == TRUE)
+            return 2;
+    }
+    return 0;
+}
+
+bool8 TryDoRewindWarp(struct MapPosition *position, u16 metatileBehavior)
+{
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
+    {
+        if (SetRewindWarpEmerge(position->x - 7, position->y - 7))
+        {
+            StoreInitialPlayerAvatarState();
+            DoRewindWarp();
+            PlaySE(SE_M_SUPERSONIC);
+            return TRUE;
+        }
+    }
+    else if (MetatileBehavior_IsRewindable(metatileBehavior) == TRUE)
+    {
+        if (SetRewindWarpDive(position->x - 7, position->y - 7))
+        {
+            StoreInitialPlayerAvatarState();
+            DoRewindWarp();
+            PlaySE(SE_M_SUPERSONIC);
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+
+u8 TrySetRewindWarp(void)
+{
+    s16 x, y;
+    u8 metatileBehavior;
+
+    PlayerGetDestCoords(&x, &y);
+    metatileBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
+    {
+        if (SetRewindWarpEmerge(x - 7, y - 7) == TRUE)
+            return 1;
+    }
+    else if (MetatileBehavior_IsRewindable(metatileBehavior) == TRUE)
+    {
+        if (SetRewindWarpDive(x - 7, y - 7) == TRUE)
             return 2;
     }
     return 0;

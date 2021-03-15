@@ -1765,8 +1765,13 @@
 	.4byte \ptr
 	.endm
 
-	.macro tryactivategrimneigh, battler:req
+	.macro tryactivategrimneigh battler:req
 	various \battler, VARIOUS_TRY_ACTIVATE_GRIM_NEIGH
+	.endm
+
+	.macro jumpifoverhalfhp ptr:req
+	various BS_ATTACKER, VARIOUS_JUMP_IF_OVER_HALF_HP
+	.4byte \ptr
 	.endm
 
 @ helpful macros
@@ -1892,10 +1897,5 @@
 	jumpifability BS_ATTACKER, ABILITY_INFILTRATOR, 1f
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, \jumpptr
 	1:
-	.endm
-
-	.macro jumpifoverhalfhp ptr:req
-	various \battler, VARIOUS_JUMP_IF_OVER_HALF_HP
-	.4byte \ptr
 	.endm
 

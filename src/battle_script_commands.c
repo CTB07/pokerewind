@@ -1362,17 +1362,17 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
-    else if (gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST)
-             && ( ( (gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_25
-             || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_50
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_33_STATUS) && GetBattlerAbility(gBattlerAttacker) != ABILITY_ROCK_HEAD)
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_THRASH
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_RECOIL_IF_MISS
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_MEMENTO
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_HEALING_WISH
-	     || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_BELLY_DRUM
-             || gBattleMoves[gCurrentMove].effect == MOVE_EFFECT_SUBSTITUTE)
+    else if (((gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST))
+             && ((((gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_25)
+             || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_50)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33_STATUS)) && (GetBattlerAbility(gBattlerAttacker) != ABILITY_ROCK_HEAD))
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RAMPAGE)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_MEMENTO)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_HEALING_WISH)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_BELLY_DRUM)
+             || (gBattleMoves[gCurrentMove].effect == EFFECT_SUBSTITUTE))))
     {
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
@@ -6954,7 +6954,7 @@ static bool32 HasAttackerFaintedTarget(void)
         return FALSE;
 }
 
-static void static void HandleTerrainMove(u16 move)
+static void HandleTerrainMove(u16 move)
 {
     u32 statusFlag = 0;
     u8 *timer = NULL;
@@ -7015,8 +7015,6 @@ static void static void HandleTerrainMove(u16 move)
         }
         break;
     }
-    }
-
     if (gFieldStatuses & statusFlag || statusFlag == 0)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
@@ -8433,15 +8431,11 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;    // exit if loop failed (failsafe)
         }
         return;
-    case VARIOUS_JUMP_IF_OVER_HALF_HP
-        if (gBattleMons[gBattlerAttacker].hp > halfHp)
-        {
-             gBattlescriptCurrInstr = jumpPtr;
-        }
+    case VARIOUS_JUMP_IF_OVER_HALF_HP:
+        if (gBattleMons[gBattlerAttacker].hp > (gBattleMons[gBattlerAttacker].maxHP / 2))
+             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         else
-        {
-        gBattlescriptCurrInstr = +=5;
-        }
+             gBattlescriptCurrInstr +=7;
         return;
     }
     gBattlescriptCurrInstr += 3;
@@ -12257,8 +12251,10 @@ static void Cmd_handleballthrow(void)
             catchRate = 1;
         else
             catchRate = catchRate + ballAddition;
-	if gBattleMons[gBattlerAttacker].ability = ABILITY_BALL_FETCH
+	if (gBattleMons[gBattlerAttacker].ability == ABILITY_BALL_FETCH)
 	    odds = ((catchRate) * (ballMultiplier + 20) / 10)
+	    * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)
+            / (3 * gBattleMons[gBattlerTarget].maxHP);
 	else
             odds = ((catchRate) * ballMultiplier / 10)
             * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)

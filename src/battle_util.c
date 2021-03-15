@@ -4090,7 +4090,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
-                i = Random() % NATURE_STATS + STAT_ATK; //the nature stats are atk def sate sdef spe. nature stats  is 5. +1 because we can't stat boost hp
+                i = (Random() % 5) + 1; //the stats used are atk def sate sdef spe. Rand 5 gives no from 0-4. +1 because we can't stat boost hp - gives us stats 
                 SET_STATCHANGER(i, 4, FALSE);
                 BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
                 effect++;
@@ -6863,6 +6863,7 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
 
 static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 updateFlags)
 {
+    u32 percentBoost;
     u32 i, ability;
     u32 holdEffectAtk, holdEffectParamAtk;
     u16 basePower = CalcMoveBasePower(move, battlerAtk, battlerDef);
@@ -6984,9 +6985,9 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (gBattleMoves[move].effect == EFFECT_PAY_DAY)
            MulModifier(&modifier, UQ_4_12(2.0));
         break;
-    case ABILITY_ECHO_CHAMBER
-        percentBoost = min(gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
-        MulModifier(&finalModifier, UQ_4_12(1.0) + sPercentToModifier[percentBoost]);
+    case ABILITY_ECHO_CHAMBER:
+        percentBoost = min((gBattleStruct->sameMoveTurns[battlerAtk] * 20), 100);
+        MulModifier(&modifier, UQ_4_12(1.0) + sPercentToModifier[percentBoost]);
         break;
     case ABILITY_ARTILLERY:
         if (gBattleMoves[move].flags & FLAG_MEGA_LAUNCHER_BOOST || gBattleMoves[move].flags & FLAG_BALLISTIC)
@@ -7741,7 +7742,7 @@ static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 batt
         mod = UQ_4_12(2.0);
     if (gBattleMoves[move].effect == EFFECT_EJECT && defType == TYPE_PSYCHIC)
         mod = UQ_4_12(2.0);
-    if (gBattleMoves[move].effect == EFFECT_TRIPLE_SUPER_EFFECTIVE && mod = UQ_4_12(2.0))
+    if (gBattleMoves[move].effect == EFFECT_TRIPLE_SUPER_EFFECTIVE && mod == UQ_4_12(2.0))
         mod = UQ_4_12(3.0);
     if (moveType == TYPE_GROUND && defType == TYPE_FLYING && IsBattlerGrounded(battlerDef) && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);

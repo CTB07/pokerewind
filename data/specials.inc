@@ -329,6 +329,7 @@ gSpecials:: @ 81DBA64
 	def_special FoundBlackGlasses
 	def_special StartDroughtWeatherBlend
 	def_special DoDiveWarp
+	def_special DoRewindWarp
 	def_special DoFallWarp
 	def_special ShowContestEntryMonPic
 	def_special HideContestEntryMonPic

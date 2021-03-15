@@ -2097,6 +2097,7 @@ BattleScript_EffectBelch:
 BattleScript_EffectMentalStrike:
 BattleScript_EffectBodyPress:
 BattleScript_EffectSpinDash:
+BattleScript_EffectTripleSuperEffective:
 
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
