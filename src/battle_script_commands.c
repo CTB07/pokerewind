@@ -1367,12 +1367,12 @@ static void Cmd_attackcanceler(void)
              || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33
 	     || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_50
 	     || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33_STATUS) && GetBattlerAbility(gBattlerAttacker) != ABILITY_ROCK_HEAD)
-	     || gBattleMoves[gCurrentMove].effect == EFFECT_THRASH
+	     || gBattleMoves[gCurrentMove].effect == EFFECT_RAMPAGE
 	     || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS
 	     || gBattleMoves[gCurrentMove].effect == EFFECT_MEMENTO
 	     || gBattleMoves[gCurrentMove].effect == EFFECT_HEALING_WISH
 	     || gBattleMoves[gCurrentMove].effect == EFFECT_BELLY_DRUM
-             || gBattleMoves[gCurrentMove].effect == EFFECT_SUBSTITUTE)
+             || gBattleMoves[gCurrentMove].effect == EFFECT_SUBSTITUTE))
     {
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
