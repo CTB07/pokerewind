@@ -501,7 +501,7 @@ static bool32 TrySetupFastForwardScript(void)
 {
     if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
     {
-        ScriptContext1_SetupScript(EventScript_UseRewindFastForward);
+        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
         return TRUE;
     }
     return FALSE;
