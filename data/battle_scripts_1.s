@@ -3245,7 +3245,7 @@ BattleScript_EffectRecharge::
 BattleScript_MoveUsedMustRecharge::
 	printstring STRINGID_PKMNMUSTRECHARGE
 	waitmessage 0x40
-	jumpifability BS_TARGET_SIDE, ABILITY_BUFFOONERY, BattleScript_EmergencyExit
+	jumpifability BS_ATTACKER, ABILITY_BUFFOONERY, BattleScript_EmergencyExit
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRage::

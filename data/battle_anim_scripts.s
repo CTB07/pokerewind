@@ -13714,6 +13714,7 @@ Move_OVERDRIVE::
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_THIN_RING, 0, 0, 12, 0x76E1     @Blue Electricity
 	waitforvisualfinish
 	end
+
 OverdriveRings:
 	playsewithpan SE_M_THUNDERBOLT, SOUND_PAN_TARGET
 	launchtemplate gSimplePaletteBlendSpriteTemplate 0x2 0x5 0x1f 0x3 0x8 0x0 0x3ff
@@ -14111,6 +14112,8 @@ Move_MOB_MENTALITY::
 	call IceCrystalEffectShort
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 16, 0, RGB_BLACK
 	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
 	end
 
 Move_MIC_DROP::
@@ -14185,14 +14188,15 @@ Move_LEEK_SPIN::
 
 
 Move_DOUBLE_CLICK::
-	loadspritegfx ANIM_TAG_MOUSE_CURSOR
+	@loadspritegfx ANIM_TAG_MOUSE_CURSOR @gMouseCursorTemplate
+	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
 	delay 6
-	createsprite gMouseCursorTemplate, 2, 4, 0, 0, 1, 2
+	createsprite gBasicHitSplatSpriteTemplate, 2, 4, 0, 0, 1, 2
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
-	playsewithpan SE_M_SWAGGER2, SOUND_PAN_TARGET
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
 	delay 8
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
@@ -14204,25 +14208,26 @@ Move_BLUE_SCREEN::
 
 Move_SPIN_DASH::
 	loadspritegfx ANIM_TAG_SHADOW_BALL
+	monbg ANIM_ATTACKER
 	createvisualtask AnimTask_AttackerFadeToInvisible, 5, 0
 	waitforvisualfinish
 	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_MIST, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 5, 0, 5
 	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
 	waitforvisualfinish
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_TARGET
-	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
+	createvisualtask AnimTask_AttackerFadeFromInvisible, 2, 1
 	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 8, 1
 	delay 4
 	waitforvisualfinish
-	clearmonbg ANIM_ATTACKER
 	end
 
 Move_SYNTH_WAVE::
-	goto Move_OVERDRIVE
+	goto Move_THUNDER_SHOCK
 
 Move_ENVELOP::
-	goto Move_HEAVY_SLAM
+	goto Move_BODY_SLAM
 
 Move_FROSTBITE::
 	goto Move_GLACIATE
