@@ -265,6 +265,7 @@ static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
 static const u8 sOmnipotenceDescription[] =  _("Ups random stat on switch.");
 static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
 
+
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
     [ABILITY_NONE] = _("-------"),
