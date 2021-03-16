@@ -22,7 +22,6 @@ void FieldCB_ReturnToFieldNoScript(void);
 void FieldCB_ReturnToFieldNoScriptCheckMusic(void);
 void DoWarp(void);
 void DoDiveWarp(void);
-void DoRewindWarp(void);
 void DoSootopolisLegendWarp(void);
 void DoDoorWarp(void);
 void DoFallWarp(void);
@@ -42,6 +41,7 @@ void DoOrbEffect(void);
 void FadeOutOrbEffect(void);
 void sub_80B05B4(void);
 void WriteFlashScanlineEffectBuffer(u8 flashLevel);
+void DoRewindWarp(void);
 bool8 IsPlayerStandingStill(void);
 
 #endif // GUARD_FIELD_SCREEN_EFFECT_H

@@ -52,8 +52,6 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *, u8, u8);
 static const u8 *GetInteractedWaterScript(struct MapPosition *, u8, u8);
 static bool32 TrySetupDiveDownScript(void);
 static bool32 TrySetupDiveEmergeScript(void);
-static bool32 TrySetupRewindScript(void);
-static bool32 TrySetupFastForwardScript(void);
 static bool8 TryStartStepBasedScript(struct MapPosition *, u16, u16);
 static bool8 CheckStandardWildEncounter(u16);
 static bool8 TryArrowWarp(struct MapPosition *, u16, u8);
@@ -71,6 +69,8 @@ static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
 static void UpdateHappinessStepCounter(void);
 static bool8 UpdatePoisonStepCounter(void);
+static bool32 TrySetupRewindScript(void);
+static bool32 TrySetupFastForwardScript(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
