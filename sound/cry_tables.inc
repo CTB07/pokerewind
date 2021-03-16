@@ -30,8 +30,8 @@ gCryTable:: @ 869DCF4
 	cry Cry_Grubfeed  @ 869DE2C
 	cry Cry_Kwizbee  @ 869DE38
 	cry Cry_Cosmonarch  @ 869DE44
-	cry Cry_Nidorina  @ 869DE50
-	cry Cry_Nidoqueen  @ 869DE5C
+	cry Cry_Paastel  @ 869DE50
+	cry Cry_Sheepastry  @ 869DE5C
 	cry Cry_NidoranM  @ 869DE68
 	cry Cry_Nidorino  @ 869DE74
 	cry Cry_Nidoking  @ 869DE80
@@ -1304,8 +1304,8 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Grubfeed  @ 869F05C
 	cry2 Cry_Kwizbee  @ 869F068
 	cry2 Cry_Cosmonarch  @ 869F074
-	cry2 Cry_Nidorina  @ 869F080
-	cry2 Cry_Nidoqueen  @ 869F08C
+	cry2 Cry_Paastel  @ 869F080
+	cry2 Cry_Sheepastry  @ 869F08C
 	cry2 Cry_NidoranM  @ 869F098
 	cry2 Cry_Nidorino  @ 869F0A4
 	cry2 Cry_Nidoking  @ 869F0B0

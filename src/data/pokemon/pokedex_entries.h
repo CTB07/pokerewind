@@ -360,24 +360,24 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_NIDORINA] =
+    [NATIONAL_DEX_PAASTEL] =
     {
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Cupcake"),
         .height = 8,
         .weight = 200,
-        .description = gNidorinaPokedexText,
+        .description = gPaastelPokedexText,
         .pokemonScale = 381,
         .pokemonOffset = 15,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_NIDOQUEEN] =
+    [NATIONAL_DEX_SHEEPASTRY] =
     {
-        .categoryName = _("Drill"),
+        .categoryName = _("Confection"),
         .height = 13,
         .weight = 600,
-        .description = gNidoqueenPokedexText,
+        .description = gSheepastryPokedexText,
         .pokemonScale = 293,
         .pokemonOffset = 4,
         .trainerScale = 256,

@@ -154,30 +154,30 @@ const u8 gRaichuPokedexText[] = _(
     "and calms itself down.");
 
 const u8 gGrubfeedPokedexText[] = _(
-    "When it curls up in a ball, it can make any\n"
-    "attack bounce off harmlessly. Its hide has\n"
-    "turned tough and solid as a result of\n"
-    "living in the desert.");
+    "Largely sedentary, it spends much of its\n" 
+    "life without thoughts of its own, merely\n" 
+    "consuming the mind honey produced by elder\n"
+    "members of the hive.");
 
 const u8 gKwizbeePokedexText[] = _(
-    "It curls up in a ball to protect itself from\n"
-    "enemy attacks. It also curls up to prevent\n"
-    "heatstroke during the daytime when\n"
-    "temperatures rise sharply.");
+    "It imprints psychic energy into the honey\n" 
+    "it produces in the form of sets of\n" 
+    "questions, then harvests the answers from\n"
+    "those who consume the honey.");
 
 const u8 gCosmonarchPokedexText[] = _(
-    "Its highly toxic barbs are thought to have\n"
-    "developed as protection for this small-\n"
-    "bodied Pokémon. When enraged, it releases\n"
-    "a horrible toxin from its horn.");
+    "A powerful psychic, it forces the\n" 
+    "hive under its command to toil day and\n"
+    "night to constantly feed it new\n"
+    "information.");
 
-const u8 gNidorinaPokedexText[] = _(
-    "When it is with its friends or\n"
-    "family, its barbs are tucked away to\n"
-    "prevent injury. It appears to become\n"
-    "nervous if separated from the others.");
+const u8 gPaastelPokedexText[] = _(
+    "Paastel seek out others of their kind, only\n"
+    "to to viciously fight each other. For some\n" 
+    "reason, Shiny Paastel have a different\n"
+    "mindset entirely and behave normally.");
 
-const u8 gNidoqueenPokedexText[] = _(
+const u8 gSheepastryPokedexText[] = _(
     "It is adept at sending foes flying with\n"
     "harsh tackles using its tough, scaly body.\n"
     "This Pokémon is at its strongest when\n"

@@ -150,14 +150,14 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 3,
     },
-    [SPECIES_NIDORINA] =
+    [SPECIES_PAASTEL] =
     {
-        .size = 0x66,
-        .y_offset = 8,
+        .size = 0x45,
+        .y_offset = 5,
     },
-    [SPECIES_NIDOQUEEN] =
+    [SPECIES_SHEEPASTRY] =
     {
-        .size = 0x78,
+        .size = 0x45,
         .y_offset = 2,
     },
     [SPECIES_NIDORAN_M] =

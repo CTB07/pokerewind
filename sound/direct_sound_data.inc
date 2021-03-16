@@ -503,11 +503,11 @@ Cry_Cosmonarch::
 	.incbin "sound/direct_sound_samples/cries/nidoran_f.bin"
 
 	.align 2
-Cry_Nidorina::
+Cry_Paastel::
 	.incbin "sound/direct_sound_samples/cries/nidorina.bin"
 
 	.align 2
-Cry_Nidoqueen::
+Cry_Sheepastry::
 	.incbin "sound/direct_sound_samples/cries/nidoqueen.bin"
 
 	.align 2
