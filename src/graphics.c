@@ -118,6 +118,9 @@ const u32 gBattleAnimSpritePal_DragonPulseRing[] = INCBIN_U32("graphics/battle_a
 const u32 gBattleAnimSpriteGfx_DreepyMissile[] = INCBIN_U32("graphics/battle_anims/sprites/new/dreepy_missile.4bpp.lz");
 const u32 gBattleAnimSpritePal_DreepyMissile[] = INCBIN_U32("graphics/battle_anims/sprites/new/dreepy_missile.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_MouseCursor[] = INCBIN_U32("graphics/battle_anims/sprites/new/mouse_cursor.4bpp.lz");
+const u32 gBattleAnimSpritePal_MouseCursor[] = INCBIN_U32("graphics/battle_anims/sprites/new/mouse_cursor.gbapal.lz");
+
 const u32 gBattleAnimSpriteGfx_Drill[] = INCBIN_U32("graphics/battle_anims/sprites/new/drill.4bpp.lz");
 const u32 gBattleAnimSpritePal_Drill[] = INCBIN_U32("graphics/battle_anims/sprites/new/drill.gbapal.lz");
 

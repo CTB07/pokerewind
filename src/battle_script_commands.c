@@ -8533,14 +8533,14 @@ static void Cmd_faintifabilitynotdamp(void)
     if (gBattleControllerExecFlags)
         return;
 
-    if ((gBattlerTarget = IsAbilityOnField(ABILITY_DAMP)))
+    if ((gBattlerTarget == IsAbilityOnField(ABILITY_DAMP)))
     {
         gLastUsedAbility = ABILITY_DAMP;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_DAMP);
         gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
         return;
     }
-    if ((gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST)))
+    if ((gBattlerTarget == IsAbilityOnField(ABILITY_THERAPIST)))
     {
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);

@@ -391,6 +391,7 @@
 #define ANIM_TAG_DREEPY                     (ANIM_SPRITES_START + 379)
 #define ANIM_TAG_ICE_ROCK_SINGLE            (ANIM_SPRITES_START + 380)
 #define ANIM_TAG_STONE_PILLAR_MULTI         (ANIM_SPRITES_START + 381)
+#define ANIM_TAG_MOUSE_CURSOR               (ANIM_SPRITES_START + 382)
 
 // battlers
 #define ANIM_ATTACKER    0

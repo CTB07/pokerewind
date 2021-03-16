@@ -7951,7 +7951,7 @@ BattleScript_PanicSweatTrySpDef::
 BattleScript_PanicSweatEnd::
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectTerrainHit:
+BattleScript_EffectTerrainHit::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -7971,7 +7971,6 @@ BattleScript_EffectTerrainHit:
 	resultmessage
 	waitmessage 0x40
 	setterrain BattleScript_TryFaint
-@@@ TODO - 'restore' bg @@@
 	printfromtable gTerrainStringIds
 BattleScript_TryFaint:
 	tryfaintmon BS_TARGET, FALSE, NULL

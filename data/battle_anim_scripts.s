@@ -776,7 +776,36 @@ gBattleAnims_Moves::
 	.4byte Move_GLACIAL_LANCE
 	.4byte Move_ASTRAL_BARRAGE
 	.4byte Move_EERIE_SPELL
-	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
+        .4byte Move_BIG_DEBATE
+        .4byte Move_LEGION_BASH
+        .4byte Move_MOB_MENTALITY
+        .4byte Move_MIC_DROP
+        .4byte Move_SNAP
+        .4byte Move_MORDANT_ACID
+        .4byte Move_BEAR_HUG
+        .4byte Move_LENS_FLARE
+        .4byte Move_JUSTICE_HAMMER
+        .4byte Move_GENTLE_RAIN
+        .4byte Move_LEAD_CANNON
+        .4byte Move_PSYCH_OUT
+        .4byte Move_PANIC_SWEAT
+        .4byte Move_PIXIE_PETAL
+        .4byte Move_MIND_PIECE
+        .4byte Move_DIVEBOMB
+        .4byte Move_REWIND
+        .4byte Move_MENTAL_STRIKE
+        .4byte Move_NARUTO_RUN
+        .4byte Move_LEEK_SPIN
+        .4byte Move_DOUBLE_CLICK
+        .4byte Move_BLUE_SCREEN
+        .4byte Move_SPIN_DASH
+        .4byte Move_SYNTH_WAVE
+        .4byte Move_ENVELOP
+        .4byte Move_FROSTBITE
+        .4byte Move_GUN
+        .4byte Move_VENT_KILL
+        .4byte Move_EJECT
+	.4byte Move_COUNT @ cannot be reached, because last move is as defined
 
 	.align 2
 gBattleAnims_StatusConditions::
@@ -14041,6 +14070,168 @@ Move_ASTRAL_BARRAGE::
 
 Move_EERIE_SPELL::
 	end @to do:
+
+Move_BIG_DEBATE::
+	goto Move_TORMENT
+
+Move_LEGION_BASH::
+	goto Move_SLAM
+
+Move_MOB_MENTALITY::
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 9, RGB_RED
+	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 0
+	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 64
+	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 128
+	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 196
+	playsewithpan SE_M_FLAME_WHEEL, SOUND_PAN_TARGET
+	waitforvisualfinish
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 8, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 1
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 5, 3, 1
+	waitforvisualfinish
+	delay 15
+	call IceCrystalEffectShort
+	delay 5
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 9, 0, RGB(12, 26, 31)
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 7, 0, RGB_BLACK
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
+Move_MIC_DROP::
+	goto Move_PARTING_SHOT
+
+Move_SNAP::
+	loadspritegfx ANIM_TAG_FINGER
+	loadspritegfx ANIM_TAG_THIN_RING
+	monbg ANIM_TARGET
+	fadetobg BG_DARK
+	waitbgfadein
+	delay 0	
+	createsprite gMetronomeFingerSpriteTemplate, ANIM_ATTACKER, 12, 0
+	delay 24
+	loopsewithpan SE_M_COMET_PUNCH, SOUND_PAN_ATTACKER, 22, 3
+	waitforvisualfinish
+	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 0x1D09, 12
+	createvisualtask AnimTask_SpiteTargetShadow, 2
+	loopsewithpan SE_M_PSYBEAM, SOUND_PAN_TARGET, 20, 3
+	delay 8
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	delay 1
+	restorebg
+	waitbgfadein
+	end
+
+Move_MORDANT_ACID::
+	goto Move_ACID_SPRAY
+
+Move_BEAR_HUG::
+	goto Move_OCTOLOCK
+
+Move_LENS_FLARE::
+	goto Move_FLASH
+
+Move_JUSTICE_HAMMER::
+	goto Move_IRON_TAIL
+
+Move_GENTLE_RAIN::
+	goto Move_WATER_SPOUT
+
+Move_LEAD_CANNON::
+	goto Move_SMACK_DOWN
+
+Move_PSYCH_OUT::
+	goto Move_ROLE_PLAY
+
+Move_PANIC_SWEAT::
+	goto Move_FAKE_TEARS
+
+Move_PIXIE_PETAL::
+	goto Move_PETAL_BLIZZARD
+
+Move_MIND_PIECE::
+	goto Move_EXTRASENSORY
+
+Move_DIVEBOMB::
+	goto Move_SKY_ATTACK
+
+Move_REWIND::
+	goto Move_TELEKINESIS
+
+Move_MENTAL_STRIKE::
+	goto Move_SECRET_SWORD
+
+Move_NARUTO_RUN::
+	goto Move_AGILITY
+
+Move_LEEK_SPIN::
+	goto Move_PETAL_DANCE
+
+
+Move_DOUBLE_CLICK::
+	loadspritegfx ANIM_TAG_MOUSE_CURSOR
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
+	delay 6
+	createsprite gMouseCursorTemplate, 2, 4, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_M_SWAGGER2, SOUND_PAN_TARGET
+	delay 8
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
+Move_BLUE_SCREEN::
+	goto Move_EXPLOSION
+
+Move_SPIN_DASH::
+	loadspritegfx ANIM_TAG_SHADOW_BALL
+	delay 15
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_MIST, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 5, 0, 5
+	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
+	createvisualtask AnimTask_AttackerFadeToInvisible, 5, 0
+	waitforvisualfinish
+	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 8, 1
+	delay 4
+	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
+	waitforvisualfinish
+	end
+
+Move_SYNTH_WAVE::
+	goto Move_OVERDRIVE
+
+Move_ENVELOP::
+	goto Move_HEAVY_SLAM
+
+Move_FROSTBITE::
+	goto Move_GLACIATE
+
+
+Move_ASSASSINATE::
+	goto Move_NIGHT_SLASH
+
+Move_GUN::
+	goto Move_SMACK_DOWN
+
+Move_VENT_KILL::
+	goto Move_U_TURN
+
+Move_EJECT::
+	goto Move_CIRCLE_THROW
+
+
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
