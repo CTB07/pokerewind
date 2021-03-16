@@ -13972,6 +13972,7 @@ Move_STEEL_BEAM::
 	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0xE 0x0 0x6B59    @From gray
 	waitforvisualfinish
 	end
+
 SteelBeamShards:
 	launchtemplate gSteelBeamSpikeShardTemplate 0x80, 0x5 0xf 0xf 0x14 0x0 0x0
 	launchtemplate gSteelBeamSpikeShardTemplate 0x80, 0x5 0xf 0xf 0x14 0xa 0x5
@@ -13980,6 +13981,7 @@ SteelBeamShards:
 	launchtemplate gSteelBeamSpikeShardTemplate 0x80, 0x5 0xf 0xf 0x14 0x14 0xa
 	launchtemplate gSteelBeamSpikeShardTemplate 0x80, 0x5 0xf 0xf 0x14 0xffec 0xfff6
 	delay 0x2
+	return
 
 Move_EXPANDING_FORCE::
 	end @to do:
@@ -14072,14 +14074,26 @@ Move_EERIE_SPELL::
 	end @to do:
 
 Move_BIG_DEBATE::
-	goto Move_TORMENT
+	loadspritegfx ANIM_TAG_ANGER
+	loadspritegfx ANIM_TAG_THOUGHT_BUBBLE
+	call SetPsychicBackground
+	createvisualtask AnimTask_TormentAttacker, 2
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendMonInAndOut, 2, ANIM_TARGET, RGB_RED, 10, 1, 1
+	createsprite gAngerMarkSpriteTemplate, ANIM_TARGET, 2, 1, -20, -28
+	playsewithpan SE_M_SWAGGER2, SOUND_PAN_TARGET
+	delay 20
+	createsprite gAngerMarkSpriteTemplate, ANIM_TARGET, 2, 1, 20, -28
+	playsewithpan SE_M_SWAGGER2, SOUND_PAN_TARGET
+	waitforvisualfinish
+	call UnsetPsychicBg
+	end
 
 Move_LEGION_BASH::
 	goto Move_SLAM
 
 Move_MOB_MENTALITY::
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
-	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -14093,7 +14107,9 @@ Move_MOB_MENTALITY::
 	waitforvisualfinish
 	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
 	waitforvisualfinish
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	call IceCrystalEffectShort
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 16, 0, RGB_BLACK
 	waitforvisualfinish
 	end
 
@@ -14193,14 +14209,13 @@ Move_SPIN_DASH::
 	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_MIST, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 5, 0, 5
 	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
 	waitforvisualfinish
-	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
-	waitforvisualfinish
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_TARGET
 	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 8, 1
 	delay 4
 	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
 	end
 
 Move_SYNTH_WAVE::

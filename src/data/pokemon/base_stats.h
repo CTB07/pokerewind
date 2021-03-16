@@ -7167,7 +7167,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_DRAGON,
-        .abilities = {ABILITY_ARTILLERY, ABILITY_NONE},
+        .abilities = {ABILITY_LOW_ODDS, ABILITY_NONE},
         #ifdef BATTLE_ENGINE
             .abilityHidden = ABILITY_UNBURDEN,
         #endif
@@ -7388,7 +7388,7 @@ const struct BaseStats gBaseStats[] =
         .baseSpeed     = 35,
         .baseSpAttack  = 30,
         .baseSpDefense = 30,
-        .type1 = TYPE_DARK,
+        .type1 = TYPE_STEEL,
         .type2 = TYPE_DARK,
         .catchRate = 255,
         .expYield = 56,

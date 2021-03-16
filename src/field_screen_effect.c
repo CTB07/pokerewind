@@ -505,16 +505,6 @@ void DoDiveWarp(void)
     CreateTask(Task_WarpAndLoadMap, 10);
 }
 
-void DoRewindWarp(void)
-{
-    ScriptContext2_Enable();
-    TryFadeOutOldMapMusic();
-    WarpFadeOutScreen();
-    PlaySE(SE_WARP_IN);
-    gFieldCallback = FieldCB_SpinEnterWarp;
-    CreateTask(Task_WarpAndLoadMap, 10);
-}
-
 void DoSootopolisLegendWarp(void)
 {
     ScriptContext2_Enable();
@@ -1282,4 +1272,14 @@ static void Task_EnableScriptAfterMusicFade(u8 taskId)
         DestroyTask(taskId);
         EnableBothScriptContexts();
     }
+}
+
+void DoRewindWarp(void)
+{
+    ScriptContext2_Enable();
+    TryFadeOutOldMapMusic();
+    WarpFadeOutScreen();
+    PlaySE(SE_WARP_IN);
+    gFieldCallback = FieldCB_SpinEnterWarp;
+    CreateTask(Task_WarpAndLoadMap, 10);
 }

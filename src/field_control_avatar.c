@@ -487,25 +487,6 @@ static bool32 TrySetupDiveEmergeScript(void)
     return FALSE;
 }
 
-static bool32 TrySetupRewindScript(void)
-{
-    if (FlagGet(FLAG_BADGE01_GET) && TrySetRewindWarp() == 2)
-    {
-        ScriptContext1_SetupScript(EventScript_UseRewind);
-        return TRUE;
-    }
-    return FALSE;
-}
-
-static bool32 TrySetupFastForwardScript(void)
-{
-    if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
-    {
-        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
-        return TRUE;
-    }
-    return FALSE;
-}
 
 static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileBehavior, u16 direction)
 {
@@ -1075,4 +1056,25 @@ int SetCableClubWarp(void)
     MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
+}
+
+
+static bool32 TrySetupRewindScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && TrySetRewindWarp() == 2)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewind);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupFastForwardScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
+        return TRUE;
+    }
+    return FALSE;
 }
