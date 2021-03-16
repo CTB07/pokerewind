@@ -14102,7 +14102,6 @@ Move_MOB_MENTALITY::
 	waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 7, 0, RGB_BLACK
 	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
 
@@ -14199,13 +14198,13 @@ Move_SPIN_DASH::
 	loadspritegfx ANIM_TAG_SHADOW_BALL
 	delay 15
 	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_MIST, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 5, 0, 5
-	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
 	createvisualtask AnimTask_AttackerFadeToInvisible, 5, 0
+	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
 	waitforvisualfinish
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_TARGET
+	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 8, 1
 	delay 4
-	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
 	waitforvisualfinish
 	end
 

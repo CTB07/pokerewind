@@ -3652,7 +3652,7 @@ const struct SpriteTemplate gDreepyMissileTemplate =
 const struct SpriteTemplate gMouseCursorTemplate =
 {
     .tileTag = ANIM_TAG_MOUSE_CURSOR,
-    .paletteTag = ANIM_TAG_MOUSE_CURSOR,
+    .paletteTag = ANIM_TAG_ACCUPRESSURE,
     .oam = &gOamData_AffineOff_ObjNormal_16x32,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
