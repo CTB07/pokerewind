@@ -3034,10 +3034,8 @@ static void FillPartnerParty(u16 trainerId)
             CalculateMonStats(&gPlayerParty[MULTI_PARTY_SIZE + i]);
         }
     }
-#ifdef BATTLE_ENGINE
     else if (trainerId >= TRAINER_CUSTOM_PARTNER)
     {
-        const struct TrainerMon *partyData = gTrainers[trainerId - TRAINER_CUSTOM_PARTNER].party.TrainerMon;
         otID = Random32();
 
         for (i = 0; i < 3; i++)
