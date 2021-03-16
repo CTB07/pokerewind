@@ -51,7 +51,6 @@ void RunOnTransitionMapScript(void);
 void RunOnResumeMapScript(void);
 void RunOnReturnToFieldMapScript(void);
 void RunOnDiveWarpMapScript(void);
-void RunOnRewindWarpMapScript(void);
 bool8 TryRunOnFrameMapScript(void);
 void TryRunOnWarpIntoMapScript(void);
 u32 CalculateRamScriptChecksum(void);
@@ -61,6 +60,7 @@ const u8 *GetRamScript(u8 objectId, const u8 *script);
 bool32 ValidateSavedRamScript(void);
 u8 *GetSavedRamScriptIfValid(void);
 void InitRamScript_NoObjectEvent(u8 *script, u16 scriptSize);
+void RunOnRewindWarpMapScript(void);
 
 // srccmd.h
 void SetMovingNpcId(u16 npcId);
