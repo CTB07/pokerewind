@@ -14098,9 +14098,6 @@ Move_MOB_MENTALITY::
 	delay 15
 	call IceCrystalEffectShort
 	delay 5
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 9, 0, RGB(12, 26, 31)
-	waitforvisualfinish
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 7, 0, RGB_BLACK
 	waitforvisualfinish
 	blendoff
 	end
@@ -14146,7 +14143,7 @@ Move_GENTLE_RAIN::
 	goto Move_WATER_SPOUT
 
 Move_LEAD_CANNON::
-	goto Move_SMACK_DOWN
+	goto Move_STEEL_BEAM
 
 Move_PSYCH_OUT::
 	goto Move_ROLE_PLAY
@@ -14199,8 +14196,10 @@ Move_SPIN_DASH::
 	delay 15
 	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_MIST, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 5, 0, 5
 	createvisualtask AnimTask_AttackerFadeToInvisible, 5, 0
+	waitforvisualfinish
 	createsprite gShadowBallSpriteTemplate, ANIM_TARGET, 2, 16, 16, 8
 	waitforvisualfinish
+
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_TARGET
 	createvisualtask AnimTask_AttackerFadeFromInvisible, 5, 1
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 8, 1
@@ -14217,12 +14216,11 @@ Move_ENVELOP::
 Move_FROSTBITE::
 	goto Move_GLACIATE
 
-
 Move_ASSASSINATE::
 	goto Move_NIGHT_SLASH
 
 Move_GUN::
-	goto Move_SMACK_DOWN
+	goto Move_BULLET_SEED
 
 Move_VENT_KILL::
 	goto Move_U_TURN

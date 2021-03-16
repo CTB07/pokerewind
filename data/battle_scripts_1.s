@@ -4035,7 +4035,7 @@ BattleScript_SkullBashEnd::
 BattleScript_EffectMeteorBeam::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
-	setbyte sTWOTURN_STRINGID, 2
+	setbyte sTWOTURN_STRINGID, 9
 	call BattleScriptFirstChargingTurn
 	setstatchanger STAT_SPATK, 1, FALSE
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_MeteorBeamEnd
@@ -4052,7 +4052,7 @@ BattleScript_MeteorBeamEnd::
 BattleScript_EffectDivebomb::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
-	setbyte sTWOTURN_STRINGID, 2
+	setbyte sTWOTURN_STRINGID, 9
 	call BattleScriptFirstChargingTurn
 	setstatchanger STAT_SPEED, 1, FALSE
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_DivebombEnd
@@ -7972,6 +7972,8 @@ BattleScript_EffectTerrainHit::
 	waitmessage 0x40
 	setterrain BattleScript_TryFaint
 	printfromtable gTerrainStringIds
+	waitmessage 0x40
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 BattleScript_TryFaint:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd

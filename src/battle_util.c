@@ -4072,13 +4072,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 {
                     for (stat = 0; stat < NUM_BATTLE_STATS; stat++)
                     {
-                        if (gBattleMons[opposingBattler].statStages[i] != 6)
+                        if (gBattleMons[opposingBattler].statStages[stat] != 6)
                             break;
                     }
                     if (stat != NUM_BATTLE_STATS)
                     {
                         for (stat = 0; stat < NUM_BATTLE_STATS; stat++)
-                            gBattleMons[opposingBattler].statStages[i] = 6;
+                            gBattleMons[opposingBattler].statStages[stat] = 6;
 			BattleScriptExecute(BattleScript_BattlerAbilityNoFucks);
                     }
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
@@ -4091,7 +4091,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 i = (Random() % 5) + 1; //the stats used are atk def sate sdef spe. Rand 5 gives no from 0-4. +1 because we can't stat boost hp - gives us stats 
-                SET_STATCHANGER(i, 4, FALSE);
+                SET_STATCHANGER(i, 3, FALSE);
                 BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
                 effect++;
             }
