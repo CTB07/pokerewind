@@ -4079,9 +4079,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     {
                         for (stat = 0; stat < NUM_BATTLE_STATS; stat++)
                             gBattleMons[opposingBattler].statStages[i] = 6;
+			BattleScriptExecute(BattleScript_BattlerAbilityNoFucks);
                     }
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
-		BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityNoFucks);
                 effect++;
 		}
             }
