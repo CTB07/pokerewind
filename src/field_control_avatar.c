@@ -991,6 +991,49 @@ u8 TrySetDiveWarp(void)
     return 0;
 }
 
+const u8 *GetObjectEventScriptPointerPlayerFacing(void)
+{
+    u8 direction;
+    struct MapPosition position;
+
+    direction = GetPlayerMovementDirection();
+    GetInFrontOfPlayerPosition(&position);
+    return GetInteractedObjectEventScript(&position, MapGridGetMetatileBehaviorAt(position.x, position.y), direction);
+}
+
+int SetCableClubWarp(void)
+{
+    struct MapPosition position;
+
+    GetPlayerMovementDirection();  //unnecessary
+    GetPlayerPosition(&position);
+    MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
+    SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
+    return 0;
+}
+
+
+static bool32 TrySetupRewindScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && TrySetRewindWarp() == 2)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewind);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupFastForwardScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+
 bool8 TryDoRewindWarp(struct MapPosition *position, u16 metatileBehavior)
 {
     if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
@@ -1035,46 +1078,4 @@ u8 TrySetRewindWarp(void)
             return 2;
     }
     return 0;
-}
-
-const u8 *GetObjectEventScriptPointerPlayerFacing(void)
-{
-    u8 direction;
-    struct MapPosition position;
-
-    direction = GetPlayerMovementDirection();
-    GetInFrontOfPlayerPosition(&position);
-    return GetInteractedObjectEventScript(&position, MapGridGetMetatileBehaviorAt(position.x, position.y), direction);
-}
-
-int SetCableClubWarp(void)
-{
-    struct MapPosition position;
-
-    GetPlayerMovementDirection();  //unnecessary
-    GetPlayerPosition(&position);
-    MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
-    SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
-    return 0;
-}
-
-
-static bool32 TrySetupRewindScript(void)
-{
-    if (FlagGet(FLAG_BADGE01_GET) && TrySetRewindWarp() == 2)
-    {
-        ScriptContext1_SetupScript(EventScript_UseRewind);
-        return TRUE;
-    }
-    return FALSE;
-}
-
-static bool32 TrySetupFastForwardScript(void)
-{
-    if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
-    {
-        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
-        return TRUE;
-    }
-    return FALSE;
 }

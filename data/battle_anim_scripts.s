@@ -14188,20 +14188,8 @@ Move_LEEK_SPIN::
 
 
 Move_DOUBLE_CLICK::
-	@loadspritegfx ANIM_TAG_MOUSE_CURSOR @gMouseCursorTemplate
-	loadspritegfx ANIM_TAG_IMPACT
-	monbg ANIM_TARGET
-	setalpha 12, 8
-	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
-	delay 6
-	createsprite gBasicHitSplatSpriteTemplate, 2, 4, 0, 0, 1, 2
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
-	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
-	delay 8
-	waitforvisualfinish
-	clearmonbg ANIM_TARGET
-	blendoff
-	end
+	@loadspritegfx ANIM_TAG_MOUSE_CURSOR is added,  and also @gMouseCursorTemplate
+	goto Move_MEGAHORN
 
 Move_BLUE_SCREEN::
 	goto Move_EXPLOSION
