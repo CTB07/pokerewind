@@ -7257,15 +7257,6 @@ BattleScript_BattlerAbilityStatRaiseOnSwitchIn::
 	waitmessage 0x40
 	end3
 
-
-BattleScript_BattlerAbilityNoFucks::
-	copybyte gBattlerAbility, gBattlerAttacker
-	call BattleScript_AbilityPopUp
-	printstring STRINGID_RESETSTARGETSSTATLEVELS
-	waitmessage 0x40
-	end3
-
-
 BattleScript_TargetAbilityStatRaiseOnMoveEnd::
 	call BattleScript_AbilityPopUp
 	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, NULL
@@ -7977,3 +7968,23 @@ BattleScript_EffectTerrainHit::
 BattleScript_TryFaint:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
+
+
+
+BattleScript_BattlerAbilityNoFucks::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_RESETSTARGETSSTATLEVELS
+	waitmessage 0x40
+	end3
+
+BattleScript_BattlerAbilityStatRocketOnSwitchIn::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, NULL
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printstring STRINGID_ABILITYRAISEDSTATDRASTICALLY
+	waitmessage 0x40
+	end3

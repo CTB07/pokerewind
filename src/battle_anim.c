@@ -2012,6 +2012,7 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_DreepyMissile, ANIM_TAG_DREEPY},
     {gBattleAnimSpritePal_IceRock, ANIM_TAG_ICE_ROCK_SINGLE},
     {gBattleAnimSpritePal_StonePillar, ANIM_TAG_STONE_PILLAR_MULTI},
+    {gBattleAnimSpritePal_MouseCursor, ANIM_TAG_MOUSE_CURSOR},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
