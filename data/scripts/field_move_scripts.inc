@@ -212,6 +212,68 @@ Text_WantToWaterfall: @ 8290AC3
 Text_MonUsedWaterfall: @ 8290AFC
 	.string "{STR_VAR_1} used WATERFALL.$"
 
+EventScript_UseDive:: @ 8290B0F
+	lockall
+	checkpartymove MOVE_DIVE
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CantDive
+	bufferpartymonnick 0, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 1, 1
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndDive
+	end
+
+EventScript_CantDive:: @ 8290B4E
+//	msgbox Text_CantDive, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_EndDive:: @ 8290B58
+	releaseall
+	end
+
+EventScript_UseDiveUnderwater:: @ 8290B5A
+	lockall
+	checkpartymove MOVE_DIVE
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CantSurface
+	bufferpartymonnick 0, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 1, 1
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndSurface
+	end
+
+EventScript_CantSurface:: @ 8290B99
+	lockall
+	goto EventScript_EndSurface
+	end
+
+EventScript_EndSurface:: @ 8290BA8
+	releaseall
+	end
+
+Text_MonUsedDive: @ 8290C1A
+	.string "{STR_VAR_1} used DIVE.$"
+
+Text_CantSurface: @ 8290C28
+	.string "Light is filtering down from above.\n"
+	.string "A POKéMON may be able to surface.$"
+
+Text_WantToSurface: @ 8290C6E
+	.string "Light is filtering down from above.\n"
+	.string "Would you like to use DIVE?$"
+
+EventScript_FailSweetScent:: @ 8290CAE
+	msgbox Text_FailSweetScent, MSGBOX_SIGN
+	end
+
+Text_FailSweetScent: @ 8290CB7
+	.string "Looks like there's nothing here…$"
+
+
+
 
 EventScript_UseRewind:: @ 8290B0F
 	lockall
@@ -257,49 +319,6 @@ EventScript_EndRewindSurface:: @ 8290BA8
 	releaseall
 	end
 
-
-EventScript_UseDive:: @ 8290B0F
-	lockall
-	checkpartymove MOVE_DIVE
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq EventScript_CantDive
-	bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
-	setfieldeffectargument 1, 1
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndDive
-	end
-
-EventScript_CantDive:: @ 8290B4E
-//	msgbox Text_CantDive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-EventScript_EndDive:: @ 8290B58
-	releaseall
-	end
-
-EventScript_UseDiveUnderwater:: @ 8290B5A
-	lockall
-	checkpartymove MOVE_DIVE
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq EventScript_CantSurface
-	bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
-	setfieldeffectargument 1, 1
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndSurface
-	end
-
-EventScript_CantSurface:: @ 8290B99
-	lockall
-	goto EventScript_EndSurface
-	end
-
-EventScript_EndSurface:: @ 8290BA8
-	releaseall
-	end
-
 Text_CantRewind: @ 8290BAA
 	.string "There's a strange aura. Maybe.\n"
 	.string "a POKéMON could rewind time.$"
@@ -311,22 +330,3 @@ Text_MonUsedRewind: @ 8290BE8
 Text_CantFastForward: @ 8290C28
 	.string "There's a strange aura. Maybe.\n"
 	.string "a POKéMON could fast forward time.$"
-
-
-Text_MonUsedDive: @ 8290C1A
-	.string "{STR_VAR_1} used DIVE.$"
-
-Text_CantSurface: @ 8290C28
-	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
-
-Text_WantToSurface: @ 8290C6E
-	.string "Light is filtering down from above.\n"
-	.string "Would you like to use DIVE?$"
-
-EventScript_FailSweetScent:: @ 8290CAE
-	msgbox Text_FailSweetScent, MSGBOX_SIGN
-	end
-
-Text_FailSweetScent: @ 8290CB7
-	.string "Looks like there's nothing here…$"

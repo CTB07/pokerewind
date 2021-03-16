@@ -11843,7 +11843,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_DOUBLE_CLICK] =
     {	
-        .effect = EFFECT_MULTI_HIT,
+        .effect = EFFECT_DOUBLE_HIT,
         .power = 50,
         .type = TYPE_BUG,
         .accuracy = 100,

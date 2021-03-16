@@ -6788,6 +6788,8 @@ BattleScript_EmergencyExitWildNoPopUp::
 	finishaction
 	return
 
+
+
 BattleScript_TraceActivates::
 	pause 0x20
 	call BattleScript_AbilityPopUp
@@ -7986,6 +7988,29 @@ BattleScript_BattlerAbilityStatRocketOnSwitchIn::
 	setgraphicalstatchangevalues
 	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	waitanimation
-	printstring STRINGID_ABILITYRAISEDSTATDRASTICALLY
+	printstring STRINGID_BATTLERABILITYRAISEDSTATDRASTICALLY
 	waitmessage 0x40
 	end3
+
+BattleScript_Buffoonery::
+	pause 0x5
+	call BattleScript_AbilityPopUp
+	pause 0x40
+	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_ButItFailed
+	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_ButItFailed
+	playanimation BS_ATTACKER, B_ANIM_SLIDE_OFFSCREEN, NULL
+	waitanimation
+	openpartyscreen BS_TARGET, BattleScript_EmergencyExitRet
+	switchoutabilities BS_ATTACKER
+	waitstate
+	switchhandleorder BS_ATTACKER, 2
+	returntoball BS_TARGET
+	getswitchedmondata BS_ATTACKER
+	switchindataupdate BS_ATTACKER
+	hpthresholds BS_ATTACKER
+	printstring STRINGID_SWITCHINMON
+	switchinanim BS_ATTACKER, TRUE
+	waitstate
+	switchineffects BS_ATTACKER
+BattleScript_BuffooneryRet:
+	return
