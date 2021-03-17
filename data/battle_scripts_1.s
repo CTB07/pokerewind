@@ -7973,12 +7973,10 @@ BattleScript_TryFaint:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 
-
-
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_RESETSTARGETSSTATLEVELS
+	printstring STRINGID_NOFUCKSENTERS
 	waitmessage 0x40
 	end3
 
