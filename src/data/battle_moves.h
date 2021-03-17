@@ -11915,7 +11915,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ASSASSINATE] =
     {	
         .effect = EFFECT_TRIPLE_SUPER_EFFECTIVE,
-        .power = 70,
+        .power = 65,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 10,
