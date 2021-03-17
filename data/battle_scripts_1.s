@@ -6776,6 +6776,7 @@ BattleScript_EmergencyExitNoPopUp::
 	switchineffects BS_TARGET
 BattleScript_EmergencyExitRet:
 	return
+
 	
 BattleScript_EmergencyExitWild::
 	pause 0x5
@@ -7993,18 +7994,18 @@ BattleScript_BattlerAbilityStatRocketOnSwitchIn::
 	end3
 
 BattleScript_Buffoonery::
+	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_MoveEnd
+	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_MoveEnd
 	pause 0x5
 	call BattleScript_AbilityPopUp
 	pause 0x40
-	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_ButItFailed
-	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_ButItFailed
 	playanimation BS_ATTACKER, B_ANIM_SLIDE_OFFSCREEN, NULL
 	waitanimation
-	openpartyscreen BS_ATTACKER, BattleScript_BuffooneryRet
+	openpartyscreen BS_ATTACKER, BattleScript_ButItFailed
 	switchoutabilities BS_ATTACKER
 	waitstate
-	switchhandleorder BS_ATTACKER, 2
-	returntoball BS_TARGET
+	switchhandleorder BS_ATTACKER, 0x2
+	returntoball BS_ATTACKER
 	getswitchedmondata BS_ATTACKER
 	switchindataupdate BS_ATTACKER
 	hpthresholds BS_ATTACKER
@@ -8012,5 +8013,5 @@ BattleScript_Buffoonery::
 	switchinanim BS_ATTACKER, TRUE
 	waitstate
 	switchineffects BS_ATTACKER
-BattleScript_BuffooneryRet:
-	return
+	goto BattleScript_MoveEnd
+
