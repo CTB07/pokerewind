@@ -2943,59 +2943,59 @@ static const u8 sEERIE_SPELLDescription[] = _(
     "Foe's last move has 3 PP cut.");
 
 static const u8 sMOVE_BIG_DEBATEDescription[] = _(
-    "Roasts target in an argument.\n"
-    "Has a chance to Burn");
+    "Roasts target in debate.\n"
+    "Has a chance to Burn.");
 
 static const u8 sMOVE_LEGION_BASHDescription[] = _(
-    "A fire/Ice barrage of dislikes.\n"
-    "Clears stat gains quickly");
+    "Summons subscribers to\n"
+    "hit 3x with rising power.");
 
 static const u8 sMOVE_MOB_MENTALITYDescription[] = _(
-    "Summons loyal subscribers to\n"
-    "hit thrice with rising power.");
+    "A Fire/Ice dislike bomb.\n"
+    "Hits fast, clears stat gains.");
 
 static const u8 sMOVE_MIC_DROPDescription[] = _(
     "Passes the mic with flair,\n"
-    "switching after damaging.");
+    "switching after hitting.");
 
 static const u8 sMOVE_SNAPDescription[] = _(
     "You should've gone for the\n"
-    "head. a 50% OHKO on both foes.");
+    "head. a 50% OHKO on foes.");
 
 static const u8 sMOVE_MORDANT_ACIDDescription[] = _(
     "May badly poison. Super\n"
     "Effective against Steel.");
 
 static const u8 sMOVE_BEAR_HUGDescription[] = _(
-    "Hugs the foe\n"
-    "currently bugged");
+    "Hugs the foe.\n"
+    "not in use");
 
 static const u8 sMOVE_LENS_FLAREDescription[] = _(
-    "Hits first if foe uses an attack.\n"
+    "Hits first if foe attacks.\n"
     "Bottom Text");
 
 static const u8 sMOVE_JUSTICE_HAMMERDescription[] = _(
-    "Drops a hammer that damages\n"
-    "and starts Electric Terrain.");
+    "Drops a hammer. Hits,\n"
+    " starting Electric Terrain.");
 
 static const u8 sMOVE_GENTLE_RAINDescription[] = _(
-    "A nurturing rain swamps the\n"
-    "foe, starting Grassy Terrain.");
+    "A nurturing rain strikes.\n"
+    "Starts Grassy Terrain.");
 
 static const u8 sMOVE_LEAD_CANNONDescription[] = _(
-    "A bullet blast that bursts on \n"
+    "A bullet blast bursts on \n"
     "adjacent foes.");
 
 static const u8 sMOVE_PSYCH_OUTDescription[] = _(
-    "Surprises the foe by appearing\n"
-    "suddenly with an odd question.");
+    "Surprises the foe by \n"
+    "ambushing with queries.");
 
 static const u8 sMOVE_PANIC_SWEATDescription[] = _(
-    "Raises defenses above half HP.\n"
-    "Raises speed below half HP.");
+    "Raises defenses above 1/2 \n"
+    "HP. Raises speed below.");
 
 static const u8 sMOVE_PIXIE_PETALDescription[] = _(
-    "Floral petals bombard the foe,\n"
+    "Petals perfume the foe,\n"
     "starting Misty Terrain.");
 
 
@@ -3004,7 +3004,7 @@ static const u8 sMOVE_PIXIE_PETALDescription[] = _(
 
 
 static const u8 sMOVE_MIND_PIECEDescription[] = _(
-    "Shows the foe its spooky brain,\n"
+    "Shows the foe its brain,\n"
     "starting Psychic Terrain.");
 
 static const u8 sMOVE_DIVEBOMBDescription[] = _(
@@ -3012,56 +3012,58 @@ static const u8 sMOVE_DIVEBOMBDescription[] = _(
     "then strikes the next.");
 
 static const u8 sMOVE_REWINDDescription[] = _(
-    "Drags the foe back through\n"
+    "Drags foe back through\n"
     "time, reversing stat changes.");
 
 static const u8 sMOVE_MENTAL_STRIKEDescription[] = _(
     "Strikes the foe intelligently, \n"
-    "damaging on Sp. Defense.");
+    "damaging on Sp. Def.");
 
 static const u8 sMOVE_NARUTO_RUNDescription[] = _(
-    "Ups Speed and Accuracy. Turns\n"
-    "out it's faster to run this way");
+    "It's faster to run this way.\n"
+    "Ups Speed and Accuracy.");
 
 static const u8 sMOVE_LEEK_SPINDescription[] = _(
     "A weeb dance with a high\n"
-    "chance to raise Sp. Attack.");
+    "chance to raise Sp. Atk.");
 
 static const u8 sMOVE_DOUBLE_CLICKDescription[] = _(
-    "Selects the foe with a double \n"
-    "click, striking twice.");
+    "Selects the foe with a \n"
+    "double click. Hits twice.");
 
 static const u8 sMOVE_BLUE_SCREENDescription[] = _(
-    "A critical error selfdestructs\n"
-    "the user to deal huge damage.");
+    "A critical error destroys\n"
+    "the user, dealing damage.");
 
 static const u8 sMOVE_SPIN_DASHDescription[] = _(
     "Steps it up, using Speed in\n"
     "place of the user's Attack.");
 
 static const u8 sMOVE_SYNTH_WAVEDescription[] = _(
-    "Three waves of electrosynth\n"
-    "strike first with rising power.");
+    "Three electrosynth shocks\n"
+    "strike first. Rising power.");
 
 static const u8 sMOVE_ENVELOPDescription[] = _(
     "Envelops the foe, using\n"
-    "Sp.Defense, not Sp.Attack.");
+    "Sp.Def, not Sp.Atk.");
 
-static const u8 sMOVE_FROSTBITEDescription[] = _(
-    "Super-effective hits deal 3x\n"
-    "damage rather than 2x.");
+static const u8 sMOVE_ASSASSINATEDescription[] = _(
+    "Super-effective hits deal\n"
+    "3x rather than 2x.");
+
+
+static const u8 sMOVE_VENT_KILLDescription[] = _(
+    "Crushes the foe, then \n"
+    " switches out via a vent.");
+
+static const u8 sMOVE_EJECTDescription[] = _(
+    "Hurls the foe out. Super\n"
+    "Effective against Dark.");
 
 static const u8 sMOVE_GUNDescription[] = _(
     "Pulls a fucking gat on the foe\n"
     "killing it instantly.");
 
-static const u8 sMOVE_VENT_KILLDescription[] = _(
-    "Kills the foe in a million ways.\n"
-    "Switches out through a vent");
-
-static const u8 sMOVE_EJECTDescription[] = _(
-    "Hurls the foe out. Super\n"
-    "Effective against Dark.");
 
 
 static const u8 sNotDoneYetDescription[] = _(
@@ -3857,9 +3859,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SPIN_DASH - 1] = sMOVE_SPIN_DASHDescription,
     [MOVE_SYNTH_WAVE - 1] = sMOVE_SYNTH_WAVEDescription,
     [MOVE_ENVELOP - 1] = sMOVE_ENVELOPDescription,
-    [MOVE_FROSTBITE - 1] = sMOVE_FROSTBITEDescription,
-    [MOVE_ASSASSINATE - 1] = sMOVE_FROSTBITEDescription,
-    [MOVE_GUN - 1] = sMOVE_GUNDescription,
+    [MOVE_ASSASSINATE - 1] = sMOVE_ASSASSINATEDescription,
+    [MOVE_FROSTBITE - 1] = sMOVE_ASSASSINATEDescription,
     [MOVE_VENT_KILL - 1] = sMOVE_VENT_KILLDescription,
     [MOVE_EJECT - 1] = sMOVE_EJECTDescription,
+    [MOVE_GUN - 1] = sMOVE_GUNDescription,
 };
