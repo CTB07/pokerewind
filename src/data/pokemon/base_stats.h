@@ -6,7 +6,7 @@ const struct BaseStats gBaseStats[] =
 {
     [SPECIES_NONE] = {0},
 
-    [SPECIES_PAROPEAT] =
+    [SPECIES_BULBASAUR] =
     {
         .baseHP        = 50,
         .baseAttack    = 60,

@@ -8000,7 +8000,7 @@ BattleScript_Buffoonery::
 	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_ButItFailed
 	playanimation BS_ATTACKER, B_ANIM_SLIDE_OFFSCREEN, NULL
 	waitanimation
-	openpartyscreen BS_TARGET, BattleScript_BuffooneryRet
+	openpartyscreen BS_ATTACKER, BattleScript_BuffooneryRet
 	switchoutabilities BS_ATTACKER
 	waitstate
 	switchhandleorder BS_ATTACKER, 2
