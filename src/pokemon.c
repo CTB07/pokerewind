@@ -96,6 +96,8 @@ static const struct CombinedMove sCombinedMoves[2] =
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
 #define HOENN_TO_NATIONAL(name)     [HOENN_DEX_##name - 1] = NATIONAL_DEX_##name
 
+// do not touch this, it's just there to assign list one to list two. Unless we want a separate national dex and I hope to god that we don't lol.
+
 const u16 gSpeciesToHoennPokedexNum[NUM_SPECIES] = // Assigns all species to the Hoenn Dex Index (Summary No. for Hoenn Dex)
 {
     SPECIES_TO_HOENN(TREECKO),

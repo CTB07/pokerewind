@@ -157,5 +157,7 @@ bool32 sub_80875C8(void);
 bool32 sub_8087634(void);
 bool32 sub_808766C(void);
 void ClearLinkPlayerObjectEvents(void);
+bool8 SetRewindWarpEmerge(u16 x, u16 y);
+bool8 SetRewindWarpDive(u16 x, u16 y);
 
 #endif // GUARD_OVERWORLD_H

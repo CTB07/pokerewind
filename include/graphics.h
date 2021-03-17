@@ -8920,6 +8920,8 @@ extern const u32 gBattleAnimSpriteGfx_DragonPulseRing[];
 extern const u32 gBattleAnimSpritePal_DragonPulseRing[];
 extern const u32 gBattleAnimSpriteGfx_DreepyMissile[];
 extern const u32 gBattleAnimSpritePal_DreepyMissile[];
+extern const u32 gBattleAnimSpriteGfx_MouseCursor[];
+extern const u32 gBattleAnimSpritePal_MouseCursor[];
 extern const u32 gBattleAnimSpriteGfx_Drill[];
 extern const u32 gBattleAnimSpritePal_Drill[];
 extern const u32 gBattleAnimSpriteGfx_NewEmbers[];

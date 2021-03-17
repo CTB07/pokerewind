@@ -72,6 +72,7 @@ gFieldEffectScriptPointers:: @ 82DB9D4
 	.4byte gFieldEffectScript_RayquazaSpotlight         @ FLDEFF_RAYQUAZA_SPOTLIGHT
 	.4byte gFieldEffectScript_DestroyDeoxysRock         @ FLDEFF_DESTROY_DEOXYS_ROCK
 	.4byte gFieldEffectScript_MoveDeoxysRock            @ FLDEFF_MOVE_DEOXYS_ROCK
+	.4byte gFieldEffectScript_UseRewind                 @ FLDEFF_USE_REWIND
 
 gFieldEffectScript_ExclamationMarkIcon1:: @ 82DBAE0
 	field_eff_callnative FldEff_ExclamationMarkIcon
@@ -342,4 +343,9 @@ gFieldEffectScript_DestroyDeoxysRock:: @ 82DBCF9
 
 gFieldEffectScript_MoveDeoxysRock:: @ 82DBCFF
 	field_eff_callnative FldEff_MoveDeoxysRock
+	field_eff_end
+
+
+gFieldEffectScript_UseRewind::
+	field_eff_callnative FldEff_UseRewind
 	field_eff_end

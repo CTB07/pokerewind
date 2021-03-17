@@ -7619,4 +7619,35 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 255  //signature z move
     },
+
+    [ITEM_VOMIT_FOSSIL] =
+    {
+        .name = _("Vomit Fossil"),
+        .itemId = ITEM_VOMIT_FOSSIL,
+        .description = sVomitFossilDesc,
+        .price = 7000,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+    [ITEM_TUSK_FOSSIL] =
+    {
+        .name = _("Tusk Fossil"),
+        .itemId = ITEM_TUSK_FOSSIL,
+        .description = sTuskFossilDesc,
+        .price = 7000,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+    [ITEM_DOGECOIN] =
+    {
+        .name = _("Dogecoin"),
+        .itemId = ITEM_DOGECOIN,
+        .price = 5000,
+        .description = sDogecoinDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

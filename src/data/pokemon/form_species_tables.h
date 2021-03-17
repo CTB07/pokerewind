@@ -1,5 +1,20 @@
 #define FORM_SPECIES_END (0xffff)
 
+
+static const u16 sHumongecFormSpeciesIdTable[] = {
+    SPECIES_HUMONGEC,
+    SPECIES_HUMONGEC_SCHOOLING,
+    FORM_SPECIES_END,
+};
+
+static const u16 sDisputrawFormSpeciesIdTable[] = {
+    SPECIES_DISPUTRAW,
+    SPECIES_DISPUTRAW_SPECIAL,
+    FORM_SPECIES_END,
+};
+
+//
+
 static const u16 sVenusaurFormSpeciesIdTable[] = {
     SPECIES_VENUSAUR,
     SPECIES_VENUSAUR_MEGA,

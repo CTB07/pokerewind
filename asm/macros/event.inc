@@ -1846,3 +1846,11 @@
 	settotemboost \battler, 0, 0, 0, 0, 0, 0, 2
 	.endm
 
+	@ Sets the destination that rewind in present or past will take the player to.
+	.macro setrewindwarp map:req, warp:req, X:req, Y:req
+	.byte 0x40
+	map \map
+	.byte \warp
+	.2byte \X
+	.2byte \Y
+	.endm

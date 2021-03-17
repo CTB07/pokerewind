@@ -8,9 +8,6 @@ EventScript_CutTree:: @ 82906BB
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick 0, VAR_RESULT
 	buffermovename 1, MOVE_CUT
-	msgbox Text_WantToCut, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_CancelCut
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
@@ -69,9 +66,6 @@ EventScript_RockSmash:: @ 82907A6
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick 0, VAR_RESULT
 	buffermovename 1, MOVE_ROCK_SMASH
-	msgbox Text_WantToSmash, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_CancelSmash
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
@@ -135,10 +129,6 @@ EventScript_StrengthBoulder:: @ 82908BA
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq EventScript_CantStrength
 	setfieldeffectargument 0, VAR_RESULT
-	msgbox Text_WantToStrength, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_CancelStrength
-	closemessage
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
 	goto EventScript_ActivateStrength
@@ -197,9 +187,6 @@ EventScript_UseWaterfall:: @ 8290A49
 	goto_if_eq EventScript_CantWaterfall
 	bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
-	msgbox Text_WantToWaterfall, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndWaterfall
 	msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_WATERFALL
 	goto EventScript_EndWaterfall
@@ -233,16 +220,12 @@ EventScript_UseDive:: @ 8290B0F
 	bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
-	msgbox Text_WantToDive, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndDive
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
 	end
 
 EventScript_CantDive:: @ 8290B4E
-	msgbox Text_CantDive, MSGBOX_DEFAULT
+//	msgbox Text_CantDive, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -258,31 +241,18 @@ EventScript_UseDiveUnderwater:: @ 8290B5A
 	bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
-	msgbox Text_WantToSurface, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq EventScript_EndSurface
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
 	end
 
 EventScript_CantSurface:: @ 8290B99
 	lockall
-	msgbox Text_CantSurface, MSGBOX_DEFAULT
 	goto EventScript_EndSurface
 	end
 
 EventScript_EndSurface:: @ 8290BA8
 	releaseall
 	end
-
-Text_CantDive: @ 8290BAA
-	.string "The sea is deep here. A POKéMON\n"
-	.string "may be able to go underwater.$"
-
-Text_WantToDive: @ 8290BE8
-	.string "The sea is deep here.\n"
-	.string "Would you like to use DIVE?$"
 
 Text_MonUsedDive: @ 8290C1A
 	.string "{STR_VAR_1} used DIVE.$"
@@ -301,3 +271,62 @@ EventScript_FailSweetScent:: @ 8290CAE
 
 Text_FailSweetScent: @ 8290CB7
 	.string "Looks like there's nothing here…$"
+
+
+
+
+EventScript_UseRewind:: @ 8290B0F
+	lockall
+	checkpartymove MOVE_REWIND
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CantRewind
+	bufferpartymonnick 0, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 1, 1
+	msgbox Text_MonUsedRewind, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_USE_REWIND
+	goto EventScript_EndDive
+	end
+
+EventScript_CantRewind:: @ 8290B4E
+	msgbox Text_CantRewind, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_EndRewind:: @ 8290B58
+	releaseall
+	end
+
+EventScript_UseRewindUnderwater:: @ 8290B5A
+	lockall
+	checkpartymove MOVE_REWIND
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CantFastForward
+	bufferpartymonnick 0, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 1, 1
+	dofieldeffect FLDEFF_USE_REWIND
+	goto EventScript_EndRewindSurface
+	end
+
+EventScript_CantFastForward:: @ 8290B99
+	lockall
+	msgbox Text_CantFastForward, MSGBOX_DEFAULT
+	goto EventScript_EndRewindSurface
+	end
+
+EventScript_EndRewindSurface:: @ 8290BA8
+	releaseall
+	end
+
+Text_CantRewind: @ 8290BAA
+	.string "There's a strange aura. Maybe.\n"
+	.string "a POKéMON could rewind time.$"
+
+Text_MonUsedRewind: @ 8290BE8
+	.string "You can go back in time here.\n"
+	.string "Would you like to use REWIND?$"
+
+Text_CantFastForward: @ 8290C28
+	.string "There's a strange aura. Maybe.\n"
+	.string "a POKéMON could fast forward time.$"

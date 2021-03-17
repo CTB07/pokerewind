@@ -705,7 +705,12 @@
 #define ITEM_TAPUNIUM_Z               602
 #define ITEM_ULTRANECROZIUM_Z         603
 
-#define ITEMS_COUNT 604
+//new shit
+#define ITEM_VOMIT_FOSSIL      	      604
+#define ITEM_TUSK_FOSSIL      	      605
+#define ITEM_DOGECOIN      	      606
+
+#define ITEMS_COUNT 607
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS

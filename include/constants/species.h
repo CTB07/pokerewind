@@ -1370,10 +1370,20 @@
 #define SPECIES_CALYREX_ICE_RIDER            FORMS_START + 307
 #define SPECIES_CALYREX_SHADOW_RIDER         FORMS_START + 308
 
-#define SPECIES_EGG SPECIES_CALYREX_SHADOW_RIDER + 1
+//#define SPECIES_PAROPEAT 1
+#define SPECIES_DISPUTRAW   	             FORMS_START + 309
+#define SPECIES_DISPUTRAW_SPECIAL  	     FORMS_START + 310
+
+#define SPECIES_HUMONGEC                     FORMS_START + 311
+#define SPECIES_HUMONGEC_SCHOOLING           FORMS_START + 312
+
+
+#define SPECIES_EGG SPECIES_HUMONGEC_SCHOOLING + 1
 #define NUM_SPECIES SPECIES_EGG
 
 // National Dex Index Defines
+
+//species are fully assigned according to this, in pokemon.c
 
 #define NATIONAL_DEX_NONE 0
 #define NATIONAL_DEX_PAROPEAT 1

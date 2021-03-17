@@ -772,6 +772,7 @@ bool8 SetDiveWarpEmerge(u16 x, u16 y)
     return SetDiveWarp(CONNECTION_EMERGE, x, y);
 }
 
+
 bool8 SetDiveWarpDive(u16 x, u16 y)
 {
     return SetDiveWarp(CONNECTION_DIVE, x, y);
@@ -3203,4 +3204,34 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
         sprite->invisible = ((sprite->data[7] & 4) >> 2);
         sprite->data[7]++;
     }
+}
+
+
+static bool8 SetRewindWarp(u8 dir, u16 x, u16 y)
+{
+    const struct MapConnection *connection = GetMapConnection(dir);
+
+    if (connection != NULL)
+    {
+        SetWarpDestination(connection->mapGroup, connection->mapNum, -1, x, y);
+    }
+    else
+    {
+        RunOnRewindWarpMapScript();
+        if (IsDummyWarp(&sFixedDiveWarp))
+            return FALSE;
+        SetWarpDestinationToDiveWarp();
+    }
+    return TRUE;
+}
+
+bool8 SetRewindWarpDive(u16 x, u16 y)
+{
+    return SetRewindWarp(CONNECTION_DIVE, x, y);
+}
+
+
+bool8 SetRewindWarpEmerge(u16 x, u16 y)
+{
+    return SetRewindWarp(CONNECTION_EMERGE, x, y);
 }

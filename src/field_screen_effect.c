@@ -1273,3 +1273,13 @@ static void Task_EnableScriptAfterMusicFade(u8 taskId)
         EnableBothScriptContexts();
     }
 }
+
+void DoRewindWarp(void)
+{
+    ScriptContext2_Enable();
+    TryFadeOutOldMapMusic();
+    WarpFadeOutScreen();
+    PlaySE(SE_WARP_IN);
+    gFieldCallback = FieldCB_SpinEnterWarp;
+    CreateTask(Task_WarpAndLoadMap, 10);
+}

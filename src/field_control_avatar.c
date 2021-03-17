@@ -70,6 +70,8 @@ static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
 static void UpdateHappinessStepCounter(void);
 static bool8 UpdatePoisonStepCounter(void);
+static bool32 TrySetupRewindScript(void);
+static bool32 TrySetupFastForwardScript(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
@@ -183,6 +185,10 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     if (input->pressedBButton && TrySetupDiveEmergeScript() == TRUE)
         return TRUE;
+
+    if (input->pressedBButton && TrySetupDiveEmergeScript() == TRUE)
+        return TRUE;
+
     if (input->tookStep)
     {
         IncrementGameStat(GAME_STAT_STEPS);
@@ -550,6 +556,7 @@ static bool32 TrySetupDiveEmergeScript(void)
     }
     return FALSE;
 }
+
 
 static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileBehavior, u16 direction)
 {
@@ -1075,5 +1082,73 @@ int SetCableClubWarp(void)
     GetPlayerPosition(&position);
     MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
+    return 0;
+}
+
+
+static bool32 TrySetupRewindScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && TrySetRewindWarp() == 2)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewind);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 TrySetupFastForwardScript(void)
+{
+    if (FlagGet(FLAG_BADGE01_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetRewindWarp() == 1)
+    {
+        ScriptContext1_SetupScript(EventScript_UseRewindUnderwater);
+        return TRUE;
+    }
+    return FALSE;
+}
+
+
+bool8 TryDoRewindWarp(struct MapPosition *position, u16 metatileBehavior)
+{
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
+    {
+        if (SetRewindWarpEmerge(position->x - 7, position->y - 7))
+        {
+            StoreInitialPlayerAvatarState();
+            DoRewindWarp();
+            PlaySE(SE_M_SUPERSONIC);
+            return TRUE;
+        }
+    }
+    else if (MetatileBehavior_IsRewindable(metatileBehavior) == TRUE)
+    {
+        if (SetRewindWarpDive(position->x - 7, position->y - 7))
+        {
+            StoreInitialPlayerAvatarState();
+            DoRewindWarp();
+            PlaySE(SE_M_SUPERSONIC);
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+
+u8 TrySetRewindWarp(void)
+{
+    s16 x, y;
+    u8 metatileBehavior;
+
+    PlayerGetDestCoords(&x, &y);
+    metatileBehavior = MapGridGetMetatileBehaviorAt(x, y);
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && MetatileBehavior_IsFastforwardable(metatileBehavior))
+    {
+        if (SetRewindWarpEmerge(x - 7, y - 7) == TRUE)
+            return 1;
+    }
+    else if (MetatileBehavior_IsRewindable(metatileBehavior) == TRUE)
+    {
+        if (SetRewindWarpDive(x - 7, y - 7) == TRUE)
+            return 2;
+    }
     return 0;
 }

@@ -115,6 +115,12 @@ static bool8 DiveFieldEffect_Init(struct Task *);
 static bool8 DiveFieldEffect_ShowMon(struct Task *);
 static bool8 DiveFieldEffect_TryWarp(struct Task *);
 
+static void Task_UseRewind(u8);
+static bool8 RewindFieldEffect_Init(struct Task *);
+static bool8 RewindFieldEffect_ShowMon(struct Task *);
+static bool8 RewindFieldEffect_TryWarp(struct Task *);
+
+
 static void Task_LavaridgeGymB1FWarp(u8);
 static bool8 LavaridgeGymB1FWarpEffect_Init(struct Task *, struct ObjectEvent *, struct Sprite *);
 static bool8 LavaridgeGymB1FWarpEffect_CameraShake(struct Task *, struct ObjectEvent *, struct Sprite *);
@@ -644,6 +650,14 @@ bool8 (*const sDiveFieldEffectFuncs[])(struct Task *) =
     DiveFieldEffect_ShowMon,
     DiveFieldEffect_TryWarp,
 };
+
+bool8 (*const sRewindFieldEffectFuncs[])(struct Task *) =
+{
+    RewindFieldEffect_Init,
+    RewindFieldEffect_ShowMon,
+    RewindFieldEffect_TryWarp,
+};
+
 
 bool8 (*const sLavaridgeGymB1FWarpEffectFuncs[])(struct Task *, struct ObjectEvent *, struct Sprite *) =
 {
@@ -3890,5 +3904,51 @@ static void Task_MoveDeoxysRock(u8 taskId)
             }
             break;
     }
+}
+
+bool8 FldEff_UseRewind(void)
+{
+    u8 taskId;
+    taskId = CreateTask(Task_UseRewind, 0xff);
+    gTasks[taskId].data[15] = gFieldEffectArguments[0];
+    gTasks[taskId].data[14] = gFieldEffectArguments[1];
+    Task_UseRewind(taskId);
+    return FALSE;
+}
+
+void Task_UseRewind(u8 taskId)
+{
+    while (sRewindFieldEffectFuncs[gTasks[taskId].data[0]](&gTasks[taskId]));
+}
+
+static bool8 RewindFieldEffect_Init(struct Task *task)
+{
+    gPlayerAvatar.preventStep = TRUE;
+    task->data[0]++;
+    return FALSE;
+}
+
+static bool8 RewindFieldEffect_ShowMon(struct Task *task)
+{
+    ScriptContext2_Enable();
+    gFieldEffectArguments[0] = task->data[15];
+    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+    task->data[0]++;
+    return FALSE;
+}
+
+static bool8 RewindFieldEffect_TryWarp(struct Task *task)
+{
+    struct MapPosition mapPosition;
+    PlayerGetDestCoords(&mapPosition.x, &mapPosition.y);
+
+    // Wait for show mon first
+    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    {
+        TryDoRewindWarp(&mapPosition, gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior);
+        DestroyTask(FindTaskIdByFunc(Task_UseRewind));
+        FieldEffectActiveListRemove(FLDEFF_USE_REWIND);
+    }
+    return FALSE;
 }
 

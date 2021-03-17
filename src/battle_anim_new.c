@@ -3649,6 +3649,17 @@ const struct SpriteTemplate gDreepyMissileTemplate =
     .callback = AnimShadowBall
 };
 
+const struct SpriteTemplate gMouseCursorTemplate =
+{
+    .tileTag = ANIM_TAG_MOUSE_CURSOR,
+    .paletteTag = ANIM_TAG_MOUSE_CURSOR,
+    .oam = &gOamData_AffineOff_ObjNormal_16x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimHitSplatBasic
+};
+
 //bolt beak
 const struct SpriteTemplate gBoltBeakBlueSparkTemplate =
 {

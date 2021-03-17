@@ -627,4 +627,8 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SOLGANIUM_Z] = {gItemIcon_SolganiumZ, gItemIconPalette_SolganiumZ},
     [ITEM_TAPUNIUM_Z] = {gItemIcon_TapuniumZ, gItemIconPalette_TapuniumZ},
     [ITEM_ULTRANECROZIUM_Z] = {gItemIcon_UltranecroziumZ, gItemIconPalette_UltranecroziumZ},
+    [ITEM_VOMIT_FOSSIL] = {gItemIcon_DomeFossil, gItemIconPalette_KantoFossil},
+    [ITEM_TUSK_FOSSIL] = {gItemIcon_HelixFossil, gItemIconPalette_KantoFossil},
+    [ITEM_DOGECOIN] = {gItemIcon_AmuletCoin, gItemIconPalette_AmuletCoin},
+
 };

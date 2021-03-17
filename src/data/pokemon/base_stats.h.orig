@@ -658,7 +658,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_BULLETPROOF, ABILITY_CUTE_CHARM},
-        .abilityHidden = ABILITY_ARTILLERY,
+        //.abilityHidden = ABILITY_ARTILLERY,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },

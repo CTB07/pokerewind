@@ -85,6 +85,8 @@ bool8 MetatileBehavior_IsIndoorEncounter(u8);
 bool8 MetatileBehavior_IsMountain(u8);
 bool8 MetatileBehavior_IsDiveable(u8);
 bool8 MetatileBehavior_IsUnableToEmerge(u8);
+bool8 MetatileBehavior_IsRewindable(u8);
+bool8 MetatileBehavior_IsFastforwardable(u8);
 bool8 MetatileBehavior_IsShallowFlowingWater(u8);
 bool8 MetatileBehavior_IsThinIce(u8);
 bool8 MetatileBehavior_IsCrackedIce(u8);
