@@ -14099,7 +14099,7 @@ Move_MOB_MENTALITY::
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 9, RGB_RED
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 7, RGB_BLACK
 	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 0
 	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 64
 	createsprite gFireSpiralInwardSpriteTemplate, ANIM_TARGET, 1, 128
@@ -14114,7 +14114,7 @@ Move_MOB_MENTALITY::
 	waitforvisualfinish
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	call IceCrystalEffectShort
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 16, 0, RGB_BLACK
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 7, 0, RGB_BLACK
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff

@@ -3245,7 +3245,7 @@ BattleScript_EffectRecharge::
 BattleScript_MoveUsedMustRecharge::
 	printstring STRINGID_PKMNMUSTRECHARGE
 	waitmessage 0x40
-	jumpifability BS_ATTACKER, ABILITY_BUFFOONERY, BattleScript_EmergencyExit
+	jumpifability BS_ATTACKER, ABILITY_BUFFOONERY, BattleScript_Buffoonery
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRage::
@@ -8000,7 +8000,7 @@ BattleScript_Buffoonery::
 	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_ButItFailed
 	playanimation BS_ATTACKER, B_ANIM_SLIDE_OFFSCREEN, NULL
 	waitanimation
-	openpartyscreen BS_TARGET, BattleScript_EmergencyExitRet
+	openpartyscreen BS_TARGET, BattleScript_BuffooneryRet
 	switchoutabilities BS_ATTACKER
 	waitstate
 	switchhandleorder BS_ATTACKER, 2
