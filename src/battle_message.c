@@ -694,7 +694,7 @@ static const u8 sText_AbilityRaisedStatDrastically[] = _("{B_DEF_ABILITY} raised
 static const u8 sText_AsOneEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} has two Abilities!");
 static const u8 sText_CuriousMedicineEnters[] = _("{B_EFF_NAME_WITH_PREFIX}'s\nstat changes were reset!");
 static const u8 sText_BattlerAbilityRaisedStatDrastically[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\n drastically raised its {B_BUFF1}!");
-static const u8 sText_NoFucksEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nreset all enemy stat changes!");
+static const u8 sText_NoFucksEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nreset enemy stat changes!");
 
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
