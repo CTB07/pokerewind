@@ -1253,6 +1253,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_COMATOSEENTERS - 12] = sText_ComatoseActivates,
     [STRINGID_SCREENCLEANERENTERS - 12] = sText_ScreenCleanerActivates,
     [STRINGID_BATTLERABILITYRAISEDSTATDRASTICALLY - 12] = sText_BattlerAbilityRaisedStatDrastically
+    [STRINGID_NOFUCKSENTERS - 12] = sText_NoFucksEnters
+
 };
 
 const u16 gTerrainStringIds[] =
