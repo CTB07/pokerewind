@@ -38,12 +38,12 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_SUBSTEE] =
     {
         .size = 0x45,
-        .y_offset = 11,
+        .y_offset = 6,
     },
     [SPECIES_MANEMBER] =
     {
         .size = 0x45,
-        .y_offset = 7,
+        .y_offset = 5,
     },
     [SPECIES_TRECHIBER] =
     {
@@ -118,12 +118,12 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_KITKAR] =
     {
         .size = 0x45,
-        .y_offset = 9,
+        .y_offset = 6,
     },
     [SPECIES_CANNEKO] =
     {
         .size = 0x45,
-        .y_offset = 5,
+        .y_offset = 2,
     },
     [SPECIES_PIKACHU] =
     {
