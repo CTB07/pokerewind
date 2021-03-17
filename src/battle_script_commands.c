@@ -1374,7 +1374,7 @@ static void Cmd_attackcanceler(void)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_BELLY_DRUM)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_SUBSTITUTE))))
     {
-	gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST)
+	gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST);
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
         gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
