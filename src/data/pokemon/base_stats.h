@@ -7400,7 +7400,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_CASH_GRAB, ABILITY_NO_FUCKS},
+            .abilities = {ABILITY_NO_FUCKS, ABILITY_NO_FUCKS},
             .abilityHidden = ABILITY_RATTLED,
         #else
             .abilities = {ABILITY_RUN_AWAY, ABILITY_NONE},
@@ -7657,7 +7657,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_GRASS,
-        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
+        .abilities = {ABILITY_CASH_GRAB, ABILITY_RAIN_DISH},
         .abilityHidden = ABILITY_OWN_TEMPO,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
