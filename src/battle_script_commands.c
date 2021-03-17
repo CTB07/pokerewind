@@ -1362,7 +1362,7 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
-    else if (((gBattlerTarget == IsAbilityOnField(ABILITY_THERAPIST))
+    else if (((IsAbilityOnField(ABILITY_THERAPIST))
              && ((((gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_25)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_50)
