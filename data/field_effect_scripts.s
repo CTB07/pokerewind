@@ -50,7 +50,6 @@ gFieldEffectScriptPointers:: @ 82DB9D4
 	.4byte gFieldEffectScript_HotSpringsWater           @ FLDEFF_HOT_SPRINGS_WATER
 	.4byte gFieldEffectScript_UseWaterfall              @ FLDEFF_USE_WATERFALL
 	.4byte gFieldEffectScript_UseDive                   @ FLDEFF_USE_DIVE
-	.4byte gFieldEffectScript_UseRewind                 @ FLDEFF_USE_REWIND
 	.4byte gFieldEffectScript_Pokeball                  @ FLDEFF_POKEBALL
 	.4byte gFieldEffectScript_HeartIcon                 @ FLDEFF_HEART_ICON
 	.4byte gFieldEffectScript_Nop47                     @ FLDEFF_NOP_47
@@ -73,6 +72,7 @@ gFieldEffectScriptPointers:: @ 82DB9D4
 	.4byte gFieldEffectScript_RayquazaSpotlight         @ FLDEFF_RAYQUAZA_SPOTLIGHT
 	.4byte gFieldEffectScript_DestroyDeoxysRock         @ FLDEFF_DESTROY_DEOXYS_ROCK
 	.4byte gFieldEffectScript_MoveDeoxysRock            @ FLDEFF_MOVE_DEOXYS_ROCK
+	.4byte gFieldEffectScript_UseRewind                 @ FLDEFF_USE_REWIND
 
 gFieldEffectScript_ExclamationMarkIcon1:: @ 82DBAE0
 	field_eff_callnative FldEff_ExclamationMarkIcon
