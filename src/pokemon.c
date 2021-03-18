@@ -315,37 +315,37 @@ const u16 gSpeciesToHoennPokedexNum[NUM_SPECIES] = // Assigns all species to the
 
 const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to the National Dex Index (Summary No. for National Dex)
 {
-    SPECIES_TO_NATIONAL(BULBASAUR),
-    SPECIES_TO_NATIONAL(IVYSAUR),
-    SPECIES_TO_NATIONAL(VENUSAUR),
-    SPECIES_TO_NATIONAL(CHARMANDER),
-    SPECIES_TO_NATIONAL(CHARMELEON),
-    SPECIES_TO_NATIONAL(CHARIZARD),
-    SPECIES_TO_NATIONAL(SQUIRTLE),
-    SPECIES_TO_NATIONAL(WARTORTLE),
-    SPECIES_TO_NATIONAL(BLASTOISE),
-    SPECIES_TO_NATIONAL(CATERPIE),
-    SPECIES_TO_NATIONAL(METAPOD),
-    SPECIES_TO_NATIONAL(BUTTERFREE),
-    SPECIES_TO_NATIONAL(WEEDLE),
-    SPECIES_TO_NATIONAL(KAKUNA),
-    SPECIES_TO_NATIONAL(BEEDRILL),
-    SPECIES_TO_NATIONAL(PIDGEY),
-    SPECIES_TO_NATIONAL(PIDGEOTTO),
-    SPECIES_TO_NATIONAL(PIDGEOT),
-    SPECIES_TO_NATIONAL(RATTATA),
-    SPECIES_TO_NATIONAL(RATICATE),
-    SPECIES_TO_NATIONAL(SPEAROW),
-    SPECIES_TO_NATIONAL(FEAROW),
-    SPECIES_TO_NATIONAL(EKANS),
-    SPECIES_TO_NATIONAL(ARBOK),
+    SPECIES_TO_NATIONAL(PAROPEAT),
+    SPECIES_TO_NATIONAL(MACAUMENT),
+    SPECIES_TO_NATIONAL(ARGUWINT),
+    SPECIES_TO_NATIONAL(PRIMATIO),
+    SPECIES_TO_NATIONAL(OPINIMP),
+    SPECIES_TO_NATIONAL(TEMPERILLA),
+    SPECIES_TO_NATIONAL(SUBSTEE),
+    SPECIES_TO_NATIONAL(MANEMBER),
+    SPECIES_TO_NATIONAL(TRECHIBER),
+    SPECIES_TO_NATIONAL(BULBITE),
+    SPECIES_TO_NATIONAL(LAMPUPA),
+    SPECIES_TO_NATIONAL(ELECREEP),
+    SPECIES_TO_NATIONAL(ACTURUNK),
+    SPECIES_TO_NATIONAL(DRAMASPIRE),
+    SPECIES_TO_NATIONAL(BURROBIT),
+    SPECIES_TO_NATIONAL(BUNNAETHER),
+    SPECIES_TO_NATIONAL(CUCKOOB),
+    SPECIES_TO_NATIONAL(TWIDDIES),
+    SPECIES_TO_NATIONAL(AIRIOLA),
+    SPECIES_TO_NATIONAL(STANDAAD),
+    SPECIES_TO_NATIONAL(RECKLOAT),
+    SPECIES_TO_NATIONAL(DEVILOAT),
+    SPECIES_TO_NATIONAL(KITKAR),
+    SPECIES_TO_NATIONAL(CANNEKO),
     SPECIES_TO_NATIONAL(PIKACHU),
     SPECIES_TO_NATIONAL(RAICHU),
-    SPECIES_TO_NATIONAL(SANDSHREW),
-    SPECIES_TO_NATIONAL(SANDSLASH),
-    SPECIES_TO_NATIONAL(NIDORAN_F),
-    SPECIES_TO_NATIONAL(NIDORINA),
-    SPECIES_TO_NATIONAL(NIDOQUEEN),
+    SPECIES_TO_NATIONAL(GRUBFEED),
+    SPECIES_TO_NATIONAL(KWIZBEE),
+    SPECIES_TO_NATIONAL(COSMONARCH),
+    SPECIES_TO_NATIONAL(PAASTEL),
+    SPECIES_TO_NATIONAL(SHEEPASTRY),
     SPECIES_TO_NATIONAL(NIDORAN_M),
     SPECIES_TO_NATIONAL(NIDORINO),
     SPECIES_TO_NATIONAL(NIDOKING),
@@ -1855,37 +1855,37 @@ const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 
 static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
 {
-    [SPECIES_BULBASAUR - 1] = 0x06,
-    [SPECIES_IVYSAUR - 1] = 0x17,
-    [SPECIES_VENUSAUR - 1] = 0x2f,
-    [SPECIES_CHARMANDER - 1] = 0x52,
-    [SPECIES_CHARMELEON - 1] = 0x25,
-    [SPECIES_CHARIZARD - 1] = 0x10,
-    [SPECIES_SQUIRTLE - 1] = 0x0b,
-    [SPECIES_WARTORTLE - 1] = 0x13,
-    [SPECIES_BLASTOISE - 1] = 0x19,
-    [SPECIES_CATERPIE - 1] = 0x0b,
-    [SPECIES_METAPOD - 1] = 0x0b,
-    [SPECIES_BUTTERFREE - 1] = 0x1d,
-    [SPECIES_WEEDLE - 1] = 0x46,
-    [SPECIES_KAKUNA - 1] = 0x20,
-    [SPECIES_BEEDRILL - 1] = 0x02,
-    [SPECIES_PIDGEY - 1] = 0x17,
-    [SPECIES_PIDGEOTTO - 1] = 0x17,
-    [SPECIES_PIDGEOT - 1] = 0x29,
-    [SPECIES_RATTATA - 1] = 0x43,
-    [SPECIES_RATICATE - 1] = 0x2b,
-    [SPECIES_SPEAROW - 1] = 0x18,
-    [SPECIES_FEAROW - 1] = 0x2b,
-    [SPECIES_EKANS - 1] = 0x16,
-    [SPECIES_ARBOK - 1] = 0x17,
+    [SPECIES_PAROPEAT - 1] = 0x06,
+    [SPECIES_MACAUMENT - 1] = 0x17,
+    [SPECIES_ARGUWINT - 1] = 0x2f,
+    [SPECIES_PRIMATIO - 1] = 0x52,
+    [SPECIES_OPINIMP - 1] = 0x25,
+    [SPECIES_TEMPERILLA - 1] = 0x10,
+    [SPECIES_SUBSTEE - 1] = 0x0b,
+    [SPECIES_MANEMBER - 1] = 0x13,
+    [SPECIES_TRECHIBER - 1] = 0x19,
+    [SPECIES_BULBITE - 1] = 0x0b,
+    [SPECIES_LAMPUPA - 1] = 0x0b,
+    [SPECIES_ELECREEP - 1] = 0x1d,
+    [SPECIES_ACTURUNK - 1] = 0x46,
+    [SPECIES_DRAMASPIRE - 1] = 0x20,
+    [SPECIES_BURROBIT - 1] = 0x02,
+    [SPECIES_BUNNAETHER - 1] = 0x17,
+    [SPECIES_CUCKOOB - 1] = 0x17,
+    [SPECIES_TWIDDIES - 1] = 0x29,
+    [SPECIES_AIRIOLA - 1] = 0x43,
+    [SPECIES_STANDAAD - 1] = 0x2b,
+    [SPECIES_RECKLOAT - 1] = 0x18,
+    [SPECIES_DEVILOAT - 1] = 0x2b,
+    [SPECIES_KITKAR - 1] = 0x16,
+    [SPECIES_CANNEKO - 1] = 0x17,
     [SPECIES_PIKACHU - 1] = 0x2c,
     [SPECIES_RAICHU - 1] = 0x17,
-    [SPECIES_SANDSHREW - 1] = 0x2d,
-    [SPECIES_SANDSLASH - 1] = 0x17,
-    [SPECIES_NIDORAN_F - 1] = 0x00,
-    [SPECIES_NIDORINA - 1] = 0x17,
-    [SPECIES_NIDOQUEEN - 1] = 0x0f,
+    [SPECIES_GRUBFEED - 1] = 0x2d,
+    [SPECIES_KWIZBEE - 1] = 0x17,
+    [SPECIES_COSMONARCH - 1] = 0x00,
+    [SPECIES_PAASTEL - 1] = 0x17,
+    [SPECIES_SHEEPASTRY - 1] = 0x0f,
     [SPECIES_NIDORAN_M - 1] = 0x09,
     [SPECIES_NIDORINO - 1] = 0x13,
     [SPECIES_NIDOKING - 1] = 0x0f,
@@ -2988,37 +2988,58 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     else
         personality = Random32();
 
-    //Determine original trainer ID
-    if (otIdType == OT_ID_RANDOM_NO_SHINY) //Pokemon cannot be shiny
+    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
+
+    switch (otIdType)
     {
-        u32 shinyValue;
-        do
+        case OT_ID_SHINY:
         {
-            value = Random32();
-            shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
-        } while (shinyValue < SHINY_ODDS);
-    }
-    else if (otIdType == OT_ID_PRESET) //Pokemon has a preset OT ID
-    {
-        value = fixedOtId;
-    }
-    else //Player is the OT
-    {
-        value = gSaveBlock2Ptr->playerTrainerId[0]
-              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
-        
-        if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
-        {
-            u32 shinyValue;
-            u32 rolls = 0;
+            u32 shinyValue = 0;
             do
             {
-                personality = Random32();
+                value = Random32();
                 shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
-                rolls++;
-            } while (shinyValue >= SHINY_ODDS && rolls < I_SHINY_CHARM_REROLLS);
+            } while (shinyValue >= SHINY_ODDS);
+        }
+        break;
+
+        case OT_ID_RANDOM_NO_SHINY:
+        {
+            u32 shinyValue = 0;
+            do
+            {
+                value = Random32();
+                shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+            } while (shinyValue < SHINY_ODDS);
+        }
+        break;
+
+        case OT_ID_PRESET:
+        {
+            value = fixedOtId;
+        }
+        break;
+
+        default:
+        {
+            value = gSaveBlock2Ptr->playerTrainerId[0]
+                 | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                 | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+                 | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+
+#ifdef ITEM_SHINY_CHARM
+            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+            {
+                u32 shinyValue;
+                u32 rolls = 0;
+                do
+                {
+                    personality = Random32();
+                    shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+                    rolls++;
+                } while (shinyValue >= SHINY_ODDS && rolls < I_SHINY_CHARM_REROLLS);
+            }
+#endif
         }
     }
 
@@ -3096,7 +3117,7 @@ void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV,
     CreateMon(mon, species, level, fixedIV, 1, personality, OT_ID_PLAYER_ID, 0);
 }
 
-void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter)
+void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter, u8 otIdType)
 {
     u32 personality;
 
@@ -3763,6 +3784,32 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
     }
 
     return retVal;
+}
+
+u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
+{
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, NULL);
+
+    // since you can learn more than one move per level
+    // the game needs to know whether you decided to
+    // learn it or keep the old set to avoid asking
+    // you to learn the same move over and over again
+    if (firstMove)
+    {
+        sLearningMoveTableID = 0;
+    }
+    while(gLevelUpLearnsets[species][sLearningMoveTableID].move != LEVEL_UP_END)
+    {
+        while (!gLevelUpLearnsets[species][sLearningMoveTableID].level || gLevelUpLearnsets[species][sLearningMoveTableID].level == level)
+        {
+            gMoveToLearn = gLevelUpLearnsets[species][sLearningMoveTableID].move;
+            sLearningMoveTableID++;
+            return GiveMoveToMon(mon, gMoveToLearn);
+        }
+        sLearningMoveTableID++;
+    }
+    return 0;
 }
 
 void DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move)
@@ -7401,10 +7448,10 @@ static void Task_PokemonSummaryAnimateAfterDelay(u8 taskId)
 
 void BattleAnimateFrontSprite(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
 {
-    if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
-        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
-    else
-        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3);
+    //if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
+    DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
+    /*else
+        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3);*/
 }
 
 void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
@@ -7453,7 +7500,8 @@ void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, 
 
 void PokemonSummaryDoMonAnimation(struct Sprite* sprite, u16 species, bool8 oneFrame)
 {
-    if (!oneFrame && HasTwoFramesAnimation(species))
+    sprite->callback = SpriteCallbackDummy;
+    /*if (!oneFrame && HasTwoFramesAnimation(species))
         StartSpriteAnim(sprite, 1);
     if (sMonAnimationDelayTable[species - 1] != 0)
     {
@@ -7467,7 +7515,7 @@ void PokemonSummaryDoMonAnimation(struct Sprite* sprite, u16 species, bool8 oneF
     else
     {
         StartMonSummaryAnimation(sprite, sMonFrontAnimIdsTable[species - 1]);
-    }
+    }*/
 }
 
 void StopPokemonAnimationDelayTask(void)
@@ -7479,15 +7527,15 @@ void StopPokemonAnimationDelayTask(void)
 
 void BattleAnimateBackSprite(struct Sprite* sprite, u16 species)
 {
-    if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
-    {
-        sprite->callback = SpriteCallbackDummy;
-    }
+    /*if (gHitMarker & HITMARKER_NO_ANIMATIONS && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK)))
+    {*/
+    sprite->callback = SpriteCallbackDummy;
+    /*}
     else
     {
         LaunchAnimationTaskForBackSprite(sprite, GetSpeciesBackAnimSet(species));
         sprite->callback = SpriteCallbackDummy_2;
-    }
+    }*/
 }
 
 u8 sub_806EF08(u8 arg0)

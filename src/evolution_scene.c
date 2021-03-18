@@ -724,7 +724,7 @@ static void Task_EvolutionScene(u8 taskID)
     case 15: // check if it wants to learn a new move
         if (!IsTextPrinterActive(0))
         {
-            var = MonTryLearningNewMove(mon, gTasks[taskID].tLearnsFirstMove);
+            var = MonTryLearningNewMoveEvolution(mon, gTasks[taskID].tLearnsFirstMove);
             if (var != 0 && !gTasks[taskID].tEvoWasStopped)
             {
                 u8 text[20];
@@ -1087,7 +1087,7 @@ static void Task_TradeEvolutionScene(u8 taskID)
     case 13:
         if (!IsTextPrinterActive(0) && IsFanfareTaskInactive() == TRUE)
         {
-            var = MonTryLearningNewMove(mon, gTasks[taskID].tLearnsFirstMove);
+            var = MonTryLearningNewMoveEvolution(mon, gTasks[taskID].tLearnsFirstMove);
             if (var != 0 && !gTasks[taskID].tEvoWasStopped)
             {
                 u8 text[20];
@@ -1530,7 +1530,8 @@ static void sub_8140174(void)
 
 static void EvoScene_DoMonAnimation(u8 monSpriteId, u16 speciesId)
 {
-    DoMonFrontSpriteAnimation(&gSprites[monSpriteId], speciesId, FALSE, 0);
+    //DoMonFrontSpriteAnimation
+    BattleAnimateFrontSprite(&gSprites[monSpriteId], speciesId, FALSE, 0);
 }
 
 static bool32 EvoScene_IsMonAnimFinished(u8 monSpriteId)

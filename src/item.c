@@ -24,6 +24,7 @@ extern u16 gUnknown_0203CF30[];
 #endif
 static bool8 CheckPyramidBagHasItem(u16 itemId, u16 count);
 static bool8 CheckPyramidBagHasSpace(u16 itemId, u16 count);
+void ItemId_GetHoldEffectParam_Script();
 
 // EWRAM variables
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
@@ -33,6 +34,11 @@ EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
 #include "data/items.h"
 
 // code
+void ItemId_GetHoldEffectParam_Script()
+{
+    VarSet(VAR_RESULT, ItemId_GetHoldEffectParam(VarGet(VAR_0x8004)));
+}
+
 static u16 GetBagItemQuantity(u16 *quantity)
 {
     return gSaveBlock2Ptr->encryptionKey ^ *quantity;

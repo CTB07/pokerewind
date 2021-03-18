@@ -3,6 +3,7 @@
 #include "bike.h"
 #include "coord_event_weather.h"
 #include "daycare.h"
+#include "debug.h"
 #include "faraway_island.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -132,6 +133,35 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         input->dpadDirection = DIR_WEST;
     else if (heldKeys & DPAD_RIGHT)
         input->dpadDirection = DIR_EAST;
+
+
+    //DEBUG
+    if (heldKeys & R_BUTTON) 
+    {
+        if(input->pressedSelectButton)
+        {
+            input->input_field_1_0 = TRUE;
+            input->pressedSelectButton = FALSE;
+        }else if(input->pressedStartButton) 
+        {
+            input->input_field_1_2 = TRUE;
+            input->pressedStartButton = FALSE;
+        }
+    }
+    if (heldKeys & L_BUTTON) 
+    {
+        if(input->pressedSelectButton)
+        {
+            input->input_field_1_1 = TRUE;
+            input->pressedSelectButton = FALSE;
+        }else if(input->pressedStartButton) 
+        {
+            input->input_field_1_3 = TRUE;
+            input->pressedStartButton = FALSE;
+        }
+    }
+    //
+
 }
 
 int ProcessPlayerFieldInput(struct FieldInput *input)
@@ -194,6 +224,15 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     }
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
+
+#if DEBUGGING
+    if (input->input_field_1_2)
+    {
+        PlaySE(SE_WIN_OPEN);
+        Debug_ShowMainMenu();
+        return TRUE;
+    }
+#endif
 
     return FALSE;
 }
@@ -294,8 +333,39 @@ static const u8 *GetInteractedObjectEventScript(struct MapPosition *position, u8
 {
     u8 objectEventId;
     const u8 *script;
-
-    objectEventId = GetObjectEventIdByXYZ(position->x, position->y, position->height);
+    s16 currX = gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x;
+    s16 currY = gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y;
+    u8 currBehavior = MapGridGetMetatileBehaviorAt(currX, currY);
+        
+    switch (direction)
+    {
+    case DIR_EAST:
+        if (MetatileBehavior_IsSidewaysStairsLeftSideAny(metatileBehavior))
+            // sideways stairs left-side to your right -> check northeast
+            objectEventId = GetObjectEventIdByXYZ(currX + 1, currY - 1, position->height);
+        else if (MetatileBehavior_IsSidewaysStairsRightSideAny(currBehavior))
+            // on top of right-side stairs -> check southeast
+            objectEventId = GetObjectEventIdByXYZ(currX + 1, currY + 1, position->height);
+        else
+            // check in front of player
+            objectEventId = GetObjectEventIdByXYZ(position->x, position->y, position->height);
+        break;
+    case DIR_WEST:
+        if (MetatileBehavior_IsSidewaysStairsRightSideAny(metatileBehavior))
+            // facing sideways stairs right side -> check northwest
+            objectEventId = GetObjectEventIdByXYZ(currX - 1, currY - 1, position->height);
+        else if (MetatileBehavior_IsSidewaysStairsLeftSideAny(currBehavior))
+            // on top of left-side stairs -> check southwest
+            objectEventId = GetObjectEventIdByXYZ(currX - 1, currY + 1, position->height);
+        else
+            // check in front of player
+            objectEventId = GetObjectEventIdByXYZ(position->x, position->y, position->height);
+        break;
+    default:
+        objectEventId = GetObjectEventIdByXYZ(position->x, position->y, position->height);
+        break;
+    }
+    
     if (objectEventId == OBJECT_EVENTS_COUNT || gObjectEvents[objectEventId].localId == OBJ_EVENT_ID_PLAYER)
     {
         if (MetatileBehavior_IsCounter(metatileBehavior) != TRUE)
@@ -675,6 +745,9 @@ void RestartWildEncounterImmunitySteps(void)
 
 static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 {
+    if (FlagGet(FLAG_SYS_NO_ENCOUNTER)) //DEBUG
+        return FALSE;//
+
     if (sWildEncounterImmunitySteps < 4)
     {
         sWildEncounterImmunitySteps++;
@@ -690,7 +763,7 @@ static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
     }
 
     sPreviousPlayerMetatileBehavior = metatileBehavior;
-    return FALSE;
+    return FALSE;   
 }
 
 static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8 direction)

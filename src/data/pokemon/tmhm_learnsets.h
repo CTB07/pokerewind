@@ -16,7 +16,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM25_THUNDER)
                                             | TMHM(TM06_TOXIC)),
 
-    [SPECIES_BULBASAUR]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
+    [SPECIES_PAROPEAT]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
                                             | TMHM(TM09_BULLET_SEED)
                                             | TMHM(HM01_CUT)
                                             | TMHM(TM32_DOUBLE_TEAM)

@@ -356,7 +356,6 @@ static void (*const gMovementStatusHandler[])(struct LinkPlayerObjectEvent *, st
 void DoWhiteOut(void)
 {
     ScriptContext2_RunNewScript(EventScript_WhiteOut);
-    SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
     HealPlayerParty();
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestinationToLastHealLocation();
@@ -2121,10 +2120,7 @@ static void ResumeMap(bool32 a1)
     ResetAllPicSprites();
     ResetCameraUpdateInfo();
     InstallCameraPanAheadCallback();
-    if (!a1)
-        InitObjectEventPalettes(0);
-    else
-        InitObjectEventPalettes(1);
+    FreeAllSpritePalettes();
 
     FieldEffectActiveListClear();
     StartWeather();

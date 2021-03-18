@@ -96,7 +96,17 @@ static bool8 ShouldSwitchIfWonderGuard(void)
     }
 
     // Get party information.
-    GetAIPartyIndexes(gActiveBattler, &firstId, &lastId);
+    if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI))
+    {
+        if ((gActiveBattler & BIT_FLANK) == B_FLANK_LEFT)
+            firstId = 0, lastId = 3;
+        else
+            firstId = 3, lastId = 6;
+    }
+    else
+    {
+        firstId = 0, lastId = 6;
+    }
 
     if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
         party = gPlayerParty;
@@ -178,7 +188,17 @@ static bool8 FindMonThatAbsorbsOpponentsMove(void)
     if (gBattleMons[gActiveBattler].ability == absorbingTypeAbility)
         return FALSE;
 
-    GetAIPartyIndexes(gActiveBattler, &firstId, &lastId);
+    if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI))
+    {
+        if ((gActiveBattler & BIT_FLANK) == B_FLANK_LEFT)
+            firstId = 0, lastId = 3;
+        else
+            firstId = 3, lastId = 6;
+    }
+    else
+    {
+        firstId = 0, lastId = 6;
+    }
 
     if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
         party = gPlayerParty;
@@ -359,7 +379,17 @@ static bool8 FindMonWithFlagsAndSuperEffective(u16 flags, u8 moduloPercent)
         battlerIn2 = gActiveBattler;
     }
 
-    GetAIPartyIndexes(gActiveBattler, &firstId, &lastId);
+    if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI))
+    {
+        if ((gActiveBattler & BIT_FLANK) == 0)
+            firstId = 0, lastId = 3;
+        else
+            firstId = 3, lastId = 6;
+    }
+    else
+    {
+        firstId = 0, lastId = 6;
+    }
 
     if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
         party = gPlayerParty;
@@ -449,7 +479,17 @@ static bool8 ShouldSwitch(void)
         battlerIn2 = gActiveBattler;
     }
 
-    GetAIPartyIndexes(gActiveBattler, &firstId, &lastId);
+    if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI))
+    {
+        if ((gActiveBattler & BIT_FLANK) == B_FLANK_LEFT)
+            firstId = 0, lastId = 3;
+        else
+            firstId = 3, lastId = 6;
+    }
+    else
+    {
+        firstId = 0, lastId = 6;
+    }
 
     if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
         party = gPlayerParty;
@@ -532,7 +572,17 @@ void AI_TrySwitchOrUseItem(void)
                         battlerIn2 = GetBattlerAtPosition(battlerIdentity ^ BIT_FLANK);
                     }
 
-                    GetAIPartyIndexes(gActiveBattler, &firstId, &lastId);
+                    if (gBattleTypeFlags & (BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TOWER_LINK_MULTI))
+                    {
+                        if ((gActiveBattler & BIT_FLANK) == B_FLANK_LEFT)
+                            firstId = 0, lastId = 3;
+                        else
+                            firstId = 3, lastId = 6;
+                    }
+                    else
+                    {
+                        firstId = 0, lastId = 6;
+                    }
 
                     for (monToSwitchId = firstId; monToSwitchId < lastId; monToSwitchId++)
                     {

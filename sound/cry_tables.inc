@@ -1,37 +1,37 @@
 
 	.align 2
 gCryTable:: @ 869DCF4
-	cry Cry_Bulbasaur  @ 869DCF4
-	cry Cry_Ivysaur  @ 869DD00
-	cry Cry_Venusaur  @ 869DD0C
-	cry Cry_Charmander  @ 869DD18
-	cry Cry_Charmeleon  @ 869DD24
-	cry Cry_Charizard  @ 869DD30
-	cry Cry_Squirtle  @ 869DD3C
-	cry Cry_Wartortle  @ 869DD48
-	cry Cry_Blastoise  @ 869DD54
-	cry Cry_Caterpie  @ 869DD60
-	cry Cry_Metapod  @ 869DD6C
-	cry Cry_Butterfree  @ 869DD78
-	cry Cry_Weedle  @ 869DD84
-	cry Cry_Kakuna  @ 869DD90
-	cry Cry_Beedrill  @ 869DD9C
-	cry Cry_Pidgey  @ 869DDA8
-	cry Cry_Pidgeotto  @ 869DDB4
-	cry Cry_Pidgeot  @ 869DDC0
-	cry Cry_Rattata  @ 869DDCC
-	cry Cry_Raticate  @ 869DDD8
-	cry Cry_Spearow  @ 869DDE4
-	cry Cry_Fearow  @ 869DDF0
-	cry Cry_Ekans  @ 869DDFC
-	cry Cry_Arbok  @ 869DE08
+	cry Cry_Paropeat  @ 869DCF4
+	cry Cry_Macaument  @ 869DD00
+	cry Cry_Arguwint  @ 869DD0C
+	cry Cry_Primatio  @ 869DD18
+	cry Cry_Opinimp  @ 869DD24
+	cry Cry_Temperilla  @ 869DD30
+	cry Cry_Substee  @ 869DD3C
+	cry Cry_Manember  @ 869DD48
+	cry Cry_Trechiber  @ 869DD54
+	cry Cry_Bulbite  @ 869DD60
+	cry Cry_Lampupa  @ 869DD6C
+	cry Cry_Elecreep  @ 869DD78
+	cry Cry_Acturunk  @ 869DD84
+	cry Cry_Dramaspire  @ 869DD90
+	cry Cry_Burrobit  @ 869DD9C
+	cry Cry_Bunnaether  @ 869DDA8
+	cry Cry_Cuckoob  @ 869DDB4
+	cry Cry_Twiddies  @ 869DDC0
+	cry Cry_Airiola  @ 869DDCC
+	cry Cry_Standaad  @ 869DDD8
+	cry Cry_Reckloat  @ 869DDE4
+	cry Cry_Deviloat  @ 869DDF0
+	cry Cry_Kitkar  @ 869DDFC
+	cry Cry_Canneko  @ 869DE08
 	cry Cry_Pikachu  @ 869DE14
 	cry Cry_Raichu  @ 869DE20
-	cry Cry_Sandshrew  @ 869DE2C
-	cry Cry_Sandslash  @ 869DE38
-	cry Cry_NidoranF  @ 869DE44
-	cry Cry_Nidorina  @ 869DE50
-	cry Cry_Nidoqueen  @ 869DE5C
+	cry Cry_Grubfeed  @ 869DE2C
+	cry Cry_Kwizbee  @ 869DE38
+	cry Cry_Cosmonarch  @ 869DE44
+	cry Cry_Paastel  @ 869DE50
+	cry Cry_Sheepastry  @ 869DE5C
 	cry Cry_NidoranM  @ 869DE68
 	cry Cry_Nidorino  @ 869DE74
 	cry Cry_Nidoking  @ 869DE80
@@ -952,11 +952,11 @@ gCryTable:: @ 869DCF4
 	cry_uncomp Cry_KyogrePrimal
 	cry_uncomp Cry_GroudonPrimal
 	@ Alolan Forms
-	cry Cry_Rattata
-	cry Cry_Raticate
+	cry Cry_Airiola
+	cry Cry_Standaad
 	cry Cry_Raichu
-	cry Cry_Sandshrew
-	cry Cry_Sandslash
+	cry Cry_Grubfeed
+	cry Cry_Kwizbee
 	cry Cry_Vulpix
 	cry Cry_Ninetales
 	cry Cry_Diglett
@@ -1275,37 +1275,37 @@ gCryTable:: @ 869DCF4
 
 	.align 2
 gCryTable2:: @ 869EF24
-	cry2 Cry_Bulbasaur  @ 869EF24
-	cry2 Cry_Ivysaur  @ 869EF30
-	cry2 Cry_Venusaur  @ 869EF3C
-	cry2 Cry_Charmander  @ 869EF48
-	cry2 Cry_Charmeleon  @ 869EF54
-	cry2 Cry_Charizard  @ 869EF60
-	cry2 Cry_Squirtle  @ 869EF6C
-	cry2 Cry_Wartortle  @ 869EF78
-	cry2 Cry_Blastoise  @ 869EF84
-	cry2 Cry_Caterpie  @ 869EF90
-	cry2 Cry_Metapod  @ 869EF9C
-	cry2 Cry_Butterfree  @ 869EFA8
-	cry2 Cry_Weedle  @ 869EFB4
-	cry2 Cry_Kakuna  @ 869EFC0
-	cry2 Cry_Beedrill  @ 869EFCC
-	cry2 Cry_Pidgey  @ 869EFD8
-	cry2 Cry_Pidgeotto  @ 869EFE4
-	cry2 Cry_Pidgeot  @ 869EFF0
-	cry2 Cry_Rattata  @ 869EFFC
-	cry2 Cry_Raticate  @ 869F008
-	cry2 Cry_Spearow  @ 869F014
-	cry2 Cry_Fearow  @ 869F020
-	cry2 Cry_Ekans  @ 869F02C
-	cry2 Cry_Arbok  @ 869F038
+	cry2 Cry_Paropeat  @ 869EF24
+	cry2 Cry_Macaument  @ 869EF30
+	cry2 Cry_Arguwint  @ 869EF3C
+	cry2 Cry_Primatio  @ 869EF48
+	cry2 Cry_Opinimp  @ 869EF54
+	cry2 Cry_Temperilla  @ 869EF60
+	cry2 Cry_Substee  @ 869EF6C
+	cry2 Cry_Manember  @ 869EF78
+	cry2 Cry_Trechiber  @ 869EF84
+	cry2 Cry_Bulbite  @ 869EF90
+	cry2 Cry_Lampupa  @ 869EF9C
+	cry2 Cry_Elecreep  @ 869EFA8
+	cry2 Cry_Acturunk  @ 869EFB4
+	cry2 Cry_Dramaspire  @ 869EFC0
+	cry2 Cry_Burrobit  @ 869EFCC
+	cry2 Cry_Bunnaether  @ 869EFD8
+	cry2 Cry_Cuckoob  @ 869EFE4
+	cry2 Cry_Twiddies  @ 869EFF0
+	cry2 Cry_Airiola  @ 869EFFC
+	cry2 Cry_Standaad  @ 869F008
+	cry2 Cry_Reckloat  @ 869F014
+	cry2 Cry_Deviloat  @ 869F020
+	cry2 Cry_Kitkar  @ 869F02C
+	cry2 Cry_Canneko  @ 869F038
 	cry2 Cry_Pikachu  @ 869F044
 	cry2 Cry_Raichu  @ 869F050
-	cry2 Cry_Sandshrew  @ 869F05C
-	cry2 Cry_Sandslash  @ 869F068
-	cry2 Cry_NidoranF  @ 869F074
-	cry2 Cry_Nidorina  @ 869F080
-	cry2 Cry_Nidoqueen  @ 869F08C
+	cry2 Cry_Grubfeed  @ 869F05C
+	cry2 Cry_Kwizbee  @ 869F068
+	cry2 Cry_Cosmonarch  @ 869F074
+	cry2 Cry_Paastel  @ 869F080
+	cry2 Cry_Sheepastry  @ 869F08C
 	cry2 Cry_NidoranM  @ 869F098
 	cry2 Cry_Nidorino  @ 869F0A4
 	cry2 Cry_Nidoking  @ 869F0B0
@@ -2226,11 +2226,11 @@ gCryTable2:: @ 869EF24
 	cry2_uncomp Cry_KyogrePrimal
 	cry2_uncomp Cry_GroudonPrimal
 	@ Alolan Forms
-	cry2 Cry_Rattata
-	cry2 Cry_Raticate
+	cry2 Cry_Airiola
+	cry2 Cry_Standaad
 	cry2 Cry_Raichu
-	cry2 Cry_Sandshrew
-	cry2 Cry_Sandslash
+	cry2 Cry_Grubfeed
+	cry2 Cry_Kwizbee
 	cry2 Cry_Vulpix
 	cry2 Cry_Ninetales
 	cry2 Cry_Diglett

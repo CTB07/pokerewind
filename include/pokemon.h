@@ -288,7 +288,7 @@ void ZeroEnemyPartyMons(void);
 void CreateMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId);
 void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId);
 void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 nature);
-void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter);
+void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter, u8 otIdType);
 void CreateMaleMon(struct Pokemon *mon, u16 species, u8 level);
 void CreateMonWithIVsPersonality(struct Pokemon *mon, u16 species, u8 level, u32 ivs, u32 personality);
 void CreateMonWithIVsOTID(struct Pokemon *mon, u16 species, u8 level, u8 *ivs, u32 otId);
@@ -439,5 +439,6 @@ void sub_806F47C(u8 id);
 u8 *sub_806F4F8(u8 id, u8 arg1);
 u16 GetFormSpeciesId(u16 speciesId, u8 formId);
 u8 GetFormIdFromFormSpeciesId(u16 formSpeciesId);
+u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove);
 
 #endif // GUARD_POKEMON_H
