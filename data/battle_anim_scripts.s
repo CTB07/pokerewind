@@ -805,6 +805,8 @@ gBattleAnims_Moves::
         .4byte Move_GUN
         .4byte Move_VENT_KILL
         .4byte Move_EJECT
+        .4byte Move_TOXIC_ATTITUDE
+        .4byte Move_HIVE_MIND
 	.4byte Move_COUNT @ cannot be reached, because last move is as defined
 
 	.align 2
@@ -14236,6 +14238,30 @@ Move_VENT_KILL::
 Move_EJECT::
 	goto Move_CIRCLE_THROW
 
+Move_TOXIC_ATTITUDE::
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_POISON_BUBBLE
+	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 1, 1, RGB(24, 6, 23)
+	waitforvisualfinish
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
+	delay 6
+	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 4, 0, -10, 8, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, -10, ANIM_TARGET, 1
+        createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	waitforvisualfinish
+	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, ANIM_ATTACKER, 1
+	clearmonbg ANIM_TARGET
+	blendoff
+	call PoisonBubblesEffect
+	waitforvisualfinish
+	end
+
+Move_HIVE_MIND::
+	goto Move_STRUGGLE_BUG
 
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@

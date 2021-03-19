@@ -786,4 +786,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_ASSASSINATE] = _("Assassinate"),
     [MOVE_EJECT] = _("Eject"),
     [MOVE_VENT_KILL] = _("Vent Kill"),
+    [MOVE_TOXIC_ATTITUDE] = _("Toxic Attitude"),
+    [MOVE_HIVE_MIND] = _("Hive Mind"),
 };

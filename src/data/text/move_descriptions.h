@@ -3064,6 +3064,13 @@ static const u8 sMOVE_GUNDescription[] = _(
     "Pulls a fucking gat on the foe\n"
     "killing it instantly.");
 
+static const u8 sMOVE_TOXIC_ATTITUDEDescription[] = _(
+    "If user is under 50% HP, \n"
+    "gets salty and poisons.");
+
+static const u8 sMOVE_HIVE_MINDDescription[] = _(
+    "If the user has status, the\n"
+    "target gains that status.");
 
 
 static const u8 sNotDoneYetDescription[] = _(
@@ -3864,4 +3871,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_VENT_KILL - 1] = sMOVE_VENT_KILLDescription,
     [MOVE_EJECT - 1] = sMOVE_EJECTDescription,
     [MOVE_GUN - 1] = sMOVE_GUNDescription,
+    [MOVE_TOXIC_ATTITUDE - 1] = sMOVE_TOXIC_ATTITUDEDescription,
+    [MOVE_HIVE_MIND - 1] = sMOVE_HIVE_MINDDescription,
 };

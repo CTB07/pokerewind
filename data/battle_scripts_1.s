@@ -377,6 +377,9 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMordantAcid
 	.4byte BattleScript_EffectEject
 	.4byte BattleScript_EffectTripleSuperEffective
+	.4byte BattleScript_EffectToxicAttitude
+	.4byte BattleScript_EffectHiveMind
+
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -7978,6 +7981,45 @@ BattleScript_EffectTerrainHit::
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 BattleScript_TryFaint:
+	tryfaintmon BS_TARGET, FALSE, NULL
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectToxicAttitude::
+	jumpifoverhalfhp BattleScript_EffectHit
+	goto BattleScript_EffectPoisonHit
+
+BattleScript_EffectHiveMind:
+	setmoveeffect MOVE_EFFECT_FLINCH
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	tryfaintmon BS_TARGET, FALSE, NULL
+	jumpifstatus BS_ATTACKER, STATUS1_ANY, BattleScript_EffectHiveMindCanWork
+	goto BattleScript_MoveEnd
+BattleScript_EffectHiveMindCanWork:
+	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
+	jumpifsafeguard BattleScript_SafeguardProtected
+	trypsychoshift BattleScript_MoveEnd
+	copybyte gEffectBattler, gBattlerTarget
+	printfromtable gStatusConditionsStringIds
+	waitmessage 0x40
+	statusanimation BS_TARGET
+	updatestatusicon BS_TARGET
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 

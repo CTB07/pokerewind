@@ -4063,6 +4063,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_DEMONETIZE:
         case ABILITY_NO_FUCKS:
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
@@ -4079,9 +4080,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     {
                         for (stat = 0; stat < NUM_BATTLE_STATS; stat++)
                             gBattleMons[opposingBattler].statStages[stat] = 6;
-			BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityNoFucks);
+			gEffectBattler = opposingBattler;
+			BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityNoFucks);//"(mon)'s (Ability) reset (target)'s stat boosts". Works for both demonetise and no fucks.
 			effect++;
-
                     }
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 effect++;
@@ -4095,6 +4096,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 i = (Random() % 5) + 1; //the stats used are atk def sate sdef spe. Rand 5 gives no from 0-4. +1 because we can't stat boost hp - gives us stats.
                 SET_STATCHANGER(i, 3, FALSE);
                 BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRocketOnSwitchIn);// The only unique thing about this is it says "drastically" rather than just rose. 
+                effect++;
+            }
+            break;
+        case ABILITY_OPPOSITE_DAY:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_OPPOSITE_DAY;
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
                 effect++;
             }
             break;
@@ -7736,14 +7746,14 @@ static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 batt
             RecordAbilityBattle(battlerAtk, ABILITY_SCRAPPY);
     }
 
-    if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
-        mod = UQ_4_12(1.0);
     if (gBattleMoves[move].effect == EFFECT_FREEZE_DRY && defType == TYPE_WATER)
         mod = UQ_4_12(2.0);
     if (gBattleMoves[move].effect == EFFECT_MORDANT_ACID && defType == TYPE_STEEL)
         mod = UQ_4_12(2.0);
-    if (gBattleMoves[move].effect == EFFECT_EJECT && defType == TYPE_PSYCHIC)
+    if (gBattleMoves[move].effect == EFFECT_EJECT && defType == TYPE_DARK)
         mod = UQ_4_12(2.0);
+    if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
+        mod = UQ_4_12(1.0);
     if (gBattleMoves[move].effect == EFFECT_TRIPLE_SUPER_EFFECTIVE && mod == UQ_4_12(2.0))
         mod = UQ_4_12(3.0);
     if (moveType == TYPE_GROUND && defType == TYPE_FLYING && IsBattlerGrounded(battlerDef) && mod == UQ_4_12(0.0))
@@ -7854,7 +7864,7 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
 
 u16 GetTypeModifier(u8 atkType, u8 defType)
 {
-    if (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE))
+    if ((B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) || IsAbilityOnField(ABILITY_OPPOSITE_DAY))
         return sInverseTypeEffectivenessTable[atkType][defType];
     else
         return sTypeEffectivenessTable[atkType][defType];
