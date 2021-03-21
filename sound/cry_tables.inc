@@ -84,7 +84,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Magnemite  @ 869E0B4
 	cry Cry_Magneton  @ 869E0C0
 	cry Cry_Farfetchd  @ 869E0CC
-	cry Cry_Doduo  @ 869E0D8
+	cry Cry_Funnesus  @ 869E0D8
 	cry Cry_Dodrio  @ 869E0E4
 	cry Cry_Seel  @ 869E0F0
 	cry Cry_Dewgong  @ 869E0FC
@@ -1358,7 +1358,7 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Magnemite  @ 869F2E4
 	cry2 Cry_Magneton  @ 869F2F0
 	cry2 Cry_Farfetchd  @ 869F2FC
-	cry2 Cry_Doduo  @ 869F308
+	cry2 Cry_Funnesus  @ 869F308
 	cry2 Cry_Dodrio  @ 869F314
 	cry2 Cry_Seel  @ 869F320
 	cry2 Cry_Dewgong  @ 869F32C

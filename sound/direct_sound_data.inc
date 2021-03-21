@@ -719,8 +719,8 @@ Cry_Farfetchd::
 	.incbin "sound/direct_sound_samples/cries/farfetchd.bin"
 
 	.align 2
-Cry_Doduo::
-	.incbin "sound/direct_sound_samples/cries/doduo.bin"
+Cry_Funnesus::
+	.incbin "sound/direct_sound_samples/cries/funnesus.bin"
 
 	.align 2
 Cry_Dodrio::
