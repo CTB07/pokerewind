@@ -3072,6 +3072,9 @@ static const u8 sMOVE_HIVE_MINDDescription[] = _(
     "If the user has status, the\n"
     "target gains that status.");
 
+static const u8 sMOVE_TSUNAMIDescription[] = _(
+    "Summons a tidal wave\n"
+    "that washes foes away.");
 
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
@@ -3873,4 +3876,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GUN - 1] = sMOVE_GUNDescription,
     [MOVE_TOXIC_ATTITUDE - 1] = sMOVE_TOXIC_ATTITUDEDescription,
     [MOVE_HIVE_MIND - 1] = sMOVE_HIVE_MINDDescription,
+    [MOVE_TSUNAMI - 1] = sMOVE_TSUNAMIDescription,
 };

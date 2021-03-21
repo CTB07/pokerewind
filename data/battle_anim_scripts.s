@@ -807,6 +807,7 @@ gBattleAnims_Moves::
         .4byte Move_EJECT
         .4byte Move_TOXIC_ATTITUDE
         .4byte Move_HIVE_MIND
+        .4byte Move_TSUNAMI
 	.4byte Move_COUNT @ cannot be reached, because last move is as defined
 
 	.align 2
@@ -14263,6 +14264,14 @@ Move_TOXIC_ATTITUDE::
 Move_HIVE_MIND::
 	goto Move_STRUGGLE_BUG
 
+Move_TSUNAMI::
+	createvisualtask AnimTask_CreateSurfWave, 2, ANIM_SURF_PAL_SURF
+	delay 24
+	panse_1B SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_SlideOffScreen, 5, ANIM_TARGET, 8
+	waitforvisualfinish
+	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
