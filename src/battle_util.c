@@ -6765,7 +6765,7 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
             basePower *= 2;
         break;
     case EFFECT_TERRAIN_PULSE:
-        if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN||gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN||gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN||gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
+        if (gFieldStatuses & (STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN))
             basePower *= 2;
         break;
     case EFFECT_PURSUIT:

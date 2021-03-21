@@ -7006,7 +7006,6 @@ static void HandleTerrainMove(u16 move)
             statusFlag = STATUS_FIELD_MISTY_TERRAIN, timer = &gFieldTimers.mistyTerrainTimer;
             gBattleCommunication[MULTISTRING_CHOOSER] = 0;
             break;
-            return;
         case 2: //grassy
             statusFlag = STATUS_FIELD_GRASSY_TERRAIN, timer = &gFieldTimers.grassyTerrainTimer;
             gBattleCommunication[MULTISTRING_CHOOSER] = 1;
@@ -11115,10 +11114,41 @@ static void Cmd_setcharge(void)
 static void Cmd_callterrainattack(void) // nature power
 {
     gHitMarker &= ~(HITMARKER_ATTACKSTRING_PRINTED);
-    gCurrentMove = sNaturePowerMoves[gBattleTerrain];
-    gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
-    BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
-    gBattlescriptCurrInstr++;
+    if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN)
+    {
+    	gCurrentMove = MOVE_THUNDERBOLT;
+    	gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
+    	BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+    	gBattlescriptCurrInstr++;
+    }
+    else if (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN)
+    {
+    	gCurrentMove = MOVE_MOONBLAST;
+    	gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
+    	BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+    	gBattlescriptCurrInstr++;
+    }
+    else if (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN)
+    {
+    	gCurrentMove = MOVE_ENERGY_BALL;
+    	gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
+    	BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+    	gBattlescriptCurrInstr++;
+    }
+    else if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
+    {
+    	gCurrentMove = MOVE_PSYCHIC;
+    	gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
+    	BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+    	gBattlescriptCurrInstr++;
+    }
+    else
+    {
+    	gCurrentMove = sNaturePowerMoves[gBattleTerrain];
+    	gBattlerTarget = GetMoveTarget(gCurrentMove, 0);
+    	BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
+    	gBattlescriptCurrInstr++;
+    }
 }
 
 static void Cmd_cureifburnedparalysedorpoisoned(void) // refresh
