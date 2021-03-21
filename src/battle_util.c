@@ -1660,7 +1660,7 @@ enum
 u8 DoFieldEndTurnEffects(void)
 {
     u8 effect = 0;
-    if (!(IsAbilityOnField(ABILITY_CIRCLEJERK)))
+
     for (gBattlerAttacker = 0; gBattlerAttacker < gBattlersCount && gAbsentBattlerFlags & gBitTable[gBattlerAttacker]; gBattlerAttacker++)
     {
     }
@@ -2151,8 +2151,8 @@ if (ability == ABILITY_MAGIC_GUARD) \
 u8 DoBattlerEndTurnEffects(void)
 {
     u32 ability, i, effect = 0;
+
     gHitMarker |= (HITMARKER_GRUDGE | HITMARKER_x20);
-    if (!(IsAbilityOnField(ABILITY_CIRCLEJERK)))
     while (gBattleStruct->turnEffectsBattlerId < gBattlersCount && gBattleStruct->turnEffectsTracker <= ENDTURN_BATTLER_COUNT)
     {
         gActiveBattler = gBattlerAttacker = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId];
