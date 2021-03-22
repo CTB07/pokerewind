@@ -1176,24 +1176,24 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_KRABBY] =
+    [NATIONAL_DEX_CUBEAST] =
     {
-        .categoryName = _("River Crab"),
+        .categoryName = _("Beast"),
         .height = 4,
         .weight = 65,
-        .description = gKrabbyPokedexText,
+        .description = gCubeastPokedexText,
         .pokemonScale = 469,
         .pokemonOffset = 20,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_KINGLER] =
+    [NATIONAL_DEX_BEASTUNT] =
     {
-        .categoryName = _("Pincer"),
+        .categoryName = _("Monsieur"),
         .height = 13,
         .weight = 600,
-        .description = gKinglerPokedexText,
+        .description = gBeastuntPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,

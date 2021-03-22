@@ -579,17 +579,17 @@ const u8 gHypnoPokedexText[] = _(
     "into deep hypnosis. While searching for\n"
     "prey, it polishes the pendulum.");
 
-const u8 gKrabbyPokedexText[] = _(
-    "Krabby live in holes dug into beaches.\n"
-    "On sandy shores with little in the way\n"
-    "of food, they can be seen squabbling with\n"
-    "each other over territory.");
+const u8 gCubeastPokedexText[] = _(
+    "Cubeast is held in Vidioh superstition to\n"
+    "be a symbol of good fortune. It is\n" 
+    "believed that wild Cubeast can sense a\n" 
+    "person in need of help.");
 
-const u8 gKinglerPokedexText[] = _(
-    "It waves its huge, oversized claw in the\n"
-    "air to communicate with others.\n"
-    "But since the claw is so heavy, this\n"
-    "Pokémon quickly tires.");
+const u8 gBeastuntPokedexText[] = _(
+    "There are old legends in Vidioh about\n"
+    "Beastunt leaving gifts of treasure or food\n"
+    "in villages struck by disaster, but few are\n"
+    "brave enough to test these myths.");
 
 const u8 gVoltorbPokedexText[] = _(
     "It bears an uncanny and unexplained\n"

@@ -39,7 +39,7 @@ static const u8 sTileBitAttributes[] =
     [MB_UNUSED_SOOTOPOLIS_DEEP_WATER_2] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_STAIRS_OUTSIDE_ABANDONED_SHIP] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_SHOAL_CAVE_ENTRANCE] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
-    [MB_UNUSED_1D] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_LAB] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_UNUSED_1E] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_1F] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_ICE] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
@@ -1588,4 +1588,10 @@ bool8 MetatileBehavior_IsRockStairs(u8 metatileBehavior)
         return FALSE;
 }
 
-
+bool8 MetatileBehavior_IsLab(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_LAB)
+        return TRUE;
+    else
+        return FALSE;
+}

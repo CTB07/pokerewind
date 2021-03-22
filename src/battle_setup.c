@@ -660,7 +660,6 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
         return BATTLE_TERRAIN_SAND;
-
     switch (gMapHeader.mapType)
     {
     case MAP_TYPE_TOWN:
@@ -669,13 +668,29 @@ u8 BattleSetup_GetTerrainId(void)
         break;
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
-            return BATTLE_TERRAIN_BUILDING;
+        {
+            if (MetatileBehavior_IsLab(tileBehavior))
+            {
+                return BATTLE_TERRAIN_LAB;
+            }
+            else
+            {
+                return BATTLE_TERRAIN_BUILDING;
+            }
+        }
         if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
             return BATTLE_TERRAIN_POND;
         return BATTLE_TERRAIN_CAVE;
     case MAP_TYPE_INDOOR:
     case MAP_TYPE_SECRET_BASE:
-        return BATTLE_TERRAIN_BUILDING;
+        if (MetatileBehavior_IsLab(tileBehavior))
+        {
+            return BATTLE_TERRAIN_LAB;
+        }
+        else
+        {
+            return BATTLE_TERRAIN_BUILDING;
+        }
     case MAP_TYPE_UNDERWATER:
         return BATTLE_TERRAIN_UNDERWATER;
     case MAP_TYPE_OCEAN_ROUTE:

@@ -359,6 +359,7 @@
 #define BATTLE_TERRAIN_CAVE         7
 #define BATTLE_TERRAIN_BUILDING     8
 #define BATTLE_TERRAIN_PLAIN        9
+#define BATTLE_TERRAIN_LAB          10
 
 // Move targets
 #define MOVE_TARGET_SELECTED            0x0
