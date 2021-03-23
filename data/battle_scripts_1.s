@@ -380,6 +380,10 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectToxicAttitude
 	.4byte BattleScript_EffectHiveMind
 	.4byte BattleScript_EffectTerrainPulse
+	.4byte BattleScript_EffectBoltBeak
+	.4byte BattleScript_EffectSandblaster
+
+
 
 
 BattleScript_EffectSleepHit:
@@ -2103,7 +2107,8 @@ BattleScript_EffectBodyPress:
 BattleScript_EffectSpinDash:
 BattleScript_EffectTripleSuperEffective:
 BattleScript_EffectTerrainPulse:
-
+BattleScript_EffectBoltBeak::
+BattleScript_EffectSandblaster::
 
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
