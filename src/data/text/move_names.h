@@ -788,4 +788,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_VENT_KILL] = _("Vent Kill"),
     [MOVE_TOXIC_ATTITUDE] = _("Toxic Attitude"),
     [MOVE_HIVE_MIND] = _("Hive Mind"),
+    [MOVE_TSUNAMI] = _("Tsunami"),
+    [MOVE_SANDBLASTER] = _("Sandblaster"),
+    [MOVE_FREEZE_FRAME] = _("Freeze Frame"),
+    [MOVE_EROSION_RAY] = _("Erosion Ray"),
+    [MOVE_BROKEN_ARIA] = _("Broken Aria"),
 };

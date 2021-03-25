@@ -808,6 +808,10 @@ gBattleAnims_Moves::
         .4byte Move_TOXIC_ATTITUDE
         .4byte Move_HIVE_MIND
         .4byte Move_TSUNAMI
+        .4byte Move_SANDBLASTER
+        .4byte Move_FREEZE_FRAME
+	.4byte Move_EROSION_RAY
+	.4byte Move_BROKEN_ARIA
 	.4byte Move_COUNT @ cannot be reached, because last move is as defined
 
 	.align 2
@@ -14236,7 +14240,7 @@ Move_GUN::
 Move_VENT_KILL::
 	goto Move_U_TURN
 
-Move_EJECT::
+Move_EJECT:
 	goto Move_CIRCLE_THROW
 
 Move_TOXIC_ATTITUDE::
@@ -14272,6 +14276,51 @@ Move_TSUNAMI::
 	createvisualtask AnimTask_SlideOffScreen, 5, ANIM_TARGET, 8
 	waitforvisualfinish
 	end
+
+Move_SANDBLASTER:
+	loadspritegfx ANIM_TAG_BROWN_ORB
+	monbg ANIM_DEF_PARTNER
+	monbgprio_28 ANIM_TARGET
+	setalpha 12, 8
+	fadetobg BG_FISSURE
+	waitbgfadeout
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 0, 2, 46, 1
+	delay 6
+	createvisualtask AnimTask_StartSinAnimTimer, 5, 100
+	panse_1B SE_M_WHIRLPOOL, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +1, 0
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 43, 1
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	call MudShotOrbs
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	call UnsetPsychicBg
+	end
+MudShotOrbs:
+	createsprite gMudShotOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
+	delay 2
+	createsprite gMudShotOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
+	delay 2
+	return
+
+Move_FREEZE_FRAME::
+	goto Move_ICY_WIND
+
+Move_EROSION_RAY::
+	goto Move_HYPER_BEAM
+
+Move_BROKEN_ARIA::
+	goto Move_RELIC_SONG
+
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:

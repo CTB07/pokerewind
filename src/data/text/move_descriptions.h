@@ -3076,8 +3076,27 @@ static const u8 sMOVE_TSUNAMIDescription[] = _(
     "Summons a tidal wave\n"
     "that washes foes away.");
 
+static const u8 sMOVE_SANDBLASTERDescription[] = _(
+    "A blistering blast of sand. \n"
+    "1.5x power in sandstorm.");
+
+static const u8 sMOVE_FREEZE_FRAMEDescription[] = _(
+    "An icy chill strikes foes first,\n"
+    "but doesn't reduce below 1HP.");
+
+static const u8 sMOVE_EROSION_RAYDescription[] = _(
+    "Erodes itself, losing 1/2\n"
+    "HP into a blasting ray");
+
+static const u8 sMOVE_BROKEN_ARIADescription[] = _(
+    "Sings with a breaking voice,\n"
+    "dealing damage with recoil.");
+
+
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
+
+
 
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
@@ -3877,4 +3896,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_TOXIC_ATTITUDE - 1] = sMOVE_TOXIC_ATTITUDEDescription,
     [MOVE_HIVE_MIND - 1] = sMOVE_HIVE_MINDDescription,
     [MOVE_TSUNAMI - 1] = sMOVE_TSUNAMIDescription,
+    [MOVE_SANDBLASTER - 1] = sMOVE_SANDBLASTERDescription,
+    [MOVE_FREEZE_FRAME - 1] = sMOVE_FREEZE_FRAMEDescription,
+    [MOVE_EROSION_RAY - 1] = sMOVE_EROSION_RAYDescription,
+    [MOVE_BROKEN_ARIA - 1] = sMOVE_BROKEN_ARIADescription,
 };
