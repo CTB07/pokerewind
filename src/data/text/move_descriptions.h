@@ -3077,21 +3077,20 @@ static const u8 sMOVE_TSUNAMIDescription[] = _(
     "that washes foes away.");
 
 static const u8 sMOVE_SANDBLASTERDescription[] = _(
-    "A blistering blast of sand. \n"
+    "A blistering blast of sand.\n"
     "1.5x power in sandstorm.");
 
 static const u8 sMOVE_FREEZE_FRAMEDescription[] = _(
-    "An icy chill strikes foes first,\n"
-    "but doesn't reduce below 1HP.");
+    "An icy chill hits foes first.\n"
+    "Doesn't reduce below 1HP.");
 
 static const u8 sMOVE_EROSION_RAYDescription[] = _(
     "Erodes itself, losing 1/2\n"
     "HP into a blasting ray");
 
 static const u8 sMOVE_BROKEN_ARIADescription[] = _(
-    "Sings with a breaking voice,\n"
-    "dealing damage with recoil.");
-
+    "Heart-rending song that,\n"
+    "hurts user and may sleep.");
 
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
