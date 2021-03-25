@@ -102,7 +102,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Kingler  @ 869E18C
 	cry Cry_Voltorb  @ 869E198
 	cry Cry_Electrode  @ 869E1A4
-	cry Cry_Exeggcute  @ 869E1B0
+	cry Cry_Broyalty  @ 869E1B0
 	cry Cry_Exeggutor  @ 869E1BC
 	cry Cry_Cubone  @ 869E1C8
 	cry Cry_Marowak  @ 869E1D4
@@ -1376,7 +1376,7 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Kingler  @ 869F3BC
 	cry2 Cry_Voltorb  @ 869F3C8
 	cry2 Cry_Electrode  @ 869F3D4
-	cry2 Cry_Exeggcute  @ 869F3E0
+	cry2 Cry_Broyalty  @ 869F3E0
 	cry2 Cry_Exeggutor  @ 869F3EC
 	cry2 Cry_Cubone  @ 869F3F8
 	cry2 Cry_Marowak  @ 869F404
