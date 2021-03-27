@@ -8466,6 +8466,8 @@ static void Cmd_various(void)
              gBattlescriptCurrInstr +=7;
         return;
     case VARIOUS_RESET_TIMERS:
+        gWishFutureKnock.weatherDuration = 5;
+	gFieldTimers.mistyTerrainTimer = 5;
 	return; //fucking horrible effect. 
     }
     gBattlescriptCurrInstr += 3;
