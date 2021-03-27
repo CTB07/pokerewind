@@ -265,6 +265,8 @@ static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
 static const u8 sOmnipotenceDescription[] =  _("Ups random stat on switch.");
 static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
 static const u8 sOppositeDayDescription[] =  _("Inverts the type chart.");
+static const u8 sTieBreakerDescription[] =   _("Wraps can't miss, hurt more.");
+
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
@@ -548,7 +550,7 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_THERAPIST] = _("Therapist"),
     [ABILITY_OPPOSITE_DAY] = _("Opposite Day"),
     [ABILITY_DEMONETIZE] = _("Demonetize"),
-
+    [ABILITY_TIE_BREAKER] = _("Tie Breaker"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -833,5 +835,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_THERAPIST] = sTherapistDescription,
     [ABILITY_OPPOSITE_DAY] = sOppositeDayDescription,
     [ABILITY_DEMONETIZE] = sNoFucksDescription,
+    [ABILITY_TIE_BREAKER] = sTieBreakerDescription,
 
 };

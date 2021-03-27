@@ -11052,7 +11052,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_OBSTRUCT] =
     {
-        .effect = EFFECT_PLACEHOLDER,   //TODO. EFFECT_PROTECT?
+        .effect = EFFECT_PROTECT,   //TODO. EFFECT_PROTECT?
         .power = 0,
         .type = TYPE_DARK,
         .accuracy = 100,
