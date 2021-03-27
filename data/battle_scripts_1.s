@@ -382,7 +382,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectTerrainPulse
 	.4byte BattleScript_EffectBoltBeak
 	.4byte BattleScript_EffectSandblaster
-
+	.4byte BattleScript_EffectHitResetTimers
 
 
 
@@ -8028,6 +8028,33 @@ BattleScript_EffectHiveMindCanWork:
 	waitmessage 0x40
 	statusanimation BS_TARGET
 	updatestatusicon BS_TARGET
+	tryfaintmon BS_TARGET, FALSE, NULL
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectHitResetTimers:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	resettimers BattleScript_TryFaint
+	printfromtable gTerrainStringIds
+	waitmessage 0x40
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+BattleScript_TryFaint:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 

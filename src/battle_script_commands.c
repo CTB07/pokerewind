@@ -8465,6 +8465,8 @@ static void Cmd_various(void)
         else
              gBattlescriptCurrInstr +=7;
         return;
+    case VARIOUS_RESET_TIMERS:
+	return; //fucking horrible effect. 
     }
     gBattlescriptCurrInstr += 3;
 }
