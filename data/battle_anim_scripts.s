@@ -14305,12 +14305,6 @@ Move_SANDBLASTER:
 	blendoff
 	call UnsetPsychicBg
 	end
-MudShotOrbs:
-	createsprite gMudShotOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
-	delay 2
-	createsprite gMudShotOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
-	delay 2
-	return
 
 Move_FREEZE_FRAME::
 	goto Move_ICY_WIND
