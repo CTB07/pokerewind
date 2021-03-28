@@ -802,6 +802,7 @@ gBattleAnims_Moves::
         .4byte Move_SYNTH_WAVE
         .4byte Move_ENVELOP
         .4byte Move_FROSTBITE
+        .4byte Move_ASSASSINATE
         .4byte Move_GUN
         .4byte Move_VENT_KILL
         .4byte Move_EJECT
@@ -13353,6 +13354,7 @@ Move_OCTOLOCK::
 	end
 
 Move_BOLT_BEAK::
+	goto Move_SPARK
 	loadspritegfx ANIM_TAG_HORN_HIT
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_SPARK_2
@@ -14243,7 +14245,7 @@ Move_VENT_KILL::
 Move_EJECT:
 	goto Move_CIRCLE_THROW
 
-Move_TOXIC_ATTITUDE::
+Move_TOXIC_ATTITUDE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
@@ -14265,10 +14267,10 @@ Move_TOXIC_ATTITUDE::
 	waitforvisualfinish
 	end
 
-Move_HIVE_MIND::
+Move_HIVE_MIND:
 	goto Move_STRUGGLE_BUG
 
-Move_TSUNAMI::
+Move_TSUNAMI:
 	createvisualtask AnimTask_CreateSurfWave, 2, ANIM_SURF_PAL_SURF
 	delay 24
 	panse_1B SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
