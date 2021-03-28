@@ -418,44 +418,44 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
     SPECIES_TO_NATIONAL(CHANNOWL),
     SPECIES_TO_NATIONAL(BROYALTY),
     SPECIES_TO_NATIONAL(FANDAM),
-    SPECIES_TO_NATIONAL(CUBONE),
     SPECIES_TO_NATIONAL(MAROWAK),
     SPECIES_TO_NATIONAL(HITMONLEE),
     SPECIES_TO_NATIONAL(HITMONCHAN),
     SPECIES_TO_NATIONAL(LICKITUNG),
     SPECIES_TO_NATIONAL(KOFFING),
-    SPECIES_TO_NATIONAL(WEEZING),
-    SPECIES_TO_NATIONAL(RHYHORN),
-    SPECIES_TO_NATIONAL(RHYDON),
-    SPECIES_TO_NATIONAL(CHANSEY),
-    SPECIES_TO_NATIONAL(TANGELA),
-    SPECIES_TO_NATIONAL(KANGASKHAN),
-    SPECIES_TO_NATIONAL(HORSEA),
-    SPECIES_TO_NATIONAL(SEADRA),
-    SPECIES_TO_NATIONAL(GOLDEEN),
-    SPECIES_TO_NATIONAL(SEAKING),
-    SPECIES_TO_NATIONAL(STARYU),
-    SPECIES_TO_NATIONAL(STARMIE),
-    SPECIES_TO_NATIONAL(MR_MIME),
-    SPECIES_TO_NATIONAL(SCYTHER),
-    SPECIES_TO_NATIONAL(JYNX),
-    SPECIES_TO_NATIONAL(ELECTABUZZ),
-    SPECIES_TO_NATIONAL(MAGMAR),
-    SPECIES_TO_NATIONAL(PINSIR),
-    SPECIES_TO_NATIONAL(TAUROS),
-    SPECIES_TO_NATIONAL(MAGIKARP),
-    SPECIES_TO_NATIONAL(GYARADOS),
-    SPECIES_TO_NATIONAL(LAPRAS),
-    SPECIES_TO_NATIONAL(DITTO),
-    SPECIES_TO_NATIONAL(EEVEE),
-    SPECIES_TO_NATIONAL(VAPOREON),
-    SPECIES_TO_NATIONAL(JOLTEON),
-    SPECIES_TO_NATIONAL(FLAREON),
-    SPECIES_TO_NATIONAL(PORYGON),
-    SPECIES_TO_NATIONAL(OMANYTE),
-    SPECIES_TO_NATIONAL(OMASTAR),
-    SPECIES_TO_NATIONAL(KABUTO),
-    SPECIES_TO_NATIONAL(KABUTOPS),
+    SPECIES_TO_NATIONAL(MUSTELIT),
+    SPECIES_TO_NATIONAL(CAPENSEAR),
+    SPECIES_TO_NATIONAL(MAPIG),
+    SPECIES_TO_NATIONAL(PREDATOAR),
+    SPECIES_TO_NATIONAL(ILLUMARYD),
+    SPECIES_TO_NATIONAL(ENLIMINATI),
+    SPECIES_TO_NATIONAL(ASTLEYROID),
+    SPECIES_TO_NATIONAL(POSTLE),
+    SPECIES_TO_NATIONAL(HUSHBACK),
+    SPECIES_TO_NATIONAL(SLICHIC),
+    SPECIES_TO_NATIONAL(MURDEROO),
+    SPECIES_TO_NATIONAL(ROBBANK),
+    SPECIES_TO_NATIONAL(CORRIMINAL),
+    SPECIES_TO_NATIONAL(VEGAVA),
+    SPECIES_TO_NATIONAL(GLUTTOCADO),
+    SPECIES_TO_NATIONAL(PLAYSTRIKE),
+    SPECIES_TO_NATIONAL(EXBULK),
+    SPECIES_TO_NATIONAL(TOUCHSPEED),
+    SPECIES_TO_NATIONAL(ZOUNO),
+    SPECIES_TO_NATIONAL(PHANESIS),
+    SPECIES_TO_NATIONAL(BIOSSIL),
+    SPECIES_TO_NATIONAL(VIRANCIENT),
+    SPECIES_TO_NATIONAL(EVECHO),
+    SPECIES_TO_NATIONAL(BARSONIST),
+    SPECIES_TO_NATIONAL(CHIPCHUNE),
+    SPECIES_TO_NATIONAL(ORCLASSTRA),
+    SPECIES_TO_NATIONAL(RELAQUA),
+    SPECIES_TO_NATIONAL(SQUEANIME),
+    SPECIES_TO_NATIONAL(ENIGMASH),
+    SPECIES_TO_NATIONAL(AIRPODON),
+    SPECIES_TO_NATIONAL(MIKOMODO),
+    SPECIES_TO_NATIONAL(GOJIREC),
+    SPECIES_TO_NATIONAL(EEKORONE),
     SPECIES_TO_NATIONAL(AERODACTYL),
     SPECIES_TO_NATIONAL(SNORLAX),
     SPECIES_TO_NATIONAL(ARTICUNO),
@@ -6234,6 +6234,46 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u
                 if (currentMap == gEvolutionTable[species][i].param)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_HIGH_ATK:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_SPDEF, 0))
+			        &&(GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_DEF:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_SPDEF, 0))
+			        &&(GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_SPATK:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_SPDEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_SPDEF:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_SPEED:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_SPDEF, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;        
             }
         }
         break;
