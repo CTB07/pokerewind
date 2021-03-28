@@ -7333,7 +7333,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         #ifdef BATTLE_ENGINE
-            .abilities = {ABILITY_THERAPIST, ABILITY_TRIANGULATE},
+            .abilities = {ABILITY_THERAPIST, ABILITY_OPPOSITE_DAY},
             .abilityHidden = ABILITY_QUICK_FEET,
         #else
             .abilities = {ABILITY_PICKUP, ABILITY_NONE},
@@ -7530,7 +7530,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_GRASS,
-        .abilities = {ABILITY_CASH_GRAB, ABILITY_RAIN_DISH},
+        .abilities = {ABILITY_CASH_GRAB, ABILITY_TRIANGULATE},
         .abilityHidden = ABILITY_OWN_TEMPO,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
@@ -7610,7 +7610,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_GRASS,
-        .abilities = {ABILITY_CHLOROPHYLL, ABILITY_EARLY_BIRD},
+        .abilities = {ABILITY_BUFFOONERY, ABILITY_DEMONETIZE},
         #ifdef BATTLE_ENGINE
             .abilityHidden = ABILITY_PICKPOCKET,
         #endif
