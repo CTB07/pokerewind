@@ -7986,11 +7986,11 @@ BattleScript_EffectTerrainHit::
 	waitmessage 0x40
 	resultmessage
 	waitmessage 0x40
-	setterrain BattleScript_TryFaint
+	setterrain BattleScript_TryFaintTerrainHit
 	printfromtable gTerrainStringIds
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
-BattleScript_TryFaint:
+BattleScript_TryFaintTerrainHit:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 
@@ -8052,11 +8052,11 @@ BattleScript_EffectHitResetTimers:
 	waitmessage 0x40
 	resultmessage
 	waitmessage 0x40
-	resettimers BattleScript_TryFaint
+	resettimers BattleScript_TryFaintreset
 	printfromtable gTerrainStringIds
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
-BattleScript_TryFaint:
+BattleScript_TryFaintreset:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 
