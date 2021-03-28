@@ -368,6 +368,11 @@
 #define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  30     // Pokémon reaches the specified level with a Dark Type Pokémon in party
 #define EVO_TRADE_SPECIFIC_MON            31     // Pokémon is traded for a specified Pokémon
 #define EVO_SPECIFIC_MAP                  32     // Pokémon levels up on specified map
+#define EVO_LEVEL_HIGH_ATK                33     // Pokémon evolves if Attack is its highest stat
+#define EVO_LEVEL_HIGH_DEF                34     // Pokémon evolves if Defense is its highest stat
+#define EVO_LEVEL_HIGH_SPATK              35     // Pokémon evolves if Sp. Attack is its highest stat
+#define EVO_LEVEL_HIGH_SPDEF              36     // Pokémon evolves if Sp. Defense is its highest stat
+#define EVO_LEVEL_HIGH_SPEED              37     // Pokémon evolves if Speed is its highest stat
 
 #define EVOS_PER_MON 10
 

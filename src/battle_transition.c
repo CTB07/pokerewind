@@ -260,6 +260,9 @@ static bool8 TrainerPicCb_SetSlideOffsets(struct Sprite *sprite);
 static bool8 TrainerPicCb_Slide1(struct Sprite *sprite);
 static bool8 TrainerPicCb_Slide2(struct Sprite *sprite);
 static bool8 TrainerPicCb_Slide3(struct Sprite *sprite);
+static void Phase2Task_AnnoyingOrange(u8 taskId);
+static bool8 Phase2_AnnoyingOrange_Func1(struct Task *task);
+static bool8 Phase2_AnnoyingOrange_Func2(struct Task *task);
 
 // iwram bss vars
 static s16 sUnusedRectangularSpiralVar;
@@ -311,6 +314,9 @@ static const u32 sFrontierSquares_EmptyBg_Tileset[] = INCBIN_U32("graphics/battl
 static const u32 sFrontierSquares_Shrink1_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_3.4bpp.lz");
 static const u32 sFrontierSquares_Shrink2_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_4.4bpp.lz");
 static const u32 sFrontierSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/frontier_squares.bin");
+static const u32 sAnnoyingOrange_Palette[] = INCBIN_U32("graphics/battle_transitions/annoying_orange.gbapal");
+static const u32 sAnnoyingOrange_Tileset[] = INCBIN_U32("graphics/battle_transitions/annoying_orange.4bpp.lz");
+static const u32 sAnnoyingOrange_Tilemap[] = INCBIN_U32("graphics/battle_transitions/annoying_orange.bin.lz");
 
 static const TaskFunc sPhase1_Tasks[B_TRANSITION_COUNT] =
 {
@@ -361,6 +367,7 @@ static const TaskFunc sPhase2_Tasks[B_TRANSITION_COUNT] =
     [B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ] = Phase2Task_FrontierCirclesCrossInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ] = Phase2Task_FrontierCirclesAsymmetricSpiralInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ] = Phase2Task_FrontierCirclesSymmetricSpiralInSeq,
+    [B_TRANSITION_ANNOYING_ORANGE] = Phase2Task_AnnoyingOrange,
 };
 
 static const TransitionStateFunc sMainTransitionPhases[] =
@@ -511,6 +518,17 @@ static const TransitionStateFunc sPhase2_Mugshot_Funcs[] =
     Phase2_Mugshot_Func8,
     Phase2_Mugshot_Func9,
     Phase2_Mugshot_Func10
+};
+
+static const TransitionStateFunc sPhase2_AnnoyingOrange_Funcs[] =
+{
+    Phase2_AnnoyingOrange_Func1,
+    Phase2_AnnoyingOrange_Func2,
+    Phase2_BigPokeball_Func3,
+    Phase2_BigPokeball_Func4,
+    Phase2_BigPokeball_Func5,
+    Phase2_FramesCountdown,
+    Phase2_BigPokeball_Func6
 };
 
 static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
@@ -1659,6 +1677,38 @@ static bool8 Phase2_PokeballsTrail_Func3(struct Task *task)
         FadeScreenBlack();
         DestroyTask(FindTaskIdByFunc(Phase2Task_PokeballsTrail));
     }
+    return FALSE;
+}
+
+static void Phase2Task_AnnoyingOrange(u8 taskId)
+{
+   while (sPhase2_AnnoyingOrange_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+static bool8 Phase2_AnnoyingOrange_Func1(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    task->tFrames = 60;
+    sub_814669C(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, 0x800);
+    LZ77UnCompVram(sAnnoyingOrange_Tileset, tileset);
+    LoadPalette(sAnnoyingOrange_Palette, 0xF0, 0x20);
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 Phase2_AnnoyingOrange_Func2(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sAnnoyingOrange_Tilemap, tilemap);
+    sub_8149F98(gScanlineEffectRegBuffers[0], 0, task->tData4, 132, task->tData5, 160);
+
+    task->tState++;
     return FALSE;
 }
 

@@ -791,8 +791,8 @@ Cry_Electrode::
 	.incbin "sound/direct_sound_samples/cries/electrode.bin"
 
 	.align 2
-Cry_Exeggcute::
-	.incbin "sound/direct_sound_samples/cries/exeggcute.bin"
+Cry_Broyalty::
+	.incbin "sound/direct_sound_samples/cries/broyalty.bin"
 
 	.align 2
 Cry_Exeggutor::
