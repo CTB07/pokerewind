@@ -11207,7 +11207,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_GRASSY_GLIDE] =
     {
-        .effect = EFFECT_PLACEHOLDER,   //TODO
+        .effect = EFFECT_GRASSY_GLIDE, 
         .power = 70,
         .type = TYPE_GRASS,
         .accuracy = 100,

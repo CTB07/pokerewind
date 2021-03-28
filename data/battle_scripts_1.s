@@ -383,7 +383,8 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectBoltBeak
 	.4byte BattleScript_EffectSandblaster
 	.4byte BattleScript_EffectHitResetTimers
-
+	.4byte BattleScript_EffectMop
+	.4byte BattleScript_EffectGrassyGlide
 
 
 BattleScript_EffectSleepHit:
@@ -2107,8 +2108,9 @@ BattleScript_EffectBodyPress:
 BattleScript_EffectSpinDash:
 BattleScript_EffectTripleSuperEffective:
 BattleScript_EffectTerrainPulse:
-BattleScript_EffectBoltBeak::
-BattleScript_EffectSandblaster::
+BattleScript_EffectBoltBeak:
+BattleScript_EffectSandblaster:
+BattleScript_EffectGrassyGlide:
 
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
@@ -8064,6 +8066,13 @@ BattleScript_BattlerAbilityNoFucks::
 	printstring STRINGID_NOFUCKSENTERS
 	waitmessage 0x40
 	end3
+
+BattleScript_EffectMop:
+	setstatchanger STAT_SPEED, 1, TRUE
+	attackcanceler
+	jumpifsubstituteblocks BattleScript_DefogIfCanClearHazards
+	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPEED, 0x0, BattleScript_DefogWorks
+	goto BattleScript_DefogIfCanClearHazards
 
 BattleScript_BattlerAbilityStatRocketOnSwitchIn::
 	copybyte gBattlerAbility, gBattlerAttacker
