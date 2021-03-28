@@ -10772,7 +10772,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BOLT_BEAK] =
     {
-        .effect = EFFECT_PLACEHOLDER,   //TODO
+        .effect = EFFECT_BOLT_BEAK,   //TODO
         .power = 85,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
@@ -10786,7 +10786,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FISHIOUS_REND] =
     {
-        .effect = EFFECT_PLACEHOLDER,   //TODO. same as bolt beak
+        .effect = EFFECT_BOLT_BEAK,   //TODO. same as bolt beak
         .power = 85,
         .type = TYPE_WATER,
         .accuracy = 100,
@@ -11052,7 +11052,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_OBSTRUCT] =
     {
-        .effect = EFFECT_PLACEHOLDER,   //TODO. EFFECT_PROTECT?
+        .effect = EFFECT_PROTECT,   //TODO. EFFECT_PROTECT?
         .power = 0,
         .type = TYPE_DARK,
         .accuracy = 100,
@@ -11108,7 +11108,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_STEEL_BEAM] =
     {
-        .effect = EFFECT_RECOIL_50,
+        .effect = EFFECT_MIND_BLOWN,
         .power = 140,
         .type = TYPE_STEEL,
         .accuracy = 95,
@@ -11207,7 +11207,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_GRASSY_GLIDE] =
     {
-        .effect = EFFECT_PLACEHOLDER,   //TODO
+        .effect = EFFECT_GRASSY_GLIDE, 
         .power = 70,
         .type = TYPE_GRASS,
         .accuracy = 100,
@@ -11930,9 +11930,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FROSTBITE] =
     {	
         .effect = EFFECT_TRIPLE_SUPER_EFFECTIVE,
-        .power = 75,
+        .power = 80,
         .type = TYPE_ICE,
-        .accuracy = 100,
+        .accuracy = 95,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -11968,4 +11968,106 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
         .split = SPLIT_PHYSICAL,
     },
+
+
+    [MOVE_TOXIC_ATTITUDE] =
+    {
+        .effect = EFFECT_TOXIC_ATTITUDE,
+        .power = 75,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .split = SPLIT_PHYSICAL,
+    },
+
+    [MOVE_HIVE_MIND] =
+    {	
+	.effect = EFFECT_HIVE_MIND, 
+	.power = 80,
+	.type = TYPE_BUG,
+	.accuracy = 95,
+	.pp = 15,
+	.secondaryEffectChance = 0,
+	.target = MOVE_TARGET_BOTH,
+	.priority = 0,
+	.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+	.split = SPLIT_SPECIAL,
+    },
+
+    [MOVE_TSUNAMI] =
+    {
+        .effect = EFFECT_HIT_SWITCH_TARGET,
+        .power = 80,
+        .type = TYPE_WATER,
+        .accuracy = 80,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_BOTH,
+        .priority = -6,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+        .split = SPLIT_SPECIAL,
+    },
+
+
+    [MOVE_SANDBLASTER] =
+    {
+        .effect = EFFECT_SANDBLASTER,
+        .power = 110,
+        .type = TYPE_GROUND,
+        .accuracy = 75,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .split = SPLIT_SPECIAL,
+    },
+
+    [MOVE_FREEZE_FRAME] =
+    {
+        .effect = EFFECT_FALSE_SWIPE,
+        .power = 70,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 1,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+        .split = SPLIT_SPECIAL,
+    },
+
+    [MOVE_EROSION_RAY] =
+    {
+        .effect = EFFECT_MIND_BLOWN,
+        .power = 130,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_RECKLESS_BOOST,
+        .split = SPLIT_SPECIAL,
+    },
+
+    [MOVE_BROKEN_ARIA] =
+    {
+        .effect = EFFECT_RECOIL_33_STATUS,
+        .power = 110,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_RECKLESS_BOOST,
+        .split = SPLIT_SPECIAL,
+        .argument = STATUS1_SLEEP,
+    },
+
 };

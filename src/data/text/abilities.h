@@ -260,10 +260,12 @@ static const u8 sBuffooneryDescription[] =   _("Switches out on recharge.");
 static const u8 sCashGrabDescription[] =     _("Get cash items. Ups Pay Day.");
 static const u8 sEchoChamberDescription[] =  _("Repeating moves ups power.");
 static const u8 sArtilleryDescription[] =    _("Powers bomb/pulse moves.");
-static const u8 sContagiousDescription[] =   _("Infects foes.");
+static const u8 sContagiousDescription[] =   _("Infects foes' abilities.");
 static const u8 sTriangulateDescription[] =  _("Normal moves become Psychic.");
 static const u8 sOmnipotenceDescription[] =  _("Ups random stat on switch.");
 static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
+static const u8 sOppositeDayDescription[] =  _("Inverts the type chart.");
+static const u8 sTieBreakerDescription[] =   _("Wraps can't miss, hurt more.");
 
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
@@ -546,6 +548,9 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TRIANGULATE] = _("Triangulate"),
     [ABILITY_OMNIPOTENCE] = _("Omnipotence"),
     [ABILITY_THERAPIST] = _("Therapist"),
+    [ABILITY_OPPOSITE_DAY] = _("Opposite Day"),
+    [ABILITY_DEMONETIZE] = _("Demonetize"),
+    [ABILITY_TIE_BREAKER] = _("Tie Breaker"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -828,4 +833,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_TRIANGULATE] = sTriangulateDescription,
     [ABILITY_OMNIPOTENCE] = sOmnipotenceDescription,
     [ABILITY_THERAPIST] = sTherapistDescription,
+    [ABILITY_OPPOSITE_DAY] = sOppositeDayDescription,
+    [ABILITY_DEMONETIZE] = sNoFucksDescription,
+    [ABILITY_TIE_BREAKER] = sTieBreakerDescription,
+
 };

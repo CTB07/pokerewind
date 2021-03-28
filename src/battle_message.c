@@ -696,7 +696,9 @@ static const u8 sText_AbilityRaisedStatDrastically[] = _("{B_DEF_ABILITY} raised
 static const u8 sText_AsOneEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} has two Abilities!");
 static const u8 sText_CuriousMedicineEnters[] = _("{B_EFF_NAME_WITH_PREFIX}'s\nstat changes were reset!");
 static const u8 sText_BattlerAbilityRaisedStatDrastically[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\n drastically raised its {B_BUFF1}!");
-static const u8 sText_NoFucksEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nreset enemy stat changes!");
+static const u8 sText_NoFucksEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nreset {B_EFF_NAME_WITH_PREFIX}'s stat changes!");
+static const u8 sText_OppositeDayEnters[] = _("The type chart was inverted!");
+
 
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
@@ -1258,6 +1260,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PLAYERPAIDPRIZEMONEY - 12] = sText_PlayerPaidPrizeMoney,
     [STRINGID_BATTLERABILITYRAISEDSTATDRASTICALLY - 12] = sText_BattlerAbilityRaisedStatDrastically,
     [STRINGID_NOFUCKSENTERS - 12] = sText_NoFucksEnters,
+    [STRINGID_OPPOSITEDAYENTERS - 12] = sText_OppositeDayEnters,
+
 
 };
 
@@ -1303,6 +1307,7 @@ const u16 gSwitchInAbilityStringIds[] =
     [MULTI_SWITCHIN_SCREENCLEANER] = STRINGID_SCREENCLEANERENTERS,
     [MULTI_SWITCHIN_ASONE] = STRINGID_ASONEENTERS,
     [MULTI_SWITCHIN_CURIOUS_MEDICINE] = STRINGID_CURIOUSMEDICINEENTERS,
+    [MULTI_SWITCHIN_OPPOSITE_DAY] = STRINGID_OPPOSITEDAYENTERS
 };
 
 const u16 gMissStringIds[] =
