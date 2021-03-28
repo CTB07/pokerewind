@@ -2354,9 +2354,9 @@ u8 DoBattlerEndTurnEffects(void)
                     gBattleScripting.animArg2 = gBattleStruct->wrappedMove[gActiveBattler] >> 8;
                     PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleStruct->wrappedMove[gActiveBattler]);
                     gBattlescriptCurrInstr = BattleScript_WrapTurnDmg;
-                    if (GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND && (GetBattlerAbility(gBattleStruct->wrappedBy[gActiveBattler] == ABILITY_TIE_BREAKER))
+                    if ((GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND) && (GetBattlerAbility(gBattleStruct->wrappedBy[gActiveBattler] == ABILITY_TIE_BREAKER)))
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
-                    else if ((GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND) || (GetBattlerAbility(gBattleStruct->wrappedBy[gActiveBattler] == ABILITY_TIE_BREAKER))
+                    else if ((GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND) || (GetBattlerAbility(gBattleStruct->wrappedBy[gActiveBattler] == ABILITY_TIE_BREAKER)))
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 6;
                     else
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
