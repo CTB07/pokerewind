@@ -813,6 +813,7 @@ gBattleAnims_Moves::
         .4byte Move_FREEZE_FRAME
 	.4byte Move_EROSION_RAY
 	.4byte Move_BROKEN_ARIA
+        .4byte Move_GAMER_RAGE
 	.4byte Move_COUNT @ cannot be reached, because last move is as defined
 
 	.align 2
@@ -14316,6 +14317,9 @@ Move_EROSION_RAY::
 
 Move_BROKEN_ARIA::
 	goto Move_RELIC_SONG
+
+Move_GAMER_RAGE::
+	goto Move_SUPERPOWER
 
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@

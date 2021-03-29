@@ -793,4 +793,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_FREEZE_FRAME] = _("Freeze Frame"),
     [MOVE_EROSION_RAY] = _("Erosion Ray"),
     [MOVE_BROKEN_ARIA] = _("Broken Aria"),
+    [MOVE_GAMER_RAGE] = _("Gamer Rage"),
 };

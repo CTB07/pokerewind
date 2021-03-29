@@ -3092,6 +3092,10 @@ static const u8 sMOVE_BROKEN_ARIADescription[] = _(
     "Heart-rending song that,\n"
     "hurts user and may sleep.");
 
+static const u8 sMOVE_GAMER_RAGEDescription[] = _(
+    "Can't be used unless tilted\n"
+    "at under half HP.");
+
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
 
@@ -3899,4 +3903,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FREEZE_FRAME - 1] = sMOVE_FREEZE_FRAMEDescription,
     [MOVE_EROSION_RAY - 1] = sMOVE_EROSION_RAYDescription,
     [MOVE_BROKEN_ARIA - 1] = sMOVE_BROKEN_ARIADescription,
+    [MOVE_GAMER_RAGE - 1] = sMOVE_GAMER_RAGEDescription,
 };

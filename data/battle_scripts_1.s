@@ -385,7 +385,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectHitResetTimers
 	.4byte BattleScript_EffectMop
 	.4byte BattleScript_EffectGrassyGlide
-
+	.4byte BattleScript_EffectFailOverHalfHP
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -7999,7 +7999,6 @@ BattleScript_EffectToxicAttitude::
 	goto BattleScript_EffectPoisonHit
 
 BattleScript_EffectHiveMind:
-	setmoveeffect MOVE_EFFECT_FLINCH
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -8059,6 +8058,10 @@ BattleScript_EffectHitResetTimers:
 BattleScript_TryFaintreset:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectFailOverHalfHP::
+	jumpifoverhalfhp BattleScript_ButItFailed
+	goto BattleScript_EffectHit
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker
