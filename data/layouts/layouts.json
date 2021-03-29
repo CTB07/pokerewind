@@ -4414,7 +4414,7 @@
     {
       "id": "LAYOUT_REWIND_ROUTE1",
       "name": "RewindRoute1_Layout",
-      "width": 60,
+      "width": 50,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
