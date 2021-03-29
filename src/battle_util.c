@@ -4569,7 +4569,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 }
             }
             break;
-
         case ABILITY_CONTAGIOUS:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && IsBattlerAlive(gBattlerAttacker)
@@ -4578,7 +4577,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             {
                 switch (gBattleMons[gBattlerAttacker].ability)
                 {
-                case ABILITY_CONTAGIOUS:
+                case ABILITY_CONTAGIOUS: // This is the only reason the script doesn't check for confusion self damage
                 case ABILITY_BATTLE_BOND:
                 case ABILITY_COMATOSE:
                 case ABILITY_DISGUISE:
@@ -4893,6 +4892,65 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_HEAD_TRAUMA:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && !gProtectStructs[gBattlerTarget].confusionSelfDmg 
+             && !IsAbilityStatusProtected(gBattlerTarget)
+             && IsMoveMakingContact(move, gBattlerAttacker)
+             && (Random() % 3) == 0)
+            {
+                switch (gBattleMons[gBattlerTarget].ability)
+                {
+                case ABILITY_KLUTZ:
+                case ABILITY_ROCK_HEAD:
+                case ABILITY_BATTLE_BOND:
+                case ABILITY_COMATOSE:
+                case ABILITY_DISGUISE:
+                case ABILITY_MULTITYPE:
+                case ABILITY_POWER_CONSTRUCT:
+                case ABILITY_RKS_SYSTEM:
+                case ABILITY_SCHOOLING:
+                case ABILITY_SHIELDS_DOWN:
+                case ABILITY_STANCE_CHANGE:
+                    break;
+                default:
+                    gLastUsedAbility = gBattleMons[gBattlerTarget].ability = ABILITY_KLUTZ;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_MummyActivates;
+                    effect++;
+                    break;
+                }
+            }
+	    break;
+        case ABILITY_BAD_VIBES:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && !gProtectStructs[gBattlerTarget].confusionSelfDmg
+             && !IsAbilityStatusProtected(gBattlerTarget)
+             && IsMoveMakingContact(move, gBattlerAttacker)
+             && (Random() % 3) == 0)
+            {
+                switch (gBattleMons[gBattlerTarget].ability)
+                {
+                case ABILITY_DEFEATIST:
+                case ABILITY_BATTLE_BOND:
+                case ABILITY_COMATOSE:
+                case ABILITY_DISGUISE:
+                case ABILITY_MULTITYPE:
+                case ABILITY_POWER_CONSTRUCT:
+                case ABILITY_RKS_SYSTEM:
+                case ABILITY_SCHOOLING:
+                case ABILITY_SHIELDS_DOWN:
+                case ABILITY_STANCE_CHANGE:
+                    break;
+                default:
+                    gLastUsedAbility = gBattleMons[gBattlerTarget].ability = ABILITY_DEFEATIST;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_MummyActivates;
+                    effect++;
+                    break;
+                }
+            }
+	    break;
         }
         break;
     case ABILITYEFFECT_MOVE_END_OTHER: // Abilities that activate on *another* battler's moveend: Dancer, Soul-Heart, Receiver, Symbiosis

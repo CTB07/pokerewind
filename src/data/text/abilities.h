@@ -266,6 +266,10 @@ static const u8 sOmnipotenceDescription[] =  _("Ups random stat on switch.");
 static const u8 sTherapistDescription[] =    _("Stops self injury moves.");
 static const u8 sOppositeDayDescription[] =  _("Inverts the type chart.");
 static const u8 sTieBreakerDescription[] =   _("Wraps can't miss, hurt more.");
+static const u8 sHeadTraumaDescription[] =   _("Contact target gets Klutz.");
+static const u8 sWhoKnowsDescription[] =     _("gets random ability.");
+static const u8 sBadVibesDescription[] =     _("Targets become defeatists.");
+
 
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
@@ -551,6 +555,9 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_OPPOSITE_DAY] = _("Opposite Day"),
     [ABILITY_DEMONETIZE] = _("Demonetize"),
     [ABILITY_TIE_BREAKER] = _("Tie Breaker"),
+    [ABILITY_HEAD_TRAUMA] = _("Head Trauma"),
+    [ABILITY_WHO_KNOWS] = _("Who Knows?"),
+    [ABILITY_BAD_VIBES] = _("Bad Vibes"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -836,5 +843,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_OPPOSITE_DAY] = sOppositeDayDescription,
     [ABILITY_DEMONETIZE] = sNoFucksDescription,
     [ABILITY_TIE_BREAKER] = sTieBreakerDescription,
-
+    [ABILITY_HEAD_TRAUMA] = sHeadTraumaDescription,
+    [ABILITY_WHO_KNOWS] = sWhoKnowsDescription,
+    [ABILITY_BAD_VIBES] = sBadVibesDescription,
 };
