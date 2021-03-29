@@ -377,6 +377,15 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMordantAcid
 	.4byte BattleScript_EffectEject
 	.4byte BattleScript_EffectTripleSuperEffective
+	.4byte BattleScript_EffectToxicAttitude
+	.4byte BattleScript_EffectHiveMind
+	.4byte BattleScript_EffectTerrainPulse
+	.4byte BattleScript_EffectBoltBeak
+	.4byte BattleScript_EffectSandblaster
+	.4byte BattleScript_EffectHitResetTimers
+	.4byte BattleScript_EffectMop
+	.4byte BattleScript_EffectGrassyGlide
+	.4byte BattleScript_EffectFailOverHalfHP
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -2098,6 +2107,10 @@ BattleScript_EffectMentalStrike:
 BattleScript_EffectBodyPress:
 BattleScript_EffectSpinDash:
 BattleScript_EffectTripleSuperEffective:
+BattleScript_EffectTerrainPulse:
+BattleScript_EffectBoltBeak:
+BattleScript_EffectSandblaster:
+BattleScript_EffectGrassyGlide:
 
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
@@ -7973,13 +7986,82 @@ BattleScript_EffectTerrainHit::
 	waitmessage 0x40
 	resultmessage
 	waitmessage 0x40
-	setterrain BattleScript_TryFaint
+	setterrain BattleScript_TryFaintTerrainHit
 	printfromtable gTerrainStringIds
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
-BattleScript_TryFaint:
+BattleScript_TryFaintTerrainHit:
 	tryfaintmon BS_TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectToxicAttitude::
+	jumpifoverhalfhp BattleScript_EffectHit
+	goto BattleScript_EffectPoisonHit
+
+BattleScript_EffectHiveMind:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	tryfaintmon BS_TARGET, FALSE, NULL
+	jumpifstatus BS_ATTACKER, STATUS1_ANY, BattleScript_EffectHiveMindCanWork
+	goto BattleScript_MoveEnd
+BattleScript_EffectHiveMindCanWork:
+	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
+	jumpifsafeguard BattleScript_SafeguardProtected
+	trypsychoshift BattleScript_MoveEnd
+	copybyte gEffectBattler, gBattlerTarget
+	printfromtable gStatusConditionsStringIds
+	waitmessage 0x40
+	statusanimation BS_TARGET
+	updatestatusicon BS_TARGET
+	tryfaintmon BS_TARGET, FALSE, NULL
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectHitResetTimers:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	resettimers BattleScript_TryFaintreset
+	printfromtable gTerrainStringIds
+	waitmessage 0x40
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+BattleScript_TryFaintreset:
+	tryfaintmon BS_TARGET, FALSE, NULL
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectFailOverHalfHP::
+	jumpifoverhalfhp BattleScript_ButItFailed
+	goto BattleScript_EffectHit
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker
@@ -7987,6 +8069,13 @@ BattleScript_BattlerAbilityNoFucks::
 	printstring STRINGID_NOFUCKSENTERS
 	waitmessage 0x40
 	end3
+
+BattleScript_EffectMop:
+	setstatchanger STAT_SPEED, 1, TRUE
+	attackcanceler
+	jumpifsubstituteblocks BattleScript_DefogIfCanClearHazards
+	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPEED, 0x0, BattleScript_DefogWorks
+	goto BattleScript_DefogIfCanClearHazards
 
 BattleScript_BattlerAbilityStatRocketOnSwitchIn::
 	copybyte gBattlerAbility, gBattlerAttacker

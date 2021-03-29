@@ -3092,6 +3092,7 @@ void FaintClearSetData(void)
     gProtectStructs[gActiveBattler].protected = 0;
     gProtectStructs[gActiveBattler].spikyShielded = 0;
     gProtectStructs[gActiveBattler].kingsShielded = 0;
+    gProtectStructs[gActiveBattler].obstructed = 0;
     gProtectStructs[gActiveBattler].banefulBunkered = 0;
     gProtectStructs[gActiveBattler].endured = 0;
     gProtectStructs[gActiveBattler].noValidMoves = 0;
@@ -4329,6 +4330,14 @@ s8 GetMovePriority(u32 battlerId, u16 move)
     {
         priority++;
     }
+    else if (gBattleMoves[move].effect == EFFECT_MOP && (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_RAIN_ANY))
+    {
+        priority++;
+    }
+    else if (gBattleMoves[move].effect == EFFECT_GRASSY_GLIDE && (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN))
+    {
+        priority++;
+    }
     else if (GetBattlerAbility(battlerId) == ABILITY_PRANKSTER && IS_MOVE_STATUS(move))
     {
         priority++;
@@ -4551,6 +4560,7 @@ static void TurnValuesCleanUp(bool8 var0)
             gProtectStructs[gActiveBattler].protected = 0;
             gProtectStructs[gActiveBattler].spikyShielded = 0;
             gProtectStructs[gActiveBattler].kingsShielded = 0;
+            gProtectStructs[gActiveBattler].obstructed = 0;
             gProtectStructs[gActiveBattler].banefulBunkered = 0;
         }
         else
@@ -5009,6 +5019,19 @@ void SetTypeBeforeUsingMove(u16 move, u8 battlerAtk)
             else
                 gBattleStruct->dynamicMoveType = TYPE_NORMAL | 0x80;
         }
+    }
+    else if (gBattleMoves[move].effect == EFFECT_TERRAIN_PULSE)
+    {
+            if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN)
+                gBattleStruct->dynamicMoveType = TYPE_ELECTRIC | 0x80;
+            else if (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN)
+                gBattleStruct->dynamicMoveType = TYPE_FAIRY | 0x80;
+            else if (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN)
+                gBattleStruct->dynamicMoveType = TYPE_GRASS | 0x80;
+            else if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)
+                gBattleStruct->dynamicMoveType = TYPE_PSYCHIC | 0x80;
+            else
+                gBattleStruct->dynamicMoveType = TYPE_NORMAL | 0x80;
     }
     else if (gBattleMoves[move].effect == EFFECT_HIDDEN_POWER)
     {

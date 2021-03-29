@@ -1,5 +1,5 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Hi! Sorry to keep you waiting!\p"
+	.string "Hey! VSauce! Michael here.\p"
 	.string "Welcome to the world of POKéMON!\p"
 	.string "My name is BIRCH.\p"
 	.string "But everyone calls me the POKéMON\n"
