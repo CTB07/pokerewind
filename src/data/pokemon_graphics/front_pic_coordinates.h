@@ -277,91 +277,107 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x45,
         .y_offset = 0,
     },
-    [SPECIES_VENOMOTH] =
+    [SPECIES_BINYOTAKE] =
     {
-        .size = 0x88,
-        .y_offset = 9,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_DIGLETT] =
+
+   [SPECIES_SVAMPELETT] =
     {
-        .size = 0x54,
-        .y_offset = 17,
+        .size = 0x45,
+        .y_offset = 0,
     },
+
     [SPECIES_DUGTRIO] =
     {
         .size = 0x75,
         .y_offset = 11,
     },
-    [SPECIES_MEOWTH] =
+    [SPECIES_SEAGIRL] =
     {
-        .size = 0x55,
-        .y_offset = 10,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_PERSIAN] =
+
+    [SPECIES_DOOMERMAID] =
     {
-        .size = 0x77,
-        .y_offset = 4,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_PSYDUCK] =
+
+    [SPECIES_BONGSAI] =
     {
-        .size = 0x56,
-        .y_offset = 11,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_GOLDUCK] =
+
+    [SPECIES_REEFIR] =
     {
-        .size = 0x78,
-        .y_offset = 2,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_MANKEY] =
+
+    [SPECIES_RANDOMAIL] =
     {
-        .size = 0x65,
-        .y_offset = 11,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_PRIMEAPE] =
+
+    [SPECIES_DEDLIVERY] =
     {
-        .size = 0x77,
-        .y_offset = 6,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_GROWLITHE] =
+
+    [SPECIES_SKELIPEDE] =
     {
-        .size = 0x66,
-        .y_offset = 11,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_ARCANINE] =
+
+    [SPECIES_COFFINSECT] =
     {
-        .size = 0x88,
-        .y_offset = 2,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_POLIWAG] =
+
+    [SPECIES_TERRACAL] =
     {
-        .size = 0x74,
-        .y_offset = 13,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_POLIWHIRL] =
+
+    [SPECIES_DIGFLOPPA] =
     {
-        .size = 0x76,
-        .y_offset = 9,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_POLIWRATH] =
+
+    [SPECIES_SIXTEEVY] =
     {
-        .size = 0x76,
-        .y_offset = 6,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_ABRA] =
+
+    [SPECIES_TENEIDEEPI] =
     {
-        .size = 0x66,
-        .y_offset = 10,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_KADABRA] =
+
+    [SPECIES_FOREKAYE] =
     {
-        .size = 0x77,
-        .y_offset = 5,
+        .size = 0x45,
+        .y_offset = 0,
     },
-    [SPECIES_ALAKAZAM] =
+
+    [SPECIES_MLADIBUG] =
     {
-        .size = 0x87,
-        .y_offset = 2,
+        .size = 0x45,
+        .y_offset = 0,
     },
+
     [SPECIES_FLEXNAKE] =
     {
         .size = 0x45,
