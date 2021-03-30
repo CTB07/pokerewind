@@ -5920,6 +5920,21 @@ static void Cmd_switchineffects(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_StickyWebOnSwitchIn;
     }
+    else if ((IsAbilityOnField(ABILITY_RADIOACTIVE)
+		&& !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
+                && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)
+                && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_POISON)
+                && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY
+                && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD))
+    {
+        gBattleMons[gActiveBattler].status1 |= STATUS1_TOXIC_POISON;
+        BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+        gBattleScripting.battler = gActiveBattler;
+        PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_AbilityStatusEffect;
+    }
     else
     {
         // There is a hack here to ensure the truant counter will be 0 when the battler's next turn starts.
@@ -8471,6 +8486,22 @@ static void Cmd_various(void)
         gWishFutureKnock.weatherDuration = 5;
 	gFieldTimers.mistyTerrainTimer = 5;
 	return; //fucking horrible effect. 
+    case VARIOUS_SET_MOOD_CRUSH:
+        switch (gBattleMons[gActiveBattler].ability)
+        {
+        case ABILITY_SIMPLE:
+        case ABILITY_TRUANT:
+        case ABILITY_STANCE_CHANGE:
+        case ABILITY_DISGUISE:
+        case ABILITY_MULTITYPE:
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+            break;
+        default:
+            gBattleMons[gActiveBattler].ability = ABILITY_DEFEATIST;
+            gBattlescriptCurrInstr += 7;
+            break;
+        }
+        return;
     }
     gBattlescriptCurrInstr += 3;
 }

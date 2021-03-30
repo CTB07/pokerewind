@@ -386,6 +386,8 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMop
 	.4byte BattleScript_EffectGrassyGlide
 	.4byte BattleScript_EffectFailOverHalfHP
+	.4byte BattleScript_EffectMoodCrush
+
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -8060,8 +8062,36 @@ BattleScript_TryFaintreset:
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectFailOverHalfHP::
-	jumpifoverhalfhp BattleScript_ButItFailed
-	goto BattleScript_EffectHit
+	jumpifoverhalfhp BattleScript_EffectHit
+	goto BattleScript_EffectDoubleHit
+
+BattleScript_EffectMoodCrush:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	tryfaintmon BS_TARGET, FALSE, NULL
+	setabilitydefeatist BS_TARGET, BattleScript_MoveEnd
+	setlastusedability BS_TARGET
+	printstring STRINGID_PKMNACQUIREDABILITY
+	waitmessage 0x40
+	moveendall
+	end
+
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker

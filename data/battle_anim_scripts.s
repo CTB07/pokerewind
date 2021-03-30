@@ -814,6 +814,7 @@ gBattleAnims_Moves::
 	.4byte Move_EROSION_RAY
 	.4byte Move_BROKEN_ARIA
         .4byte Move_GAMER_RAGE
+        .4byte Move_MOOD_CRUSH
 	.4byte Move_COUNT @ cannot be reached, because last move is as defined
 
 	.align 2
@@ -14320,6 +14321,9 @@ Move_BROKEN_ARIA::
 
 Move_GAMER_RAGE::
 	goto Move_SUPERPOWER
+
+Move_MOOD_CRUSH::
+	goto Move_SPITE
 
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
