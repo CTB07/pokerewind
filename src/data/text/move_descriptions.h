@@ -1419,7 +1419,7 @@ static const u8 sPsychoBoostDescription[] = _(
 
 static const u8 sROOSTDescription[] = _(
     "Restores the user's HP by\n"
-    "half of its max HP.");
+    "half and lands for 1 turn.");
 
 static const u8 sGRAVITYDescription[] = _(
     "Gravity is intensified\n"
@@ -2987,8 +2987,8 @@ static const u8 sMOVE_LEAD_CANNONDescription[] = _(
     "adjacent foes.");
 
 static const u8 sMOVE_PSYCH_OUTDescription[] = _(
-    "Surprises the foe by \n"
-    "ambushing with queries.");
+    "A first-turn move that\n"
+    "makes the target flinch.");
 
 static const u8 sMOVE_PANIC_SWEATDescription[] = _(
     "Raises defenses above 1/2 \n"
@@ -3008,7 +3008,7 @@ static const u8 sMOVE_MIND_PIECEDescription[] = _(
     "starting Psychic Terrain.");
 
 static const u8 sMOVE_DIVEBOMBDescription[] = _(
-    "Raises speed the first turn, \n"
+    "Raises Speed the first turn, \n"
     "then strikes the next.");
 
 static const u8 sMOVE_REWINDDescription[] = _(
