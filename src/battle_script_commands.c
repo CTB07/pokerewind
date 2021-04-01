@@ -1033,7 +1033,7 @@ static const u16 sNaturePowerMoves[] =
     [BATTLE_TERRAIN_CAVE]       = MOVE_SHADOW_BALL,
     [BATTLE_TERRAIN_BUILDING]   = MOVE_TRI_ATTACK,
     [BATTLE_TERRAIN_PLAIN]      = MOVE_TRI_ATTACK,
-    [BATTLE_TERRAIN_LAB]        = MOVE_TRI_ATTACK
+    [BATTLE_TERRAIN_LAB]        = MOVE_THUNDERBOLT
 };
 
 static const u16 sPickupItems[] =

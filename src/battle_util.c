@@ -4892,12 +4892,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_LIFE_LEECH:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                    && gSpecialStatuses[gBattlerTarget].dmg != 0
+                    && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
+                    && gBattlerAttacker != gBattlerTarget
+                    && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+                    && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
+                    && gBattleMons[gBattlerAttacker].hp != 0)
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                    gBattleMoveDamage = (gSpecialStatuses[gBattlerTarget].dmg / 6) * -1;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = -1;
+                    gSpecialStatuses[gBattlerTarget].dmg = 0; ///this is in shell bell and I don't know why to be honest. Prevents recursion and stacking w shell bell
+                    effect++;
+                }
+                break;
         case ABILITY_HEAD_TRAUMA:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && !gProtectStructs[gBattlerTarget].confusionSelfDmg 
              && !IsAbilityStatusProtected(gBattlerTarget)
              && IsMoveMakingContact(move, gBattlerAttacker)
-             && (Random() % 3) == 0)
+             && (Random() % 2) == 0)
             {
                 switch (gBattleMons[gBattlerTarget].ability)
                 {
@@ -6096,6 +6113,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && gSpecialStatuses[gBattlerTarget].dmg != 0
                     && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
                     && gBattlerAttacker != gBattlerTarget
+                    && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
                     && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
                     && gBattleMons[gBattlerAttacker].hp != 0)
                 {
@@ -7400,6 +7418,10 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     // target's abilities
     switch (GetBattlerAbility(battlerDef))
     {
+    case ABILITY_GLITTERBOMB:
+        if (gDisableStructs[battlerDef].isFirstTurn == 2) // just switched in
+            MulModifier(&modifier, UQ_4_12(0.25));
+        break;
     case ABILITY_THICK_FAT:
         if (moveType == TYPE_FIRE || moveType == TYPE_ICE)
         {
