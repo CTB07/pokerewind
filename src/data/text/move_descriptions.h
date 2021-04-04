@@ -2956,7 +2956,7 @@ static const u8 sMOVE_MOB_MENTALITYDescription[] = _(
 
 static const u8 sMOVE_MIC_DROPDescription[] = _(
     "Passes the mic with flair,\n"
-    "switching after hitting.");
+    "switching after burning.");
 
 static const u8 sMOVE_SNAPDescription[] = _(
     "You should've gone for the\n"

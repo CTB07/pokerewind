@@ -389,11 +389,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMoodCrush
 	.4byte BattleScript_EffectBlueScreen
 	.4byte BattleScript_EffectVaporWave
-
-
-
-
-
+	.4byte BattleScript_EffectMicDrop
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -8198,7 +8194,26 @@ BattleScript_VapeAlreadyAsleep::
 	waitmessage 0x40
 	goto BattleScript_VapeDoHP
 
-
+BattleScript_EffectMicDrop::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifsubstituteblocks BattleScript_ButItFailed
+	jumpifstatus BS_TARGET, STATUS1_BURN, BattleScript_AlreadyBurned
+	jumpiftype BS_TARGET, TYPE_FIRE, BattleScript_NotAffected
+	jumpifability BS_TARGET, ABILITY_WATER_VEIL, BattleScript_WaterVeilPrevents
+	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_LeafGuardProtects
+	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifleafguard BattleScript_LeafGuardProtects
+	jumpifshieldsdown BS_TARGET, BattleScript_LeafGuardProtects
+	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifsafeguard BattleScript_SafeguardProtected
+	attackanimation
+	waitanimation
+	setmoveeffect MOVE_EFFECT_BURN
+	seteffectprimary
+	goto BattleScript_EffectPartingShotSwitch
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker
