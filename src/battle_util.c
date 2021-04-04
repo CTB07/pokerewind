@@ -771,6 +771,11 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_FLUFFY] = 1,
     [ABILITY_QUEENLY_MAJESTY] = 1,
     [ABILITY_WATER_BUBBLE] = 1,
+    [ABILITY_THERAPIST] = 1,
+    [ABILITY_GLITTERBOMB] = 1,
+    [ABILITY_OCEAN_MANTLE] = 1,
+    [ABILITY_HORNY_JAIL] = 1,
+
 };
 
 static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
@@ -4090,7 +4095,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 		}
             }
             break;
-        case ABILITY_OMNIPOTENCE:
+        case ABILITY_OMNIPOTENCE://broken in battle frontier
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
@@ -4902,10 +4907,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     && gBattleMons[gBattlerAttacker].hp != 0)
                 {
                     BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
-                    gBattleMoveDamage = (gSpecialStatuses[gBattlerTarget].dmg / 6) * -1;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = -1;
-                    gSpecialStatuses[gBattlerTarget].dmg = 0; ///this is in shell bell and I don't know why to be honest. Prevents recursion and stacking w shell bell
+                    gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gSpecialStatuses[gBattlerTarget].dmg / 6));
+                    gSpecialStatuses[gBattlerTarget].dmg = 0;/// this is in shell bell and I don't know why to be honest. Prevents recursion and stacking w shell bell. If removed, probably leeches infinite hp all the time.
                     effect++;
                 }
                 break;
@@ -5034,6 +5037,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect = 1;
                 }
                 break;
+            case ABILITY_WATER_BUBBLE:
             case ABILITY_WATER_VEIL:
                 if (gBattleMons[battler].status1 & STATUS1_BURN)
                 {
@@ -5297,7 +5301,7 @@ u32 IsAbilityPreventingEscape(u32 battlerId)
 
 bool32 CanBattlerEscape(u32 battlerId) // no ability check
 {
-    return (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_SHED_SHELL
+    return (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_SHED_SHELL || IS_BATTLER_OF_TYPE(battlerId, TYPE_GHOST)
             || !((gBattleMons[battlerId].status2 & (STATUS2_ESCAPE_PREVENTION | STATUS2_WRAPPED))
                 || (gStatuses3[battlerId] & STATUS3_ROOTED)
                 || gFieldStatuses & STATUS_FIELD_FAIRY_LOCK));
@@ -7035,6 +7039,10 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_WATER)
            MulModifier(&modifier, UQ_4_12(2.0));
         break;
+    case ABILITY_OCEAN_MANTLE:
+        if (moveType == TYPE_WATER)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
     case ABILITY_STEELWORKER:
         if (moveType == TYPE_STEEL)
            MulModifier(&modifier, UQ_4_12(1.5));
@@ -7133,6 +7141,14 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_HEATPROOF:
     case ABILITY_WATER_BUBBLE:
         if (moveType == TYPE_FIRE)
+        {
+            MulModifier(&modifier, UQ_4_12(0.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, ability);
+        }
+        break;
+    case ABILITY_OCEAN_MANTLE:
+        if (moveType == TYPE_ICE || moveType ==TYPE_FIRE)
         {
             MulModifier(&modifier, UQ_4_12(0.5));
             if (updateFlags)

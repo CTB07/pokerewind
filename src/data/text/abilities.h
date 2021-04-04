@@ -271,7 +271,9 @@ static const u8 sWhoKnowsDescription[] =     _("gets random ability.");
 static const u8 sBadVibesDescription[] =     _("Targets become defeatists.");
 static const u8 sRadioactiveDescription[] =  _("Toxic to all foes on field.");
 static const u8 sLifeLeechDescription[] =    _("Drains life from attacks.");
-static const u8 sGlitterbombDescription[] =  _("Takes 0.25x damage on turn 1");
+static const u8 sGlitterbombDescription[] =  _("Takes 1/4 damage on turn 1");
+static const u8 sOceanMantleDescription[] =  _("Resist Fire/Ice. Water 1.5x.");
+static const u8 sHornyJailDescription[] =    _("Immune to innuendo moves.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
@@ -562,6 +564,9 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RADIOACTIVE] =  _("Radioactive"),
     [ABILITY_LIFE_LEECH] =   _("Life Drinker"),
     [ABILITY_GLITTERBOMB] =  _("Glitterbomb"),
+    [ABILITY_OCEAN_MANTLE] = _("Ocean Mantle"),
+    [ABILITY_HORNY_JAIL] =   _("Horny Jail"),
+
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
@@ -853,4 +858,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_RADIOACTIVE] = sWhoKnowsDescription,
     [ABILITY_LIFE_LEECH] = sLifeLeechDescription,
     [ABILITY_GLITTERBOMB] =  sGlitterbombDescription
+    [ABILITY_OCEAN_MANTLE] =  sOceanMantleDescription
+    [ABILITY_HORNY_JAIL] =  sHornyJailDescription
+
 };

@@ -1379,17 +1379,26 @@ static void Cmd_attackcanceler(void)
              && ((((gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_25)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_50)
-	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33_STATUS)) && (GetBattlerAbility(gBattlerAttacker) != ABILITY_ROCK_HEAD))
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33_STATUS)) && !(GetBattlerAbility(gBattlerAttacker) == ABILITY_ROCK_HEAD))
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RAMPAGE)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_MEMENTO)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_HEALING_WISH)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_BELLY_DRUM)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_BLUE_SCREEN)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_SUBSTITUTE))))
     {
 	gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST);
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
+        gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
+        return;
+    }
+    else if (IsAbilityOnField(ABILITY_HORNY_JAIL) && gBattleMoves[move].flags & FLAG_R_RATED)
+    {
+	gBattlerTarget = IsAbilityOnField(ABILITY_HORNY_JAIL);
+        gLastUsedAbility = ABILITY_HORNY_JAIL;
+        RecordAbilityBattle(--gBattlerTarget, ABILITY_HORNY_JAIL);
         gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
         return;
     }
@@ -2558,6 +2567,25 @@ void SetMoveEffect(bool32 primary, u32 certain)
             {
                 gLastUsedAbility = ABILITY_WATER_VEIL;
                 RecordAbilityBattle(gEffectBattler, ABILITY_WATER_VEIL);
+
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_BRNPrevention;
+                if (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
+                {
+                    gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+                    gHitMarker &= ~(HITMARKER_IGNORE_SAFEGUARD);
+                }
+                else
+                {
+                    gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+                }
+                RESET_RETURN
+            }
+            if (GetBattlerAbility(gEffectBattler) == ABILITY_WATER_BUBBLE
+                && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
+            {
+                gLastUsedAbility = ABILITY_WATER_BUBBLE;
+                RecordAbilityBattle(gEffectBattler, ABILITY_WATER_BUBBLE);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_BRNPrevention;

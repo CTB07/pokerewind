@@ -3032,8 +3032,8 @@ static const u8 sMOVE_DOUBLE_CLICKDescription[] = _(
     "double click. Hits twice.");
 
 static const u8 sMOVE_BLUE_SCREENDescription[] = _(
-    "A critical error destroys\n"
-    "the user, dealing damage.");
+    "A critical error cuts HP\n"
+    "by 1/2. Sets dual screens.");
 
 static const u8 sMOVE_SPIN_DASHDescription[] = _(
     "Steps it up, using Speed in\n"

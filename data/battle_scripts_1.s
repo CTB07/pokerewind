@@ -387,6 +387,12 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectGrassyGlide
 	.4byte BattleScript_EffectFailOverHalfHP
 	.4byte BattleScript_EffectMoodCrush
+	.4byte BattleScript_EffectBlueScreen
+	.4byte BattleScript_EffectVaporWave
+
+
+
+
 
 
 BattleScript_EffectSleepHit:
@@ -2760,6 +2766,7 @@ BattleScript_EffectLightScreen::
 	ppreduce
 	setlightscreen
 	goto BattleScript_PrintReflectLightScreenSafeguardString
+
 
 BattleScript_EffectTriAttack::
 	setmoveeffect MOVE_EFFECT_TRI_ATTACK
@@ -8092,6 +8099,106 @@ BattleScript_EffectMoodCrush:
 	moveendall
 	end
 
+BattleScript_EffectMop:
+	setstatchanger STAT_SPEED, 1, TRUE
+	attackcanceler
+	jumpifsubstituteblocks BattleScript_DefogIfCanClearHazards
+	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPEED, 0x0, BattleScript_DefogWorks
+	goto BattleScript_DefogIfCanClearHazards
+
+BattleScript_EffectBlueScreen::
+	attackcanceler
+	attackstring
+	ppreduce
+	faintifabilitynotdamp
+	dmg_1_2_attackerhp
+	attackanimation
+	waitanimation
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	setreflect
+	printfromtable gReflectLightScreenSafeguardStringIds
+	waitmessage 0x40
+	setlightscreen
+	printfromtable gReflectLightScreenSafeguardStringIds
+	waitmessage 0x40
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectVaporWave::
+	attackcanceler
+	attackstring
+	ppreduce
+	setbyte gBattlerTarget, 0x0
+	jumpifstatus BS_ATTACKER, STATUS1_SLEEP, BattleScript_RestIsAlreadyAsleep
+	jumpifability BS_ATTACKER, ABILITY_COMATOSE, BattleScript_RestIsAlreadyAsleep
+	jumpifcantmakeasleep BattleScript_RestCantSleep
+BattleScript_VapeLoop::
+	movevaluescleanup
+	setmoveeffect MOVE_EFFECT_SLEEP
+	jumpifstatus BS_TARGET, STATUS1_SLEEP, BattleScript_AlreadyAsleep
+	jumpifcantmakeasleep BattleScript_CantMakeAsleep
+	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_VapeLeafGuardProtects
+	jumpifflowerveil BattleScript_VapeLeafGuardProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_SWEET_VEIL, BattleScript_VapeLeafGuardProtects
+	jumpifleafguard BattleScript_VapeLeafGuardProtects
+	jumpifshieldsdown BS_TARGET, BattleScript_VapeLeafGuardProtects
+	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_VapeSubstitutePrevents
+	jumpifsafeguard BattleScript_VapeAlreadyAsleep
+	jumpifability BS_TARGET, ABILITY_INSOMNIA, BattleScript_VapeLeafGuardProtects
+	jumpifsubstituteblocks BattleScript_VapeSubstitutePrevents
+	jumpifhasnohp BS_TARGET, BattleScript_VapeLoopIncrement
+	seteffectprimary
+	resultmessage
+	waitmessage 0x40
+BattleScript_VapeDoHP::
+	tryhealpulse BS_TARGET, BattleScript_VapeAlreadyAtFullHp
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage 0x40
+BattleScript_VapeDoMoveEndIncrement::
+	moveendto MOVEEND_NEXT_TARGET
+BattleScript_VapeLoopIncrement::
+	addbyte gBattlerTarget, 0x1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_VapeLoop
+	end
+
+BattleScript_VapeAlreadyAtFullHP::
+	pause 0x20
+	printstring STRINGID_PKMNHPFULL
+	waitmessage 0x40
+	goto BattleScript_VapeDoMoveEndIncrement
+
+BattleScript_VapeLeafGuardPrevents::
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ITDOESNTAFFECT
+	waitmessage 0x40
+	goto BattleScript_VapeDoHP
+
+BattleScript_VapeSafeguardProtected::
+	pause 0x20
+	printstring STRINGID_PKMNUSEDSAFEGUARD
+	waitmessage 0x40
+	goto BattleScript_VapeDoHP
+
+BattleScript_VapeSubstitutePrevents::
+	pause 0x20
+	printstring STRINGID_BUTITFAILED
+	waitmessage 0x40
+	goto BattleScript_VapeDoMoveEndIncrement
+
+BattleScript_VapeAlreadyAsleep::
+	setalreadystatusedmoveattempt BS_ATTACKER
+	pause 0x20
+	printstring STRINGID_PKMNALREADYASLEEP
+	waitmessage 0x40
+	goto BattleScript_VapeDoHP
+
+
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker
@@ -8099,13 +8206,6 @@ BattleScript_BattlerAbilityNoFucks::
 	printstring STRINGID_NOFUCKSENTERS
 	waitmessage 0x40
 	end3
-
-BattleScript_EffectMop:
-	setstatchanger STAT_SPEED, 1, TRUE
-	attackcanceler
-	jumpifsubstituteblocks BattleScript_DefogIfCanClearHazards
-	jumpifstat BS_TARGET, CMP_NOT_EQUAL, STAT_SPEED, 0x0, BattleScript_DefogWorks
-	goto BattleScript_DefogIfCanClearHazards
 
 BattleScript_BattlerAbilityStatRocketOnSwitchIn::
 	copybyte gBattlerAbility, gBattlerAttacker
