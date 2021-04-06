@@ -279,6 +279,10 @@ DirectSoundWaveData_sc88pro_square_wave::
 	.incbin "sound/direct_sound_samples/sc88pro_square_wave.bin"
 
 	.align 2
+DirectSoundWaveData_rlndgm_clarinet::
+	.incbin "sound/direct_sound_samples/rlndgm_clarinet.bin"
+
+	.align 2
 DirectSoundWaveData_bicycle_bell::
 	.incbin "sound/direct_sound_samples/bicycle_bell.bin"
 
@@ -4541,7 +4545,3 @@ DirectSoundWaveData_sd90_classical_whistle::
 	.align 2
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
-	
-	.align 2
-DirectSoundWaveData_rlndgm_clarinet::
-	.incbin "sound/direct_sound_samples/rlndgm_clarinet.bin"

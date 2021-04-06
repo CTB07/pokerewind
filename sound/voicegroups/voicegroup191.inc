@@ -89,4 +89,4 @@ voicegroup191:: @ 86B429C
 	voice_directsound_no_resample 64, 104, DirectSoundWaveData_ethnic_flavours_atarigane, 255, 0, 255, 0  @ 86B46A4
 	voice_directsound 63, 64, DirectSoundWaveData_sc88pro_taiko, 255, 0, 255, 0  @ 86B46B0
 	voice_square_2 60, 0, 0, 0, 1, 4, 1  @ 8692648
-	voice_keysplit_all voicegroup003, KeySplitTable1  @ Percussion
+	@ voice_keysplit_all voicegroup003, KeySplitTable1  @ Percussion
