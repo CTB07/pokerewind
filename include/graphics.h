@@ -7062,6 +7062,7 @@ extern const u32 gTrainerFrontPic_Leaf[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
 extern const u32 gTrainerFrontPic_AnnoyingOrange[];
+extern const u32 gTrainerFrontPic_LeaderCharlie[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -7157,6 +7158,7 @@ extern const u32 gTrainerPalette_Leaf[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
 extern const u32 gTrainerPalette_AnnoyingOrange[];
+extern const u32 gTrainerPalette_LeaderCharlie[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];
@@ -7393,6 +7395,11 @@ extern const u32 gBattleTerrainTilemap_Lab[];
 extern const u32 gBattleTerrainAnimTiles_Lab[];
 extern const u32 gBattleTerrainAnimTilemap_Lab[];
 extern const u32 gBattleTerrainPalette_Lab[];
+extern const u32 gBattleTerrainTiles_Beach[];
+extern const u32 gBattleTerrainTilemap_Beach[];
+extern const u32 gBattleTerrainAnimTiles_Beach[];
+extern const u32 gBattleTerrainAnimTilemap_Beach[];
+extern const u32 gBattleTerrainPalette_Beach[];
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];

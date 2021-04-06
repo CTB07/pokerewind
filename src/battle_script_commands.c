@@ -1033,7 +1033,8 @@ static const u16 sNaturePowerMoves[] =
     [BATTLE_TERRAIN_CAVE]       = MOVE_SHADOW_BALL,
     [BATTLE_TERRAIN_BUILDING]   = MOVE_TRI_ATTACK,
     [BATTLE_TERRAIN_PLAIN]      = MOVE_TRI_ATTACK,
-    [BATTLE_TERRAIN_LAB]        = MOVE_THUNDERBOLT
+    [BATTLE_TERRAIN_LAB]        = MOVE_THUNDERBOLT,
+    [BATTLE_TERRAIN_BEACH]      = MOVE_EARTH_POWER
 };
 
 static const u16 sPickupItems[] =
@@ -1091,6 +1092,7 @@ static const u8 sTerrainToType[] =
     [BATTLE_TERRAIN_BUILDING]   = TYPE_NORMAL,
     [BATTLE_TERRAIN_PLAIN]      = TYPE_NORMAL,
     [BATTLE_TERRAIN_LAB]        = TYPE_NORMAL,
+    [BATTLE_TERRAIN_BEACH]      = TYPE_GROUND,
 };
 
 // - ITEM_ULTRA_BALL skips Master Ball and ITEM_NONE
