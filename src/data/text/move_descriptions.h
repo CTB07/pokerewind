@@ -3004,7 +3004,7 @@ static const u8 sMOVE_PIXIE_PETALDescription[] = _(
 
 
 static const u8 sMOVE_MIND_PIECEDescription[] = _(
-    "Shows the foe its brain,\n"
+    "Sprays with psychedelics,\n"
     "starting Psychic Terrain.");
 
 static const u8 sMOVE_DIVEBOMBDescription[] = _(
@@ -3092,6 +3092,10 @@ static const u8 sMOVE_BROKEN_ARIADescription[] = _(
     "Heart-rending song that,\n"
     "hurts user and may sleep.");
 
+static const u8 sMOVE_MOPDescription[] = _(
+    "Clears hazards, slows,\n"
+    "moves first in rain.");
+
 static const u8 sMOVE_GAMER_RAGEDescription[] = _(
     "Hits twice if tilted\n"
     "- at under half HP.");
@@ -3099,6 +3103,11 @@ static const u8 sMOVE_GAMER_RAGEDescription[] = _(
 static const u8 sMOVE_MOOD_CRUSHDescription[] = _(
     "A crippling depression\n"
     "makes target Defeatist.");
+
+static const u8 sMOVE_POWER_PROCDescription[] = _(
+    "Hits itself to activate\n"
+    "its own abilities.");
+
 
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
@@ -3907,7 +3916,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FREEZE_FRAME - 1] = sMOVE_FREEZE_FRAMEDescription,
     [MOVE_EROSION_RAY - 1] = sMOVE_EROSION_RAYDescription,
     [MOVE_BROKEN_ARIA - 1] = sMOVE_BROKEN_ARIADescription,
+    [MOVE_MOP - 1] = sMOVE_MOPDescription,
     [MOVE_GAMER_RAGE - 1] = sMOVE_GAMER_RAGEDescription,
     [MOVE_MOOD_CRUSH - 1] = sMOVE_MOOD_CRUSHDescription,
+    [MOVE_POWER_PROC - 1] = sMOVE_POWER_PROCDescription,
 
 };

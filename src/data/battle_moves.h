@@ -11686,7 +11686,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {	
 	.effect = EFFECT_DAMAGE_SET_TERRAIN,
 	.power = 60,
-	.type = TYPE_GHOST,
+	.type = TYPE_POISON,
 	.accuracy = 100,
 	.pp = 10,
 	.secondaryEffectChance = 0,
@@ -12070,6 +12070,20 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .argument = STATUS1_SLEEP,
     },
 
+    [MOVE_MOP] =
+    {
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+        .effect = EFFECT_MOP,
+        .power = 0,
+        .type = TYPE_WATER,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+    },
+
     [MOVE_GAMER_RAGE] =
     {
         .effect = EFFECT_FAIL_OVER_HALF_HP,
@@ -12098,4 +12112,17 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .split = SPLIT_PHYSICAL,
     },
 
+    [MOVE_POWER_PROC] =
+    {
+        .effect = EFFECT_POWER_PROC,
+        .power = 10,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT,
+        .split = SPLIT_PHYSICAL,
+    },
 };

@@ -4341,23 +4341,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect = 1;
                 break;
             case ABILITY_MOTOR_DRIVE:
-                if (moveType == TYPE_ELECTRIC)
+                if (moveType == TYPE_ELECTRIC || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_SPEED;
                 break;
             case ABILITY_LIGHTNING_ROD:
-                if (moveType == TYPE_ELECTRIC)
+                if (moveType == TYPE_ELECTRIC || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_SPATK;
                 break;
             case ABILITY_STORM_DRAIN:
-                if (moveType == TYPE_WATER)
+                if (moveType == TYPE_WATER || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_SPATK;
                 break;
             case ABILITY_SAP_SIPPER:
-                if (moveType == TYPE_GRASS)
+                if (moveType == TYPE_GRASS || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_ATK;
                 break;
             case ABILITY_FLASH_FIRE:
-                if (moveType == TYPE_FIRE && !((gBattleMons[battler].status1 & STATUS1_FREEZE) && B_FLASH_FIRE_FROZEN <= GEN_4))
+                if ((moveType == TYPE_FIRE || move == MOVE_POWER_PROC)&& !((gBattleMons[battler].status1 & STATUS1_FREEZE) && B_FLASH_FIRE_FROZEN <= GEN_4))
                 {
                     if (!(gBattleResources->flags->flags[battler] & RESOURCE_FLAG_FLASH_FIRE))
                     {
@@ -4436,7 +4436,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && moveType == TYPE_DARK
+             && (moveType == TYPE_DARK || move == MOVE_POWER_PROC)
              && gBattleMons[battler].statStages[STAT_ATK] != 12)
             {
                 SET_STATCHANGER(STAT_ATK, 1, FALSE);
@@ -4449,7 +4449,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && (moveType == TYPE_DARK || moveType == TYPE_BUG || moveType == TYPE_GHOST)
+             && (moveType == TYPE_DARK || moveType == TYPE_BUG || moveType == TYPE_GHOST || move == MOVE_POWER_PROC)
              && gBattleMons[battler].statStages[STAT_SPEED] != 12)
             {
                 SET_STATCHANGER(STAT_SPEED, 1, FALSE);
@@ -4462,7 +4462,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && moveType == TYPE_WATER
+             && (moveType == TYPE_WATER || move == MOVE_POWER_PROC)
+
              && gBattleMons[battler].statStages[STAT_DEF] != 12)
             {
                 SET_STATCHANGER(STAT_DEF, 2, FALSE);
@@ -4605,7 +4606,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 	    break;
         case ABILITY_ANGER_POINT:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-             && gIsCriticalHit
+             && (gIsCriticalHit || move == MOVE_POWER_PROC)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
              && gBattleMons[battler].statStages[STAT_ATK] != 12)
@@ -4829,7 +4830,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
              && gBattleMons[battler].statStages[STAT_SPEED] != 12
-             && (moveType == TYPE_FIRE || moveType == TYPE_WATER))
+             && (moveType == TYPE_FIRE || moveType == TYPE_WATER || move == MOVE_POWER_PROC))
             {
                 SET_STATCHANGER(STAT_SPEED, 6, FALSE);
                 BattleScriptPushCursor();

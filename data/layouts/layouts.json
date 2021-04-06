@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/RewindRoute1/border.bin",
       "blockdata_filepath": "data/layouts/RewindRoute1/map.bin"
+    },
+    {
+      "id": "LAYOUT_REWIND_TOWN1",
+      "name": "RewindTown1_Layout",
+      "width": 30,
+      "height": 18,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/RewindTown1/border.bin",
+      "blockdata_filepath": "data/layouts/RewindTown1/map.bin"
     }
   ]
 }

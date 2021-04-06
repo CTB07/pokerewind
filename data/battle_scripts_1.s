@@ -390,6 +390,8 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectBlueScreen
 	.4byte BattleScript_EffectVaporWave
 	.4byte BattleScript_EffectMicDrop
+	.4byte BattleScript_EffectPowerProc
+
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -3598,6 +3600,7 @@ BattleScript_TripleKickEnd::
 	tryfaintmon BS_TARGET, FALSE, NULL
 	moveendfrom MOVEEND_UPDATE_LAST_MOVES
 	end
+
 
 BattleScript_EffectThief::
 	setmoveeffect MOVE_EFFECT_STEAL_ITEM
@@ -8168,7 +8171,7 @@ BattleScript_VapeAlreadyAtFullHP::
 	waitmessage 0x40
 	goto BattleScript_VapeDoMoveEndIncrement
 
-BattleScript_VapeLeafGuardPrevents::
+BattleScript_VapeLeafGuardProtects::
 	pause 0x20
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_ITDOESNTAFFECT
@@ -8214,6 +8217,54 @@ BattleScript_EffectMicDrop::
 	setmoveeffect MOVE_EFFECT_BURN
 	seteffectprimary
 	goto BattleScript_EffectPartingShotSwitch
+
+BattleScript_EffectPowerProc::
+	attackcanceler
+	attackstring
+	ppreduce
+	initmultihitstring
+	setmultihit 0x3
+BattleScript_ProcLoop::
+	jumpifhasnohp BS_ATTACKER, BattleScript_ProcEnd
+	jumpifhasnohp BS_TARGET, BattleScript_ProcStrings
+	jumpifhalfword CMP_EQUAL, gChosenMove, MOVE_SLEEP_TALK, BattleScript_ProcMultiHit
+	jumpifstatus BS_ATTACKER, STATUS1_SLEEP, BattleScript_ProcStrings
+BattleScript_ProcMultiHit::
+	movevaluescleanup
+	copyhword sMOVE_EFFECT, sMULTIHIT_EFFECT
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	jumpifmovehadnoeffect BattleScript_Procimmune
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+BattleScript_Procimmune::
+	multihitresultmessage
+	printstring STRINGID_EMPTYSTRING3
+	waitmessage 0x1
+	addbyte sMULTIHIT_STRING + 4, 0x1
+	moveendto MOVEEND_NEXT_TARGET
+	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_ProcStrings
+	decrementmultihit BattleScript_ProcLoop
+	goto BattleScript_ProcStrings
+	pause 0x20
+BattleScript_ProcStrings::
+	resultmessage
+	waitmessage 0x40
+	jumpifmovehadnoeffect BattleScript_ProcEnd
+	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 0x6
+	printstring STRINGID_HITXTIMES
+	waitmessage 0x40
+BattleScript_ProcEnd::
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	moveendcase MOVEEND_SYNCHRONIZE_TARGET
+	moveendfrom MOVEEND_STATUS_IMMUNITY_ABILITIES
+	end
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker

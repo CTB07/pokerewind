@@ -813,9 +813,12 @@ gBattleAnims_Moves::
         .4byte Move_FREEZE_FRAME
 	.4byte Move_EROSION_RAY
 	.4byte Move_BROKEN_ARIA
+        .4byte Move_MOP
         .4byte Move_GAMER_RAGE
         .4byte Move_MOOD_CRUSH
+        .4byte Move_POWER_PROC
 	.4byte Move_COUNT @ cannot be reached, because last move is as defined
+
 
 	.align 2
 gBattleAnims_StatusConditions::
@@ -14319,11 +14322,17 @@ Move_EROSION_RAY::
 Move_BROKEN_ARIA::
 	goto Move_RELIC_SONG
 
+Move_MOP::
+	goto Move_WATER_SPORT
+
 Move_GAMER_RAGE::
-	goto Move_SUPERPOWER
+	goto Move_ZING_ZAP
 
 Move_MOOD_CRUSH::
 	goto Move_SPITE
+
+Move_POWER_PROC::
+	goto Move_KARATE_CHOP
 
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
