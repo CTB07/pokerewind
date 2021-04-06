@@ -62,4 +62,4 @@ voicegroup000:: @ 8675D04
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8675FC8
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8675FD4
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8675FE0
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_clarinet, 255, 0, 255, 149 @ 8676026
+
