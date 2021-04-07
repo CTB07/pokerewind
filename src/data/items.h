@@ -4632,10 +4632,10 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-    [ITEM_TM74_U-TURN] =
+    [ITEM_TM74_U_TURN] =
     {
         .name = _("TM74"),
-        .itemId = ITEM_TM74_U-TURN,
+        .itemId = ITEM_TM74_U_TURN,
         .price = 0,
         .description = sTM74Desc,
         .importance = 1,
@@ -4643,10 +4643,10 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-    [ITEM_TM75_X-SCISSOR] =
+    [ITEM_TM75_X_SCISSOR] =
     {
         .name = _("TM75"),
-        .itemId = ITEM_TM75_X-SCISSOR,
+        .itemId = ITEM_TM75_X_SCISSOR,
         .price = 0,
         .description = sTM75Desc,
         .importance = 1,
