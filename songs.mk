@@ -135,6 +135,9 @@ $(MID_SUBDIR)/mus_route122.s: %.s: %.mid
 $(MID_SUBDIR)/mus_route1.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090
 
+$(MID_SUBDIR)/mus_clarinetsaxperctest.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -v100 
+
 $(MID_SUBDIR)/mus_dummy.s: %.s: %.mid
 	$(MID) $< $@ -E -R40
 
