@@ -4898,20 +4898,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_LIFE_LEECH:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                    && gSpecialStatuses[gBattlerTarget].dmg != 0
-                    && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
-                    && gBattlerAttacker != gBattlerTarget
-                    && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
-                    && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
-                    && gBattleMons[gBattlerAttacker].hp != 0)
-                {
-                    BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
-                    gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gSpecialStatuses[gBattlerTarget].dmg / 6));
-                    gSpecialStatuses[gBattlerTarget].dmg = 0;/// this is in shell bell and I don't know why to be honest. Prevents recursion and stacking w shell bell. If removed, probably leeches infinite hp all the time.
-                    effect++;
-                }
-                break;
+	    if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && gSpecialStatuses[gBattlerTarget].dmg != 0
+             && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
+             && gBattlerAttacker != gBattlerTarget
+             && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+             && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
+             && gBattleMons[gBattlerAttacker].hp != 0)
+	    {
+		BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+		gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gSpecialStatuses[gBattlerTarget].dmg / 6));
+		gSpecialStatuses[gBattlerTarget].dmg = 0;/// this is in shell bell and I don't know why to be honest. Prevents recursion and stacking w shell bell. If removed, probably leeches infinite hp all the time.
+		effect++;
+	    }
+	    break;
         case ABILITY_HEAD_TRAUMA:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && !gProtectStructs[gBattlerTarget].confusionSelfDmg 
@@ -5214,7 +5214,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
         }
         break;
     }
-
     if (effect && gLastUsedAbility != 0xFF)
         RecordAbilityBattle(battler, gLastUsedAbility);
     if (effect && caseID <= ABILITYEFFECT_MOVE_END)
