@@ -857,8 +857,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_BAD_VIBES] = sBadVibesDescription,
     [ABILITY_RADIOACTIVE] = sWhoKnowsDescription,
     [ABILITY_LIFE_LEECH] = sLifeLeechDescription,
-    [ABILITY_GLITTERBOMB] =  sGlitterbombDescription
-    [ABILITY_OCEAN_MANTLE] =  sOceanMantleDescription
-    [ABILITY_HORNY_JAIL] =  sHornyJailDescription
+    [ABILITY_GLITTERBOMB] =  sGlitterbombDescription,
+    [ABILITY_OCEAN_MANTLE] =  sOceanMantleDescription,
+    [ABILITY_HORNY_JAIL] =  sHornyJailDescription,
 
 };
