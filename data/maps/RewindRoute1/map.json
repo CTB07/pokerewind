@@ -15,8 +15,8 @@
   "connections": [
     {
       "direction": "down",
-      "offset": 4,
-      "map": "MAP_ROUTE103"
+      "offset": -2,
+      "map": "MAP_REWIND_TOWN1"
     }
   ],
   "object_events": [
