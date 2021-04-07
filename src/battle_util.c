@@ -6118,7 +6118,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && gSpecialStatuses[gBattlerTarget].dmg != 0
                     && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
                     && gBattlerAttacker != gBattlerTarget
-                    && !(gStatuses3[battlerId] & STATUS3_HEAL_BLOCK))
+                    && !(gStatuses3[battlerId] & STATUS3_HEAL_BLOCK)
                     && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
                     && gBattleMons[gBattlerAttacker].hp != 0)
                 {
