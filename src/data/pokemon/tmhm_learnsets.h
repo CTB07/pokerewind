@@ -1,10 +1,10 @@
-#define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32), ((u32)((moves) >> 64)-64), ((u64)((moves) >> 96)-64)}
-#define TMHM(tmhm) ((u128)1 << (ITEM_##tmhm - ITEM_TM01_FOCUS_PUNCH))
+#define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
+#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_FOCUS_PUNCH))
 
 // This table determines which TMs and HMs a species is capable of learning.
 // Each entry is a 64-bit bit array spread across two 32-bit values, with
 // each bit corresponding to a TM or HM.
-const u32 gTMHMLearnsets[][2][3][4] =
+const u32 gTMHMLearnsets[][2] =
 {
     [SPECIES_NONE]        = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
                                             | TMHM(HM01_CUT)
@@ -3324,6 +3324,11 @@ const u32 gTMHMLearnsets[][2][3][4] =
                                             | TMHM(HM01_CUT) 
                                             | TMHM(HM07_ROCK_CLIMB) 
                                             | TMHM(HM10_NATURE_POWER)),
+
+
+
+///assorted bullshit so the rom compiles
+
 
     [SPECIES_DUGTRIO]     = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
                                             | TMHM(TM45_ATTRACT)
