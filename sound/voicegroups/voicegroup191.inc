@@ -1,6 +1,6 @@
 	.align 2
 voicegroup191:: @ 86B429C
-	voice_keysplit voicegroup005, KeySplitTable1  @ Piano 1
+	voice_keysplit_all voicegroup003, @ Percussion
 	voice_keysplit voicegroup005, KeySplitTable1  @ Piano 1
 	voice_keysplit voicegroup005, KeySplitTable1  @ Piano 1
 	voice_keysplit voicegroup005, KeySplitTable1  @ Piano 1
@@ -64,10 +64,10 @@ voicegroup191:: @ 86B429C
 	voice_directsound_no_resample 64, 94, DirectSoundWaveData_unused_heart_of_asia_indian_drum, 255, 0, 255, 0  @ 86B4578
 	voice_directsound_no_resample 64, 34, DirectSoundWaveData_sc88pro_mute_high_conga, 255, 0, 255, 0  @ 86B4584
 	voice_directsound_no_resample 64, 34, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0  @ 86B4590
-	voice_directsound_no_resample 64, 90, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0  @ 86B459C
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86B45A8
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86B45B4
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86B45C0
+	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86B45CC
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86B45D8
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86B45E4
@@ -89,4 +89,4 @@ voicegroup191:: @ 86B429C
 	voice_directsound_no_resample 64, 104, DirectSoundWaveData_ethnic_flavours_atarigane, 255, 0, 255, 0  @ 86B46A4
 	voice_directsound 63, 64, DirectSoundWaveData_sc88pro_taiko, 255, 0, 255, 0  @ 86B46B0
 	voice_square_2 60, 0, 0, 0, 1, 4, 1  @ 8692648
-	@ voice_keysplit_all voicegroup003, KeySplitTable1  @ Percussion
+	
