@@ -4,6 +4,12 @@
 // This table determines which TMs and HMs a species is capable of learning.
 // Each entry is a 64-bit bit array spread across two 32-bit values, with
 // each bit corresponding to a TM or HM.
+
+// As far as I can tell, we're going to have to completely replace this 
+//internal data structure in order to add more than 64 TMs. Which is a shame, 
+//but ghoulslash has done it and we can too. And his implementation doesn't
+//require us to mess with the internal item order whenever we add new TMs.
+
 const u32 gTMHMLearnsets[][2] =
 {
     [SPECIES_NONE]        = TMHM_LEARNSET(TMHM(TM14_BLIZZARD)
