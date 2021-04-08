@@ -1396,7 +1396,7 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
         return;
     }
-    else if (IsAbilityOnField(ABILITY_HORNY_JAIL) && gBattleMoves[move].flags & FLAG_R_RATED)
+    else if (IsAbilityOnField(ABILITY_HORNY_JAIL) && gBattleMoves[gCurrentMove].flags & FLAG_R_RATED)
     {
 	gBattlerTarget = IsAbilityOnField(ABILITY_HORNY_JAIL);
         gLastUsedAbility = ABILITY_HORNY_JAIL;
@@ -5950,7 +5950,7 @@ static void Cmd_switchineffects(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_StickyWebOnSwitchIn;
     }
-    else if ((IsAbilityOnField(ABILITY_RADIOACTIVE)
+    else if (IsAbilityOnField(ABILITY_RADIOACTIVE)
 		&& !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
                 && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)
                 && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_POISON)
@@ -8519,7 +8519,7 @@ static void Cmd_various(void)
     case VARIOUS_SET_MOOD_CRUSH:
         switch (gBattleMons[gActiveBattler].ability)
         {
-        case ABILITY_SIMPLE:
+        case ABILITY_DEFEATIST:
         case ABILITY_TRUANT:
         case ABILITY_STANCE_CHANGE:
         case ABILITY_DISGUISE:
