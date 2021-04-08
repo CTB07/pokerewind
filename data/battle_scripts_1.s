@@ -8151,7 +8151,7 @@ BattleScript_VapeLoop::
 	resultmessage
 	waitmessage 0x40
 BattleScript_VapeDoHP::
-	tryhealpulse BS_TARGET, BattleScript_VapeAlreadyAtFullHp
+	tryhealpulse BS_TARGET, BattleScript_VapeAlreadyAtFullHP
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	attackanimation
