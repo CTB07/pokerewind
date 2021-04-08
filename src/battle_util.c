@@ -771,6 +771,11 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_FLUFFY] = 1,
     [ABILITY_QUEENLY_MAJESTY] = 1,
     [ABILITY_WATER_BUBBLE] = 1,
+    [ABILITY_THERAPIST] = 1,
+    [ABILITY_GLITTERBOMB] = 1,
+    [ABILITY_OCEAN_MANTLE] = 1,
+    [ABILITY_HORNY_JAIL] = 1,
+
 };
 
 static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
@@ -4090,7 +4095,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 		}
             }
             break;
-        case ABILITY_OMNIPOTENCE:
+        case ABILITY_OMNIPOTENCE://broken in battle frontier
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
@@ -4336,23 +4341,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect = 1;
                 break;
             case ABILITY_MOTOR_DRIVE:
-                if (moveType == TYPE_ELECTRIC)
+                if (moveType == TYPE_ELECTRIC || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_SPEED;
                 break;
             case ABILITY_LIGHTNING_ROD:
-                if (moveType == TYPE_ELECTRIC)
+                if (moveType == TYPE_ELECTRIC || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_SPATK;
                 break;
             case ABILITY_STORM_DRAIN:
-                if (moveType == TYPE_WATER)
+                if (moveType == TYPE_WATER || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_SPATK;
                 break;
             case ABILITY_SAP_SIPPER:
-                if (moveType == TYPE_GRASS)
+                if (moveType == TYPE_GRASS || move == MOVE_POWER_PROC)
                     effect = 2, statId = STAT_ATK;
                 break;
             case ABILITY_FLASH_FIRE:
-                if (moveType == TYPE_FIRE && !((gBattleMons[battler].status1 & STATUS1_FREEZE) && B_FLASH_FIRE_FROZEN <= GEN_4))
+                if ((moveType == TYPE_FIRE || move == MOVE_POWER_PROC) && !((gBattleMons[battler].status1 & STATUS1_FREEZE) && B_FLASH_FIRE_FROZEN <= GEN_4))
                 {
                     if (!(gBattleResources->flags->flags[battler] & RESOURCE_FLAG_FLASH_FIRE))
                     {
@@ -4431,7 +4436,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && moveType == TYPE_DARK
+             && (moveType == TYPE_DARK || move == MOVE_POWER_PROC)
              && gBattleMons[battler].statStages[STAT_ATK] != 12)
             {
                 SET_STATCHANGER(STAT_ATK, 1, FALSE);
@@ -4444,7 +4449,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && (moveType == TYPE_DARK || moveType == TYPE_BUG || moveType == TYPE_GHOST)
+             && (moveType == TYPE_DARK || moveType == TYPE_BUG || moveType == TYPE_GHOST || move == MOVE_POWER_PROC)
              && gBattleMons[battler].statStages[STAT_SPEED] != 12)
             {
                 SET_STATCHANGER(STAT_SPEED, 1, FALSE);
@@ -4457,7 +4462,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
-             && moveType == TYPE_WATER
+             && (moveType == TYPE_WATER || move == MOVE_POWER_PROC)
              && gBattleMons[battler].statStages[STAT_DEF] != 12)
             {
                 SET_STATCHANGER(STAT_DEF, 2, FALSE);
@@ -4600,7 +4605,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 	    break;
         case ABILITY_ANGER_POINT:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-             && gIsCriticalHit
+             && (gIsCriticalHit || move == MOVE_POWER_PROC)
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
              && gBattleMons[battler].statStages[STAT_ATK] != 12)
@@ -4824,7 +4829,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && TARGET_TURN_DAMAGED
              && IsBattlerAlive(battler)
              && gBattleMons[battler].statStages[STAT_SPEED] != 12
-             && (moveType == TYPE_FIRE || moveType == TYPE_WATER))
+             && (moveType == TYPE_FIRE || moveType == TYPE_WATER || move == MOVE_POWER_PROC))
             {
                 SET_STATCHANGER(STAT_SPEED, 6, FALSE);
                 BattleScriptPushCursor();
@@ -4892,12 +4897,27 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_LIFE_LEECH:
+	    if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && gSpecialStatuses[gBattlerTarget].dmg != 0
+             && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
+             && gBattlerAttacker != gBattlerTarget
+             && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK)
+             && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
+             && gBattleMons[gBattlerAttacker].hp != 0)
+	    {
+		BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+		gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gSpecialStatuses[gBattlerTarget].dmg / 6);
+		gSpecialStatuses[gBattlerTarget].dmg = 0;/// this is in shell bell and I don't know why to be honest. Prevents recursion and stacking w shell bell. If removed, probably leeches infinite hp all the time.
+		effect++;
+	    }
+	    break;
         case ABILITY_HEAD_TRAUMA:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && !gProtectStructs[gBattlerTarget].confusionSelfDmg 
              && !IsAbilityStatusProtected(gBattlerTarget)
              && IsMoveMakingContact(move, gBattlerAttacker)
-             && (Random() % 3) == 0)
+             && (Random() % 2) == 0)
             {
                 switch (gBattleMons[gBattlerTarget].ability)
                 {
@@ -5017,6 +5037,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect = 1;
                 }
                 break;
+            case ABILITY_WATER_BUBBLE:
             case ABILITY_WATER_VEIL:
                 if (gBattleMons[battler].status1 & STATUS1_BURN)
                 {
@@ -5193,7 +5214,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
         }
         break;
     }
-
     if (effect && gLastUsedAbility != 0xFF)
         RecordAbilityBattle(battler, gLastUsedAbility);
     if (effect && caseID <= ABILITYEFFECT_MOVE_END)
@@ -5280,7 +5300,7 @@ u32 IsAbilityPreventingEscape(u32 battlerId)
 
 bool32 CanBattlerEscape(u32 battlerId) // no ability check
 {
-    return (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_SHED_SHELL
+    return (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_SHED_SHELL || IS_BATTLER_OF_TYPE(battlerId, TYPE_GHOST)
             || !((gBattleMons[battlerId].status2 & (STATUS2_ESCAPE_PREVENTION | STATUS2_WRAPPED))
                 || (gStatuses3[battlerId] & STATUS3_ROOTED)
                 || gFieldStatuses & STATUS_FIELD_FAIRY_LOCK));
@@ -6096,6 +6116,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && gSpecialStatuses[gBattlerTarget].dmg != 0
                     && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
                     && gBattlerAttacker != gBattlerTarget
+                    && !(gStatuses3[battlerId] & STATUS3_HEAL_BLOCK)
                     && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
                     && gBattleMons[gBattlerAttacker].hp != 0)
                 {
@@ -7017,6 +7038,10 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
         if (moveType == TYPE_WATER)
            MulModifier(&modifier, UQ_4_12(2.0));
         break;
+    case ABILITY_OCEAN_MANTLE:
+        if (moveType == TYPE_WATER)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;
     case ABILITY_STEELWORKER:
         if (moveType == TYPE_STEEL)
            MulModifier(&modifier, UQ_4_12(1.5));
@@ -7115,6 +7140,14 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_HEATPROOF:
     case ABILITY_WATER_BUBBLE:
         if (moveType == TYPE_FIRE)
+        {
+            MulModifier(&modifier, UQ_4_12(0.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, ability);
+        }
+        break;
+    case ABILITY_OCEAN_MANTLE:
+        if (moveType == TYPE_ICE || moveType ==TYPE_FIRE)
         {
             MulModifier(&modifier, UQ_4_12(0.5));
             if (updateFlags)
@@ -7400,6 +7433,10 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     // target's abilities
     switch (GetBattlerAbility(battlerDef))
     {
+    case ABILITY_GLITTERBOMB:
+        if (gDisableStructs[battlerDef].isFirstTurn == 2) // just switched in
+            MulModifier(&modifier, UQ_4_12(0.25));
+        break;
     case ABILITY_THICK_FAT:
         if (moveType == TYPE_FIRE || moveType == TYPE_ICE)
         {

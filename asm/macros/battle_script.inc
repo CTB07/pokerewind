@@ -1779,6 +1779,11 @@
 	.4byte \ptr
 	.endm
 
+	.macro setabilitydefeatist battler:req, ptr:req
+	various \battler VARIOUS_SET_MOOD_CRUSH
+	.4byte \ptr
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7
