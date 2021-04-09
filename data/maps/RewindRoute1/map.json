@@ -12,7 +12,13 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "down",
+      "offset": -2,
+      "map": "MAP_REWIND_TOWN1"
+    }
+  ],
   "object_events": [
 
   ],

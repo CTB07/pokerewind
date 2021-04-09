@@ -770,7 +770,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_PSYCH_OUT] = _("Psych Out"),
     [MOVE_PANIC_SWEAT] = _("Panic Sweat"),
     [MOVE_PIXIE_PETAL] = _("Pixie Petal"),
-    [MOVE_MIND_PIECE] = _("Mind Piece"),
+    [MOVE_MIND_PIECE] = _("Acid Trip"),
     [MOVE_DIVEBOMB] = _("Divebomb"),
     [MOVE_REWIND] = _("Rewind"),
     [MOVE_MENTAL_STRIKE] = _("MentalStrike"),
@@ -793,5 +793,8 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_FREEZE_FRAME] = _("Freeze Frame"),
     [MOVE_EROSION_RAY] = _("Erosion Ray"),
     [MOVE_BROKEN_ARIA] = _("Broken Aria"),
+    [MOVE_MOP] = _("Mop"),
     [MOVE_GAMER_RAGE] = _("Gamer Rage"),
+    [MOVE_MOOD_CRUSH] = _("Mood Crush"),
+    [MOVE_POWER_PROC] = _("War Drum"),
 };

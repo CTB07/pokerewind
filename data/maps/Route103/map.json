@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE103",
   "name": "Route103",
   "layout": "LAYOUT_ROUTE103",
-  "music": "MUS_ROUTE1",
+  "music": "MUS_CLARINETSAXPERCTEST",
   "region_map_section": "MAPSEC_ROUTE_103",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -14,14 +14,19 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "direction": "right",
+      "offset": -60,
+      "map": "MAP_ROUTE110"
+    },
+    {
       "direction": "down",
       "offset": 0,
       "map": "MAP_OLDALE_TOWN"
     },
     {
-      "direction": "right",
-      "offset": -60,
-      "map": "MAP_ROUTE110"
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_REWIND_TOWN1"
     }
   ],
   "object_events": [
