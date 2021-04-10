@@ -31,7 +31,7 @@ else
 EXE :=
 endif
 
-TITLE       := POKEMON REWN #POKEMON EMER
+TITLE       := POKEMON EMER #POKEMON EMER
 GAME_CODE   := BPEE #BPRW
 GAME_NAME	:= Pokemon Rewind (English)
 MAKER_CODE  := 01
