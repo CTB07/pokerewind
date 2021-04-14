@@ -4549,3 +4549,7 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.align 2
 DirectSoundWaveData_rlndgm_altosax::
 	.incbin "sound/direct_sound_samples/rlndgm_altosax.bin"
+	
+	.align 2
+DirectSoundWaveData_dokidoki::
+	.incbin "sound/direct_sound_samples/dokidoki.bin"
