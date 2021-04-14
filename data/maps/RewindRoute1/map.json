@@ -2,7 +2,7 @@
   "id": "MAP_REWIND_ROUTE1",
   "name": "RewindRoute1",
   "layout": "LAYOUT_REWIND_ROUTE1",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ROUTE1",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -1,6 +1,6 @@
 	.align 2
 voicegroup191:: @ 86B429C
-	voice_keysplit voicegroup003 @ Percussion
+	voice_keysplit_all voicegroup003 @ Percussion
 	voice_keysplit voicegroup005, KeySplitTable1  @ Piano 1
 	voice_directsound 60, 0, DirectSoundWaveData_steinway_b_piano, 255, 252, 0, 239  @ Bright Piano
 	voice_keysplit voicegroup001, KeySplitTable4  @ Electric Piano 1
@@ -104,10 +104,10 @@ voicegroup191:: @ 86B429C
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4900, 0, 7, 15, 2  @ Wave 14
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4910, 0, 7, 15, 2  @ Wave 15
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4920, 0, 7, 15, 2  @ Wave 16
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4930, 0, 7, 15, 2  @ Unused Wave 17
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4940, 0, 7, 15, 2  @ Unused Wave 18
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4950, 0, 7, 15, 2  @ Unused Wave 19
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4960, 0, 7, 15, 2  @ Unused Wave 20
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_Unused_86B4930, 0, 7, 15, 2  @ Unused Wave 17
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_Unused_86B4940, 0, 7, 15, 2  @ Unused Wave 18
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_Unused_86B4950, 0, 7, 15, 2  @ Unused Wave 19
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_Unused_86B4960, 0, 7, 15, 2  @ Unused Wave 20
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4970, 0, 7, 15, 2  @ Wave 21
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4990, 0, 7, 15, 2  @ Wave 22
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B49A0, 0, 7, 15, 2  @ Wave 23
