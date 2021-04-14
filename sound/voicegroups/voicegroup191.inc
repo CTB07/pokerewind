@@ -57,21 +57,21 @@ voicegroup191:: @ 86B429C
 	voice_directsound 60, 0, DirectSoundWaveData_unused_unknown_male_voice, 128, 165, 128, 188  @ Male Choir
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_keysplit voicegroup007, KeySplitTable3  @ Trumpet
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
+	voice_keysplit voicegroup007, KeySplitTable3  @ Trumpet
 	voice_keysplit voicegroup008, KeySplitTable3  @ Tuba
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
+	voice_keysplit voicegroup007, KeySplitTable3  @ Trumpet
 	voice_keysplit voicegroup009, KeySplitTable5  @ French Horn
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax 
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax 
+	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_clarinet, 240, 0, 231, 127 @ Clarinet
+	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_clarinet, 240, 0, 231, 127 @ Clarinet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127  @ Flute
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
