@@ -35,8 +35,8 @@ voicegroup003:: @ 86763D0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_directsound 62, 64, DirectSoundWaveData_drum_and_percussion_kick, 255, 0, 255, 0  @ Kick Drum
+	voice_directsound_no_resample 60, 79, DirectSoundWaveData_dokidoki, 255, 0, 255, 188  @ Dokidoki 
+	voice_directsound 62, 64, DirectSoundWaveData_sc88pro_rnd_kick, 255, 0, 255, 0  @ Kick Drum
 	voice_directsound_no_resample 64, 64, DirectSoundWaveData_sd90_solo_snare, 255, 180, 175, 228  @ Unused FRLG Snare
 	voice_directsound_no_resample 64, 64, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 0, 255, 242  @ Acoustic Snare
 	voice_directsound_no_resample 64, 54, DirectSoundWaveData_sc88pro_tr909_hand_clap, 255, 255, 255, 127  @ Clap
