@@ -89,13 +89,13 @@ voicegroup191:: @ 86B429C
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4830, 0, 7, 15, 2  @ Unidentified Wave 1
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4840, 0, 7, 15, 2  @ Unidentified Wave Dup 1
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4850, 0, 7, 15, 2  @ Sawtooth Wave
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4840, 0, 7, 15, 2  @ Unidentified Wave Dup 1
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4860, 0, 7, 15, 2  @ Gen 1 Wave/Sawtooth Wave 2
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4870, 0, 7, 15, 2  @ Unidentified Wave 3
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4880, 0, 7, 15, 2  @ Unidentified Wave 4
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4890, 0, 7, 15, 2  @ Unidentified Wave 5
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48A0, 0, 7, 15, 2  @ Unidentified Wave 6
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4920, 0, 7, 15, 2  @ Sine-y Wave 12
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48B0, 0, 7, 15, 2  @ Sawtooth
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48C0, 0, 7, 15, 2  @ Saw-Square75 Wave 7
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48D0, 0, 7, 15, 2  @ Saw-Square75 Wave Dup 7
@@ -103,7 +103,7 @@ voicegroup191:: @ 86B429C
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48F0, 0, 7, 15, 2  @ Weird Wave 9
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4900, 0, 7, 15, 2  @ Unidentified Wave 10
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4910, 0, 7, 15, 2  @ Triangle Wave 11
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4920, 0, 7, 15, 2  @ Sine-y Wave 12
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48A0, 0, 7, 15, 2  @ Unidentified Wave 6
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4930, 0, 7, 15, 2  @ Wobble Sawtooth Wave 13
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4940, 0, 7, 15, 2  @ Smooth Sawtooth Wave 14
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_unused_86B4950, 0, 7, 15, 2  @ Smooth Sawtooth Wave Dup 14
