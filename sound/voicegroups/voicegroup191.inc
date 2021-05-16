@@ -70,7 +70,7 @@ voicegroup191:: @ 86B429C
 	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
+	voice_keysplit voicegroup010, KeySplitTable6 @ GMGSx Clarinet 
 	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_clarinet, 240, 0, 231, 127 @ Clarinet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127  @ Flute

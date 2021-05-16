@@ -389,6 +389,27 @@ DirectSoundWaveData_8745034::
 	.align 2
 DirectSoundWaveData_8745A7C::
 	.incbin "sound/direct_sound_samples/8745A7C.bin"
+	
+	.align 2
+DirectSoundWaveData_gmg_clarinet_55::
+	.incbin "sound/direct_sound_samples/gmg_clarinet_55.bin"
+	
+	.align 2
+DirectSoundWaveData_gmg_clarinet_64::
+	.incbin "sound/direct_sound_samples/gmg_clarinet_64.bin"
+	
+	.align 2
+DirectSoundWaveData_gmg_clarinet_70::
+	.incbin "sound/direct_sound_samples/gmg_clarinet_70.bin"
+	
+	.align 2
+DirectSoundWaveData_gmg_clarinet_75::
+	.incbin "sound/direct_sound_samples/gmg_clarinet_75.bin"
+	
+	.align 2
+DirectSoundWaveData_gmg_clarinet_95::
+	.incbin "sound/direct_sound_samples/gmg_clarinet_95.bin"
+
 
 	.align 2
 Cry_Paropeat::
