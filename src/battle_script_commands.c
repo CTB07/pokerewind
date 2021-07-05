@@ -1033,7 +1033,8 @@ static const u16 sNaturePowerMoves[] =
     [BATTLE_TERRAIN_CAVE]       = MOVE_SHADOW_BALL,
     [BATTLE_TERRAIN_BUILDING]   = MOVE_TRI_ATTACK,
     [BATTLE_TERRAIN_PLAIN]      = MOVE_TRI_ATTACK,
-    [BATTLE_TERRAIN_LAB]        = MOVE_TRI_ATTACK
+    [BATTLE_TERRAIN_LAB]        = MOVE_THUNDERBOLT,
+    [BATTLE_TERRAIN_BEACH]      = MOVE_EARTH_POWER
 };
 
 static const u16 sPickupItems[] =
@@ -1091,6 +1092,7 @@ static const u8 sTerrainToType[] =
     [BATTLE_TERRAIN_BUILDING]   = TYPE_NORMAL,
     [BATTLE_TERRAIN_PLAIN]      = TYPE_NORMAL,
     [BATTLE_TERRAIN_LAB]        = TYPE_NORMAL,
+    [BATTLE_TERRAIN_BEACH]      = TYPE_GROUND,
 };
 
 // - ITEM_ULTRA_BALL skips Master Ball and ITEM_NONE
@@ -1379,17 +1381,26 @@ static void Cmd_attackcanceler(void)
              && ((((gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_25)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_50)
-	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33_STATUS)) && (GetBattlerAbility(gBattlerAttacker) != ABILITY_ROCK_HEAD))
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_33_STATUS)) && !(GetBattlerAbility(gBattlerAttacker) == ABILITY_ROCK_HEAD))
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RAMPAGE)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_MEMENTO)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_HEALING_WISH)
 	     || (gBattleMoves[gCurrentMove].effect == EFFECT_BELLY_DRUM)
+	     || (gBattleMoves[gCurrentMove].effect == EFFECT_BLUE_SCREEN)
              || (gBattleMoves[gCurrentMove].effect == EFFECT_SUBSTITUTE))))
     {
 	gBattlerTarget = IsAbilityOnField(ABILITY_THERAPIST);
         gLastUsedAbility = ABILITY_THERAPIST;
         RecordAbilityBattle(--gBattlerTarget, ABILITY_THERAPIST);
+        gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
+        return;
+    }
+    else if (IsAbilityOnField(ABILITY_HORNY_JAIL) && gBattleMoves[gCurrentMove].flags & FLAG_R_RATED)
+    {
+	gBattlerTarget = IsAbilityOnField(ABILITY_HORNY_JAIL);
+        gLastUsedAbility = ABILITY_HORNY_JAIL;
+        RecordAbilityBattle(--gBattlerTarget, ABILITY_HORNY_JAIL);
         gBattlescriptCurrInstr = BattleScript_DampStopsExplosion;
         return;
     }
@@ -2558,6 +2569,25 @@ void SetMoveEffect(bool32 primary, u32 certain)
             {
                 gLastUsedAbility = ABILITY_WATER_VEIL;
                 RecordAbilityBattle(gEffectBattler, ABILITY_WATER_VEIL);
+
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_BRNPrevention;
+                if (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
+                {
+                    gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+                    gHitMarker &= ~(HITMARKER_IGNORE_SAFEGUARD);
+                }
+                else
+                {
+                    gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+                }
+                RESET_RETURN
+            }
+            if (GetBattlerAbility(gEffectBattler) == ABILITY_WATER_BUBBLE
+                && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
+            {
+                gLastUsedAbility = ABILITY_WATER_BUBBLE;
+                RecordAbilityBattle(gEffectBattler, ABILITY_WATER_BUBBLE);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_BRNPrevention;
@@ -5920,6 +5950,21 @@ static void Cmd_switchineffects(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_StickyWebOnSwitchIn;
     }
+    else if (IsAbilityOnField(ABILITY_RADIOACTIVE)
+		&& !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
+                && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)
+                && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_POISON)
+                && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY
+                && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD))
+    {
+        gBattleMons[gActiveBattler].status1 |= STATUS1_TOXIC_POISON;
+        BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+        gBattleScripting.battler = gActiveBattler;
+        PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_AbilityStatusEffect;
+    }
     else
     {
         // There is a hack here to ensure the truant counter will be 0 when the battler's next turn starts.
@@ -8471,6 +8516,22 @@ static void Cmd_various(void)
         gWishFutureKnock.weatherDuration = 5;
 	gFieldTimers.mistyTerrainTimer = 5;
 	return; //fucking horrible effect. 
+    case VARIOUS_SET_MOOD_CRUSH:
+        switch (gBattleMons[gActiveBattler].ability)
+        {
+        case ABILITY_DEFEATIST:
+        case ABILITY_TRUANT:
+        case ABILITY_STANCE_CHANGE:
+        case ABILITY_DISGUISE:
+        case ABILITY_MULTITYPE:
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+            break;
+        default:
+            gBattleMons[gActiveBattler].ability = ABILITY_DEFEATIST;
+            gBattlescriptCurrInstr += 7;
+            break;
+        }
+        return;
     }
     gBattlescriptCurrInstr += 3;
 }

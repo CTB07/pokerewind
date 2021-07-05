@@ -287,7 +287,7 @@
 #define MUS_C_COMM_CENTER           356 // MUS_PCC
 #define MUS_GSC_PEWTER              357 // MUS_NIBI
 #define MUS_C_VS_LEGEND_BEAST       358 // MUS_SUIKUN
-#define MUS_ROUTE101                359 // MUS_DOORO1
+#define MUS_ROUTE1                  359 // MUS_DOORO1
 #define MUS_ROUTE110                360 // MUS_DOORO_X1
 #define MUS_ROUTE120                361 // MUS_DOORO_X3
 #define MUS_PETALBURG               362 // MUS_MACHI_S2
@@ -540,6 +540,7 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+#define MUS_CLARINETSAXPERCTEST     610
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

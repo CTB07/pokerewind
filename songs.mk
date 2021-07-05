@@ -132,8 +132,8 @@ $(MID_SUBDIR)/mus_route120.s: %.s: %.mid
 $(MID_SUBDIR)/mus_route122.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G021 -V080
 
-$(MID_SUBDIR)/mus_route101.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G011 -V080
+$(MID_SUBDIR)/mus_route1.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090
 
 $(MID_SUBDIR)/mus_dummy.s: %.s: %.mid
 	$(MID) $< $@ -E -R40
@@ -244,7 +244,7 @@ $(MID_SUBDIR)/mus_fortree.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G032 -V080
 
 $(MID_SUBDIR)/mus_oldale.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G019 -V080
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
 
 $(MID_SUBDIR)/mus_mt_pyre_exterior.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G080 -V080
@@ -298,7 +298,7 @@ $(MID_SUBDIR)/mus_lilycove.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G054 -V085
 
 $(MID_SUBDIR)/mus_littleroot.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G051 -V100
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_surf.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G017 -V080
@@ -607,7 +607,7 @@ $(MID_SUBDIR)/mus_littleroot_test.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G034 -V099
 
 $(MID_SUBDIR)/mus_credits.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G101 -V100
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_title.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G059 -V090
@@ -1262,3 +1262,6 @@ $(MID_SUBDIR)/se_m_leer.s: %.s: %.mid
 
 $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -v100 -P5
+
+$(MID_SUBDIR)/mus_clarinetsaxperctest.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -v100 
