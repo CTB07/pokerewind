@@ -71,7 +71,7 @@ voicegroup191:: @ 86B429C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_clarinet, 240, 0, 231, 127 @ Clarinet
+	voice_keysplit voicegroup010, KeySplitTable2  @ Clarinet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127  @ Flute
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
