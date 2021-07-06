@@ -4573,4 +4573,4 @@ DirectSoundWaveData_rlndgm_altosax::
 	
 	.align 2
 DirectSoundWaveData_dokidoki::
-	.incbin "sound/direct_sound_samples/dokidoki.bin"
+	.incbin "sound/direct_sound_samples/voice_dokidoki.bin"
