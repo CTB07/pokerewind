@@ -1,8 +1,5 @@
 	.align 2
 voicegroup010:: @ 8677138
-	voice_directsound 55, 0, DirectSoundWaveData_gmg_clarinet_55, 240, 0, 255, 127 @ 8677138
-	voice_directsound 64, 0, DirectSoundWaveData_gmg_clarinet_64, 240, 0, 255, 127 @ 8677141
-	voice_directsound 70, 0, DirectSoundWaveData_gmg_clarinet_70, 240, 0, 255, 127 @ 8677147
-	voice_directsound 75, 0, DirectSoundWaveData_gmg_clarinet_75, 240, 0, 255, 127 @ 867714C
-	voice_directsound 95, 0, DirectSoundWaveData_gmg_clarinet_95, 240, 0, 255, 127 @ 8677160
-	
+	voice_directsound 48, 0, DirectSoundWaveData_clarinet_C4, 255, 252, 0, 239  @ Clarinet Low
+	voice_directsound 60, 0, DirectSoundWaveData_clarinet_C5, 255, 252, 0, 239  @ Clarinet Mid
+	voice_directsound 72, 0, DirectSoundWaveData_clarinet_C6, 255, 252, 0, 239  @ Clarinet High
