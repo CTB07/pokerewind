@@ -71,7 +71,7 @@ voicegroup191:: @ 86B429C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_directsound 60, 0, DirectSoundWaveData_rlndgm_clarinet, 240, 0, 231, 127 @ Clarinet
+	voice_keysplit voicegroup010, KeySplitTable2  @ Clarinet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127  @ Flute
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
@@ -88,7 +88,7 @@ voicegroup191:: @ 86B429C
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4830, 0, 7, 15, 2  @ Unidentified Wave 1
+  voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4830, 0, 7, 15, 2  @ Unidentified Wave 1
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4840, 0, 7, 15, 2  @ Unidentified Wave Dup 1
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4850, 0, 7, 15, 2  @ Sawtooth Wave
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4860, 0, 7, 15, 2  @ Gen 1 Wave/Sawtooth Wave 2
