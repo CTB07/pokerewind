@@ -68,9 +68,15 @@ voicegroup191:: @ 86B429C
 	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
 	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax 
 	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+<<<<<<< HEAD
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @
+	voice_keysplit voicegroup011, KeySplitTable6 @ GMGSx Clarinet 
+=======
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
+>>>>>>> 0e76cb43388f697217a5e56364413f1436ffb9a6
 	voice_keysplit voicegroup010, KeySplitTable2  @ Clarinet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127  @ Flute
@@ -88,14 +94,24 @@ voicegroup191:: @ 86B429C
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
 	voice_noise_alt 60, 0, 0, 0, 2, 7, 0  @ Noise
+<<<<<<< HEAD
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4830, 0, 7, 15, 2  @ Unidentified Wave 1
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4850, 0, 7, 15, 2  @ Sawtooth Wave
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4840, 0, 7, 15, 2  @ Unidentified Wave Dup 1
+=======
   voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4830, 0, 7, 15, 2  @ Unidentified Wave 1
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4840, 0, 7, 15, 2  @ Unidentified Wave Dup 1
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4850, 0, 7, 15, 2  @ Sawtooth Wave
+>>>>>>> 0e76cb43388f697217a5e56364413f1436ffb9a6
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4860, 0, 7, 15, 2  @ Gen 1 Wave/Sawtooth Wave 2
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4870, 0, 7, 15, 2  @ Unidentified Wave 3
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4880, 0, 7, 15, 2  @ Unidentified Wave 4
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4890, 0, 7, 15, 2  @ Unidentified Wave 5
+<<<<<<< HEAD
+	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4920, 0, 7, 15, 2  @ Sine-y Wave 12
+=======
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48A0, 0, 7, 15, 2  @ Unidentified Wave 6
+>>>>>>> 0e76cb43388f697217a5e56364413f1436ffb9a6
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48B0, 0, 7, 15, 2  @ Sawtooth
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48C0, 0, 7, 15, 2  @ Saw-Square75 Wave 7
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B48D0, 0, 7, 15, 2  @ Saw-Square75 Wave Dup 7
