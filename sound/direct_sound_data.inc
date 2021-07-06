@@ -279,10 +279,6 @@ DirectSoundWaveData_sc88pro_square_wave::
 	.incbin "sound/direct_sound_samples/sc88pro_square_wave.bin"
 
 	.align 2
-DirectSoundWaveData_rlndgm_clarinet::
-	.incbin "sound/direct_sound_samples/rlndgm_clarinet.bin"
-
-	.align 2
 DirectSoundWaveData_bicycle_bell::
 	.incbin "sound/direct_sound_samples/bicycle_bell.bin"
 
@@ -4498,7 +4494,6 @@ DirectSoundWaveData_88F1D94::
 DirectSoundWaveData_88F2B08::
 	.incbin "sound/direct_sound_samples/88F2B08.bin"
 
-	.align 2
 DirectSoundWaveData_88F2F84::
 	.incbin "sound/direct_sound_samples/88F2F84.bin"
 
@@ -4553,3 +4548,15 @@ DirectSoundWaveData_rlndgm_altosax::
 	.align 2
 DirectSoundWaveData_dokidoki::
 	.incbin "sound/direct_sound_samples/voice_dokidoki.bin"
+	
+	.align 2
+DirectSoundWaveData_clarinet_C4::
+	.incbin "sound/direct_sound_samples/clarinet_C4.bin"
+	
+		.align 2
+DirectSoundWaveData_clarinet_C5::
+	.incbin "sound/direct_sound_samples/clarinet_C5.bin"
+		.align 2
+	
+DirectSoundWaveData_clarinet_C6::
+	.incbin "sound/direct_sound_samples/clarinet_C6.bin"
