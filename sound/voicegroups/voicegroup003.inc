@@ -36,7 +36,7 @@ voicegroup003:: @ 86763D0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_dokidoki, 255, 0, 255, 188  @ Dokidoki 
-	voice_directsound 62, 64, DirectSoundWaveData_sc88pro_rnd_kick, 255, 0, 255, 0  @ Kick Drum
+	voice_directsound_no_resample 64, 64, DirectSoundWaveData_drum_and_percussion_kick, 255, 0, 255, 0   @ Kick Drum
 	voice_directsound_no_resample 64, 64, DirectSoundWaveData_sd90_solo_snare, 255, 180, 175, 228  @ Unused FRLG Snare
 	voice_directsound_no_resample 64, 64, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 0, 255, 242  @ Acoustic Snare
 	voice_directsound_no_resample 64, 54, DirectSoundWaveData_sc88pro_tr909_hand_clap, 255, 255, 255, 127  @ Clap
@@ -44,20 +44,20 @@ voicegroup003:: @ 86763D0
 	voice_directsound 64, 24, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ Low Tom
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ Close Hi Hat
 	voice_directsound_no_resample 64, 94, DirectSoundWaveData_unused_heart_of_asia_indian_drum, 255, 0, 255, 0  @ 8676424
-	voice_directsound_no_resample 64, 34, DirectSoundWaveData_sc88pro_mute_high_conga, 255, 0, 255, 0  @ 8676430
+	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_rnd_snare, 255, 0, 255, 242  @ Round Snare
 	voice_directsound_no_resample 64, 34, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0  @ 867643C
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_open_hihat, 255, 242, 141, 0  @ Open Hi Hat
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676454
 	voice_directsound 64, 24, DirectSoundWaveData_unused_sc55_tom, 255, 0, 255, 226  @ Unused High Tom
-	voice_directsound_no_resample 33, 89, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ Cymbal Crash 1
+	voice_directsound 63, 104, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ Cymbal Crash 1
 	voice_directsound_no_resample 64, 24, DirectSoundWaveData_unused_sc55_tom, 255, 0, 255, 226 @ Unused High Tom
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676484
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676490
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867649C
 	voice_directsound_no_resample 66, 34, DirectSoundWaveData_sc88pro_tambourine, 255, 127, 77, 204  @ Tambourine
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764B4
+	voice_directsound_no_resample 64, 14, DirectSoundWaveData_trinity_cymbal_crash, 255, 231, 0, 188  @ Trinity Crash
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764C0
-	voice_directsound_no_resample 33, 89, DirectSoundWaveData_trinity_cymbal_crash, 255, 231, 0, 188  @ Cymbal Crash 2
+	voice_directsound_no_resample 64, 24, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ Cymbal Crash 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764D8
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764E4
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764F0
