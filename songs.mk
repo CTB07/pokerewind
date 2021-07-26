@@ -1265,3 +1265,6 @@ $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_clarinetsaxperctest.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -v100 
+
+$(MID_SUBDIR)/mus_dokidoki.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -v100 
