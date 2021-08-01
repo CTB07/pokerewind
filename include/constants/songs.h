@@ -542,6 +542,7 @@
 #define PH_NURSE_SOLO               609
 #define MUS_CLARINETSAXPERCTEST     610
 #define MUS_DOKIDOKI                611
+#define MUS_VIDIOH_POKE_MART        612
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

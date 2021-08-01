@@ -22,11 +22,6 @@
       "direction": "down",
       "offset": 0,
       "map": "MAP_OLDALE_TOWN"
-    },
-    {
-      "direction": "up",
-      "offset": 0,
-      "map": "MAP_REWIND_TOWN1"
     }
   ],
   "object_events": [

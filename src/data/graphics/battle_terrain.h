@@ -96,5 +96,11 @@ const u32 gBattleTerrainTilemap_Beach[] = INCBIN_U32("graphics/battle_terrain/be
 const u32 gBattleTerrainAnimTiles_Beach[] = INCBIN_U32("graphics/battle_terrain/beach/anim_tiles.4bpp.lz");
 const u32 gBattleTerrainAnimTilemap_Beach[] = INCBIN_U32("graphics/battle_terrain/beach/anim_map.bin.lz");
 
+const u32 gBattleTerrainTiles_BeachRoad[] = INCBIN_U32("graphics/battle_terrain/beach_road/tiles.4bpp.lz");
+const u32 gBattleTerrainPalette_BeachRoad[] = INCBIN_U32("graphics/battle_terrain/beach_road/palette.gbapal.lz");
+const u32 gBattleTerrainTilemap_BeachRoad[] = INCBIN_U32("graphics/battle_terrain/beach_road/map.bin.lz");
+const u32 gBattleTerrainAnimTiles_BeachRoad[] = INCBIN_U32("graphics/battle_terrain/beach_road/anim_tiles.4bpp.lz");
+const u32 gBattleTerrainAnimTilemap_BeachRoad[] = INCBIN_U32("graphics/battle_terrain/beach_road/anim_map.bin.lz");
+
 const u32 gBattleTerrainAnimTiles_Rayquaza[] = INCBIN_U32("graphics/battle_terrain/sky/anim_tiles.4bpp.lz");
 const u32 gBattleTerrainAnimTilemap_Rayquaza[] = INCBIN_U32("graphics/battle_terrain/sky/anim_map.bin.lz");

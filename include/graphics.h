@@ -7524,6 +7524,11 @@ extern const u32 gBattleTerrainTilemap_Beach[];
 extern const u32 gBattleTerrainAnimTiles_Beach[];
 extern const u32 gBattleTerrainAnimTilemap_Beach[];
 extern const u32 gBattleTerrainPalette_Beach[];
+extern const u32 gBattleTerrainTiles_BeachRoad[];
+extern const u32 gBattleTerrainTilemap_BeachRoad[];
+extern const u32 gBattleTerrainAnimTiles_BeachRoad[];
+extern const u32 gBattleTerrainAnimTilemap_BeachRoad[];
+extern const u32 gBattleTerrainPalette_BeachRoad[];
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];

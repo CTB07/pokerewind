@@ -34,7 +34,8 @@
     "gMapGroup30",
     "gMapGroup31",
     "gMapGroup32",
-    "gMapGroup33"
+    "gMapGroup33",
+    "gMapGroup34"
   ],
   "gMapGroup0": [
     "PetalburgCity",
@@ -95,7 +96,8 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "RewindRoute1",
-    "RewindTown1"
+    "RewindTown1",
+    "HomegeTown"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -623,5 +625,8 @@
   ],
   "gMapGroup33": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup34": [
+    "NewMap1"
   ]
 }

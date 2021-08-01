@@ -1034,7 +1034,8 @@ static const u16 sNaturePowerMoves[] =
     [BATTLE_TERRAIN_BUILDING]   = MOVE_TRI_ATTACK,
     [BATTLE_TERRAIN_PLAIN]      = MOVE_TRI_ATTACK,
     [BATTLE_TERRAIN_LAB]        = MOVE_THUNDERBOLT,
-    [BATTLE_TERRAIN_BEACH]      = MOVE_EARTH_POWER
+    [BATTLE_TERRAIN_BEACH]      = MOVE_EARTH_POWER,
+    [BATTLE_TERRAIN_BEACH_ROAD] = MOVE_EARTH_POWER
 };
 
 static const u16 sPickupItems[] =
@@ -1093,6 +1094,7 @@ static const u8 sTerrainToType[] =
     [BATTLE_TERRAIN_PLAIN]      = TYPE_NORMAL,
     [BATTLE_TERRAIN_LAB]        = TYPE_NORMAL,
     [BATTLE_TERRAIN_BEACH]      = TYPE_GROUND,
+    [BATTLE_TERRAIN_BEACH_ROAD]      = TYPE_GROUND,
 };
 
 // - ITEM_ULTRA_BALL skips Master Ball and ITEM_NONE
@@ -11803,6 +11805,8 @@ static void Cmd_getsecretpowereffect(void)
         gBattleScripting.moveEffect = MOVE_EFFECT_SLEEP;
         break;
     case BATTLE_TERRAIN_SAND:
+    case BATTLE_TERRAIN_BEACH:
+    case BATTLE_TERRAIN_BEACH_ROAD:
         gBattleScripting.moveEffect = MOVE_EFFECT_ACC_MINUS_1;
         break;
     case BATTLE_TERRAIN_UNDERWATER:
@@ -12373,7 +12377,7 @@ static void Cmd_handleballthrow(void)
         else
             catchRate = catchRate + ballAddition;
 	if (gBattleMons[gBattlerAttacker].ability == ABILITY_BALL_FETCH)
-	    odds = ((catchRate) * (ballMultiplier + 20) / 10)
+	    odds = ((catchRate) * (ballMultiplier * 20) / 10)
 	    * (gBattleMons[gBattlerTarget].maxHP * 3 - gBattleMons[gBattlerTarget].hp * 2)
             / (3 * gBattleMons[gBattlerTarget].maxHP);
 	else

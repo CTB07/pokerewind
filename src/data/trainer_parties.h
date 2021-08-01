@@ -12434,3 +12434,19 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+//Vidioh
+
+/*Rewind Route 1
+static const struct TrainerMon sParty_Ryan[] = {
+    {
+    .iv = 0,
+    .lvl = 2,
+    .species = SPECIES_BULBITE,
+    },
+    {
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_ACTURUNK,
+    }
+};*/

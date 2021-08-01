@@ -11,7 +11,7 @@ const struct Trainer gTrainers[] = {
         .partySize = 0,
         .party = {.TrainerMon = NULL},
     },
-
+    //Hoenn
     [TRAINER_SAWYER_1] =
     {
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -11113,4 +11113,21 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_MayLinkPlaceholder),
         .party = {.TrainerMon = sParty_MayLinkPlaceholder},
     },
+
+    //Vidioh
+    
+    /*Rewind Route 1
+    [TRAINER_RYAN] =
+    {
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("RYAN"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Ryan),
+        .party = {.TrainerMon = sParty_Ryan},
+    },*/
+
 };

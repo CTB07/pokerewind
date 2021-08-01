@@ -3,10 +3,10 @@
   "name": "RewindRoute1",
   "layout": "LAYOUT_REWIND_ROUTE1",
   "music": "MUS_ROUTE1",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_REWIND_ROUTE1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
-      "offset": -2,
-      "map": "MAP_REWIND_TOWN1"
+      "direction": "left",
+      "offset": 28,
+      "map": "MAP_HOMEGE_TOWN"
     }
   ],
   "object_events": [
@@ -29,6 +29,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 42,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RewindRoute1_EventScript_RouteSignHomege"
+    }
   ]
 }

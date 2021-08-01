@@ -360,7 +360,8 @@
 #define BATTLE_TERRAIN_BUILDING     8
 #define BATTLE_TERRAIN_PLAIN        9
 #define BATTLE_TERRAIN_LAB          10
-#define BATTLE_TERRAIN_BEACH         11
+#define BATTLE_TERRAIN_BEACH        11
+#define BATTLE_TERRAIN_BEACH_ROAD   12
 
 // Move targets
 #define MOVE_TARGET_SELECTED            0x0
