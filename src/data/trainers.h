@@ -12,7 +12,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = NULL},
     },
     //Hoenn
-    [TRAINER_SAWYER_1] =
+    /*[TRAINER_SAWYER_1] =
     {
         .trainerClass = TRAINER_CLASS_HIKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -23,7 +23,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Sawyer1),
         .party = {.TrainerMon = sParty_Sawyer1},
-    },
+    },*/
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_1] =
     {
@@ -11116,8 +11116,8 @@ const struct Trainer gTrainers[] = {
 
     //Vidioh
     
-    /*Rewind Route 1
-    [TRAINER_RYAN] =
+    //Rewind Route 1
+    [TRAINER_REWIND_RYAN] =
     {
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -11126,8 +11126,34 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Ryan),
-        .party = {.TrainerMon = sParty_Ryan},
-    },*/
+        .partySize = ARRAY_COUNT(sParty_RewindRyan),
+        .party = {.TrainerMon = sParty_RewindRyan},
+    },
+
+    [TRAINER_REWIND_BILLY] =
+    {
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("BILLY"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_RewindBilly),
+        .party = {.TrainerMon = sParty_RewindBilly},
+    },
+
+    [TRAINER_REWIND_SHIZUKU] =
+    {
+        .trainerClass = TRAINER_CLASS_LASS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("SHIZUKU"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_RewindShizuku),
+        .party = {.TrainerMon = sParty_RewindShizuku},
+    },
 
 };

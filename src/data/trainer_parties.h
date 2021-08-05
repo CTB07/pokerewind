@@ -12437,8 +12437,8 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
 
 //Vidioh
 
-/*Rewind Route 1
-static const struct TrainerMon sParty_Ryan[] = {
+//Rewind Route 1
+static const struct TrainerMon sParty_RewindRyan[] = {
     {
     .iv = 0,
     .lvl = 2,
@@ -12449,4 +12449,25 @@ static const struct TrainerMon sParty_Ryan[] = {
     .lvl = 3,
     .species = SPECIES_ACTURUNK,
     }
-};*/
+};
+
+static const struct TrainerMon sParty_RewindBilly[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_BURROBIT,
+    }
+};
+
+static const struct TrainerMon sParty_RewindShizuku[] = {
+    {
+    .iv = 0,
+    .lvl = 3,
+    .species = SPECIES_ACTURUNK,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_CUCKOOB,
+    }
+};

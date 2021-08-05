@@ -4442,14 +4442,24 @@
       "blockdata_filepath": "data/layouts/HomegeTown/map.bin"
     },
     {
-      "id": "LAYOUT_NEW_MAP1",
-      "name": "NewMap1_Layout",
+      "id": "LAYOUT_HOMEGE_TOWN_PLAYER_HOUSE_1F",
+      "name": "HomegeTown_PlayerHouse_1F_Layout",
       "width": 11,
       "height": 9,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/NewMap1/border.bin",
-      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HomegeTown_PlayerHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/HomegeTown_PlayerHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMEGE_TOWN_PLAYER_HOUSE_2F",
+      "name": "HomegeTown_PlayerHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HomegeTown_PlayerHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/HomegeTown_PlayerHouse_2F/map.bin"
     }
   ]
 }

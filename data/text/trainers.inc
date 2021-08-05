@@ -4779,3 +4779,43 @@ Route134_Text_HudsonPostBattle: @ 82A4AD8
 	.string "Our boat drifted out to sea.\p"
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
+
+RewindRoute1_Text_RyanIntro: 
+	.string "You know the rules - eye contact\n"
+	.string "means we have to fight!$"
+
+RewindRoute1_Text_RyanDefeated: 
+	.string "What? We didn't make eye contact\n"
+	.string "until I called you out?$"
+
+RewindRoute1_Text_RyanPostBattle: 
+	.string "Well, yeah - do you have any idea\n"
+	.string "how hard it is to make eye contact\l"
+	.string "with someone who's running away?$"
+
+RewindRoute1_Text_BillyIntro: 
+	.string "Have you ever had a dreams?$"
+
+RewindRoute1_Text_BillyDefeated: 
+	.string "That-\n"
+	.string "s-$"
+
+RewindRoute1_Text_BillyPostBattle: 
+	.string "That you, um, you had, you d-, you\n"
+	.string "w-, you could, you'll do, you w-\l"
+	.string "you wants, you, you could do so,\l"
+	.string "you- you'll do, you could- you, you\l"
+	.string "want, you want them to do you so\l"
+	.string "much you could do anything?$"
+
+RewindRoute1_Text_ShizukuIntro: 
+	.string "All I listen to is lofi hip hop radio\n"
+	.string "on YouTube!$"
+
+RewindRoute1_Text_ShizukuDefeated: 
+	.string "Well...\n"
+	.string "that wasn't relaxing at all.$"
+
+RewindRoute1_Text_ShizukuPostBattle: 
+	.string "I guess this music is only for studying,\n"
+	.string "not battling...$"
