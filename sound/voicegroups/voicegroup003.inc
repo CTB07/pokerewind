@@ -44,7 +44,7 @@ voicegroup003:: @ 86763D0
 	voice_directsound 64, 24, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ Low Tom
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ Close Hi Hat
 	voice_directsound_no_resample 64, 94, DirectSoundWaveData_unused_heart_of_asia_indian_drum, 255, 0, 255, 0  @ 8676424
-	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_rnd_snare, 255, 0, 255, 242  @ Round Snare
+	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ Close Hi Hat
 	voice_directsound_no_resample 64, 34, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0  @ 867643C
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_open_hihat, 255, 242, 141, 0  @ Open Hi Hat
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676454
@@ -63,8 +63,8 @@ voicegroup003:: @ 86763D0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764F0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764FC
 	voice_directsound_no_resample 64, 39, DirectSoundWaveData_sd90_open_triangle, 255, 242, 103, 188  @ 8676508
-	voice_directsound_no_resample 64, 79, DirectSoundWaveData_sd90_open_triangle, 255, 242, 103, 188  @ 8676514
-	voice_directsound_no_resample 64, 39, DirectSoundWaveData_sd90_open_triangle, 255, 165, 103, 188  @ 8676520
+	voice_directsound_no_resample 64, 79, DirectSoundWaveData_sc88pro_mute_high_conga, 255, 242, 103, 188  @ Mute High Conga
+	voice_directsound_no_resample 64, 39, DirectSoundWaveData_sc88pro_open_low_conga, 255, 165, 103, 188  @ Open Low Conga
 	voice_directsound_no_resample 64, 24, DirectSoundWaveData_sc88pro_jingle_bell, 255, 0, 255, 0  @ 867652C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676538
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676544
@@ -83,7 +83,7 @@ voicegroup003:: @ 86763D0
 	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_rnd_snare, 255, 0, 255, 242  @ 86765E0
 	voice_directsound 72, 44, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 86765EC
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86765F8
-	voice_directsound 76, 84, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 8676604
+	voice_directsound_no_resample 64, 24, DirectSoundWaveData_sc88pro_jingle_bell, 255, 0, 255, 0  @ Jingle Bells
 	voice_directsound 80, 94, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 8676610
 	voice_directsound_no_resample 33, 89, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ 867661C
 	voice_directsound 64, 104, DirectSoundWaveData_sc88pro_taiko, 255, 0, 255, 235  @ 8676628
