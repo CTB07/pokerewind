@@ -26,7 +26,7 @@ voicegroup191:: @ 86B429C
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion, 255, 0, 255, 165  @ Accordion
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 249, 25, 149  @ Nylon String Guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 80, 249, 25, 149  @ Softer Nylon String Guitar(?)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 128, 195, 72, 127  @ Overdrive Guitar
