@@ -130,7 +130,6 @@ HomegeTown_EventScript_Paropeat::
 	showmonpic SPECIES_PAROPEAT, 10, 3
 	playmoncry SPECIES_PAROPEAT, 0
 	msgbox HomegeTown_Text_ParopeatIntro, MSGBOX_DEFAULT
-	closemessage
 	msgbox HomegeTown_Text_RescueParopeatYesNo, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, YES
@@ -146,7 +145,6 @@ HomegeTown_EventScript_Primatio::
 	showmonpic SPECIES_PRIMATIO, 10, 3
 	playmoncry SPECIES_PRIMATIO, 0
 	msgbox HomegeTown_Text_PrimatioIntro, MSGBOX_DEFAULT
-	closemessage
 	msgbox HomegeTown_Text_RescuePrimatioYesNo, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, YES
@@ -162,7 +160,6 @@ HomegeTown_EventScript_Substee::
 	playmoncry SPECIES_SUBSTEE, 0
 	showmonpic SPECIES_SUBSTEE, 10, 3
 	msgbox HomegeTown_Text_SubsteeIntro, MSGBOX_DEFAULT
-	closemessage
 	msgbox HomegeTown_Text_RescueSubsteeYesNo, MSGBOX_YESNO
 	waitmoncry
 	compare VAR_RESULT, YES
