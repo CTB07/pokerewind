@@ -113,6 +113,8 @@ EventScript_ResetAllBerries:: @ 827149D
 	return
 
 EventScript_ResetAllMapFlags:: @ 82715DE
+	setflag FLAG_HIDE_RIVAL_AND_PROFESSOR
+	setflag FLAG_HIDE_STARTERS
 	setflag FLAG_HIDE_CONTEST_POKE_BALL
 	setflag FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE
 	setflag FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE
@@ -274,3 +276,4 @@ EventScript_ResetAllMapFlags:: @ 82715DE
 	setflag FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT
 	call EventScript_ResetAllBerries
 	end
+

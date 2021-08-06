@@ -2,7 +2,7 @@
   "id": "MAP_HOMEGE_TOWN",
   "name": "HomegeTown",
   "layout": "LAYOUT_HOMEGE_TOWN",
-  "music": "MUS_DOKIDOKI",
+  "music": "MUS_LITTLEROOT_TEST",
   "region_map_section": "MAPSEC_HOMEGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -48,8 +48,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "HomegeTown_EventScript_Paropeat",
+      "flag": "FLAG_HIDE_STARTERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TORCHIC_DOLL",
@@ -61,8 +61,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "HomegeTown_EventScript_Primatio",
+      "flag": "FLAG_HIDE_STARTERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MUDKIP_DOLL",
@@ -74,8 +74,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "HomegeTown_EventScript_Substee",
+      "flag": "FLAG_HIDE_STARTERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
@@ -89,6 +89,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HomegeTown_EventScript_FatMan",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "x": 29,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_RIVAL_AND_PROFESSOR"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 29,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_RIVAL_AND_PROFESSOR"
     }
   ],
   "warp_events": [
@@ -143,8 +169,8 @@
       "y": 7,
       "elevation": 0,
       "var": "VAR_HOMEGE_INTRO_STATE",
-      "var_value": "3",
-      "script": "NULL"
+      "var_value": "2",
+      "script": "HomegeTown_EventScript_LabStarterTrigger"
     }
   ],
   "bg_events": [
@@ -158,3 +184,4 @@
     }
   ]
 }
+

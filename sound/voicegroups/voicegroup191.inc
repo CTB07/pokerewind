@@ -113,3 +113,4 @@ voicegroup191:: @ 86B429C
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B4990, 0, 7, 15, 2  @ Noisy Wave 17
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B49A0, 0, 7, 15, 2  @ Weird Wave 18
 	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_86B49B0, 0, 7, 15, 2  @ Weird Wave 19
+	
