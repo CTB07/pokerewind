@@ -276,4 +276,3 @@ EventScript_ResetAllMapFlags:: @ 82715DE
 	setflag FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT
 	call EventScript_ResetAllBerries
 	end
-
