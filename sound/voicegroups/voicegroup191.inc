@@ -64,10 +64,10 @@ voicegroup191:: @ 86B429C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
-	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
-	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
-	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax 
-	voice_directsound 48, 0, DirectSoundWaveData_rlndgm_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 48, 0, DirectSoundWaveData_dppt_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 48, 0, DirectSoundWaveData_dppt_altosax, 255, 110, 231, 127  @ Alto Sax
+	voice_directsound 48, 0, DirectSoundWaveData_dppt_altosax, 255, 110, 231, 127  @ Alto Sax 
+	voice_directsound 48, 0, DirectSoundWaveData_dppt_altosax, 255, 110, 231, 127  @ Alto Sax
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @
 	voice_keysplit voicegroup011, KeySplitTable6 @ GMGSx Clarinet 
