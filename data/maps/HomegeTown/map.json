@@ -91,7 +91,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "graphics_id": "OBJ_EVENT_GFX_RIVAL",
       "x": 29,
       "y": 6,
       "elevation": 3,
@@ -104,7 +104,7 @@
       "flag": "FLAG_HIDE_RIVAL_AND_PROFESSOR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "graphics_id": "OBJ_EVENT_GFX_PROFESSOR_SEQUOIA",
       "x": 29,
       "y": 6,
       "elevation": 3,
@@ -171,6 +171,15 @@
       "var": "VAR_HOMEGE_INTRO_STATE",
       "var_value": "2",
       "script": "HomegeTown_EventScript_LabStarterTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_HOMEGE_INTRO_STATE",
+      "var_value": "3",
+      "script": "HomegeTown_EventScript_NeedToHelpFindPokemonTrigger"
     }
   ],
   "bg_events": [

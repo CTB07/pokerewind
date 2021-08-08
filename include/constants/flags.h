@@ -1690,8 +1690,8 @@
 #define FLAG_HIDE_RIVAL_AND_PROFESSOR    0x25 // Unused Flag
 #define FLAG_HIDE_STARTERS    0x26 // Unused Flag
 #define FLAG_FORCE_SHINIES    0x27 // Unused Flag
-/*#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_RECEIVE_STARTERS    0x28 // Unused Flag
+/*#define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
