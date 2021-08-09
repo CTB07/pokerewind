@@ -49,6 +49,19 @@ gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "I get it now!\p"
 	.string "$"
 
+gText_Birch_RemindRivalName:: 
+	.string "And of course, this character!\p"
+	.string "Can you remind me what his name is\n"
+	.string "again?$"
+
+gText_Birch_SoItsRival:: 
+	.string "So his name is {RIVAL}?$"
+
+gText_Birch_HeIsRival:: 
+	.string "Ah, okay!\p"
+	.string "He is {RIVAL}, your rival!\p"
+	.string "$"
+
 gText_Birch_AreYouReady:: @ 82C8C7A
 	.string "All right, are you ready?\p"
 	.string "Your very own adventure is about\n"

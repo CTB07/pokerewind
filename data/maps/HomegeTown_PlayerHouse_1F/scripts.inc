@@ -140,8 +140,8 @@ HomegeTown_PlayerHouse_1F_Text_MomIntro1:
 
 HomegeTown_PlayerHouse_1F_Text_MomIntro2:
 	.string "You must have been up late last night!\n"
-	.string "Your friend, TIANA, came by looking for\l"
-	.string "you, but I told her you were still\l"
+	.string "Your friend, {RIVAL}, came by looking for\l"
+	.string "you, but I told him you were still\l"
 	.string "sleeping.$"
 
 HomegeTown_PlayerHouse_1F_Text_MomGivesRunningShoes:

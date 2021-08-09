@@ -95,6 +95,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_RS_MAY] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_ANNOYING_ORANGE] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LEADER_CHARLIE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_RIVAL] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -196,6 +197,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(RS_MAY, gTrainerFrontPic_RubySapphireMay, 0x800),
     TRAINER_SPRITE(ANNOYING_ORANGE, gTrainerFrontPic_AnnoyingOrange, 0x800),
     TRAINER_SPRITE(LEADER_CHARLIE, gTrainerFrontPic_LeaderCharlie, 0x800),
+    TRAINER_SPRITE(RIVAL, gTrainerFrontPic_Rival, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -297,4 +299,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(RS_MAY, gTrainerPalette_RubySapphireMay),
     TRAINER_PAL(ANNOYING_ORANGE, gTrainerPalette_AnnoyingOrange),
     TRAINER_PAL(LEADER_CHARLIE, gTrainerPalette_LeaderCharlie),
+    TRAINER_PAL(RIVAL, gTrainerPalette_Rival),
 };
