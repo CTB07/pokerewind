@@ -110,6 +110,7 @@ HomegeTown_ProfessorSequoiasLab_EventScript_GiveStarterEvent::
 	special SetUnlockedPokedexFlags
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
+	closemessage
 	applymovement LOCALID_PROF, HomegeTown_ProfessorSequoiasLab_Movement_ProfessorMovesTowardsRival
 	waitmovement 0
 	msgbox HomegeTown_ProfessorSequoiasLab_Text_ProfGivesRivalPokedex, MSGBOX_DEFAULT
@@ -120,6 +121,8 @@ HomegeTown_ProfessorSequoiasLab_EventScript_GiveStarterEvent::
 	applymovement LOCALID_PROF, HomegeTown_ProfessorSequoiasLab_Movement_ProfessorFaceLeftFaceDown
 	waitmovement 0
 	msgbox HomegeTown_ProfessorSequoiasLab_Text_ProfSendsYouOff, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_earlyrival TRAINER_BRENDAN_ROUTE_103_TORCHIC, HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated, HomegeTown_ProfessorSequoiasLab_Text_RivalVictory
 	releaseall
 	end
 
@@ -339,7 +342,7 @@ HomegeTown_ProfessorSequoiasLab_Movement_ProfessorMovesTowardsRival:
 
 HomegeTown_ProfessorSequoiasLab_Text_ProfGivesRivalPokedex:
 	.string "PROF. SEQUOIA: Here's your PokéDex,\n"
-	.string "{RIVAL}."
+	.string "{RIVAL}.$"
 
 HomegeTown_ProfessorSequoiasLab_Movement_ProfessorBackToPlayer:
 	walk_left
@@ -359,6 +362,8 @@ HomegeTown_ProfessorSequoiasLab_Text_ProfExplainsPokedex:
 HomegeTown_ProfessorSequoiasLab_Movement_ProfessorFaceLeftFaceDown:
 	face_left
 	delay_16
+	delay_16
+	delay_16
 	face_down
 	step_end
 
@@ -367,5 +372,13 @@ HomegeTown_ProfessorSequoiasLab_Text_ProfSendsYouOff:
 	.string "everything.\p"
 	.string "Be cautious on your journey, and\n"
 	.string "occasionally come back to my lab so\l"
-	.string "that I can check your PokéDex progress.\p"
-	.string "Take care, you two!"
+	.string "that I can check your PokéDex.\l"
+	.string "progress.\p"
+	.string "Take care, you two!$"
+
+HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated:
+	.string "Damn you, {PLAYER}!$"
+
+HomegeTown_ProfessorSequoiasLab_Text_RivalVictory:
+	.string "Ha ha ha!\n"
+	.string "That's all you got?$"
