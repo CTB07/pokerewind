@@ -110,6 +110,16 @@ HomegeTown_ProfessorSequoiasLab_EventScript_GiveStarterEvent::
 	special SetUnlockedPokedexFlags
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
+	applymovement LOCALID_PROF, HomegeTown_ProfessorSequoiasLab_Movement_ProfessorMovesTowardsRival
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_ProfGivesRivalPokedex, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PROF, HomegeTown_ProfessorSequoiasLab_Movement_ProfessorBackToPlayer
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_ProfExplainsPokedex, MSGBOX_DEFAULT
+	applymovement LOCALID_PROF, HomegeTown_ProfessorSequoiasLab_Movement_ProfessorFaceLeftFaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_ProfSendsYouOff, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -315,7 +325,47 @@ HomegeTown_ProfessorSequoiasLab_Text_ProfGivesPokedex:
 	.string "by now, you are both officially Pokémon\l"
 	.string "trainers.\p"
 	.string "What is a Pokémon trainer without a\n"
-	.string "PokéDex?$"
+	.string "PokéDex?\p"
+	.string "It's absolutely necessary for all\n"
+	.string "trainers to own one.$"
 
 HomegeTown_ProfessorSequoiasLab_Text_ReceivedPokedex:
 	.string "{PLAYER} received the POKéDEX!$"
+
+HomegeTown_ProfessorSequoiasLab_Movement_ProfessorMovesTowardsRival:
+	walk_right
+	face_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Text_ProfGivesRivalPokedex:
+	.string "PROF. SEQUOIA: Here's your PokéDex,\n"
+	.string "{RIVAL}."
+
+HomegeTown_ProfessorSequoiasLab_Movement_ProfessorBackToPlayer:
+	walk_left
+	face_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Text_ProfExplainsPokedex:
+	.string "PROF. SEQUOIA: This special device allows\n"
+	.string "you to identify and collect data for\l"
+	.string "various Pokémon species.\p"
+	.string "The two of you will help me discover\n"
+	.string "more Pokémon species throughout the\l"
+	.string "Vidioh region.\p"
+	.string "You would be surprised how many species\n"
+	.string "are still out there to discover!$"
+
+HomegeTown_ProfessorSequoiasLab_Movement_ProfessorFaceLeftFaceDown:
+	face_left
+	delay_16
+	face_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Text_ProfSendsYouOff:
+	.string "PROF. SEQUOIA: Well, that should be\n"
+	.string "everything.\p"
+	.string "Be cautious on your journey, and\n"
+	.string "occasionally come back to my lab so\l"
+	.string "that I can check your PokéDex progress.\p"
+	.string "Take care, you two!"

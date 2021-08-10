@@ -669,7 +669,7 @@ u8 BattleSetup_GetTerrainId(void)
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
         {
-            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB)) //if (MetatileBehavior_IsLab(tileBehavior))
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(HOMEGE_TOWN_PROFESSOR_SEQUOIAS_LAB) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(HOMEGE_TOWN_PROFESSOR_SEQUOIAS_LAB)) //if (MetatileBehavior_IsLab(tileBehavior))
             {
                 return BATTLE_TERRAIN_LAB;
             }

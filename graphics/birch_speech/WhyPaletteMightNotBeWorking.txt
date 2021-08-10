@@ -1,0 +1,2 @@
+New palette might not work since it thinks first color is supposed to be
+transparent even though it's not.

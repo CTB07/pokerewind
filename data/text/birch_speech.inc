@@ -50,7 +50,7 @@ gText_Birch_YourePlayer:: @ 82C8C2A
 	.string "$"
 
 gText_Birch_RemindRivalName:: 
-	.string "And of course, this character!\p"
+	.string "And, of course, this character!\p"
 	.string "Can you remind me what his name is\n"
 	.string "again?$"
 
