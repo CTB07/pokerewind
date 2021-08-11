@@ -12471,3 +12471,27 @@ static const struct TrainerMon sParty_RewindShizuku[] = {
     .species = SPECIES_CUCKOOB,
     }
 };
+
+static const struct TrainerMon sParty_RivalLabParopeat[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PAROPEAT,
+    }
+};
+
+static const struct TrainerMon sParty_RivalLabPrimatio[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PRIMATIO,
+    }
+};
+
+static const struct TrainerMon sParty_RivalLabSubstee[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SUBSTEE,
+    }
+};

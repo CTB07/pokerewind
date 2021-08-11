@@ -122,7 +122,6 @@ HomegeTown_ProfessorSequoiasLab_EventScript_GiveStarterEvent::
 	waitmovement 0
 	msgbox HomegeTown_ProfessorSequoiasLab_Text_ProfSendsYouOff, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_earlyrival TRAINER_BRENDAN_ROUTE_103_TORCHIC, HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated, HomegeTown_ProfessorSequoiasLab_Text_RivalVictory
 	releaseall
 	end
 
@@ -372,9 +371,203 @@ HomegeTown_ProfessorSequoiasLab_Text_ProfSendsYouOff:
 	.string "everything.\p"
 	.string "Be cautious on your journey, and\n"
 	.string "occasionally come back to my lab so\l"
-	.string "that I can check your PokéDex.\l"
+	.string "that I can check your PokéDex\l"
 	.string "progress.\p"
 	.string "Take care, you two!$"
+
+HomegeTown_ProfessorSequoiasLab_EventScript_Trigger1::
+	setvar VAR_SEQUOIA_LAB_STATE 1
+	setvar VAR_GENERAL 0
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalHey, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachOne
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing, MSGBOX_DEFAULT
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_STARTER_MON 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_Trigger2::
+	setvar VAR_SEQUOIA_LAB_STATE 1
+	setvar VAR_GENERAL 1
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalHey, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachTwo
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing, MSGBOX_DEFAULT
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_STARTER_MON 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_Trigger3::
+	setvar VAR_SEQUOIA_LAB_STATE 1
+	setvar VAR_GENERAL 2
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalHey, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachThree
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing, MSGBOX_DEFAULT
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_STARTER_MON 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_Trigger4::
+	setvar VAR_SEQUOIA_LAB_STATE 1
+	setvar VAR_GENERAL 3
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalHey, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachFour
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing, MSGBOX_DEFAULT
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_STARTER_MON 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_Trigger5::
+	setvar VAR_SEQUOIA_LAB_STATE 1
+	setvar VAR_GENERAL 4
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalHey, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachFive
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing, MSGBOX_DEFAULT
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_STARTER_MON 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_Trigger6::
+	setvar VAR_SEQUOIA_LAB_STATE 1
+	setvar VAR_GENERAL 5
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_RIVAL, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalHey, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachSix
+	waitmovement 0
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing, MSGBOX_DEFAULT
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow, MSGBOX_DEFAULT
+	closemessage
+	compare VAR_STARTER_MON 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee
+	compare VAR_STARTER_MON 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasParopeat::
+	trainerbattle_earlyrival TRAINER_RIVAL_LAB_PAROPEAT, HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated, HomegeTown_ProfessorSequoiasLab_Text_RivalVictory
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitStart
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasPrimatio::
+	trainerbattle_earlyrival TRAINER_RIVAL_LAB_PRIMATIO, HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated, HomegeTown_ProfessorSequoiasLab_Text_RivalVictory
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitStart
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalHasSubstee::
+	trainerbattle_earlyrival TRAINER_RIVAL_LAB_SUBSTEE, HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated, HomegeTown_ProfessorSequoiasLab_Text_RivalVictory
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitStart
+	end
+
+HomegeTown_ProfessorSequoiasLab_Text_RivalHey:
+	.string "Hey!$"
+
+HomegeTown_ProfessorSequoiasLab_Text_RivalWhereYouGoing:
+	.string "{RIVAL}: Where do you think you're\n" 
+	.string "going?$"
+	
+HomegeTown_ProfessorSequoiasLab_Text_RivalBattleNow:
+	.string "We're battling, {PLAYER}.\p"
+	.string "Right here.\n"
+	.string "Right now.$"
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachOne:
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	face_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachTwo:
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachThree:
+	walk_left
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachFour:
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachFive:
+	walk_right
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalApproachSix:
+	walk_right
+	walk_down
+	walk_right
+	face_down
+	step_end
 
 HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated:
 	.string "Damn you, {PLAYER}!$"
@@ -382,3 +575,114 @@ HomegeTown_ProfessorSequoiasLab_Text_RivalDefeated:
 HomegeTown_ProfessorSequoiasLab_Text_RivalVictory:
 	.string "Ha ha ha!\n"
 	.string "That's all you got?$"
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitStart::
+	bufferspeciesname 1, VAR_0x8005
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalPostBattle, MSGBOX_DEFAULT
+	closemessage
+	playbgm MUS_RG_RIVAL_EXIT, 0
+	compare VAR_GENERAL 0
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitOne
+	compare VAR_GENERAL 1
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitTwoThree
+	compare VAR_GENERAL 2
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitTwoThree
+	compare VAR_GENERAL 3
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitFourFive
+	compare VAR_GENERAL 4
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitFourFive
+	compare VAR_GENERAL 5
+	goto_if_eq HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitSix
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitOne::
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalExitOne
+	waitmovement 0
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitEnd
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitTwoThree::
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalExitTwoThree
+	waitmovement 0
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitEnd
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitFourFive::
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalExitFourFive
+	waitmovement 0
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitEnd
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitSix::
+	applymovement LOCALID_RIVAL, HomegeTown_ProfessorSequoiasLab_Movement_RivalExitSix
+	waitmovement 0
+	goto HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitEnd
+	end
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalExitEnd::
+	playse SE_EXIT
+	removeobject LOCALID_RIVAL
+	setflag FLAG_LAB_INTRO_SEQUENCE
+	fadedefaultbgm
+	end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalExitOne:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalExitTwoThree:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalExitFourFive:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Movement_RivalExitSix:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+HomegeTown_ProfessorSequoiasLab_Text_RivalPostBattle:
+	.string "Heh, whatever.\p"
+	.string "I'm going to get a head start\n"
+	.string "by training my {STR_VAR_2}.\p"
+	.string "Later, loser.$"	
+
+
+HomegeTown_ProfessorSequoiasLab_EventScript_RivalTalkingToStarter::
+	lockall
+	bufferspeciesname 1, VAR_0x8005
+	msgbox HomegeTown_ProfessorSequoiasLab_Text_RivalTalkingToStarter, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+HomegeTown_ProfessorSequoiasLab_Text_RivalTalkingToStarter:
+	.string "{RIVAL}:You hear me, {STR_VAR_2}?\p"
+	.string "We're going to dominate Vidioh.$$"	

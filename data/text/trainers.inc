@@ -4814,7 +4814,7 @@ RewindRoute1_Text_ShizukuIntro:
 
 RewindRoute1_Text_ShizukuDefeated: 
 	.string "Well...\n"
-	.string "that wasn't relaxing at all.$"
+	.string "That wasn't relaxing at all.$"
 
 RewindRoute1_Text_ShizukuPostBattle: 
 	.string "I guess this music is only for studying,\n"

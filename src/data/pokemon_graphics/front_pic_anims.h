@@ -349,7 +349,7 @@ static const union AnimCmd sAnim_DELPHIER_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ENTESAGT_1[] =
+static const union AnimCmd sAnim_KURZEQUAK_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
@@ -8547,9 +8547,9 @@ static const union AnimCmd *const sAnims_DELPHIER[] ={
     sAnim_DELPHIER_1,
 };
 
-static const union AnimCmd *const sAnims_ENTESAGT[] ={
+static const union AnimCmd *const sAnims_KURZEQUAK[] ={
     sAnim_GeneralFrame0,
-    sAnim_ENTESAGT_1,
+    sAnim_KURZEQUAK_1,
 };
 
 static const union AnimCmd *const sAnims_SKELIPEDE[] ={
@@ -13582,7 +13582,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(PANTS),
     ANIM_CMD(CACOBELLE),
     ANIM_CMD(DELPHIER),
-    ANIM_CMD(ENTESAGT),
+    ANIM_CMD(KURZEQUAK),
     ANIM_CMD(SKELIPEDE),
     ANIM_CMD(COFFINSECT),
     ANIM_CMD(TERRACAL),

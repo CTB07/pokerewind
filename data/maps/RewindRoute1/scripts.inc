@@ -28,7 +28,7 @@ RewindRoute1_EventScript_HomelessMan::
 	lock
 	faceplayer
 	msgbox RewindRoute1_Text_HomelessScriptQuestion, MSGBOX_YESNO
-	compare VAR_RESULT, 0
+	compare VAR_RESULT, 1
 	goto_if_eq RewindRoute1_EventScript_HomelessAnsweredYes
 	msgbox RewindRoute1_Text_HomelessAnsweredNo, MSGBOX_DEFAULT
 	release
@@ -47,11 +47,13 @@ RewindRoute1_Text_HomelessScriptQuestion:
 RewindRoute1_Text_HomelessAnsweredYes:
 	.string "Stupid kid! You do realize that\n"
 	.string "not even 1% of Pokémon trainers make it\l"
-	.string "to the league!? It's called survivorship\l"
-	.string "bias. Look it up, moron.$"
+	.string "to the league!?\p"
+	.string "It's called survivorship bias.\n" 
+	.string "Look it up, moron.$"
 
 RewindRoute1_Text_HomelessAnsweredNo:
-	.string "Good, very good. Don't be like me, kid.\n"
+	.string "Good, very good.\p" 
+	.string "Don't be like me, kid.\n"
 	.string "Get an education and a real job.$"
 
 RewindRoute1_Text_RouteSignHomege:

@@ -572,12 +572,12 @@ const struct PokedexEntry gPokedexEntries[] =
     .pokemonOffset =15,
     .trainerScale =256,
     },
-    [NATIONAL_DEX_ENTESAGT] =
+    [NATIONAL_DEX_KURZEQUAK] =
     {
     .categoryName = _("Nutshell"),
     .height =0,
     .weight =0,
-    .description = gEntesagtPokedexText,
+    .description = gKurzequakPokedexText,
     .pokemonScale =256,
     .pokemonOffset =15,
     .trainerScale =256,

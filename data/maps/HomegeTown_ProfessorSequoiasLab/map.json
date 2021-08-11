@@ -89,15 +89,81 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_RivalTalkingToStarter",
+      "flag": "FLAG_LAB_INTRO_SEQUENCE"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_HOMEGE_TOWN",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_HOMEGE_TOWN",
+      "dest_warp_id": 1
+    }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SEQUOIA_LAB_STATE",
+      "var_value": "0",
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_Trigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SEQUOIA_LAB_STATE",
+      "var_value": "0",
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_Trigger4"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SEQUOIA_LAB_STATE",
+      "var_value": "0",
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_Trigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SEQUOIA_LAB_STATE",
+      "var_value": "0",
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_Trigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SEQUOIA_LAB_STATE",
+      "var_value": "0",
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_Trigger5"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SEQUOIA_LAB_STATE",
+      "var_value": "0",
+      "script": "HomegeTown_ProfessorSequoiasLab_EventScript_Trigger6"
+    }
   ],
   "bg_events": [
 

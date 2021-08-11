@@ -1300,7 +1300,7 @@ static const struct LevelUpMove sDelphierLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sEntesagtLevelUpLearnset[] = {
+static const struct LevelUpMove sKurzequakLevelUpLearnset[] = {
         LEVEL_UP_MOVE(1, MOVE_PECK),
         LEVEL_UP_MOVE(1, MOVE_HELPING_HAND),
         LEVEL_UP_MOVE(1, MOVE_PSYWAVE),

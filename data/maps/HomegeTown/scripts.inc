@@ -6,7 +6,22 @@
 .set LOCALID_PROF, 7
 
 HomegeTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HomegeTown_OnTransition
 	.byte 0
+
+HomegeTown_OnTransition: 
+	compare VAR_HOMEGE_INTRO_STATE, 4
+	call_if_ge HomegeTown_EventScript_SetCamperPos
+	end
+
+HomegeTown_EventScript_SetCamperPos::
+	setobjectxyperm LOCALID_CAMPER, 36, 16
+	setobjectmovementtype LOCALID_CAMPER, MOVEMENT_TYPE_FACE_DOWN
+	return
+
+HomegeTown_EventScript_Camper:: 
+	msgbox HomegeTown_Text_Camper, MSGBOX_NPC
+	end
 
 HomegeTown_EventScript_TownSign:: 
 	msgbox HomegeTown_Text_TownSign, MSGBOX_SIGN
@@ -121,7 +136,7 @@ HomegeTown_EventScript_LabStarterTrigger::
 	setvar VAR_HOMEGE_INTRO_STATE, 3
 	setvar VAR_0x8004, 29
 	setvar VAR_0x8005, 6
-	playbgm MUS_HELP, 1
+	playbgm MUS_HELP, 0
 	applymovement OBJ_EVENT_ID_PLAYER, HomegeTown_Movement_Exclaim
 	msgbox HomegeTown_Text_StopThem, MSGBOX_DEFAULT
 	closemessage
@@ -530,3 +545,7 @@ HomegeTown_Text_GoTalkToProfForPokemon:
 	.string "Go talk to him. If you're lucky, he might\l"
 	.string "give you one.$"
 	
+HomegeTown_Text_Camper:
+	.string "Huh, so you got a Pokémon?\p"
+	.string "Wonder what I'm going to do with\n"
+	.string "my life now...$"

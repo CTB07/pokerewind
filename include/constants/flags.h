@@ -1692,8 +1692,8 @@
 #define FLAG_FORCE_SHINIES    0x27 // Unused Flag
 #define FLAG_RECEIVE_STARTERS    0x28 // Unused Flag
 #define FLAG_NO_WHITEOUT      0x29 // Unused Flag
-/*#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_LAB_INTRO_SEQUENCE   0x2A // Unused Flag
+/*#define FLAG_UNUSED_0x02B  0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

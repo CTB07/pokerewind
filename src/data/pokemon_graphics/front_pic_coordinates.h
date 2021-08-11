@@ -347,7 +347,7 @@ const struct MonCoords gMonFrontPicCoords[] =
             .y_offset = 0,
         },
 
-    [SPECIES_ENTESAGT] =
+    [SPECIES_KURZEQUAK] =
         {
             .size = 0x45,
             .y_offset = 0,

@@ -1533,7 +1533,7 @@ const struct BaseStats gBaseStats[] =
             .noFlip = FALSE,
     },
 
-    [SPECIES_ENTESAGT] =
+    [SPECIES_KURZEQUAK] =
         {
             .baseHP        = 75,
             .baseAttack    = 75,

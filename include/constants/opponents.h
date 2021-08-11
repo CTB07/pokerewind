@@ -863,10 +863,10 @@
 #define TRAINER_REWIND_RYAN                   1
 #define TRAINER_REWIND_BILLY                  2
 #define TRAINER_REWIND_SHIZUKU                3
-/*#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
+#define TRAINER_RIVAL_LAB_PAROPEAT            4
+#define TRAINER_RIVAL_LAB_PRIMATIO            5
+#define TRAINER_RIVAL_LAB_SUBSTEE             6
+/*#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
 #define TRAINER_GABRIELLE_1                   9
 #define TRAINER_GRUNT_PETALBURG_WOODS        10

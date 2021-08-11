@@ -371,7 +371,7 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
     SPECIES_TO_NATIONAL(PANTS),
     SPECIES_TO_NATIONAL(CACOBELLE),
     SPECIES_TO_NATIONAL(DELPHIER),
-    SPECIES_TO_NATIONAL(ENTESAGT),
+    SPECIES_TO_NATIONAL(KURZEQUAK),
     SPECIES_TO_NATIONAL(SKELIPEDE),
     SPECIES_TO_NATIONAL(COFFINSECT),
     SPECIES_TO_NATIONAL(TERRACAL),
@@ -1915,7 +1915,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_PANTS- 1] = 0x06,
     [SPECIES_CACOBELLE- 1] = 0x06,
     [SPECIES_DELPHIER- 1] = 0x06,
-    [SPECIES_ENTESAGT- 1] = 0x06,
+    [SPECIES_KURZEQUAK- 1] = 0x06,
     [SPECIES_SKELIPEDE- 1] = 0x06,
     [SPECIES_COFFINSECT- 1] = 0x06,
     [SPECIES_TERRACAL- 1] = 0x06,
@@ -7145,6 +7145,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_PKMN_TRAINER_3:
+        case TRAINER_CLASS_RIVAL:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_VS_RIVAL;
             if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName))
