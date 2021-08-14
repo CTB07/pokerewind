@@ -114,7 +114,7 @@
   ],
   "warp_events": [
     {
-      "x": 10,
+      "x": 9,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_HOMEGE_TOWN_PLAYER_HOUSE_1F",

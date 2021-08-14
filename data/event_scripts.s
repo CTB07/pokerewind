@@ -1075,3 +1075,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/HomegeTown_PlayerHouse_2F/scripts.inc"
 
 	.include "data/maps/HomegeTown_ProfessorSequoiasLab/scripts.inc"
+
+	.include "data/maps/IcovaleCity/scripts.inc"

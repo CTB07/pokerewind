@@ -375,3 +375,7 @@ const u32 gObjectEventPic_Rival[] = INCBIN_U32("graphics/object_events/pics/peop
 const u16 gObjectEventPal_Rival[] = INCBIN_U16("graphics/object_events/palettes/rival.gbapal");
 const u32 gObjectEventPic_ProfessorSequoia[] = INCBIN_U32("graphics/object_events/pics/people/profsequoia.4bpp");
 const u16 gObjectEventPal_ProfessorSequoia[] = INCBIN_U16("graphics/object_events/palettes/profsequoia.gbapal");
+const u32 gObjectEventPic_RewindYoungster[] = INCBIN_U32("graphics/object_events/pics/people/rewind_youngster.4bpp");
+const u16 gObjectEventPal_RewindYoungster[] = INCBIN_U16("graphics/object_events/palettes/rewind_youngster.gbapal");
+const u32 gObjectEventPic_RewindRichBoy[] = INCBIN_U32("graphics/object_events/pics/people/rewind_rich_boy.4bpp");
+const u16 gObjectEventPal_RewindRichBoy[] = INCBIN_U16("graphics/object_events/palettes/rewind_rich_boy.gbapal");

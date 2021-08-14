@@ -684,5 +684,5 @@ HomegeTown_ProfessorSequoiasLab_EventScript_RivalTalkingToStarter::
 	end
 
 HomegeTown_ProfessorSequoiasLab_Text_RivalTalkingToStarter:
-	.string "{RIVAL}:You hear me, {STR_VAR_2}?\p"
+	.string "{RIVAL}: You hear me, {STR_VAR_2}?\p"
 	.string "We're going to dominate Vidioh.$$"	

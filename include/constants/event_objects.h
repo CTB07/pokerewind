@@ -242,8 +242,10 @@
 #define OBJ_EVENT_GFX_HOOH                       238
 #define OBJ_EVENT_GFX_RIVAL                      239
 #define OBJ_EVENT_GFX_PROFESSOR_SEQUOIA          240
+#define OBJ_EVENT_GFX_REWIND_YOUNGSTER           241
+#define OBJ_EVENT_GFX_REWIND_RICH_BOY            242
 
-#define NUM_OBJ_EVENT_GFX                        241
+#define NUM_OBJ_EVENT_GFX                        243
 
 
 // These are dynamic object gfx ids.

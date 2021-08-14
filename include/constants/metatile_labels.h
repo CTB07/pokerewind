@@ -241,6 +241,11 @@
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B
 #define METATILE_GenericBuilding_TrickHouse_Stairs_Down  0x219
 
+// gTileset_Homege
+#define METATILE_Homege_DoorBlue  0x205
+#define METATILE_Homege_DoorRed   0x221
+#define METATILE_Homege_LabDoor   0x253
+
 // gTileset_InsideOfTruck
 #define METATILE_InsideOfTruck_DoorClosedFloor_Bottom  0x21D
 #define METATILE_InsideOfTruck_DoorClosedFloor_Mid     0x215

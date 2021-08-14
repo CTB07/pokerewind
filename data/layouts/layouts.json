@@ -4414,7 +4414,7 @@
     {
       "id": "LAYOUT_REWIND_ROUTE1",
       "name": "RewindRoute1_Layout",
-      "width": 50,
+      "width": 58,
       "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4437,7 +4437,7 @@
       "width": 38,
       "height": 46,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Homege",
       "border_filepath": "data/layouts/HomegeTown/border.bin",
       "blockdata_filepath": "data/layouts/HomegeTown/map.bin"
     },
@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/HomegeTown_ProfessorSequoiasLab/border.bin",
       "blockdata_filepath": "data/layouts/HomegeTown_ProfessorSequoiasLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICOVALE_CITY",
+      "name": "IcovaleCity_Layout",
+      "width": 47,
+      "height": 43,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/IcovaleCity/border.bin",
+      "blockdata_filepath": "data/layouts/IcovaleCity/map.bin"
     }
   ]
 }

@@ -132,6 +132,10 @@ static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/
 static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
+static const u8 sDoorAnimTiles_RedHomege[] = INCBIN_U8("graphics/door_anims/red_homege.4bpp");
+static const u16 sDoorNullPalette50[16] = {};
+static const u8 sDoorAnimTiles_LabHomege[] = INCBIN_U8("graphics/door_anims/homege_lab_door.4bpp");
+static const u16 sDoorNullPalette51[16] = {};
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -220,6 +224,9 @@ static const u8 sDoorAnimPalettes_BattleDomePreBattleRoom[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_RedHomege[] = {7, 7, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_BlueHomege[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_LabHomege[] = {9, 9, 9, 9, 9, 9, 9, 9};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -276,6 +283,9 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_BattleTent_Door,                              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTentInterior, sDoorAnimPalettes_BattleTentInterior},
     {METATILE_TrainerHill_Door_Elevator_Lobby,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
+    {METATILE_Homege_DoorRed,                               DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_RedHomege, sDoorAnimPalettes_RedHomege},
+    {METATILE_Homege_DoorBlue,                              DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_RedHomege, sDoorAnimPalettes_BlueHomege},
+    {METATILE_Homege_LabDoor,                               DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LabHomege, sDoorAnimPalettes_LabHomege},
     {},
 };
 
