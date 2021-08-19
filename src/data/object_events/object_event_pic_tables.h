@@ -2220,3 +2220,39 @@ const struct SpriteFrameImage gObjectEventPicTable_RewindRichBoy[] = {
     overworld_frame(gObjectEventPic_RewindRichBoy, 2, 4, 7),
     overworld_frame(gObjectEventPic_RewindRichBoy, 2, 4, 8),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_Paropeat[] = {
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Paropeat, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Primatio[] = {
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Primatio, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Substee[] = {
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Substee, 2, 4, 8),
+};

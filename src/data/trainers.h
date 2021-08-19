@@ -88,7 +88,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_GruntSeafloorCavern1),
         .party = {.TrainerMon = sParty_GruntSeafloorCavern1},
-    },*/
+    },
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_2] =
     {
@@ -101,7 +101,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_GruntSeafloorCavern2),
         .party = {.TrainerMon = sParty_GruntSeafloorCavern2},
-    },
+    },*/
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_3] =
     {
@@ -11193,5 +11193,83 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_RivalLabSubstee),
         .party = {.TrainerMon = sParty_RivalLabSubstee},
+    },
+
+    [TRAINER_TIANA_ROUTE_1_PAROPEAT] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_MAY,
+        .trainerName = _("Tiana"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Route1Paropeat),
+        .party = {.TrainerMon = sParty_Route1Paropeat},
+    },
+
+    [TRAINER_TIANA_ROUTE_1_PRIMATIO] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_MAY,
+        .trainerName = _("Tiana"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Route1Primatio),
+        .party = {.TrainerMon = sParty_Route1Primatio},
+    },
+
+    [TRAINER_TIANA_ROUTE_1_SUBSTEE] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_MAY,
+        .trainerName = _("Tiana"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Route1Substee),
+        .party = {.TrainerMon = sParty_Route1Substee},
+    },
+
+    [TRAINER_MATT_ROUTE_1_PAROPEAT] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+        .trainerName = _("Matt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Route1Paropeat),
+        .party = {.TrainerMon = sParty_Route1Paropeat},
+    },
+
+    [TRAINER_MATT_ROUTE_1_PRIMATIO] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+        .trainerName = _("Matt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Route1Primatio),
+        .party = {.TrainerMon = sParty_Route1Primatio},
+    },
+
+    [TRAINER_MATT_ROUTE_1_SUBSTEE] =
+    {
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+        .trainerName = _("Matt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = ARRAY_COUNT(sParty_Route1Substee),
+        .party = {.TrainerMon = sParty_Route1Substee},
     },
 };

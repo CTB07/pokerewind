@@ -12495,3 +12495,27 @@ static const struct TrainerMon sParty_RivalLabSubstee[] = {
     .species = SPECIES_SUBSTEE,
     }
 };
+
+static const struct TrainerMon sParty_Route1Paropeat[] = {
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_PAROPEAT,
+    }
+};
+
+static const struct TrainerMon sParty_Route1Primatio[] = {
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_PRIMATIO,
+    }
+};
+
+static const struct TrainerMon sParty_Route1Substee[] = {
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_SUBSTEE,
+    }
+};

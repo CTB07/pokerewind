@@ -68,6 +68,7 @@ enum // TRANSITION_MUGSHOT
 #define B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ 40
 #define B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ  41
 #define B_TRANSITION_ANNOYING_ORANGE                           42
-#define B_TRANSITION_COUNT                                     43
+#define B_TRANSITION_XQC                                       43
+#define B_TRANSITION_COUNT                                     44
 
 #endif // GUARD_BATTLE_TRANSITION_H

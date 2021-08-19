@@ -437,6 +437,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PROFESSOR_SEQUOIA       0x1125
 #define OBJ_EVENT_PAL_TAG_REWIND_YOUNGSTER        0x1126
 #define OBJ_EVENT_PAL_TAG_REWIND_RICH_BOY         0x1127
+#define OBJ_EVENT_PAL_TAG_PAROPEAT                0x1128
+#define OBJ_EVENT_PAL_TAG_PRIMATIO                0x1129
+#define OBJ_EVENT_PAL_TAG_SUBSTEE                 0x112A
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -485,8 +488,11 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
     {gObjectEventPal_Rival,                 OBJ_EVENT_PAL_TAG_RIVAL},
     {gObjectEventPal_ProfessorSequoia,      OBJ_EVENT_PAL_TAG_PROFESSOR_SEQUOIA},
-    {gObjectEventPal_RewindYoungster,      OBJ_EVENT_PAL_TAG_REWIND_YOUNGSTER},
-    {gObjectEventPal_RewindRichBoy,        OBJ_EVENT_PAL_TAG_REWIND_RICH_BOY},
+    {gObjectEventPal_RewindYoungster,       OBJ_EVENT_PAL_TAG_REWIND_YOUNGSTER},
+    {gObjectEventPal_RewindRichBoy,         OBJ_EVENT_PAL_TAG_REWIND_RICH_BOY},
+    {gObjectEventPal_Paropeat,              OBJ_EVENT_PAL_TAG_PAROPEAT},
+    {gObjectEventPal_Primatio,              OBJ_EVENT_PAL_TAG_PRIMATIO},
+    {gObjectEventPal_Substee,               OBJ_EVENT_PAL_TAG_SUBSTEE},
     {NULL,                                  0x0000},
 };
 

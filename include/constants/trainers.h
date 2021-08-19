@@ -113,6 +113,7 @@
 #define TRAINER_PIC_ANNOYING_ORANGE       93
 #define TRAINER_PIC_LEADER_CHARLIE        94
 #define TRAINER_PIC_RIVAL                 95
+#define TRAINER_PIC_XQC                   96
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1

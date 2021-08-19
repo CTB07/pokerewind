@@ -73,4 +73,3 @@ HomegeTown_PlayerHouse_2F_Text_ClockIsStopped:
 HomegeTown_PlayerHouse_2F_Text_WallClockNotSet: 
 	.string "I should probably set my wall clock\n"
 	.string "before going downstairs.$"
-	

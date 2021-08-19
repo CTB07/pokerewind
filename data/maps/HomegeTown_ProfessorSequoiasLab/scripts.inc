@@ -140,8 +140,8 @@ HomegeTown_ProfessorSequoiasLab_Text_ProfAppreciatesRescue:
 HomegeTown_ProfessorSequoiasLab_EventScript_ParopeatAttachedToPlayer::
 	setvar VAR_0x8004 SPECIES_PAROPEAT
 	setvar VAR_0x8005 SPECIES_PRIMATIO
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TREECKO_DOLL
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TORCHIC_DOLL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_PAROPEAT
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_PRIMATIO
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, HomegeTown_ProfessorSequoiasLab_Movement_Exclaim
 	playmoncry SPECIES_PAROPEAT, 0
@@ -155,8 +155,8 @@ HomegeTown_ProfessorSequoiasLab_EventScript_ParopeatAttachedToPlayer::
 HomegeTown_ProfessorSequoiasLab_EventScript_PrimatioAttachedToPlayer::
 	setvar VAR_0x8004 SPECIES_PRIMATIO
 	setvar VAR_0x8005 SPECIES_SUBSTEE
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_TORCHIC_DOLL
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MUDKIP_DOLL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_PRIMATIO
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SUBSTEE
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, HomegeTown_ProfessorSequoiasLab_Movement_Exclaim
 	playmoncry SPECIES_PRIMATIO, 0
@@ -170,8 +170,8 @@ HomegeTown_ProfessorSequoiasLab_EventScript_PrimatioAttachedToPlayer::
 HomegeTown_ProfessorSequoiasLab_EventScript_SubsteeAttachedToPlayer::
 	setvar VAR_0x8004 SPECIES_SUBSTEE
 	setvar VAR_0x8005 SPECIES_PAROPEAT
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_MUDKIP_DOLL
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_TREECKO_DOLL
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SUBSTEE
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_PAROPEAT
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, HomegeTown_ProfessorSequoiasLab_Movement_Exclaim
 	playmoncry SPECIES_SUBSTEE, 0

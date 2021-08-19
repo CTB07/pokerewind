@@ -248,6 +248,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rival;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfessorSequoia;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RewindYoungster;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RewindRichBoy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Paropeat;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Primatio;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Substee;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -492,8 +495,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_RIVAL] =                    &gObjectEventGraphicsInfo_Rival,
     [OBJ_EVENT_GFX_PROFESSOR_SEQUOIA] =        &gObjectEventGraphicsInfo_ProfessorSequoia,
-    [OBJ_EVENT_GFX_REWIND_YOUNGSTER] = &gObjectEventGraphicsInfo_RewindYoungster,
-    [OBJ_EVENT_GFX_REWIND_RICH_BOY] = &gObjectEventGraphicsInfo_RewindRichBoy,
+    [OBJ_EVENT_GFX_REWIND_YOUNGSTER] =         &gObjectEventGraphicsInfo_RewindYoungster,
+    [OBJ_EVENT_GFX_REWIND_RICH_BOY] =          &gObjectEventGraphicsInfo_RewindRichBoy,
+    [OBJ_EVENT_GFX_PAROPEAT] =                 &gObjectEventGraphicsInfo_Paropeat,
+    [OBJ_EVENT_GFX_PRIMATIO] =                 &gObjectEventGraphicsInfo_Primatio,
+    [OBJ_EVENT_GFX_SUBSTEE] =                  &gObjectEventGraphicsInfo_Substee,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

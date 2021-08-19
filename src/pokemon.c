@@ -7128,6 +7128,8 @@ u16 GetBattleBGM(void)
         else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_HILL)
             trainerClass = TRAINER_CLASS_EXPERT;
         else
+            /*if (gTrainerBattleOpponent_A == TRAINER_XQC)
+                return MUS_VS_FRONTIER_BRAIN;*/
             trainerClass = gTrainers[gTrainerBattleOpponent_A].trainerClass;
 
         switch (trainerClass)
