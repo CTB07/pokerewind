@@ -929,21 +929,24 @@ const struct MonCoords gMonFrontPicCoords[] =
             .y_offset = 0,
         },
 
-    [SPECIES_CHIKORITA] =
+    [SPECIES_MUNCHARLIE] =
     {
-        .size = 0x75,
-        .y_offset = 10,
-    },
-    [SPECIES_BAYLEEF] =
-    {
-        .size = 0x77,
-        .y_offset = 3,
-    },
-    [SPECIES_MEGANIUM] =
-    {
-        .size = 0x88,
+        .size = 0x45,
         .y_offset = 0,
     },
+
+    [SPECIES_FINGATOR] =
+    {
+        .size = 0x45,
+        .y_offset = 0,
+    },
+
+    [SPECIES_GARASITE] =
+    {
+        .size = 0x45,
+        .y_offset = 0,
+    },
+
     [SPECIES_CYNDAQUIL] =
     {
         .size = 0x55,

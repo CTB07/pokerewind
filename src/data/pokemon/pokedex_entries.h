@@ -1523,40 +1523,37 @@ const struct PokedexEntry gPokedexEntries[] =
     .trainerScale =256,
     },
 
-    [NATIONAL_DEX_CHIKORITA] =
+    [NATIONAL_DEX_MUNCHARLIE] =
     {
-        .categoryName = _("Leaf"),
-        .height = 9,
-        .weight = 64,
-        .description = gChikoritaPokedexText,
-        .pokemonScale = 512,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+    .categoryName = _("Jaw"),
+    .height =0,
+    .weight =0,
+    .description = gMuncharliePokedexText,
+    .pokemonScale =256,
+    .pokemonOffset =15,
+    .trainerScale =256,
     },
 
-    [NATIONAL_DEX_BAYLEEF] =
+    [NATIONAL_DEX_FINGATOR] =
     {
-        .categoryName = _("Leaf"),
-        .height = 12,
-        .weight = 158,
-        .description = gBayleefPokedexText,
-        .pokemonScale = 296,
-        .pokemonOffset = 4,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+    .categoryName = _("Chomp"),
+    .height =0,
+    .weight =0,
+    .description = gFingatorPokedexText,
+    .pokemonScale =256,
+    .pokemonOffset =15,
+    .trainerScale =256,
     },
-
-    [NATIONAL_DEX_MEGANIUM] =
+    
+    [NATIONAL_DEX_GARASITE] =
     {
-        .categoryName = _("Herb"),
-        .height = 18,
-        .weight = 1005,
-        .description = gMeganiumPokedexText,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 277,
-        .trainerOffset = 1,
+    .categoryName = _("Crunching"),
+    .height =0,
+    .weight =0,
+    .description = gGarasitePokedexText,
+    .pokemonScale =256,
+    .pokemonOffset =15,
+    .trainerScale =256,
     },
 
     [NATIONAL_DEX_CYNDAQUIL] =

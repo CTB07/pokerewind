@@ -251,6 +251,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RewindRichBoy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Paropeat;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Primatio;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Substee;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FemaleSwimmer;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaleSwimmer;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FemaleRuinManiac;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RewindLass;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -500,6 +504,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PAROPEAT] =                 &gObjectEventGraphicsInfo_Paropeat,
     [OBJ_EVENT_GFX_PRIMATIO] =                 &gObjectEventGraphicsInfo_Primatio,
     [OBJ_EVENT_GFX_SUBSTEE] =                  &gObjectEventGraphicsInfo_Substee,
+    [OBJ_EVENT_GFX_FEMALE_SWIMMER] =           &gObjectEventGraphicsInfo_FemaleSwimmer,
+    [OBJ_EVENT_GFX_MALE_SWIMMER] =             &gObjectEventGraphicsInfo_MaleSwimmer,
+    [OBJ_EVENT_GFX_FEMALE_RUIN_MANIAC] =       &gObjectEventGraphicsInfo_FemaleRuinManiac,
+    [OBJ_EVENT_GFX_REWIND_LASS] =              &gObjectEventGraphicsInfo_RewindLass,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

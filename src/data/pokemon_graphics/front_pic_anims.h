@@ -919,27 +919,21 @@ static const union AnimCmd sAnim_MASCOT_1[] =
     ANIMCMD_END,
 };
 
-
-static const union AnimCmd sAnim_CHIKORITA_1[] =
+static const union AnimCmd sAnim_MUNCHARLIE_1[] =
 {
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_FRAME(1, 15),
-    ANIMCMD_FRAME(0, 15),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-
-static const union AnimCmd sAnim_BAYLEEF_1[] =
+static const union AnimCmd sAnim_FINGATOR_1[] =
 {
-    ANIMCMD_FRAME(1, 15),
-    ANIMCMD_FRAME(0, 15),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_MEGANIUM_1[] =
+static const union AnimCmd sAnim_GARASITE_1[] =
 {
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
@@ -9022,20 +9016,19 @@ static const union AnimCmd *const sAnims_MASCOT[] ={
     sAnim_MASCOT_1,
 };
 
-
-static const union AnimCmd *const sAnims_CHIKORITA[] ={
+static const union AnimCmd *const sAnims_MUNCHARLIE[] ={
     sAnim_GeneralFrame0,
-    sAnim_CHIKORITA_1,
+    sAnim_MUNCHARLIE_1,
 };
 
-static const union AnimCmd *const sAnims_BAYLEEF[] ={
+static const union AnimCmd *const sAnims_FINGATOR[] ={
     sAnim_GeneralFrame0,
-    sAnim_BAYLEEF_1,
+    sAnim_FINGATOR_1,
 };
 
-static const union AnimCmd *const sAnims_MEGANIUM[] ={
+static const union AnimCmd *const sAnims_GARASITE[] ={
     sAnim_GeneralFrame0,
-    sAnim_MEGANIUM_1,
+    sAnim_GARASITE_1,
 };
 
 static const union AnimCmd *const sAnims_CYNDAQUIL[] ={
@@ -13679,9 +13672,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(BROYALTY),
     ANIM_CMD(PRIMOURN),
     ANIM_CMD(MASCOT),
-    ANIM_CMD(CHIKORITA),
-    ANIM_CMD(BAYLEEF),
-    ANIM_CMD(MEGANIUM),
+    ANIM_CMD(MUNCHARLIE),
+    ANIM_CMD(FINGATOR),
+    ANIM_CMD(GARASITE),
     ANIM_CMD(CYNDAQUIL),
     ANIM_CMD(QUILAVA),
     ANIM_CMD(TYPHLOSION),

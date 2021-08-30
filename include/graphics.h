@@ -7090,6 +7090,24 @@ extern const u32 gMonPalette_Mascot[];
 extern const u32 gMonShinyPalette_Mascot[];
 extern const u8 gMonIcon_Mascot[];
 extern const u8 gMonFootprint_Mascot[];
+extern const u32 gMonFrontPic_Muncharlie[];
+extern const u32 gMonBackPic_Muncharlie[];
+extern const u32 gMonPalette_Muncharlie[];
+extern const u32 gMonShinyPalette_Muncharlie[];
+extern const u8 gMonIcon_Muncharlie[];
+extern const u8 gMonFootprint_Muncharlie[];
+extern const u32 gMonFrontPic_Fingator[];
+extern const u32 gMonBackPic_Fingator[];
+extern const u32 gMonPalette_Fingator[];
+extern const u32 gMonShinyPalette_Fingator[];
+extern const u8 gMonIcon_Fingator[];
+extern const u8 gMonFootprint_Fingator[];
+extern const u32 gMonFrontPic_Garasite[];
+extern const u32 gMonBackPic_Garasite[];
+extern const u32 gMonPalette_Garasite[];
+extern const u32 gMonShinyPalette_Garasite[];
+extern const u8 gMonIcon_Garasite[];
+extern const u8 gMonFootprint_Garasite[];
 
 // trainer sprites
 extern const u32 gTrainerFrontPic_Hiker[];

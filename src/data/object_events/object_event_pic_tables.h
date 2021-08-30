@@ -2256,3 +2256,51 @@ const struct SpriteFrameImage gObjectEventPicTable_Substee[] = {
     overworld_frame(gObjectEventPic_Substee, 2, 4, 7),
     overworld_frame(gObjectEventPic_Substee, 2, 4, 8),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_FemaleSwimmer[] = {
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 0),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 1),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 2),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 3),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 4),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 5),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 6),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 7),
+    overworld_frame(gObjectEventPic_FemaleSwimmer, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_MaleSwimmer[] = {
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 0),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 1),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 2),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 3),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 4),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 5),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 6),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 7),
+    overworld_frame(gObjectEventPic_MaleSwimmer, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_FemaleRuinManiac[] = {
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 0),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 1),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 2),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 3),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 4),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 5),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 6),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 7),
+    overworld_frame(gObjectEventPic_FemaleRuinManiac, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_RewindLass[] = {
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 0),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 1),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 2),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 3),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 4),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 5),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 6),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 7),
+    overworld_frame(gObjectEventPic_RewindLass, 2, 4, 8),
+};

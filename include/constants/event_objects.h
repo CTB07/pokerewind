@@ -247,8 +247,12 @@
 #define OBJ_EVENT_GFX_PAROPEAT                   243
 #define OBJ_EVENT_GFX_PRIMATIO                   244
 #define OBJ_EVENT_GFX_SUBSTEE                    245
+#define OBJ_EVENT_GFX_FEMALE_SWIMMER             246
+#define OBJ_EVENT_GFX_MALE_SWIMMER               247
+#define OBJ_EVENT_GFX_FEMALE_RUIN_MANIAC         248
+#define OBJ_EVENT_GFX_REWIND_LASS                249
 
-#define NUM_OBJ_EVENT_GFX                        246
+#define NUM_OBJ_EVENT_GFX                        250
 
 
 // These are dynamic object gfx ids.

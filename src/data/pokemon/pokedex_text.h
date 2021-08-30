@@ -156,23 +156,9 @@ const u8 gBroyaltyPokedexText[] = _("");
 const u8 gPrimournPokedexText[] = _("Legends say Primourn was an ordinary \nTemperila until it was put to death by Yveltal \nitself. The world plunged into chaos following\nthis, according to some sources.");
 const u8 gMascotPokedexText[] = _("");
 
-const u8 gChikoritaPokedexText[] = _(
-    "It waves its leaf around to keep foes\n"
-    "at bay. However, a sweet fragrance also\n"
-    "wafts from the leaf, creating a friendly\n"
-    "atmosphere that becalms the battlers.");
-
-const u8 gBayleefPokedexText[] = _(
-    "A Bayleef's neck is ringed by curled-up\n"
-    "leaves. Inside each leaf is a small tree\n"
-    "shoot. The fragrance of this shoot\n"
-    "makes people peppy.");
-
-const u8 gMeganiumPokedexText[] = _(
-    "The fragrance of a Meganium's flower\n"
-    "soothes and calms emotions. In battle,\n"
-    "it gives off more of its becalming scent\n"
-    "to blunt the foe's fighting spirit.");
+const u8 gMuncharliePokedexText[] = _("It has a rare and insatiable taste for human\nflesh, especially fingers. They used to be\npopular as pets before an epidemic of missing\nfingers and flushed-away Muncharlies.");
+const u8 gFingatorPokedexText[] = _("");
+const u8 gGarasitePokedexText[] = _("");
 
 const u8 gCyndaquilPokedexText[] = _(
     "It flares flames from its back to protect\n"
