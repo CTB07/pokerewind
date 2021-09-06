@@ -159,12 +159,9 @@ const u8 gMascotPokedexText[] = _("");
 const u8 gMuncharliePokedexText[] = _("It has a rare and insatiable taste for human\nflesh, especially fingers. They used to be\npopular as pets before an epidemic of missing\nfingers and flushed-away Muncharlies.");
 const u8 gFingatorPokedexText[] = _("");
 const u8 gGarasitePokedexText[] = _("");
-
-const u8 gCyndaquilPokedexText[] = _(
-    "It flares flames from its back to protect\n"
-    "itself. The fire burns vigorously if the\n"
-    "Pokémon is angry. When it is tired,\n"
-    "it sputters with incomplete combustion.");
+const u8 gCubblePokedexText[] = _("");
+const u8 gPandachooPokedexText[] = _("");
+const u8 gGesundhaPokedexText[] = _("Gesundha's immune system is filled to the\nbrim with diseases. Its stability is a result\nof many diseases cancelling each other out,\nso any sort of cure would kill it quickly.");
 
 const u8 gQuilavaPokedexText[] = _(
     "It intimidates foes with intense gusts of\n"

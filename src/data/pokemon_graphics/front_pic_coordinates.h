@@ -953,21 +953,24 @@ const struct MonCoords gMonFrontPicCoords[] =
         .y_offset = 0,
     },
 
-    [SPECIES_CYNDAQUIL] =
+    [SPECIES_CUBBLE] =
     {
-        .size = 0x55,
-        .y_offset = 14,
-    },
-    [SPECIES_QUILAVA] =
-    {
-        .size = 0x76,
-        .y_offset = 6,
-    },
-    [SPECIES_TYPHLOSION] =
-    {
-        .size = 0x78,
+        .size = 0x45,
         .y_offset = 0,
     },
+
+    [SPECIES_PANDACHOO] =
+    {
+        .size = 0x45,
+        .y_offset = 0,
+    },
+
+    [SPECIES_GESUNDHA] =
+    {
+        .size = 0x45,
+        .y_offset = 0,
+    },
+
     [SPECIES_TOTODILE] =
     {
         .size = 0x55,

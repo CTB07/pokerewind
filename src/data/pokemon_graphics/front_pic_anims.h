@@ -1,4 +1,4 @@
-﻿static const union AnimCmd sAnim_NONE_1[] =
+static const union AnimCmd sAnim_NONE_1[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
@@ -943,26 +943,21 @@ static const union AnimCmd sAnim_GARASITE_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_CYNDAQUIL_1[] =
+static const union AnimCmd sAnim_CUBBLE_1[] =
 {
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
-    ANIMCMD_FRAME(1, 10),
-    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_QUILAVA_1[] =
+static const union AnimCmd sAnim_PANDACHOO_1[] =
 {
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_TYPHLOSION_1[] =
+static const union AnimCmd sAnim_GESUNDHA_1[] =
 {
-    ANIMCMD_FRAME(1, 20),
-    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
@@ -9042,20 +9037,21 @@ static const union AnimCmd *const sAnims_GARASITE[] ={
     sAnim_GARASITE_1,
 };
 
-static const union AnimCmd *const sAnims_CYNDAQUIL[] ={
+static const union AnimCmd *const sAnims_CUBBLE[] ={
     sAnim_GeneralFrame0,
-    sAnim_CYNDAQUIL_1,
+    sAnim_CUBBLE_1,
 };
 
-static const union AnimCmd *const sAnims_QUILAVA[] ={
+static const union AnimCmd *const sAnims_PANDACHOO[] ={
     sAnim_GeneralFrame0,
-    sAnim_QUILAVA_1,
+    sAnim_PANDACHOO_1,
 };
 
-static const union AnimCmd *const sAnims_TYPHLOSION[] ={
+static const union AnimCmd *const sAnims_GESUNDHA[] ={
     sAnim_GeneralFrame0,
-    sAnim_TYPHLOSION_1,
+    sAnim_GESUNDHA_1,
 };
+
 
 static const union AnimCmd *const sAnims_TOTODILE[] ={
     sAnim_GeneralFrame0,
@@ -13687,9 +13683,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(MUNCHARLIE),
     ANIM_CMD(FINGATOR),
     ANIM_CMD(GARASITE),
-    ANIM_CMD(CYNDAQUIL),
-    ANIM_CMD(QUILAVA),
-    ANIM_CMD(TYPHLOSION),
+    ANIM_CMD(CUBBLE),
+    ANIM_CMD(PANDACHOO),
+    ANIM_CMD(GESUNDHA),
     ANIM_CMD(TOTODILE),
     ANIM_CMD(CROCONAW),
     ANIM_CMD(FERALIGATR),

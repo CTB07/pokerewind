@@ -1556,40 +1556,35 @@ const struct PokedexEntry gPokedexEntries[] =
     .trainerScale =256,
     },
 
-    [NATIONAL_DEX_CYNDAQUIL] =
+    [NATIONAL_DEX_CUBBLE] =
     {
-        .categoryName = _("Fire Mouse"),
-        .height = 5,
-        .weight = 79,
-        .description = gCyndaquilPokedexText,
-        .pokemonScale = 539,
-        .pokemonOffset = 21,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+    .categoryName = _("Snot"),
+    .height =0,
+    .weight =0,
+    .description = gCubblePokedexText,
+    .pokemonScale =256,
+    .pokemonOffset =15,
+    .trainerScale =256,
     },
-
-    [NATIONAL_DEX_QUILAVA] =
+    [NATIONAL_DEX_PANDACHOO] =
     {
-        .categoryName = _("Volcano"),
-        .height = 9,
-        .weight = 190,
-        .description = gQuilavaPokedexText,
-        .pokemonScale = 329,
-        .pokemonOffset = 11,
-        .trainerScale = 256,
-        .trainerOffset = 0,
+    .categoryName = _("Sneezing"),
+    .height =0,
+    .weight =0,
+    .description = gPandachooPokedexText,
+    .pokemonScale =256,
+    .pokemonOffset =15,
+    .trainerScale =256,
     },
-
-    [NATIONAL_DEX_TYPHLOSION] =
+    [NATIONAL_DEX_GESUNDHA] =
     {
-        .categoryName = _("Volcano"),
-        .height = 17,
-        .weight = 795,
-        .description = gTyphlosionPokedexText,
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 268,
-        .trainerOffset = 1,
+    .categoryName = _("Exhaust"),
+    .height =0,
+    .weight =0,
+    .description = gGesundhaPokedexText,
+    .pokemonScale =256,
+    .pokemonOffset =15,
+    .trainerScale =256,
     },
 
     [NATIONAL_DEX_TOTODILE] =
