@@ -2596,6 +2596,34 @@ const struct BaseStats gBaseStats[] =
             .noFlip = TRUE,
     },
 
+    [SPECIES_FONDAUNT_BUSTED] =
+        {
+            .baseHP        = 80,
+            .baseAttack    = 70,
+            .baseDefense   = 100,
+            .baseSpeed   = 70,
+            .baseSpAttack   = 70,
+            .baseSpDefense   = 90,
+            .type1 = TYPE_ICE,
+            .type2 = TYPE_ICE,
+            .catchRate = 84,
+            .expYield = 164,
+            .evYield_Defense   = 1,
+            .evYield_SpDefense = 1,
+            .item1 = ITEM_NONE,
+            .item2 = ITEM_NONE,
+            .genderRatio = MON_GENDERLESS,
+            .eggCycles = 20,
+            .friendship = 100,
+            .growthRate = GROWTH_MEDIUM_SLOW,
+            .eggGroup1 = EGG_GROUP_MINERAL,
+            .eggGroup2 = EGG_GROUP_FAIRY,
+            .abilities = {ABILITY_DISGUISE, ABILITY_NONE},
+            .abilityHidden = ABILITY_NONE,
+            .bodyColor = BODY_COLOR_YELLOW,
+            .noFlip = TRUE,
+    },
+
     [SPECIES_ROB3R] =
         {
             .baseHP        = 45,

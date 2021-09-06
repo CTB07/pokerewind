@@ -2,6 +2,8 @@ const u16 *const gFormSpeciesIdTables[NUM_SPECIES] =
 {
     [SPECIES_DISPUTRAW] = sDisputrawFormSpeciesIdTable,
     [SPECIES_DISPUTRAW_SPECIAL] = sDisputrawFormSpeciesIdTable,
+    [SPECIES_FONDAUNT] = sFondauntFormSpeciesIdTable,
+    [SPECIES_FONDAUNT_BUSTED] = sFondauntFormSpeciesIdTable,
     [SPECIES_SHARPARENT] = sSharparentFormSpeciesIdTable,
     [SPECIES_SHARPARENT_FEMALE] = sSharparentFormSpeciesIdTable,
     [SPECIES_MEGRANDON] = sMegrandonFormSpeciesIdTable,

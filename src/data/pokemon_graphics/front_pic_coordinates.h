@@ -581,6 +581,12 @@ const struct MonCoords gMonFrontPicCoords[] =
             .y_offset = 0,
         },
 
+    [SPECIES_FONDAUNT_BUSTED] =
+        {
+            .size = 0x45,
+            .y_offset = 0,
+        },
+
     [SPECIES_ROB3R] =
         {
             .size = 0x45,

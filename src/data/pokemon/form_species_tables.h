@@ -13,6 +13,12 @@ static const u16 sDisputrawFormSpeciesIdTable[] = {
     FORM_SPECIES_END,
 };
 
+static const u16 sFondauntFormSpeciesIdTable[] = {
+    SPECIES_FONDAUNT,
+    SPECIES_FONDAUNT_BUSTED,
+    FORM_SPECIES_END,
+};
+
 static const u16 sSharparentFormSpeciesIdTable[] = {
     SPECIES_SHARPARENT,
     SPECIES_SHARPARENT_FEMALE,

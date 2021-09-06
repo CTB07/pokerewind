@@ -565,3 +565,10 @@ gMetatiles_Homege::
 	.align 1
 gMetatileAttributes_Homege::
 	.incbin "data/tilesets/secondary/homege/metatile_attributes.bin"
+	.align 1
+gMetatiles_Icovale::
+	.incbin "data/tilesets/secondary/icovale/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Icovale::
+	.incbin "data/tilesets/secondary/icovale/metatile_attributes.bin"

@@ -583,6 +583,12 @@ static const union AnimCmd sAnim_FONDAUNT_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_FONDAUNT_BUSTED_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_ROB3R_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -8736,6 +8742,11 @@ static const union AnimCmd *const sAnims_FONDAUNT[] ={
     sAnim_FONDAUNT_1,
 };
 
+static const union AnimCmd *const sAnims_FONDAUNT_BUSTED[] ={
+    sAnim_GeneralFrame0,
+    sAnim_FONDAUNT_BUSTED_1,
+};
+
 static const union AnimCmd *const sAnims_ROB3R[] ={
     sAnim_GeneralFrame0,
     sAnim_ROB3R_1,
@@ -13614,6 +13625,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(BUBBATH),
     ANIM_CMD(BUBBLUST),
     ANIM_CMD(FONDAUNT),
+    ANIM_CMD(FONDAUNT_BUSTED),
     ANIM_CMD(ROB3R),
     ANIM_CMD(SKORCHOP),
     ANIM_CMD(CUBEAST),

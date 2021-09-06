@@ -15,7 +15,7 @@ HomegeTown_OnTransition:
 	end
 
 HomegeTown_EventScript_SetCamperPos::
-	setobjectxyperm LOCALID_CAMPER, 36, 16
+	setobjectxyperm LOCALID_CAMPER, 30, 16
 	setobjectmovementtype LOCALID_CAMPER, MOVEMENT_TYPE_FACE_DOWN
 	return
 

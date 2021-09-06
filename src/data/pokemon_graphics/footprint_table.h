@@ -97,6 +97,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_BUBBATH] = gMonFootprint_Bubbath,
     [SPECIES_BUBBLUST] = gMonFootprint_Bubblust,
     [SPECIES_FONDAUNT] = gMonFootprint_Fondaunt,
+    [SPECIES_FONDAUNT_BUSTED] = gMonFootprint_FondauntBusted,
     [SPECIES_ROB3R] = gMonFootprint_Rob3R,
     [SPECIES_SKORCHOP] = gMonFootprint_Skorchop,
     [SPECIES_CUBEAST] = gMonFootprint_Cubeast,

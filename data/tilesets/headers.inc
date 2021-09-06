@@ -841,3 +841,14 @@ gTileset_Homege::
 	.4byte gMetatiles_Homege
 	.4byte gMetatileAttributes_Homege
 	.4byte NULL
+
+	.align 2
+gTileset_Icovale::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Icovale
+	.4byte gTilesetPalettes_Icovale
+	.4byte gMetatiles_Icovale
+	.4byte gMetatileAttributes_Icovale
+	.4byte NULL

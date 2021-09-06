@@ -4474,10 +4474,10 @@
     {
       "id": "LAYOUT_ICOVALE_CITY",
       "name": "IcovaleCity_Layout",
-      "width": 47,
+      "width": 49,
       "height": 43,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Icovale",
       "border_filepath": "data/layouts/IcovaleCity/border.bin",
       "blockdata_filepath": "data/layouts/IcovaleCity/map.bin"
     }
