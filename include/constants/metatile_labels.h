@@ -246,6 +246,9 @@
 #define METATILE_Homege_DoorRed   0x221
 #define METATILE_Homege_LabDoor   0x253
 
+// gTileset_Icovale
+#define METATILE_Icovale_GymDoor  0x2A3
+
 // gTileset_InsideOfTruck
 #define METATILE_InsideOfTruck_DoorClosedFloor_Bottom  0x21D
 #define METATILE_InsideOfTruck_DoorClosedFloor_Mid     0x215
